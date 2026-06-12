@@ -5,8 +5,10 @@
   ║  Unverbindliche DESIGN-VORSCHAU · erstellt von Lechcode             ║
   ║  Single-File, kein Build. Stand: 12.06.2026                         ║
   ╠════════════════════════════════════════════════════════════════════╣
-  ║  DEMO-Modus: Texte neu geschrieben aus Fakten der Altseite,         ║
-  ║  keine Fotos (Freigabe offen), Formular versendet nichts.           ║
+  ║  DEMO-Modus: Texte neu geschrieben aus Fakten der Altseite.         ║
+  ║  Bilder der Altseite: Nutzung freigegeben durch Franz               ║
+  ║  (mündlich via Lenny, 12.06.2026) — Fotografen-Rechte noch offen,   ║
+  ║  s. OFFENE-FRAGEN #11. Formular versendet nichts.                   ║
   ║  Offene Punkte: _projekt/OFFENE-FRAGEN.md                           ║
   ║  Pflege-Stellen: Suche nach „HIER:"                                 ║
   ╚════════════════════════════════════════════════════════════════════╝
@@ -32,6 +34,10 @@
   <link rel="preload" href="assets/fonts/instrument-serif-400italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-tight-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-tight-600.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Hero-Foto preloaden (LCP): AVIF, responsive — Fallback-JPEG lädt nur in Alt-Browsern -->
+  <link rel="preload" as="image" type="image/avif"
+        imagesrcset="assets/img/franz-hero-400.avif 400w, assets/img/franz-hero-800.avif 800w, assets/img/franz-hero-1200.avif 1200w"
+        imagesizes="(max-width: 900px) 176px, min(44vw, 470px)">
   <link rel="stylesheet" href="assets/fonts.css">
   <script type="application/ld+json">
   {
@@ -40,6 +46,7 @@
     "name": "Franz Heinrich — UnVerschämt Coaching",
     "description": "Körperorientiertes Scham-Coaching mit Neo Emotional Release: 1:1-Sessions online oder vor Ort in München und Regensburg, dazu Retreats & Events.",
     "url": "https://franzheinrich.com/",
+    "image": "https://franzheinrich.com/assets/img/franz-hero-800.jpg",
     "areaServed": ["München", "Regensburg", "Online"],
     "founder": { "@type": "Person", "name": "Franz Heinrich", "jobTitle": "Coach für Scham & Emotionen, Neo-Emotional-Release-Practitioner" },
     "sameAs": [
@@ -144,19 +151,24 @@
     .menu-open{overflow:hidden;}
   }
 
-  /* ===== 5 · HERO — warme Bühne mit Atem-Halo ===== */
+  /* ===== 5 · HERO — warme Bühne: echtes Gesicht im Atem-Halo ===== */
   .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding-block:calc(var(--nav-h) + var(--space-3)) var(--space-3);overflow:clip;
     background:
       radial-gradient(58% 46% at 72% 30%, rgba(223,164,92,.34), transparent 70%),
       radial-gradient(42% 38% at 18% 78%, rgba(196,96,47,.13), transparent 72%),
       var(--cream);}
   .foto .hero{min-height:auto;}
-  .halo{position:absolute;right:max(-160px, 50% - 760px);top:50%;width:min(760px, 86vw);aspect-ratio:1;translate:0 -50%;pointer-events:none;}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(28px, 4vw, 64px);align-items:center;}
+  .hero-media{position:relative;justify-self:end;width:min(100%, 470px);}
+  .halo{position:absolute;left:50%;top:50%;width:142%;max-width:none;aspect-ratio:1;translate:-50% -50%;pointer-events:none;}
   .halo circle{transform-origin:center;transform-box:fill-box;}
   .js .halo .breathe{animation:breathe 9s ease-in-out infinite;}
   .js .halo .breathe2{animation:breathe 9s ease-in-out -4.5s infinite;}
   @keyframes breathe{0%,100%{transform:scale(1);opacity:.7;}50%{transform:scale(1.06);opacity:1;}}
   @media (prefers-reduced-motion:reduce){.js .halo .breathe,.js .halo .breathe2{animation:none;}}
+  .hero-foto{position:relative;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;
+    border-radius:999px 999px var(--radius-lg) var(--radius-lg);
+    box-shadow:0 34px 70px -34px rgba(44,32,20,.45);}
   .hero-content{position:relative;max-width:760px;}
   .hero h1{margin-top:18px;max-width:11em;}
   .hero h1 em{color:var(--terra);white-space:nowrap;}
@@ -166,6 +178,13 @@
   .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:var(--space-2);}
   .hero-sub{margin-top:22px;font-size:var(--step--1);color:var(--ink-soft);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
   .hero-sub a{color:var(--ink-soft);font-weight:600;}
+  @media (max-width:900px){
+    .hero{padding-top:calc(var(--nav-h) + 18px);}
+    .hero-grid{grid-template-columns:1fr;gap:20px;}
+    .hero-media{order:-1;justify-self:start;width:clamp(150px, 38vw, 184px);}
+    .hero-foto{aspect-ratio:1;border-radius:50%;object-position:50% 24%;box-shadow:0 22px 44px -22px rgba(44,32,20,.4);}
+    .halo{width:170%;}
+  }
 
   /* ===== 6 · VERTRAUENSLEISTE ===== */
   .trust{border-block:1px solid var(--line);background:var(--warm-white);}
@@ -201,11 +220,18 @@
   .arbeit .card{display:flex;flex-direction:column;gap:0;}
   .arbeit .card .num{font-family:var(--serif);font-style:italic;font-size:30px;color:var(--amber);margin-bottom:14px;}
   .arbeit .card .more{margin-top:auto;padding-top:16px;font-weight:600;font-size:15px;}
+  .card-foto{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:calc(var(--radius-lg) - 12px);margin-bottom:18px;}
 
   /* ===== 10 · N.E.R. ===== */
   .ner{background:var(--warm-white);border-block:1px solid var(--line);}
-  .ner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-1);}
-  @media (max-width:900px){.ner-grid{grid-template-columns:1fr 1fr;}}
+  .ner-layout{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:var(--space-3);align-items:center;}
+  .ner-foto{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-lg);box-shadow:0 26px 52px -28px rgba(44,32,20,.38);}
+  .ner-foto-cap{margin-top:12px;font-size:var(--step--1);color:var(--ink-soft);font-style:italic;}
+  .ner-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-1);}
+  @media (max-width:900px){
+    .ner-layout{grid-template-columns:1fr;gap:var(--space-2);}
+    .ner-layout > .reveal{max-width:420px;}
+  }
   @media (max-width:540px){.ner-grid{grid-template-columns:1fr;}}
   .ner-el{padding:clamp(18px, 2vw, 26px);border-radius:var(--radius);background:var(--cream);border:1px solid var(--line);}
   .ner-el svg{width:34px;height:34px;margin-bottom:14px;}
@@ -224,8 +250,9 @@
   .ueber-text .first{color:var(--ink);font-size:var(--step-1);}
   .werte{display:flex;gap:10px;flex-wrap:wrap;margin-top:var(--space-2);list-style:none;}
   .werte li{border:1.5px solid var(--amber);color:var(--ink);border-radius:999px;padding:9px 18px;font-size:15px;font-weight:600;}
-  .sonne{margin-inline:auto;width:min(330px, 72vw);}
-  .sonne-cap{text-align:center;margin-top:14px;font-size:var(--step--1);color:var(--ink-soft);font-style:italic;}
+  .ueber-foto{display:block;width:min(380px, 100%);height:auto;aspect-ratio:4/5;object-fit:cover;margin-inline:auto;
+    border-radius:999px 999px var(--radius-lg) var(--radius-lg);
+    box-shadow:0 34px 70px -34px rgba(44,32,20,.45);}
 
   /* ===== 12 · FUNDSTÜCK (dunkle Bühne) ===== */
   .fund{background:radial-gradient(120% 130% at 50% -20%, var(--espresso-2), var(--espresso) 60%);color:var(--bone);text-align:center;padding-block:var(--space-4);}
@@ -304,7 +331,8 @@
 
   /* ===== 19 · PRINT — Aushang/Notiz ===== */
   @media print{
-    .nav,.mobile-menu,.halo,.hero-cta,.site-footer .top,form,.demo-note,.burger{display:none !important;}
+    .nav,.mobile-menu,.halo,.hero-cta,.site-footer .top,form,.demo-note,.burger,
+    .hero-media,.card-foto,.ner-foto,.ner-foto-cap,.ueber-foto{display:none !important;}
     body{background:#fff;color:#000;font-size:11pt;}
     .hero{min-height:auto;padding:0;background:none;}
     .section{padding-block:18pt;}
@@ -347,24 +375,32 @@
 <main id="main">
 <!-- ════ HERO ════ -->
 <section class="hero" id="top">
-  <svg class="halo" viewBox="0 0 600 600" aria-hidden="true">
-    <g>
-      <circle class="breathe" cx="300" cy="300" r="262" fill="none" stroke="#dfa45c" stroke-opacity=".26" stroke-width="1.6"/>
-      <circle class="breathe2" cx="300" cy="300" r="196" fill="none" stroke="#dfa45c" stroke-opacity=".38" stroke-width="1.6"/>
-      <circle class="breathe" cx="300" cy="300" r="132" fill="none" stroke="#c4602f" stroke-opacity=".3" stroke-width="1.4"/>
-      <circle cx="300" cy="300" r="70" fill="#dfa45c" fill-opacity=".14"/>
-    </g>
-  </svg>
   <div class="wrap">
-    <div class="hero-content">
-      <p class="eyebrow">Körperorientiertes Scham-Coaching · online &amp; in München / Regensburg</p>
-      <h1>Du bist nicht falsch. Du bist <span class="unders"><em>UnVerschämt</em><svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C 40 3, 80 2.6, 116 5.4 C 150 8, 178 7, 197 4" fill="none" stroke="#dfa45c" stroke-width="3.6" stroke-linecap="round"/></svg></span> richtig.</h1>
-      <p class="lead">Ich bin Franz — Coach für das Thema, über das kaum jemand spricht: Scham. In 1:1-Sessions mit Neo Emotional Release begleite ich dich raus aus dem Dauerkampf mit dir selbst, zurück in deinen Körper und deine Lebendigkeit.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#kontakt">Kennenlern-Gespräch anfragen</a>
-        <a class="btn btn-ghost" href="#ner">Was ist N.E.R.?</a>
+    <div class="hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow">Körperorientiertes Scham-Coaching · online &amp; in München / Regensburg</p>
+        <h1>Du bist nicht falsch. Du bist <span class="unders"><em>UnVerschämt</em><svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C 40 3, 80 2.6, 116 5.4 C 150 8, 178 7, 197 4" fill="none" stroke="#dfa45c" stroke-width="3.6" stroke-linecap="round"/></svg></span> richtig.</h1>
+        <p class="lead">Ich bin Franz — Coach für das Thema, über das kaum jemand spricht: Scham. In 1:1-Sessions mit Neo Emotional Release begleite ich dich raus aus dem Dauerkampf mit dir selbst, zurück in deinen Körper und deine Lebendigkeit.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#kontakt">Kennenlern-Gespräch anfragen</a>
+          <a class="btn btn-ghost" href="#ner">Was ist N.E.R.?</a>
+        </div>
+        <p class="hero-sub">Auch auf <a href="https://www.instagram.com/franz.unverschaemt/" rel="noopener">Instagram @franz.unverschaemt</a><!-- HIER: Instagram-Link prüfen --></p>
       </div>
-      <p class="hero-sub">Auch auf <a href="https://www.instagram.com/franz.unverschaemt/" rel="noopener">Instagram @franz.unverschaemt</a><!-- HIER: Instagram-Link prüfen --></p>
+      <div class="hero-media">
+        <svg class="halo" viewBox="0 0 600 600" aria-hidden="true">
+          <g>
+            <circle class="breathe" cx="300" cy="300" r="262" fill="none" stroke="#dfa45c" stroke-opacity=".26" stroke-width="1.6"/>
+            <circle class="breathe2" cx="300" cy="300" r="196" fill="none" stroke="#dfa45c" stroke-opacity=".38" stroke-width="1.6"/>
+            <circle class="breathe" cx="300" cy="300" r="132" fill="none" stroke="#c4602f" stroke-opacity=".3" stroke-width="1.4"/>
+          </g>
+        </svg>
+        <!-- Foto: Altseite franzheinrich.com (Hero) — Freigabe Franz 12.06.2026, s. ASSETS-LIZENZEN.md -->
+        <picture>
+          <source type="image/avif" srcset="assets/img/franz-hero-400.avif 400w, assets/img/franz-hero-800.avif 800w, assets/img/franz-hero-1200.avif 1200w" sizes="(max-width: 900px) 176px, min(44vw, 470px)">
+          <img class="hero-foto" src="assets/img/franz-hero-800.jpg" srcset="assets/img/franz-hero-400.jpg 400w, assets/img/franz-hero-800.jpg 800w" sizes="(max-width: 900px) 176px, min(44vw, 470px)" width="800" height="1000" fetchpriority="high" decoding="async" alt="Franz Heinrich steht lächelnd in einer grünen, weiten Berglandschaft und schaut direkt in die Kamera">
+        </picture>
+      </div>
     </div>
   </div>
 </section>
@@ -436,18 +472,33 @@
     </div>
     <div class="grid-3">
       <div class="card reveal">
+        <!-- Foto: Altseite (Unterseite /ner) — Freigabe Franz 12.06.2026 -->
+        <picture>
+          <source type="image/avif" srcset="assets/img/franz-arbeit-400.avif 400w, assets/img/franz-arbeit-800.avif 800w" sizes="(max-width: 540px) 86vw, (max-width: 900px) 42vw, 330px">
+          <img class="card-foto" src="assets/img/franz-arbeit-800.jpg" srcset="assets/img/franz-arbeit-400.jpg 400w, assets/img/franz-arbeit-800.jpg 800w" sizes="(max-width: 540px) 86vw, (max-width: 900px) 42vw, 330px" width="800" height="534" loading="lazy" decoding="async" alt="Franz mit geschlossenen Augen, ganz konzentriert während einer N.E.R.-Session in einem hellen Holzraum">
+        </picture>
         <span class="num" aria-hidden="true">01</span>
         <h3>1:1 N.E.R.-Sessions</h3>
         <p>Körperarbeit für deine Emotionen: Über Druckpunkte, Atem und meine verbale Begleitung darf sich zeigen, was lange festsaß. Online oder vor Ort.</p>
         <a class="more" href="#ner">Mehr zur Methode ↓</a>
       </div>
       <div class="card reveal">
+        <!-- Foto: Altseite (Unterseite /about) — Freigabe Franz 12.06.2026 -->
+        <picture>
+          <source type="image/avif" srcset="assets/img/franz-ort-400.avif 400w, assets/img/franz-ort-800.avif 800w" sizes="(max-width: 540px) 86vw, (max-width: 900px) 42vw, 330px">
+          <img class="card-foto" src="assets/img/franz-ort-800.jpg" srcset="assets/img/franz-ort-400.jpg 400w, assets/img/franz-ort-800.jpg 800w" sizes="(max-width: 540px) 86vw, (max-width: 900px) 42vw, 330px" width="800" height="533" loading="lazy" decoding="async" alt="Franz sitzt entspannt lächelnd auf einem Holzgeländer unter Palmen">
+        </picture>
         <span class="num" aria-hidden="true">02</span>
         <h3>UnVerschämt Coaching</h3>
         <p>Deine 1:1-Begleitung für radikale Selbstakzeptanz: Wir schauen deine Scham gemeinsam an — Schritt für Schritt, in deinem Tempo, bis du dich wieder zeigen kannst.</p>
         <a class="more" href="#kontakt">Kennenlernen ↓</a>
       </div>
       <div class="card reveal">
+        <!-- Foto: Altseite (Unterseite /about) — Freigabe Franz 12.06.2026; Gesichter größtenteils abgewandt -->
+        <picture>
+          <source type="image/avif" srcset="assets/img/retreat-kreis-400.avif 400w, assets/img/retreat-kreis-800.avif 800w" sizes="(max-width: 540px) 86vw, (max-width: 900px) 42vw, 330px">
+          <img class="card-foto" src="assets/img/retreat-kreis-800.jpg" srcset="assets/img/retreat-kreis-400.jpg 400w, assets/img/retreat-kreis-800.jpg 800w" sizes="(max-width: 540px) 86vw, (max-width: 900px) 42vw, 330px" width="800" height="534" loading="lazy" decoding="async" alt="Eine Retreat-Gruppe steht eng umarmt im Kreis im Grünen, Franz in ihrer Mitte">
+        </picture>
         <span class="num" aria-hidden="true">03</span>
         <h3>Retreats &amp; Events</h3>
         <p>Dich selbst in voller Lebensenergie erfahren — gemeinsam mit Menschen, die denselben Weg gehen. An Orten, an denen du ganz du sein darfst.</p>
@@ -464,6 +515,15 @@
       <p class="eyebrow">Die Methode</p>
       <h2>Was ist Neo Emotional Release?</h2>
       <p>N.E.R. ist eine körperorientierte Methode, entwickelt von David Manning: psychosomatische Prozessarbeit, die deine Emotionen nicht zerredet, sondern über den Körper in Bewegung bringt. Vier Elemente greifen dabei ineinander:</p>
+    </div>
+    <div class="ner-layout">
+    <div class="reveal">
+      <!-- Foto: Altseite (Unterseite /ner, Session-Aufnahme) — Freigabe Franz 12.06.2026 -->
+      <picture>
+        <source type="image/avif" srcset="assets/img/franz-session-400.avif 400w, assets/img/franz-session-800.avif 800w" sizes="(max-width: 900px) min(86vw, 420px), 30vw">
+        <img class="ner-foto" src="assets/img/franz-session-800.jpg" srcset="assets/img/franz-session-400.jpg 400w, assets/img/franz-session-800.jpg 800w" sizes="(max-width: 900px) min(86vw, 420px), 30vw" width="800" height="1000" loading="lazy" decoding="async" alt="Franz bei einer N.E.R.-Session: Er beugt sich aufmerksam über einen Klienten, eine Hand ruht achtsam auf dessen Brust">
+      </picture>
+      <p class="ner-foto-cap">Eine Session: Berührung, Atem, deine Emotionen — und jemand, der bleibt.</p>
     </div>
     <div class="ner-grid">
       <div class="ner-el reveal">
@@ -487,6 +547,7 @@
         <p>Mit Visualisierung geben wir den Seiten in dir Raum, die lange niemand sehen durfte — auch der, die sich schämt.</p>
       </div>
     </div>
+    </div>
     <div class="ehrlich reveal">
       <svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9.5" fill="none" stroke="#5c6b43" stroke-width="1.8"/><path d="M11 6.5v6M11 15.6v.4" stroke="#5c6b43" stroke-width="2" stroke-linecap="round"/></svg>
       <p><b>Ehrlich gesagt:</b> Coaching und N.E.R. sind Prozess- und Persönlichkeitsarbeit — kein Heilverfahren. Sie ersetzen keine Psychotherapie und keine ärztliche Behandlung.</p>
@@ -509,16 +570,11 @@
         </ul>
       </div>
       <div class="reveal">
-        <!-- HIER: Foto von Franz einsetzen, sobald Freigabe & Bildrechte geklärt sind (Wunschliste: OFFENE-FRAGEN #11) -->
-        <svg class="sonne" viewBox="0 0 330 330" role="img" aria-label="Warme Sonnen-Illustration als Platzhalter für ein Porträtfoto">
-          <circle cx="165" cy="165" r="150" fill="#f2e7d2"/>
-          <circle cx="165" cy="165" r="150" fill="none" stroke="#dfa45c" stroke-width="1.6" opacity=".6"/>
-          <circle cx="165" cy="165" r="106" fill="none" stroke="#dfa45c" stroke-width="1.6" opacity=".75"/>
-          <circle cx="165" cy="165" r="64" fill="#dfa45c" opacity=".3"/>
-          <circle cx="165" cy="165" r="34" fill="#a8431f" opacity=".88"/>
-          <path d="M60 250 C 110 215, 220 215, 270 250" fill="none" stroke="#a8431f" stroke-width="3" stroke-linecap="round" opacity=".55"/>
-        </svg>
-        <p class="sonne-cap">Hier kommt bald ein echtes Foto hin — versprochen.</p>
+        <!-- HIER: Foto tauschen, falls Franz ein anderes möchte (Quelle: Altseite /coaching, Freigabe 12.06.2026; Fotografen-Rechte s. OFFENE-FRAGEN #11) -->
+        <picture>
+          <source type="image/avif" srcset="assets/img/franz-ueber-400.avif 400w, assets/img/franz-ueber-800.avif 800w" sizes="(max-width: 900px) min(86vw, 380px), 33vw">
+          <img class="ueber-foto" src="assets/img/franz-ueber-800.jpg" srcset="assets/img/franz-ueber-400.jpg 400w, assets/img/franz-ueber-800.jpg 800w" sizes="(max-width: 900px) min(86vw, 380px), 33vw" width="800" height="1000" loading="lazy" decoding="async" alt="Franz hockt herzlich lachend auf einer Wiese, die Hände vor dem Herzen aneinandergelegt">
+        </picture>
       </div>
     </div>
   </div>

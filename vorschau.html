@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<!-- Enthüllungsseite (Herkunft: ANFRAGE/Startangebot — Systemtest, Franz ist Freund von Lenny & Michael).
-     Persönliche Begrüßung, Slider, Handy-Reframe, Tacho, Rechts-Block, Startangebot 500 €. QR-/Link-Ziel. -->
+<!-- Enthüllungsseite, Runde 2 (Herkunft: ANFRAGE/Startangebot — Systemtest; Franz weiß seit 12.06. von der Aktion
+     und hat die Bilder seiner Altseite freigegeben [mündlich via Lenny]). Phase-7-Standard v1.4 vollständig:
+     Begrüßung · Slider · Handy-Reframe + Mobil-Statistik · Tacho · 6-Zeilen-Vergleichstabelle · Rechts-Block ·
+     Feature-Strecke · „Was das für dich heißt" · „Was wir noch brauchen" · Startangebot 500 €. QR-/Link-Ziel. -->
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Für Franz — deine neue Website wartet</title>
+<title>Für Franz — deine neue Website ist fertig</title>
 <meta name="theme-color" content="#2c2014">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232c2014'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23dfa45c' stroke-width='2.6' opacity='.55'/%3E%3Ccircle cx='32' cy='32' r='13.5' fill='none' stroke='%23dfa45c' stroke-width='3' opacity='.8'/%3E%3Ccircle cx='32' cy='32' r='5.5' fill='%23e8703a'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/fonts.css">
@@ -18,7 +20,7 @@
   --sans:"Inter Tight","Inter Tight Fallback",-apple-system,Arial,sans-serif;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17.5px;line-height:1.66;-webkit-font-smoothing:antialiased;}
-.wrap{max-width:780px;margin:0 auto;padding:clamp(2.6rem, 8vw, 4.6rem) clamp(1.2rem, 5vw, 2rem) 2rem;}
+.wrap{max-width:800px;margin:0 auto;padding:clamp(2.6rem, 8vw, 4.6rem) clamp(1.2rem, 5vw, 2rem) 2rem;}
 .halo-top{width:min(150px, 38vw);margin:0 auto 1.5rem;display:block;}
 .hand{display:block;text-align:center;font-size:.92rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);}
 h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem, 1.4rem + 3.8vw, 3.5rem);line-height:1.1;margin:.7rem 0 1.4rem;text-align:center;text-wrap:balance;}
@@ -29,15 +31,15 @@ p + p{margin-top:1em;}
 b{color:var(--ink);}
 a{color:var(--terra);text-underline-offset:3px;}
 :focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:6px;}
-.brief{max-width:600px;margin-inline:auto;}
+.brief{max-width:620px;margin-inline:auto;}
 .btn{display:flex;width:fit-content;margin:2.2rem auto 0;align-items:center;gap:.6em;background:var(--terra);color:var(--warm-white);font-weight:600;font-size:1.1rem;border-radius:999px;padding:1em 2.1em;text-decoration:none;box-shadow:0 18px 36px -16px rgba(156,61,28,.55);transition:transform .25s var(--ease),background .2s;}
 .btn:hover{background:var(--terra-deep);transform:translateY(-2px);}
-section.block{margin-top:3.4rem;}
+section.block{margin-top:3.6rem;}
 .block-head{text-align:center;margin-bottom:1.5rem;}
 .block-head .hand{margin-bottom:.35rem;}
-.block-head p{max-width:50ch;margin:0 auto;}
+.block-head p{max-width:52ch;margin:0 auto;}
 /* Vorher/Nachher-Schieberegler (identische Crop-Maße 760×897!) */
-.slider{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 26px 52px -26px rgba(44,32,20,.45);aspect-ratio:760/897;max-height:540px;margin-inline:auto;background:#fff;}
+.slider{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 26px 52px -26px rgba(44,32,20,.45);aspect-ratio:760/897;max-height:560px;margin-inline:auto;background:#fff;}
 .slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;}
 .slider .neu{clip-path:inset(0 0 0 var(--pos,50%));}
 .slider .griff{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2.5px;background:var(--amber);transform:translateX(-50%);pointer-events:none;}
@@ -62,15 +64,41 @@ section.block{margin-top:3.4rem;}
 .tacho .lbl{font-size:.88rem;color:var(--bone-dim);margin-top:.5rem;line-height:1.45;}
 .tacho .t:nth-child(2) .num{color:#e0a079;}
 .tacho .t:nth-child(3) .num{color:#aebd8e;}
-.tacho-quelle{text-align:center;font-size:.85rem;color:var(--ink-soft);margin-top:.7rem;}
+.tacho-quelle{text-align:center;font-size:.85rem;color:var(--ink-soft);margin-top:.7rem;max-width:60ch;margin-inline:auto;}
+/* Vergleichstabelle */
+.vgl-card{background:var(--warm-white);border:1px solid var(--line);border-radius:20px;box-shadow:0 20px 44px -24px rgba(44,32,20,.3);overflow:hidden;margin-top:1.6rem;}
+table.vgl{width:100%;border-collapse:collapse;font-size:.97rem;}
+.vgl caption{position:absolute;left:-9999px;}
+.vgl th,.vgl td{padding:.85rem 1rem;text-align:left;vertical-align:top;}
+.vgl thead th{background:var(--espresso);color:var(--bone);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;}
+.vgl thead th:first-child{width:34%;}
+.vgl tbody th{font-weight:600;color:var(--ink);font-size:.93rem;}
+.vgl tbody tr:nth-child(odd){background:var(--cream);}
+.vgl td.alt{color:#8a4a2e;}
+.vgl td.neu{color:#465233;font-weight:600;}
+.vgl td .ok{display:inline-block;width:1.05em;margin-right:.25em;}
+@media (max-width:620px){
+  .vgl thead{position:absolute;left:-9999px;}
+  .vgl tbody th,.vgl td{display:block;width:100%;padding:.4rem 1rem;}
+  .vgl tbody th{padding-top:.9rem;}
+  .vgl td.alt::before{content:"Bisher: ";font-weight:600;color:var(--ink-soft);}
+  .vgl td.neu::before{content:"Neu: ";font-weight:600;color:var(--ink-soft);}
+  .vgl td.neu{padding-bottom:.9rem;}
+}
 /* Karten */
 .card{background:var(--warm-white);border:1px solid var(--line);border-top:3px solid var(--amber);border-radius:20px;box-shadow:0 20px 44px -24px rgba(44,32,20,.3);padding:clamp(1.5rem, 4.5vw, 2.4rem);margin-top:2.4rem;}
-.card ul{list-style:none;display:grid;gap:.8rem;}
+.card ul{list-style:none;display:grid;gap:.9rem;}
 .card li{position:relative;padding-left:1.9em;color:var(--ink-soft);}
 .card li::before{content:"";position:absolute;left:.15em;top:.52em;width:9px;height:9px;border-radius:50%;background:var(--amber);}
 .card.recht{border-top-color:var(--moss);}
 .card.recht li::before{background:var(--moss);}
 .card .fuss{margin-top:1.2rem;font-size:.92rem;}
+.card.features li::before{content:"✓";background:none;width:auto;height:auto;top:0;color:var(--moss);font-weight:700;}
+/* Foto-Hinweis-Band */
+.fotoband{display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:center;background:var(--sand);border-radius:18px;padding:1.1rem 1.3rem;margin-top:2.4rem;}
+.fotoband img{width:74px;height:74px;border-radius:50%;object-fit:cover;object-position:50% 24%;}
+.fotoband p{font-size:.97rem;}
+@media (max-width:480px){.fotoband{grid-template-columns:1fr;text-align:center;}.fotoband img{margin-inline:auto;}}
 /* Startangebot */
 .angebot{background:var(--espresso);color:var(--bone);border-radius:24px;padding:clamp(1.8rem, 5vw, 2.8rem);margin-top:3.2rem;text-align:center;}
 .angebot h2{color:var(--bone);}
@@ -100,12 +128,12 @@ section.block{margin-top:3.4rem;}
     <circle cx="100" cy="100" r="14" fill="#a8431f"/>
   </svg>
 
-  <span class="hand">Psst, Franz … wir waren fleißig</span>
-  <h1>Hallo Franz — wir haben dir eine <em>neue Website</em> gebaut.</h1>
+  <span class="hand">Franz, sie ist fertig</span>
+  <h1>Hallo Franz — hier ist deine <em>neue Website</em>.</h1>
 
   <div class="brief">
-    <p>Ja, wirklich. Lenny &amp; Michael hier — wir bauen gerade mit <b>Lechcode</b> Websites für Menschen, deren Arbeit der Welt guttut. Und beim Testen unseres neuen Ablaufs war sofort klar, wessen Seite wir uns als Erstes wünschen: deine.</p>
-    <p>Du hast nichts angefragt und schuldest uns <b>nichts</b> — das hier ist ein Geschenk vorab. Wir haben deine jetzige Seite genau studiert: deine Worte, deine Arbeit, dein „UnVerschämt". Daraus ist ein kompletter Entwurf geworden — ehrlich gebaut, ohne ein einziges erfundenes Versprechen.</p>
+    <p>Lenny &amp; Michael hier. Wir bauen mit <b>Lechcode</b> gerade Websites für Menschen, deren Arbeit der Welt guttut — und beim Testen unseres Ablaufs war sofort klar, wessen Seite wir uns als Erstes wünschen: deine.</p>
+    <p>Inzwischen weißt du ja, dass wir gewerkelt haben — <b>danke für deine Bilder!</b> Genau die haben noch gefehlt. Jetzt ist der Entwurf komplett: deine Worte, deine Fotos, dein „UnVerschämt". Ehrlich gebaut, ohne ein einziges erfundenes Versprechen — und du schuldest uns <b>nichts</b>. Schau einfach in Ruhe.</p>
   </div>
 
   <a class="btn" href="index.html">Deine neue Seite ansehen&nbsp;→</a>
@@ -113,11 +141,11 @@ section.block{margin-top:3.4rem;}
   <section class="block">
     <div class="block-head">
       <span class="hand">Vorher · Nachher</span>
-      <p>Zieh den Griff nach links und rechts — links deine bisherige Seite, rechts der neue Entwurf.</p>
+      <p>Zieh den Griff nach links und rechts — links deine bisherige Seite, rechts der neue Entwurf. Mit dir drauf.</p>
     </div>
     <div class="slider" id="slider">
-      <img class="altB" src="assets/vorschau/alt-desktop.jpg" width="760" height="897" alt="Bisherige Website franzheinrich.com — Bildschirmfoto des Seitenanfangs">
-      <img class="neu" src="assets/vorschau/neu-desktop.jpg" width="760" height="897" alt="Neuer Website-Entwurf für Franz Heinrich — Bildschirmfoto des Seitenanfangs">
+      <img class="altB" src="assets/vorschau/alt-desktop.jpg" width="760" height="897" fetchpriority="high" alt="Bisherige Website franzheinrich.com — Bildschirmfoto des Seitenanfangs">
+      <img class="neu" src="assets/vorschau/neu-desktop.jpg" width="760" height="897" alt="Neuer Website-Entwurf für Franz Heinrich mit Foto von Franz in den Bergen — Bildschirmfoto des Seitenanfangs">
       <span class="griff" aria-hidden="true"></span>
       <span class="lbl altL" aria-hidden="true">Bisher</span>
       <span class="lbl neuL" aria-hidden="true">Neu</span>
@@ -129,7 +157,7 @@ section.block{margin-top:3.4rem;}
   <section class="block">
     <div class="block-head">
       <span class="hand">Und am Handy?</span>
-      <p>So sieht dich jemand heute am Smartphone — und so ab jetzt. Deine Headline wird aktuell am Handy abgeschnitten; auf der neuen Seite gehört der erste Eindruck wieder dir.</p>
+      <p>So sieht dich jemand heute am Smartphone — und so ab jetzt. Deine Überschrift wird aktuell am Handy abgeschnitten; auf der neuen Seite begrüßt stattdessen dein Gesicht jeden Besucher.</p>
     </div>
     <div class="phones">
       <figure class="phone">
@@ -137,8 +165,8 @@ section.block{margin-top:3.4rem;}
         <figcaption>Bisher — <b style="color:#9c3d1c;">„…iere deine …am"</b>: die Headline läuft aus dem Bild</figcaption>
       </figure>
       <figure class="phone">
-        <div class="rahmen"><img src="assets/vorschau/neu-handy.jpg" width="390" height="844" loading="lazy" alt="Neuer Website-Entwurf am Smartphone — alles lesbar"></div>
-        <figcaption>Neu — <b style="color:#5c6b43;">alles lesbar</b>, ein klarer Weg zum Kennenlern-Gespräch</figcaption>
+        <div class="rahmen"><img src="assets/vorschau/neu-handy.jpg" width="390" height="844" loading="lazy" alt="Neuer Website-Entwurf am Smartphone — Foto von Franz, lesbare Überschrift und Kontakt-Knopf im ersten Bildschirm"></div>
+        <figcaption>Neu — <b style="color:#5c6b43;">dein Foto, alles lesbar</b> und ein klarer Weg zum Kennenlern-Gespräch</figcaption>
       </figure>
     </div>
     <p class="statistik">📱 Über <b>60 % aller Website-Besuche</b> kommen heute vom Smartphone (StatCounter) — genau dort entscheidet sich der erste Eindruck.</p>
@@ -146,29 +174,91 @@ section.block{margin-top:3.4rem;}
 
   <section class="block">
     <div class="block-head">
-      <span class="hand">Tacho</span>
-      <p>Gemessen mit Google Lighthouse — gleiche Methode für alt und neu, am Handy-Profil:</p>
+      <span class="hand">Die Zahlen</span>
+      <p>Gemessen mit Google Lighthouse — gleiche Methode für alt und neu, am Handy-Profil. Und das Beste: Die neue Seite bleibt so schnell, <b>obwohl jetzt sechs echte Fotos drauf sind.</b></p>
     </div>
     <div class="tacho">
-      <div class="t"><div class="num">7× schneller</div><div class="lbl">Größter Inhalt sichtbar: vorher 11,7 Sekunden — jetzt 1,7</div></div>
-      <div class="t"><div class="num">15× leichter</div><div class="lbl">2,2 MB → 139 KB — lädt selbst im Funkloch</div></div>
+      <div class="t"><div class="num">6× schneller</div><div class="lbl">Größter Inhalt sichtbar: vorher 11,7 Sekunden — jetzt 1,8</div></div>
+      <div class="t"><div class="num">11× leichter</div><div class="lbl">2,2 MB → 0,2 MB — lädt selbst im Funkloch. Inklusive aller Fotos</div></div>
       <div class="t"><div class="num">100 / 100</div><div class="lbl">Performance &amp; Barrierefreiheit (vorher 62 / 76) — und 0 Cookies</div></div>
     </div>
-    <p class="tacho-quelle">Auch am großen Bildschirm: vorher Performance 91 — jetzt 100. Und statt 4 fremder Server (Google Fonts, Trustindex …) lädt die neue Seite von genau einem: deinem.</p>
+    <p class="tacho-quelle">Gemessen am 12.06.2026, je drei Läufe, Median — auf echtem Hosting eher noch schneller. Auch am großen Bildschirm: vorher Performance 91, jetzt 100.</p>
+
+    <div class="vgl-card">
+      <table class="vgl">
+        <caption>Vergleich der bisherigen und der neuen Website in sechs Punkten</caption>
+        <thead>
+          <tr><th scope="col">Auf einen Blick</th><th scope="col">Bisher</th><th scope="col">Neu</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Ladezeit am Handy</th>
+            <td class="alt">11,7 Sekunden</td>
+            <td class="neu"><span class="ok">✓</span>1,8 Sekunden</td>
+          </tr>
+          <tr>
+            <th scope="row">Seitengewicht</th>
+            <td class="alt">2,2 MB</td>
+            <td class="neu"><span class="ok">✓</span>0,2 MB — mit allen Fotos</td>
+          </tr>
+          <tr>
+            <th scope="row">Google Lighthouse (Handy)</th>
+            <td class="alt">62 von 100</td>
+            <td class="neu"><span class="ok">✓</span>100 von 100</td>
+          </tr>
+          <tr>
+            <th scope="row">Mobiltauglich</th>
+            <td class="alt">Nein — Überschrift abgeschnitten, Menü bricht</td>
+            <td class="neu"><span class="ok">✓</span>Ja — geprüft von 320 bis 1920 px</td>
+          </tr>
+          <tr>
+            <th scope="row">Server-Anfragen pro Aufruf</th>
+            <td class="alt">31 — an 5 verschiedene Server, davon 4 fremde</td>
+            <td class="neu"><span class="ok">✓</span>12 — alle an deinen eigenen</td>
+          </tr>
+          <tr>
+            <th scope="row">HTTPS &amp; Recht</th>
+            <td class="alt">HTTPS ja — aber Impressum leer, Datenschutzerklärung fehlt</td>
+            <td class="neu"><span class="ok">✓</span>HTTPS, Rechtsseiten vorbereitet, cookiefrei — kein Banner nötig</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
+
+  <div class="fotoband">
+    <img src="assets/img/franz-hero-400.jpg" width="74" height="74" loading="lazy" alt="">
+    <p><b>Übrigens, deine Fotos:</b> Wir haben sechs Bilder von deiner alten Seite übernommen — als Hero das Bergfoto mit Blickkontakt, dazu Session, Retreat-Kreis und dein Lachen auf der Wiese. Jedes Bild ist in moderne, federleichte Formate umgerechnet (AVIF, ca. 30–110 KB statt bis zu 1 MB). Die Porträts deiner vier Klientenstimmen haben wir bewusst <b>nicht</b> übernommen — dafür braucht es erst deren eigenes Okay.</p>
+  </div>
 
   <section class="block">
     <div class="card recht">
       <h2>Das haben wir gleich mitkorrigiert</h2>
       <ul>
-        <li><b>Dein Impressum war leer.</b> Auf der Impressums-Seite stehen bisher keine Pflichtangaben (§ 5 DDG) — keine Anschrift, keine E-Mail. Auf der neuen Seite ist die Struktur fertig; es fehlen nur deine Angaben.</li>
-        <li><b>Eine Datenschutzerklärung gab es nicht</b> — der Footer-Text „Datenschutz" war gar kein Link, obwohl dein Kontaktformular persönliche Daten verarbeitet. Die neue Erklärung schreiben wir passgenau, sobald die Seite live geht.</li>
-        <li><b>Schriften kamen von Google-Servern.</b> Das hat bereits Abmahnungen ausgelöst (LG München I, 2022). Jetzt: alles lokal, keine Verbindung zu Google — und ganz ohne Cookie-Banner.</li>
-        <li><b>Template-Reste mit Risiko:</b> Auf Unterseiten standen englische Muster-Bewertungen („Jenny Martins"), ein abgelaufener Countdown und „$50-Specials" aus der Vorlage — erfundene Kundenstimmen können als irreführende Werbung gelten. Auf der neuen Seite: nur noch Echtes.</li>
-        <li><b>„Certified N.E.R. Therapist"</b> haben wir zu <b>„Practitioner"</b> gemacht — „Therapeut" ist in Deutschland heikles Terrain für Coaches. Dein eigenes Impressum-Tagline sagt es übrigens genauso.</li>
-        <li><b>Dein Browser-Tab hatte keinen Titel</b> (und Google keine Beschreibung deiner Seite). Jetzt: sauberer Titel, Beschreibung, Vorschaubild beim Teilen per WhatsApp &amp; Co.</li>
+        <li><b>Dein Impressum war leer.</b> Auf /impressum steht bisher nur die Überschrift — keine Anschrift, keine E-Mail, kein Name. Für eine geschäftliche Website schreibt § 5 DDG diese Angaben aber vor. Auf der neuen Seite ist die Struktur fertig; es fehlen nur deine Daten.</li>
+        <li><b>Eine Datenschutzerklärung gab es nicht.</b> Der Footer-Text „Datenschutz" war gar kein Link — dein Kontaktformular verarbeitet aber persönliche Daten, und genau darüber muss eine Website informieren (Art. 13 DSGVO). Die neue Erklärung schreiben wir passgenau, sobald die Seite live geht.</li>
+        <li><b>Schriften kamen von Google-Servern.</b> Beim Aufruf deiner Seite wird die IP-Adresse jedes Besuchers an Google übertragen — das hat bereits Abmahnwellen ausgelöst (LG München I, 2022). Jetzt: alle Schriften liegen lokal, keine Verbindung zu Google, kein Cookie-Banner nötig.</li>
+        <li><b>Erfundene Bewertungen aus dem Template:</b> Auf /coaching und /retreats standen englische Muster-Stimmen („Jenny Martins, Industrial Desiger"), dazu ein abgelaufener Countdown („You missed out!") und „$50"-Angebote aus der Vorlage. Erfundene Kundenstimmen und Fake-Verknappung gelten als irreführende Werbung (§ 5 UWG). Auf der neuen Seite: nur noch Echtes.</li>
+        <li><b>4 von 6 Unterseiten waren Lorem-ipsum-Baustellen.</b> Wer neugierig weiterklickte, landete in englischen Yoga-Textresten und Blindtext — ausgerechnet bei deiner Zielgruppe, die sich Überwindung abringt, dich überhaupt zu besuchen. Jetzt: ein fertiger One-Pager, jede Zeile echt.</li>
+        <li><b>„Certified N.E.R. Therapist"</b> haben wir zu <b>„Practitioner"</b> gemacht — „Therapeut" ist in Deutschland geschütztes Terrain und für Coaches rechtlich angreifbar. Dein eigenes Impressum-Tagline sagt es übrigens genauso.</li>
+        <li><b>Dein Browser-Tab hatte keinen Titel</b> und Google keine Beschreibung deiner Seite. Jetzt: sauberer Titel, Beschreibung — und beim Teilen per WhatsApp erscheint eine schöne Vorschau mit deinem Foto.</li>
       </ul>
-      <p class="fuss">Alles ehrlich befundet — keine Panikmache, keine Rechtsberatung. Wir zeigen dir jeden Punkt gern am Schirm.</p>
+      <p class="fuss">Alles ehrlich befundet, nichts dazuerfunden — und keine Panikmache, keine Rechtsberatung. Wir zeigen dir jeden Punkt gern am Schirm.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="card features">
+      <h2>Was die neue Seite alles kann</h2>
+      <ul>
+        <li><b>Dein Gesicht im ersten Bildschirm</b> — echte Gesichter schlagen jedes Symbolbild, besonders bei einem Vertrauensthema wie deinem.</li>
+        <li><b>Deine Sätze als Herzstück:</b> „Was wir überdenken, unterfühlen wir." steht auf einer eigenen dunklen Bühne — und „Deine Emotionen sind nicht das Problem …" eröffnet den Perspektivwechsel.</li>
+        <li><b>N.E.R. endlich erklärt:</b> die vier Elemente der Methode (Berührung, Atem, Stimme, innere Anteile) mit deinem Session-Foto daneben — Besucher verstehen in 30 Sekunden, was du tust.</li>
+        <li><b>FAQ gegen die Anfrage-Angst:</b> sechs Fragen, die sich deine Zielgruppe wirklich stellt — inklusive „Ich schäme mich, über meine Scham zu reden."</li>
+        <li><b>Verantwortung eingebaut:</b> ehrliche „Für wen nicht"-Box, Krisen-Hinweis mit Telefonseelsorge und der klare Satz, dass Coaching keine Psychotherapie ersetzt.</li>
+        <li><b>Barrierefrei (Lighthouse 100):</b> per Tastatur bedienbar, kontrastgeprüft, mit Vorlese-Texten zu jedem Bild — und wer „reduzierte Bewegung" eingestellt hat, bekommt alles ohne Animationen.</li>
+        <li><b>Keine Cookies, kein Tracking, kein Banner</b> — und ein Druck-Layout: Strg+P ergibt ein sauberes A4 mit deinen Infos.</li>
+      </ul>
     </div>
   </section>
 
@@ -176,10 +266,10 @@ section.block{margin-top:3.4rem;}
     <div class="card">
       <h2>Was das für dich heißt</h2>
       <ul>
-        <li><b>Deine Worte wirken wieder.</b> Wer dir heute neugierig folgt, landet auf Lorem-ipsum-Baustellen. Ab jetzt: eine fertige Seite, die deine Arbeit so ernst nimmt wie du.</li>
-        <li><b>Keine Technik-Last mehr:</b> kein WordPress, keine Plugin-Updates, keine Builder-Lizenz — eine schlanke Seite, die einfach läuft.</li>
+        <li><b>Deine Worte wirken wieder.</b> Wer dir heute neugierig folgt, landet auf Baustellen-Seiten. Ab jetzt: eine fertige Seite, die deine Arbeit so ernst nimmt wie du.</li>
+        <li><b>Keine Technik-Last mehr:</b> kein WordPress, keine Plugin-Updates, kein Theme-Builder — eine schlanke Seite ohne Wartungsbedarf, die einfach läuft.</li>
         <li><b>Schneller Vertrauensaufbau:</b> Menschen mit Scham-Themen brauchen Ruhe und Klarheit. Jede Sekunde Ladezeit und jedes kaputte Layout kostet leise Anfragen — deshalb bauen wir in Tagen, nicht in Monaten.</li>
-        <li><b>Zum Vergleich:</b> Klassische Agenturen rufen für so etwas vierstellige Beträge auf und brauchen Wochen. Unser Startangebot unten ist bewusst anders.</li>
+        <li><b>Zum Vergleich:</b> Klassische Agenturen rufen für so etwas vierstellige Beträge auf und brauchen Wochen bis Monate — und jede spätere Änderung kostet extra. Unser Startangebot unten ist bewusst anders.</li>
       </ul>
     </div>
   </section>
@@ -188,11 +278,11 @@ section.block{margin-top:3.4rem;}
     <div class="card">
       <h2>Was wir noch von dir brauchen</h2>
       <ul>
-        <li><b>2–3 Fotos von dir</b> — ein Porträt mit Blickkontakt fürs Herzstück, eins aus deiner Arbeit, eins draußen. (Und: Wer hat deine bisherigen Fotos gemacht? Wegen der Bildrechte.)</li>
-        <li><b>Impressums-Angaben:</b> Anschrift, E-Mail, Telefon — deine alte Seite verrät sie nicht.</li>
+        <li><b>Deine Fotos: erledigt ✓</b> — danke! Eine Frage bleibt: <b>Wer hat sie fotografiert?</b> Bei Profi-Shootings liegt das Nutzungsrecht oft beim Fotografen — das klären wir sauber, bevor die Seite offiziell live geht.</li>
+        <li><b>Impressums-Angaben:</b> Anschrift, E-Mail, Telefon — deine alte Seite verrät sie nicht, und ohne sie bleibt die Seite für Google unsichtbar geschaltet.</li>
         <li><b>Kurz bestätigen:</b> Stimmt „online &amp; in München / Regensburg"? Und ist info@franzheinrich.com die richtige Adresse fürs Formular?</li>
         <li><b>Preise &amp; Formate:</b> Einzelsession, 3er, 6er — magst du Preise nennen oder lieber „im Gespräch"?</li>
-        <li><b>Deine Klientenstimmen:</b> Luca, Nicole, Denise &amp; Lukas klingen wunderbar — mit ihrer schriftlichen Freigabe bauen wir sie groß ein.</li>
+        <li><b>Deine Klientenstimmen:</b> Luca, Nicole, Denise &amp; Lukas klingen wunderbar — mit ihrer schriftlichen Freigabe bauen wir sie (samt Porträts) groß ein.</li>
         <li><b>Retreats:</b> Gibt es kommende Termine (mit Lukas)? Dann bekommt der Bereich echtes Futter.</li>
         <li>… und dein <b>Okay zu den Texten</b> — alles ist neu geschrieben, nur aus Fakten deiner Seite. Du hast das letzte Wort.</li>
       </ul>
