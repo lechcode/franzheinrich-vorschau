@@ -1,0 +1,12 @@
+Hier gehört das Intro-Video hin.
+
+Dateiname: franz-intro.mp4
+Format:    MP4 (H.264 + AAC), max. ca. 10 MB, 60–90 Sekunden, mindestens 1280x720.
+
+Sobald die Datei hier liegt:
+in index.html den auskommentierten <video>-Block in der Lightbox einkommentieren
+und den Hinweis-Kasten darunter (.lightbox-note) löschen.
+
+Franz' beide Drive-Clips (IMG_0770.MOV mit 21 MB und IMG_0771.mov mit 62 MB)
+sind QuickTime/iPhone-Aufnahmen und im Browser nicht zuverlässig abspielbar —
+sie müssen vorher umgewandelt werden.
