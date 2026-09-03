@@ -29,20 +29,32 @@
 <a class="skip" href="#main">Zum Inhalt springen</a>
 
 <header class="nav solid" id="nav">
-  <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Franz Heinrich — zur Startseite"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#023047"/><text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#f7f1e6">FH</text><rect x="17" y="48" width="30" height="4" rx="2" fill="#e96a2c"/></svg><span class="name">Franz&nbsp;Heinrich</span></a>
-    <nav aria-label="Hauptmenü">
-      <ul class="nav-links">
-        <li><a href="index.html#weg">Dein Weg</a></li>
-        <li><a href="sessions.html">Sessions</a></li>
-        <li><a href="begleitung.html" aria-current="page">Begleitung</a></li>
-        <li><a href="index.html#ueber">Über mich</a></li>
+  <div class="wrap masthead">
+    <div class="mh-side mh-side-l">
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Menü links">
+      <ul class="mh-left">
+        <li><a class="navlink" href="index.html#weg">Dein Weg</a></li>
+        <li><a class="navlink" href="sessions.html">Sessions</a></li>
       </ul>
-    </nav>
-    <a class="btn btn-navy btn-arrow" href="index.html#kontakt">Kennenlern-Call</a>
-    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span><span></span><span></span>
-    </button>
+      </nav>
+    </div>
+    <a class="brand" href="index.html" aria-label="Franz Heinrich — zur Startseite">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#023047"/><text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#f7f1e6">FH</text><rect x="17" y="48" width="30" height="4" rx="2" fill="#e96a2c"/></svg>
+      <span class="name">Franz&nbsp;Heinrich</span>
+      <span class="rolle">Scham &amp; Emotionen</span>
+    </a>
+    <div class="mh-side mh-side-r">
+      <nav aria-label="Menü rechts">
+      <ul class="mh-right">
+        <li><a class="navlink" href="begleitung.html" aria-current="page">Begleitung</a></li>
+        <li><a class="navlink" href="index.html#ueber">Über mich</a></li>
+      </ul>
+      </nav>
+      <a class="btn btn-navy btn-arrow mh-cta" href="index.html#kontakt">Kennenlern-Call</a>
+    </div>
   </div>
 </header>
 
@@ -84,8 +96,8 @@
 <!-- ═══ FÜR WEN ═══ -->
 <section class="section deep">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow eyebrow--rule">Für wen</span>
+    <div class="head">
+      <span class="eyebrow">Für wen</span>
       <h2>Wenn Verstehen längst nicht mehr das Problem ist.</h2>
     </div>
     <div class="passt">
@@ -114,8 +126,8 @@
 <!-- ═══ WIE ES ABLÄUFT ═══ -->
 <section class="section">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow eyebrow--rule">Wie das abläuft</span>
+    <div class="head">
+      <span class="eyebrow">Wie das abläuft</span>
       <h2>Kein Curriculum. Ein Rahmen.</h2>
       <p class="lead">Ich arbeite nicht in Wochen 1 bis 8. Ich arbeite mit dem, was da ist —
         in einer Struktur, die trägt, wenn gerade nichts trägt.</p>
@@ -163,8 +175,8 @@
 <!-- ═══ RAHMEN ═══ -->
 <section class="section deep">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow eyebrow--rule">Rahmen</span>
+    <div class="head">
+      <span class="eyebrow">Rahmen</span>
       <h2>Was du wissen willst, bevor du fragst.</h2>
     </div>
     <div class="duo">

@@ -28,20 +28,32 @@
 <a class="skip" href="#main">Zum Inhalt springen</a>
 
 <header class="nav solid" id="nav">
-  <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Franz Heinrich — zur Startseite"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#023047"/><text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#f7f1e6">FH</text><rect x="17" y="48" width="30" height="4" rx="2" fill="#e96a2c"/></svg><span class="name">Franz&nbsp;Heinrich</span></a>
-    <nav aria-label="Hauptmenü">
-      <ul class="nav-links">
-        <li><a href="index.html#weg">Dein Weg</a></li>
-        <li><a href="sessions.html" aria-current="page">Sessions</a></li>
-        <li><a href="begleitung.html">Begleitung</a></li>
-        <li><a href="index.html#ueber">Über mich</a></li>
+  <div class="wrap masthead">
+    <div class="mh-side mh-side-l">
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Menü links">
+      <ul class="mh-left">
+        <li><a class="navlink" href="index.html#weg">Dein Weg</a></li>
+        <li><a class="navlink" href="sessions.html" aria-current="page">Sessions</a></li>
       </ul>
-    </nav>
-    <a class="btn btn-navy btn-arrow" href="index.html#kontakt">Kennenlern-Call</a>
-    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span><span></span><span></span>
-    </button>
+      </nav>
+    </div>
+    <a class="brand" href="index.html" aria-label="Franz Heinrich — zur Startseite">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#023047"/><text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#f7f1e6">FH</text><rect x="17" y="48" width="30" height="4" rx="2" fill="#e96a2c"/></svg>
+      <span class="name">Franz&nbsp;Heinrich</span>
+      <span class="rolle">Scham &amp; Emotionen</span>
+    </a>
+    <div class="mh-side mh-side-r">
+      <nav aria-label="Menü rechts">
+      <ul class="mh-right">
+        <li><a class="navlink" href="begleitung.html">Begleitung</a></li>
+        <li><a class="navlink" href="index.html#ueber">Über mich</a></li>
+      </ul>
+      </nav>
+      <a class="btn btn-navy btn-arrow mh-cta" href="index.html#kontakt">Kennenlern-Call</a>
+    </div>
   </div>
 </header>
 
@@ -80,7 +92,7 @@
              alt="Franz sitzt im Schneidersitz in einem Holzraum, warmes Abendlicht fällt herein">
       </figure>
       <div class="txt rise d1">
-        <span class="eyebrow eyebrow--rule">Schritt 1</span>
+        <span class="eyebrow">Schritt 1</span>
         <!-- HIER: Ankommen -->
         <h2 style="font-size:var(--t-3)">Ankommen, ohne Vortrag.</h2>
         <p class="mt-2 muted">Wir starten mit einem kurzen Gespräch. Was ist gerade da? Wo klemmt es?
@@ -100,7 +112,7 @@
              alt="Franz arbeitet mit beiden Händen am Kopf und Nacken eines liegenden Klienten">
       </figure>
       <div class="txt rise d1">
-        <span class="eyebrow eyebrow--rule">Schritt 2</span>
+        <span class="eyebrow">Schritt 2</span>
         <!-- HIER: Körperarbeit -->
         <h2 style="font-size:var(--t-3)">Der Teil, den dein Kopf nicht steuern kann.</h2>
         <p class="mt-2 muted">Du liegst. Dein Atem wird tiefer und schneller, als du ihn im Alltag
@@ -121,7 +133,7 @@
              alt="Franz steht am Strand, die Hand auf dem eigenen Herzen, und lächelt">
       </figure>
       <div class="txt rise d1">
-        <span class="eyebrow eyebrow--rule">Schritt 3</span>
+        <span class="eyebrow">Schritt 3</span>
         <!-- HIER: Integration -->
         <h2 style="font-size:var(--t-3)">Und danach lassen wir es landen.</h2>
         <p class="mt-2 muted">Am Ende sitzen wir wieder. Wir schauen an, was sich verändert hat —
@@ -138,8 +150,8 @@
 <!-- ═══ FORMATE ═══ -->
 <section class="section deep">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow eyebrow--rule">Formate</span>
+    <div class="head">
+      <span class="eyebrow">Formate</span>
       <h2>Online oder vor Ort — beides geht wirklich.</h2>
     </div>
     <div class="duo">
@@ -172,8 +184,8 @@
 <!-- ═══ PASST DAS? — Franz wollte das ausdrücklich pro Angebot ═══ -->
 <section class="section">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow eyebrow--rule">Ehrlich gesagt</span>
+    <div class="head">
+      <span class="eyebrow">Ehrlich gesagt</span>
       <h2>Eine Session mit mir ist …</h2>
     </div>
     <div class="duo">
@@ -203,8 +215,8 @@
 <!-- ═══ FAQ ═══ -->
 <section class="section">
   <div class="wrap-narrow">
-    <div class="sec-head">
-      <span class="eyebrow eyebrow--rule">Bevor du fragst</span>
+    <div class="head">
+      <span class="eyebrow">Bevor du fragst</span>
       <h2>Das wollen fast alle wissen.</h2>
     </div>
     <!-- HIER: Fragen und Antworten -->
