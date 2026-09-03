@@ -16,80 +16,92 @@
 <meta property="og:title" content="Franz, schau mal — deine neue Seite">
 <meta property="og:description" content="Nach unserem Gespräch neu gebaut: mit deinen Fotos, deinem Prozess und den Seiten, die dir gefallen.">
 <meta property="og:image" content="assets/vorschau/neu-desktop.jpg">
-<meta name="theme-color" content="#14100d">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2314100d'/%3E%3Ccircle cx='32' cy='34' r='13' fill='%23e2a04c'/%3E%3Cpath d='M8 46h48' stroke='%23b0543a' stroke-width='3'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#023047">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23023047'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23f7f1e6'%3EFH%3C/text%3E%3Crect x='17' y='48' width='30' height='4' rx='2' fill='%23e96a2c'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css">
 <style>
   /* Vorher/Nachher-Schieber */
-  .ba{position:relative;overflow:hidden;border:1px solid var(--rule-dark);background:var(--night-2);
-      aspect-ratio:760/897;max-width:760px;margin-inline:auto}
+  .ba{position:relative;overflow:hidden;border:2px solid var(--rule);border-radius:var(--radius);
+      background:var(--sand);aspect-ratio:760/897;max-width:760px;margin-inline:auto}
   .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .ba .neu{clip-path:inset(0 0 0 var(--pos,50%))}
-  .ba .marke{position:absolute;top:12px;font-size:var(--t--2);letter-spacing:.16em;text-transform:uppercase;
-             background:rgba(20,16,13,.82);color:var(--paper);padding:.45em .8em;pointer-events:none}
+  .ba .marke{position:absolute;top:12px;font-size:var(--t--2);font-weight:700;letter-spacing:.14em;
+             text-transform:uppercase;background:var(--navy);color:var(--cream);
+             padding:.45em .8em;border-radius:4px;pointer-events:none}
   .ba .m-alt{left:12px}
-  .ba .m-neu{right:12px;background:var(--sun);color:var(--night)}
-  .ba .griff{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:var(--sun);pointer-events:none}
+  .ba .m-neu{right:12px;background:var(--cream);color:var(--navy);box-shadow:inset 0 -3px 0 var(--orange)}
+  .ba .griff{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;background:var(--orange);pointer-events:none}
   .ba .griff::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-      width:44px;height:44px;border-radius:50%;background:var(--sun);color:var(--night);
-      display:grid;place-items:center;font-size:19px}
+      width:46px;height:46px;border-radius:50%;background:var(--orange);color:var(--navy);
+      display:grid;place-items:center;font-size:20px;font-weight:700}
   .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
 
-  .lcbook{background:var(--night-2);border-top:1px solid var(--rule-dark);padding-block:var(--sp-4);text-align:center}
-  .lcbook-eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--sun);
-      font-size:var(--t--2);font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:var(--sp-2)}
-  .lcbook h2{max-width:18ch;margin-inline:auto}
   .duo-2{grid-template-columns:repeat(2,minmax(0,1fr))}
   @media (max-width:660px){.duo-2{grid-template-columns:1fr}}
+
   .handys{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--sp-2);max-width:660px}
   .handys figure{margin:0}
-  .handys img{width:100%;border:1px solid var(--rule-dark)}
-  .handys figcaption{margin-top:.7em;font-size:var(--t--1);color:var(--paper-soft)}
-  .paper .handys figcaption{color:var(--ink-soft)}
-  .paper .handys figcaption strong{color:var(--ink)}
-  .paper .handys img{border-color:var(--rule)}
+  .handys img{width:100%;border:2px solid var(--rule);border-radius:var(--radius)}
+  .handys figcaption{margin-top:.7em;font-size:var(--t--1);color:var(--ink-soft)}
+  .deep .handys figcaption{color:var(--paper-soft)}
+  .deep .handys img{border-color:var(--rule-deep)}
 
-  .zahlen{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--rule-dark)}
-  .zahlen > div{background:var(--night-2);padding:var(--sp-2)}
-  .zahlen b{display:block;font-family:var(--display);font-weight:330;font-size:var(--t-3);color:var(--sun);line-height:1}
-  .zahlen p{margin-top:.6em;font-size:var(--t--1);color:var(--paper-soft)}
+  .zahlen{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;background:var(--rule)}
+  .deep .zahlen{background:var(--rule-deep)}
+  .zahlen > div{background:var(--cream);padding:var(--sp-2)}
+  .deep .zahlen > div{background:var(--navy)}
+  .zahlen b{display:block;font-family:var(--display);font-weight:400;font-size:var(--t-3);color:var(--orange-deep);line-height:1}
+  .deep .zahlen b{color:var(--orange)}
+  .zahlen p{margin-top:.6em;font-size:var(--t--1);color:var(--ink-soft)}
+  .deep .zahlen p{color:var(--paper-soft)}
 
   table.gegen{width:100%;border-collapse:collapse;font-size:var(--t--1)}
-  table.gegen th,table.gegen td{text-align:left;padding:var(--sp-1) .8em;border-bottom:1px solid var(--rule-dark);vertical-align:top}
-  table.gegen th{font-family:var(--body);font-weight:600;font-size:var(--t--2);letter-spacing:.16em;
-                 text-transform:uppercase;color:var(--paper-faint)}
-  table.gegen td:first-child{color:var(--paper);font-weight:500}
-  table.gegen td.alt{color:var(--paper-faint)}
-  table.gegen td.neu{color:var(--sun-soft)}
-  .paper table.gegen th{color:var(--ink-faint)}
-  .paper table.gegen th,.paper table.gegen td{border-bottom-color:var(--rule)}
-  .paper table.gegen td:first-child{color:var(--ink)}
-  .paper table.gegen td.alt{color:var(--ink-faint)}
-  .paper table.gegen td.neu{color:var(--clay);font-weight:500}
+  table.gegen th,table.gegen td{text-align:left;padding:var(--sp-1) .8em;border-bottom:2px solid var(--rule);vertical-align:top}
+  table.gegen th{font-family:var(--body);font-weight:700;font-size:var(--t--2);letter-spacing:.14em;
+                 text-transform:uppercase;color:var(--ink-faint)}
+  table.gegen td:first-child{color:var(--ink);font-weight:700}
+  table.gegen td.alt{color:var(--ink-faint)}
+  table.gegen td.neu{color:var(--orange-deep);font-weight:700}
+  .deep table.gegen th,.deep table.gegen td{border-bottom-color:var(--rule-deep)}
+  .deep table.gegen th{color:var(--paper-faint)}
+  .deep table.gegen td:first-child{color:var(--cream)}
+  .deep table.gegen td.alt{color:var(--paper-soft)}
+  .deep table.gegen td.neu{color:var(--sky)}
   .scrollx{overflow-x:auto}
 
-  .befund{display:grid;gap:var(--sp-2);border-top:1px solid var(--rule-dark)}
-  .befund > div{border-bottom:1px solid var(--rule-dark);padding-bottom:var(--sp-2)}
+  .befund{display:grid;gap:var(--sp-2);border-top:2px solid var(--rule)}
+  .deep .befund{border-top-color:var(--rule-deep)}
+  .befund > div{border-bottom:2px solid var(--rule);padding-bottom:var(--sp-2)}
+  .deep .befund > div{border-bottom-color:var(--rule-deep)}
   .befund h3{font-size:var(--t-1);margin-bottom:.5em}
-  .befund p{color:var(--paper-soft);font-size:var(--t--1);line-height:1.72;max-width:64ch}
+  .befund p{color:var(--ink-soft);font-size:var(--t--1);line-height:1.72;max-width:64ch}
+  .deep .befund p{color:var(--paper-soft)}
 
   .liste{list-style:none;display:grid;gap:var(--sp-1);margin-top:var(--sp-2)}
-  .liste li{position:relative;padding-left:1.7em;font-size:var(--t--1);line-height:1.7;color:var(--paper-soft)}
-  .liste li::before{content:"→";position:absolute;left:0;top:0;color:var(--sun)}
-  .liste strong{color:var(--paper)}
-  .paper .liste li,.liste-paper li{color:var(--ink-soft)}
-  .paper .liste li::before,.liste-paper li::before{color:var(--clay)}
-  .paper .liste strong,.liste-paper strong{color:var(--ink)}
+  .liste li{position:relative;padding-left:1.7em;font-size:var(--t--1);line-height:1.7;color:var(--ink-soft)}
+  .liste li::before{content:"→";position:absolute;left:0;top:0;color:var(--orange-deep);font-weight:700}
+  .liste strong{color:var(--ink)}
+  .deep .liste li{color:var(--paper-soft)}
+  .deep .liste li::before{color:var(--orange)}
+  .deep .liste strong{color:var(--cream)}
+
+  .lcbook{background:var(--navy);color:var(--paper);border-top:2px solid var(--rule-deep);
+          padding-block:var(--sp-4);text-align:center}
+  .lcbook h2{color:var(--cream);max-width:18ch;margin-inline:auto}
+  .lcbook .lead{color:var(--paper-soft)}
+  .lcbook-eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--sky);
+      font-size:var(--t--2);font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:var(--sp-2)}
 </style>
+
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 
 <header class="nav solid">
   <div class="wrap">
-    <span class="brand">Lechcode <b>·</b> für Franz</span>
-    <a class="btn btn-sun btn-arrow" href="index.html">Zur neuen Seite</a>
+    <span class="brand"><span class="name">Lechcode</span> <span class="small muted">für Franz</span></span>
+    <a class="btn btn-navy btn-arrow" href="index.html">Zur neuen Seite</a>
   </div>
 </header>
 
@@ -98,18 +110,18 @@
 <!-- ═══ HERO ═══ -->
 <section class="pagehead">
   <div class="wrap">
-    <span class="eyebrow eyebrow--rule">Runde 3 · nach unserem Gespräch</span>
+    <span class="eyebrow eyebrow--rule">Nach dem Gespräch, deiner Sprachnachricht und deinem Brand Kit</span>
     <h1>Franz, wir haben nochmal bei <em>null</em> angefangen.</h1>
     <p class="lead">Du hast im Call gesagt, dass viele dieser Seiten „einfach nach Klaus aussehen".
-      Du hattest recht. Also haben wir den alten Entwurf nicht poliert, sondern weggeworfen —
-      und mit deinem Material, deinem Prozess und den drei Seiten, die dir gefallen,
-      etwas Neues gebaut.</p>
-    <p class="mt-2"><a class="btn btn-sun btn-arrow" href="index.html">Deine neue Seite ansehen</a></p>
+      Du hattest recht. Also haben wir den alten Entwurf nicht poliert, sondern weggeworfen.
+      Was jetzt hier steht, kommt aus deinem Kopf: dein Brand Kit, deine Sprachnachricht,
+      deine Fotos, dein Verkaufsprozess und die drei Seiten, die dir gefallen.</p>
+    <p class="mt-2"><a class="btn btn-orange btn-arrow" href="index.html">Deine neue Seite ansehen</a></p>
   </div>
 </section>
 
 <!-- ═══ WAS WIR MITGENOMMEN HABEN ═══ -->
-<section class="section paper">
+<section class="section deep">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow eyebrow--rule">Dein Input</span>
@@ -128,6 +140,13 @@
           Startseite, dazu zwei Seiten mit echter Tiefe, und Bilder, die beim Scrollen auftauchen.
           Von Hannah: der Reiter „So kannst du mit mir arbeiten", ein „Kostenlos"-Bereich
           und das News-Banner ganz oben.</p>
+      </div>
+      <div>
+        <h3>Dein Brand Kit</h3>
+        <p>Navy, Warm Orange und Cream, dazu DM Serif Display und Manrope — genau so, wie du es
+          geschickt hast. Die Seite erfindet keine eigene Optik, sie setzt deine um.
+          Nur eine Sache haben wir angepasst: Orange ist bei kleiner Schrift schwer zu lesen,
+          deshalb trägt es Flächen und Buttons, und der kleine Text bleibt Navy.</p>
       </div>
       <div>
         <h3>Deine Fotos</h3>
@@ -166,7 +185,7 @@
 </section>
 
 <!-- ═══ HANDY ═══ -->
-<section class="section paper">
+<section class="section deep">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow eyebrow--rule">Und am Handy?</span>
@@ -184,7 +203,7 @@
         <figcaption><strong>Neu</strong> — dein Foto, alles lesbar, und ein klarer Weg zum Kennenlern-Call.</figcaption>
       </figure>
     </div>
-    <p class="small mt-3" style="color:var(--ink-soft)">Über 60&nbsp;% aller Website-Besuche kommen
+    <p class="small mt-3 muted">Über 60&nbsp;% aller Website-Besuche kommen
       heute vom Smartphone (StatCounter).</p>
   </div>
 </section>
@@ -198,18 +217,18 @@
     </div>
     <div class="zahlen">
       <div><b>0,3 MB</b><p>lädt beim ersten Bildschirm. Der Rest kommt erst, wenn du weiterscrollst.</p></div>
-      <div><b>0,9 MB</b><p>die komplette Startseite mit allen acht Fotos — bisher waren es 2,2 MB.</p></div>
+      <div><b>0,7 MB</b><p>die komplette Startseite mit allen acht Fotos — bisher waren es 2,2 MB.</p></div>
       <div><b>14</b><p>Anfragen pro Aufruf, alle an deinen eigenen Server. Bisher: 31 an fünf Server, davon vier fremde.</p></div>
       <div><b>0</b><p>Cookies, kein Tracking, keine Verbindung zu Google — deshalb auch kein Cookie-Banner.</p></div>
     </div>
-    <p class="small mt-2" style="color:var(--paper-faint)">Eigene Messung am 03.09.2026
+    <p class="small muted mt-2">Eigene Messung am 03.09.2026
       (übertragene Dateigrößen und Anfragen). Die Lighthouse-Werte messen wir neu, sobald die Seite
       auf echtem Hosting liegt — der Vorgänger-Entwurf lag dort bei 100/100.</p>
   </div>
 </section>
 
 <!-- ═══ AUF EINEN BLICK ═══ -->
-<section class="section paper">
+<section class="section deep">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow eyebrow--rule">Auf einen Blick</span>
@@ -224,7 +243,7 @@
           <tr><th scope="col">&nbsp;</th><th scope="col">Bisher</th><th scope="col">Neu</th></tr>
         </thead>
         <tbody>
-          <tr><td>Seitengewicht</td><td class="alt">2,2 MB</td><td class="neu">0,9 MB — mit allen Fotos</td></tr>
+          <tr><td>Seitengewicht</td><td class="alt">2,2 MB</td><td class="neu">0,7 MB — mit allen Fotos</td></tr>
           <tr><td>Mobiltauglich</td><td class="alt">Nein — Überschrift abgeschnitten, Menü bricht</td><td class="neu">Ja — geprüft von 320 bis 1920 px</td></tr>
           <tr><td>Server-Anfragen</td><td class="alt">31 — an 5 Server, davon 4 fremde</td><td class="neu">14 — alle an deinen eigenen</td></tr>
           <tr><td>Inhalt</td><td class="alt">4 von 6 Unterseiten waren Lorem-ipsum-Baustellen</td><td class="neu">Startseite plus zwei fertige Tiefen-Seiten, jede Zeile echt</td></tr>
@@ -288,34 +307,47 @@
 </section>
 
 <!-- ═══ WAS DIE NEUE SEITE KANN ═══ -->
-<section class="section paper">
+<section class="section deep">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow eyebrow--rule">Was neu ist</span>
       <h2>Und warum wir es so gebaut haben.</h2>
     </div>
-    <ul class="liste liste-paper">
-      <li><strong>Dunkel statt cremig.</strong> Deine Fotos sind fast alle goldenes Abendlicht.
-        Auf dunklem Grund leuchten sie — auf hellem wirkten sie blass. Das ist der Hauptgrund,
-        warum die Seite jetzt völlig anders aussieht als der erste Entwurf.</li>
-      <li><strong>Andere Schrift, andere Handschrift.</strong> Petrona für die Überschriften:
-        eine Serifenschrift mit kräftigen, leicht rauen Formen und einer schön kalligrafischen
-        Kursiven — warm, nicht steril. Dazu Chivo als geerdete Textschrift.
-        Beide liegen auf deinem Hosting, nicht bei Google.</li>
+    <ul class="liste">
+      <li><strong>Dein Brand Kit ist das Gesetz.</strong> Navy, Warm Orange, Cream, Warm Sand,
+        Soft Blue — genau deine Werte, nichts dazuerfunden. Orange trägt die wichtigsten Buttons,
+        Navy den Rest; kleiner Text bleibt immer Navy auf Cream, damit alles gut lesbar ist.</li>
+      <li><strong>DM Serif Display und Manrope</strong>, beide aus deinem Kit und beide auf deinem
+        eigenen Hosting — es geht keine Anfrage an Google.</li>
+      <li><strong>Das Video steht ganz oben.</strong> Du wolltest keinen Text als Erstes, sondern
+        sehen, wie du Raum hältst. Genau so ist es gebaut: Video zuerst, Aussage darunter.
+        Ein zweiter Video-Platz sitzt bei „Über mich" für deine fünf Minuten über dich.</li>
       <li><strong>Dein Weg als Herzstück.</strong> Drei nummerierte Schritte statt Paket-Kacheln.
         Wer oben einsteigt, weiß nach zwanzig Sekunden, wie eine Zusammenarbeit mit dir anfängt.</li>
       <li><strong>Bilder tauchen auf.</strong> Genau der Effekt, den du an Ashleys Sessions-Seite
-        magst — Bild und Text kommen leicht versetzt herein, nicht gleichzeitig.
-        Wer „reduzierte Bewegung" eingestellt hat, bekommt alles ruhig.</li>
+        magst — Bild und Text kommen leicht versetzt herein, nicht gleichzeitig. Wer „reduzierte
+        Bewegung" eingestellt hat, bekommt alles ruhig.</li>
+      <li><strong>Kostenlos &amp; Shop in einem Bereich.</strong> Podcast, Instagram und das kleine
+        Scham-Handbuch als Newsletter-Geschenk; darunter drei Karten für Morgen-Ritual,
+        Meditations-Workshop und Self-Study. Bezahlt wird später bei deinem Anbieter, wir tragen
+        nur den Link ein.</li>
+      <li><strong>Deine eigene Link-Seite</strong> statt Wonderlink oder Linktree:
+        <em>franzheinrich.com/links</em>. Sieht aus wie deine Marke, kostet nichts und schickt
+        alle Klicks auf deine eigene Domain.</li>
+      <li><strong>Ein Zeichen aus deinen Initialen.</strong> FH in Navy und Orange — als Logo im
+        Menü und als Symbol im Browser-Tab. Genau das, was du vorgeschlagen hast; ein grosses
+        Logo-Projekt braucht es dafür nicht.</li>
+      <li><strong>Gegen den Bot-Spam.</strong> Deine E-Mail-Adresse steht nicht mehr im Quelltext,
+        sondern wird erst im Browser zusammengesetzt. Adress-Sammler laufen ins Leere,
+        Menschen sehen sie ganz normal.</li>
+      <li><strong>Auch AGB sind vorbereitet</strong>, nicht nur Impressum und Datenschutz —
+        du hattest sie ausdrücklich angefragt.</li>
       <li><strong>Zwei Seiten mit Tiefe.</strong> <em>Sessions</em> erklärt Schritt für Schritt,
-        was in einer Session passiert, inklusive der sechs Fragen, die sich deine Zielgruppe
-        wirklich stellt. <em>Einzelbegleitung</em> beschreibt den längeren Weg — bewusst ohne
-        Preisliste, weil du das im Call klärst.</li>
+        was in einer Session passiert, inklusive „ist was für dich, wenn …" und „nichts für dich,
+        wenn …". <em>Einzelbegleitung</em> beschreibt den längeren Weg — bewusst ohne Preisliste,
+        weil du das im Call klärst.</li>
       <li><strong>Verantwortung eingebaut.</strong> Ehrliche „Für wen nicht"-Box, Krisen-Hinweis
         mit Telefonseelsorge und der klare Satz, dass Coaching keine Psychotherapie ersetzt.</li>
-      <li><strong>Vorbereitet für deinen Shop.</strong> Workshops und digitale Angebote bekommen
-        Karten in deinem Design; der Bezahlvorgang läuft später über deinen Anbieter — wir müssen
-        nur den Link eintragen.</li>
       <li><strong>Änderbar per Sprachnachricht.</strong> Die Seite ist in klar benannte Blöcke
         gegliedert, damit Klaus deine Änderungen sauber trifft.</li>
     </ul>
@@ -334,13 +366,24 @@
     <ul class="liste">
       <li><strong>Deine Texte.</strong> Jede Stelle ist einzeln austauschbar. Schick sie, wie es
         dir passt: Sprachnachricht, Notizen, Stichpunkte.</li>
-      <li><strong>Ein Video</strong> als MP4, rund 60–90 Sekunden. Der Platz oben wartet.</li>
+      <li><strong>Zwei Videos</strong> als MP4, je rund 60–90 Sekunden: das Intro ganz oben und deine
+        fünf Minuten bei „Über mich". Beide Plätze warten. Deine zwei Drive-Clips sind
+        iPhone-Aufnahmen mit 21 und 62 MB und im Browser nicht abspielbar — die müssen wir
+        umwandeln oder du schneidest gleich eine Web-Fassung.</li>
       <li><strong>Der Preis der Schnupper-Session</strong> — sie ist bezahlt, steht aber gerade
         ohne Zahl da. Nennen oder bewusst offen lassen?</li>
       <li><strong>Deine Orte.</strong> München und Regensburg stehen noch von der alten Seite drin.
         Stimmt das, jetzt wo du im Winter in Koh Phangan bist?</li>
       <li><strong>Echte Stimmen</strong> von Menschen, die mit dir gearbeitet haben — plus deren Okay.</li>
-      <li><strong>Termine und Links</strong> für Workshops, Retreats und deinen Shop.</li>
+      <li><strong>Termine und Links</strong> für Workshops, Retreats und deinen Shop — plus die Preise
+        für Morgen-Ritual, Meditations-Workshop und Self-Study.</li>
+      <li><strong>Dein Kalender-Link</strong> (Calendly, Google-Terminplaner …) und deine
+        <strong>WhatsApp-Nummer</strong>. Solange die fehlen, führen beide Buttons zum Formular.</li>
+      <li><strong>Der Newsletter-Anbieter</strong> — und das kleine Scham-Handbuch als PDF, das
+        Menschen dafür bekommen.</li>
+      <li><strong>Deine Google-Rezensionen.</strong> Die lassen sich einbinden; weil dabei aber
+        Daten zu Google fliessen, klären wir vorher, ob wir sie live laden oder regelmässig
+        abholen und selbst anzeigen. Cookiefrei bleibt die Seite in beiden Fällen.</li>
       <li><strong>Wer hat die Fotos gemacht?</strong> Bei Profi-Shootings liegt das Nutzungsrecht
         oft beim Fotografen — das klären wir, bevor die Seite offiziell live geht.</li>
       <li><strong>Impressums-Angaben</strong> — Anschrift, E-Mail, Telefon, USt-Status. Ohne sie
@@ -358,8 +401,8 @@
     <p class="lead">Danach telefonieren wir und gehen zusammen durch, was bleibt, was fliegt und
       was noch fehlt. Wie besprochen: Die Rechnung kommt erst, wenn der Entwurf steht und du
       damit zufrieden bist.</p>
-    <a class="btn btn-sun btn-arrow" href="index.html">Deine neue Seite ansehen</a>
-    <p class="small mt-2" style="color:var(--paper-faint)">Lenny &amp; Michael · Lechcode, Landsberg am Lech</p>
+    <a class="btn btn-orange btn-arrow" href="index.html">Deine neue Seite ansehen</a>
+    <p class="small muted mt-2">Lenny &amp; Michael · Lechcode, Landsberg am Lech</p>
   </div>
 </section>
 </main>
@@ -368,7 +411,7 @@
      Übernommen aus Lennys Commit 5a03613 (16.06.2026): derselbe Kalender-Link,
      nur in die Bildsprache der neuen Seite übersetzt. Cookiefrei — der Kalender
      öffnet in einem neuen Tab. -->
-<section class="lcbook" aria-labelledby="lcbook-h">
+<section class="lcbook deep" aria-labelledby="lcbook-h">
   <div class="wrap-narrow center">
     <span class="lcbook-eyebrow">
       <svg viewBox="0 0 64 64" fill="none" aria-hidden="true" width="26" height="26"><circle cx="32" cy="32" r="22.5" stroke="currentColor" stroke-width="3.4"/><path d="M15 36 C22 28 29 28 33 34 C37 40 44 40 50 31" stroke="currentColor" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="44" cy="18.5" r="3.4" fill="currentColor"/></svg>
@@ -377,8 +420,8 @@
     <h2 id="lcbook-h">Lust auf ein kurzes Gespräch, Franz?</h2>
     <p class="lead mt-2" style="margin-inline:auto;text-align:center">Such dir einfach einen Termin aus — rund 30 Minuten,
       ganz unverbindlich. Wir gehen zusammen durch die Seite, und du fragst, was du willst.</p>
-    <p class="mt-2"><a class="btn btn-sun btn-arrow" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1vusFYCV6O45i109a0J5ruEFtWCT7iFsq5t4Mb2KvQmNhdkMtlddml9dx5V2jButjV2SUGapFg?gv=true" target="_blank" rel="noopener noreferrer">Termin aussuchen</a></p>
-    <p class="small mt-2" style="color:var(--paper-faint);max-width:46ch;margin-inline:auto">Öffnet unseren Kalender in einem neuen Tab.
+    <p class="mt-2"><a class="btn btn-orange btn-arrow" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1vusFYCV6O45i109a0J5ruEFtWCT7iFsq5t4Mb2KvQmNhdkMtlddml9dx5V2jButjV2SUGapFg?gv=true" target="_blank" rel="noopener noreferrer">Termin aussuchen</a></p>
+    <p class="small mt-2" class="small muted" style="max-width:46ch;margin-inline:auto">Öffnet unseren Kalender in einem neuen Tab.
       Diese Seite bleibt komplett cookiefrei.</p>
   </div>
 </section>
