@@ -2,21 +2,19 @@
 <!--
   ╔══════════════════════════════════════════════════════════════════════════╗
   ║  FRANZ HEINRICH — Scham-Coaching & Neo Emotional Release                  ║
-  ║  Unverbindliche DESIGN-VORSCHAU · Lechcode · Stand 03.09.2026             ║
+  ║  Unverbindliche DESIGN-VORSCHAU · Lechcode · Stand 05.09.2026             ║
   ╠══════════════════════════════════════════════════════════════════════════╣
-  ║  RUNDE 5 — neuer Seitenaufbau: alles läuft auf einer Mittelachse.        ║
-  ║  Masthead (Menü | Name | Menü), zentrierte Sektions-Köpfe, Angebote als  ║
-  ║  gestapelte Blätter statt Karten-Raster, Ornamente und Laufband als      ║
-  ║  Zäsuren. Farben und Schriften bleiben Franz' Brand Kit.                  ║
-  ║                                                                          ║
-  ║  Alle Texte sind VORSCHLÄGE — Franz schreibt sie selbst.                  ║
-  ║  Jede austauschbare Stelle ist mit „HIER:" markiert.                      ║
+  ║  RUNDE 6 — Aushängeschild. Mobile first, weniger ist mehr.                ║
+  ║  · Hero: Video-Bühne, Text darüber (Vorbild thewellpaidpriestess.com)    ║
+  ║  · jede Sektion trägt eine Idee und bekommt einen ganzen Bildschirm       ║
+  ║  · Angebote als volle Bild/Text-Sektionen, Stimmen als Statement-Bänder   ║
+  ║  · Texte halbiert — Franz schreibt sie ohnehin selbst (HIER:-Marken)      ║
   ╚══════════════════════════════════════════════════════════════════════════╝
 -->
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add('js');if(location.search.indexOf('foto')>-1)document.documentElement.classList.add('foto');</script>
 <!-- ENTFERNEN, sobald Franz live gehen will (Impressum, Datenschutz, AGB sind da) -->
 <meta name="robots" content="noindex, nofollow">
@@ -31,9 +29,10 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23023047'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23f7f1e6'%3EFH%3C/text%3E%3Crect x='17' y='48' width='30' height='4' rx='2' fill='%23e96a2c'/%3E%3C/svg%3E">
 <link rel="preload" href="assets/fonts/dmserifdisplay-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/manrope-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/jpeg"
-      imagesrcset="assets/img/gruppe-wiese-700.jpg 700w, assets/img/gruppe-wiese-1100.jpg 1100w, assets/img/gruppe-wiese-1250.jpg 1250w"
-      imagesizes="(max-width: 1180px) 94vw, 1120px">
+<link rel="preload" as="image" type="image/jpeg" media="(max-width: 899px)"
+      imagesrcset="assets/img/hero-licht-m-720.jpg 720w, assets/img/hero-licht-m-1080.jpg 1080w" imagesizes="100vw">
+<link rel="preload" as="image" type="image/jpeg" media="(min-width: 900px)"
+      imagesrcset="assets/img/hero-licht-d-1200.jpg 1200w, assets/img/hero-licht-d-1800.jpg 1800w, assets/img/hero-licht-d-2400.jpg 2400w" imagesizes="100vw">
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css">
 <script type="application/ld+json">
@@ -53,14 +52,8 @@
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 
-<!-- ═══ ANKÜNDIGUNGS-BANNER — HIER: aktuelle News, Termin oder Aktion ═══ -->
-<div class="announce" id="announce">
-  <span>Neue Termine für Workshops &amp; Retreats sind in Arbeit — <a href="#newsletter">trag dich ein, dann erfährst du sie zuerst.</a></span>
-  <button class="announce-x" id="announce-x" aria-label="Hinweis schließen">&times;</button>
-</div>
-
-<!-- ═══ MASTHEAD: Menü links · Name in der Mitte · Menü rechts ═══ -->
-<header class="nav" id="nav">
+<!-- ═══ MASTHEAD — liegt über dem Video, wird nach dem Hero fest und hell ═══ -->
+<header class="nav fixed over" id="nav">
   <div class="wrap masthead">
     <div class="mh-side mh-side-l">
       <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
@@ -68,19 +61,17 @@
       </button>
       <nav aria-label="Menü links">
       <ul class="mh-left">
+        <li><a class="navlink" href="#arbeiten">Angebote</a></li>
         <li><a class="navlink" href="#weg">Dein Weg</a></li>
-        <li><a class="navlink" href="#arbeiten">So arbeiten wir</a></li>
       </ul>
       </nav>
     </div>
 
     <a class="brand" href="#top" aria-label="Franz Heinrich — zum Seitenanfang">
-      <!-- HIER: Logo. Bis es ein richtiges gibt, tragen die Initialen in den
-           Brand-Farben die Marke — genau wie von Franz vorgeschlagen. -->
+      <!-- HIER: Logo. Bis es ein richtiges gibt, tragen die Initialen die Marke. -->
       <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
-        <rect width="64" height="64" rx="10" fill="#023047"/>
-        <text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#f7f1e6">FH</text>
-        <rect x="17" y="48" width="30" height="4" rx="2" fill="#e96a2c"/>
+        <rect width="64" height="64" rx="10" fill="#e96a2c"/>
+        <text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#023047">FH</text>
       </svg>
       <span class="name">Franz&nbsp;Heinrich</span>
       <span class="rolle">Scham &amp; Emotionen</span>
@@ -90,7 +81,7 @@
       <nav aria-label="Menü rechts">
       <ul class="mh-right">
         <li><a class="navlink" href="#ueber">Über mich</a></li>
-        <li><a class="navlink" href="#kostenlos">Kostenlos &amp; Shop</a></li>
+        <li><a class="navlink" href="#kostenlos">Kostenlos</a></li>
       </ul>
       </nav>
       <a class="btn btn-navy btn-arrow mh-cta" href="#kontakt">Kennenlern-Call</a>
@@ -99,82 +90,79 @@
 </header>
 
 <div class="mobile-menu" id="mobile-menu">
+  <a href="#arbeiten">Angebote</a>
   <a href="#weg">Dein Weg</a>
-  <a href="#arbeiten">So arbeiten wir</a>
   <a href="#ueber">Über mich</a>
-  <a href="#kostenlos">Kostenlos &amp; Shop</a>
-  <a href="#kontakt">Kennenlern-Call</a>
+  <a href="#kostenlos">Kostenlos</a>
+  <a class="btn btn-orange btn-arrow" href="#kontakt">Kennenlern-Call</a>
 </div>
 
 <main id="main">
 <span id="top"></span>
 
-<!-- ═══ 1 · HERO — Video zuerst, Aussage zentriert darunter ═══
-     Franz in der Sprachnachricht: „ganz oben, wo nicht irgendein Text ist,
-     sondern ein Video über wie ich Raum halte, 1:1 und in Gruppen."
-     HIER: Sobald eine web-taugliche MP4 vorliegt (H.264, ≤ 10 MB), unter
-     assets/video/franz-intro.mp4 ablegen — dann spielt die Lightbox sie ab. -->
-<section class="hero">
-  <div class="wrap">
-    <p class="hero-kicker">
-      <!-- HIER: die drei Fakten über dem Video -->
-      <span>Scham-Coaching</span>
-      <span>Neo Emotional Release</span>
-      <span>1:1 · Workshops · Retreats</span>
-    </p>
+<!-- ═══ 1 · HERO — Video-Bühne, der Text liegt darüber ═══
+     HIER: Sobald eine web-taugliche MP4 vorliegt (H.264, ≤ 10 MB, ohne Ton,
+     60–90 s), unter assets/video/franz-hero.mp4 ablegen und das video-Element
+     unten einkommentieren — es läuft dann stumm im Hintergrund. Der Play-Knopf
+     öffnet die Fassung mit Ton (assets/video/franz-intro.mp4) in der Lightbox. -->
+<section class="hero" id="hero">
+  <div class="hero-media" aria-hidden="true">
+    <picture>
+      <source media="(max-width: 899px)"
+              srcset="assets/img/hero-licht-m-720.jpg 720w, assets/img/hero-licht-m-1080.jpg 1080w" sizes="100vw">
+      <img src="assets/img/hero-licht-d-1800.jpg"
+           srcset="assets/img/hero-licht-d-1200.jpg 1200w, assets/img/hero-licht-d-1800.jpg 1800w, assets/img/hero-licht-d-2400.jpg 2400w"
+           sizes="100vw" width="1800" height="1011" fetchpriority="high" alt="">
+    </picture>
+    <!--
+    <video autoplay muted loop playsinline poster="assets/img/hero-licht-d-1800.jpg">
+      <source src="assets/video/franz-hero.mp4" type="video/mp4">
+    </video>
+    -->
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
 
-    <div class="videostage rise-img" id="hero-video">
-      <img src="assets/img/gruppe-wiese-1250.jpg"
-           srcset="assets/img/gruppe-wiese-700.jpg 700w, assets/img/gruppe-wiese-1100.jpg 1100w, assets/img/gruppe-wiese-1250.jpg 1250w, assets/img/gruppe-wiese-1600.jpg 1600w"
-           sizes="(max-width: 1180px) 94vw, 1120px"
-           width="1250" height="833" fetchpriority="high"
-           alt="Franz sitzt mit einer Gruppe im Kreis auf einer Wiese, alle mit den Händen auf dem Herzen">
-      <button class="video-play" id="video-play" type="button">
-        <span class="disc" aria-hidden="true">
-          <svg width="26" height="30" viewBox="0 0 20 24" fill="currentColor"><path d="M0 0l20 12L0 24z"/></svg>
-        </span>
-        <span class="cap">Sieh, wie ich Raum halte — 1:1 und in der Gruppe</span>
-      </button>
-    </div>
-
+  <div class="hero-inner">
+    <button class="hero-play video-open in-up" type="button" aria-label="Video abspielen: Wie ich Raum halte" style="--d:0s">
+      <svg width="22" height="26" viewBox="0 0 20 24" fill="currentColor" aria-hidden="true"><path d="M0 0l20 12L0 24z"/></svg>
+    </button>
+    <!-- HIER: Eyebrow -->
+    <span class="eyebrow in-up" style="--d:.1s">Scham-Coaching · Neo Emotional Release</span>
     <!-- HIER: Überschrift. Das kursive Wort ist der Akzent. -->
-    <h1 class="rise">Da ist nichts an dir, das <em>weg</em> muss.</h1>
-    <!-- HIER: Einleitung -->
-    <p class="lead rise d1">Ich bin Franz. Ich arbeite mit dem Gefühl, über das kaum jemand spricht:
-      Scham. Nicht, indem wir sie zerreden — sondern indem dein Körper endlich zeigen darf,
-      was er jahrelang für dich gehalten hat.</p>
-    <div class="btn-row rise d2">
-      <a class="btn btn-orange btn-arrow" href="#kontakt">Kennenlern-Call buchen</a>
-      <a class="btn btn-line" href="#weg">Wie das abläuft</a>
+    <h1 class="in-up" style="--d:.25s">Da ist nichts an dir, das <em>weg</em> muss.</h1>
+    <!-- HIER: ein Satz, mehr nicht -->
+    <p class="hero-sub in-up" style="--d:.4s">Körperarbeit für alles, was du zu lange
+      runtergeschluckt hast. Einzeln, in Workshops, auf Retreats.</p>
+    <p class="hero-id in-up" style="--d:.5s">
+      <img src="assets/img/franz-avatar-160.jpg" srcset="assets/img/franz-avatar-320.jpg 2x" width="44" height="44" alt="">
+      <span><b>Franz Heinrich</b>Coach für Scham &amp; Emotionen</span>
+    </p>
+    <div class="btn-row hero-cta in-up" style="--d:.6s">
+      <a class="btn btn-orange btn-arrow" href="#kontakt">Kennenlern-Call — kostenlos</a>
     </div>
+    <a class="tlink in-up" href="#arbeiten" style="--d:.7s"><b>So arbeite ich <span>→</span></b></a>
   </div>
+  <span class="hero-scroll" aria-hidden="true"></span>
 </section>
 
-<!-- ═══ 2 · KENNST DU DAS? ═══ -->
-<section class="section deep">
+<!-- ═══ 2 · STATEMENT — Kennst du das? ═══ -->
+<section class="section deep statement">
   <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Kennst du das?</span>
-      <h2>Der Kampf, den von außen keiner sieht.</h2>
-    </div>
-    <!-- HIER: die Fragen. Bewusst als Folge einzelner Sätze in der Mitte,
-         nicht als Liste — man liest sie eine nach der anderen. -->
-    <div class="fragen measure-narrow">
-      <p class="rise">Du hast verstanden, warum du so bist, wie du bist — und trotzdem ändert sich nichts.</p>
-      <p class="rise d1">Es läuft. Von außen. Innen bist du taub, angespannt oder einfach müde.</p>
-      <p class="rise d2">Da ist eine Stimme, die alles kommentiert und zuverlässig einen Fehler findet.</p>
-      <p class="rise">Du zeigst dich genau so weit, wie es sicher ist. Keinen Millimeter weiter.</p>
-      <p class="rise d1">Und irgendwo drunter der Satz: „Mit mir stimmt grundsätzlich was nicht."</p>
-    </div>
+    <span class="eyebrow rv">Kennst du das?</span>
+    <!-- HIER: der Satz, der trifft -->
+    <h2 class="rv" style="--d:.1s">Du hast alles verstanden.<br>Und trotzdem ändert sich nichts.</h2>
+    <ul class="saetze">
+      <li class="rv" style="--d:.2s">Außen läuft es. Innen bist du taub oder einfach müde.</li>
+      <li class="rv" style="--d:.3s">Du zeigst dich genau so weit, wie es sicher ist.</li>
+      <li class="rv" style="--d:.4s">Und irgendwo drunter: „Mit mir stimmt was nicht."</li>
+    </ul>
     <!-- HIER: der Dreh -->
-    <p class="dreh rise">Nichts davon ist Schwäche. Das ist Scham — und sie macht nur ihren alten Job:
-      dich schützen, damit du dazugehörst. Sie hat ihn lange gut gemacht.
-      Sie darf jetzt etwas Neues lernen.</p>
+    <p class="dreh rv" style="--d:.5s">Das ist keine Schwäche. Das ist Scham — und sie tut nur ihren alten Job:
+      dich schützen. Sie darf jetzt etwas Neues lernen.</p>
   </div>
 </section>
 
-<!-- ═══ 3 · LAUFBAND ═══
-     HIER: dein Satz, der überall hängen bleiben soll. -->
+<!-- ═══ 3 · LAUFBAND — HIER: dein Satz ═══ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
     <span>Du bist nicht zu viel</span><span>Du warst nur zu lange leise</span><span>UnVerschämt</span>
@@ -182,314 +170,197 @@
   </div>
 </div>
 
-<!-- ═══ 4 · DEIN WEG (01 / 02 / 03) ═══ -->
-<section class="section" id="weg">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Dein Weg mit mir</span>
-      <h2>Drei Schritte. Kein Abo, kein Trichter.</h2>
-      <p class="lead">Wir fangen klein an und schauen erst danach, was Sinn ergibt.
-        Du entscheidest nach jedem Schritt neu — auch dagegen.</p>
-    </div>
-
-    <div class="weg">
-      <!-- HIER: Schritt 1 -->
-      <article class="weg-step rise">
-        <span class="weg-num">01</span>
-        <h3>Kennenlern-Call</h3>
-        <p>30 Minuten, in denen wir uns anschauen, was gerade los ist — und ob wir zusammenpassen.
-          Kein Konzept, kein Fragebogen. Wenn ich nicht die richtige Adresse bin, sage ich dir das
-          und meistens auch, wer es sein könnte.</p>
-        <div class="weg-side">
-          <span class="chip chip-hot">Kostenlos · 30 Min</span>
-          <a class="tlink" href="#kontakt">Termin aussuchen <span>→</span></a>
-        </div>
-      </article>
-
-      <!-- HIER: Schritt 2 -->
-      <article class="weg-step rise">
-        <span class="weg-num">02</span>
-        <h3>Schnupper-Session</h3>
-        <p>Eine vollständige Session mit Neo Emotional Release — online oder vor Ort.
-          Kein Probeabo, sondern echte Arbeit: Atem, Druckpunkte, meine Stimme, dein Tempo.
-          Danach weißt du aus dem Körper heraus, was diese Arbeit mit dir macht.</p>
-        <div class="weg-side">
-          <!-- HIER: Preis der Schnupper-Session -->
-          <span class="chip">Erste Session</span>
-          <a class="tlink" href="sessions.html">Was da passiert <span>→</span></a>
-        </div>
-      </article>
-
-      <!-- HIER: Schritt 3 -->
-      <article class="weg-step rise">
-        <span class="weg-num">03</span>
-        <h3>Deine Begleitung</h3>
-        <p>Wenn wir beide Lust darauf haben, gehen wir weiter — über mehrere Monate,
-          in einem Rahmen, den wir gemeinsam bauen. Länge, Frequenz und Investition legen wir
-          erst fest, wenn wir wissen, worum es bei dir wirklich geht.</p>
-        <div class="weg-side">
-          <span class="chip">Individuell</span>
-          <a class="tlink" href="begleitung.html">Die Begleitung <span>→</span></a>
-        </div>
-      </article>
+<!-- ═══ 4 · ANGEBOT EINS — 1:1 Session ═══ -->
+<section class="offer" id="arbeiten">
+  <div class="wrap offer-grid">
+    <figure class="fig rv-img">
+      <img src="assets/img/session-koerper-853.jpg"
+           srcset="assets/img/session-koerper-560.jpg 560w, assets/img/session-koerper-853.jpg 853w"
+           sizes="(max-width: 899px) 92vw, 520px" width="853" height="1094" loading="lazy"
+           alt="Franz arbeitet mit den Händen am Kopf eines liegenden Klienten">
+    </figure>
+    <div class="txt">
+      <span class="eyebrow rv">Eins · Einzeln</span>
+      <h2 class="rv" style="--d:.1s">Eine Session, die im <em>Körper</em> ankommt.</h2>
+      <!-- HIER: drei Zeilen, nicht mehr -->
+      <p class="rv" style="--d:.2s">Neo Emotional Release: Atem, Druckpunkte, meine Stimme. Du musst nichts
+        erklären und nichts richtig machen. Online oder vor Ort.</p>
+      <div class="meta rv" style="--d:.3s"><span class="chip">90 Minuten</span><span class="chip">Online · Vor Ort</span></div>
+      <a class="tlink rv" style="--d:.4s" href="sessions.html"><b>Eine Session von innen <span>→</span></b></a>
     </div>
   </div>
 </section>
 
-<!-- ═══ 5 · BILD-BAND ═══ -->
-<div class="band rise-img">
-  <img src="assets/img/band-weg-1500.jpg"
-       srcset="assets/img/band-weg-900.jpg 900w, assets/img/band-weg-1500.jpg 1500w, assets/img/band-weg-2000.jpg 2000w"
-       sizes="100vw" width="1500" height="682" loading="lazy"
-       alt="Franz geht barfuß über den Strand auf die tief stehende Sonne zu">
-</div>
+<!-- ═══ 5 · STIMME — HIER: echtes Zitat + Freigabe ═══ -->
+<section class="voice">
+  <img src="assets/img/band-licht-1500.jpg"
+       srcset="assets/img/band-licht-900.jpg 900w, assets/img/band-licht-1500.jpg 1500w, assets/img/band-licht-2200.jpg 2200w"
+       sizes="100vw" width="1500" height="750" loading="lazy" alt="">
+  <blockquote class="rv">
+    <p class="sterne" aria-hidden="true">★★★★★</p>
+    <p class="zitat">„Zwei Jahre Therapie, alles verstanden. Bei Franz habe ich es zum ersten Mal gefühlt."</p>
+    <footer>Platzhalter · Vorname, Ort</footer>
+  </blockquote>
+</section>
 
-<!-- ═══ 6 · SO KANNST DU MIT MIR ARBEITEN — gestapelte Blätter ═══ -->
-<section class="section deep" id="arbeiten">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">So kannst du mit mir arbeiten</span>
-      <h2>Vier Räume. Such dir einen aus.</h2>
-    </div>
-
-    <div class="blaetter">
-      <article class="blatt rise">
-        <div class="shot rise-img">
-          <img src="assets/img/blatt-session-1100.jpg"
-               srcset="assets/img/blatt-session-700.jpg 700w, assets/img/blatt-session-1100.jpg 1100w"
-               sizes="(max-width: 900px) 92vw, 46rem" width="1100" height="825" loading="lazy"
-               alt="Franz arbeitet mit den Händen am Kopf eines liegenden Klienten">
-        </div>
-        <span class="nr">Eins</span>
-        <h3>1:1 Sessions</h3>
-        <p>Neo Emotional Release, einzeln. Körperarbeit für Emotionen, die dein Kopf längst
-          sortiert hat und dein System trotzdem noch hält. Online oder vor Ort.</p>
-        <a class="tlink" href="sessions.html">Sessions ansehen <span>→</span></a>
-      </article>
-
-      <div class="orn" aria-hidden="true"><span>◆</span></div>
-
-      <article class="blatt rise">
-        <div class="shot rise-img">
-          <img src="assets/img/blatt-raum-1100.jpg"
-               srcset="assets/img/blatt-raum-700.jpg 700w, assets/img/blatt-raum-1100.jpg 1100w"
-               sizes="(max-width: 900px) 92vw, 46rem" width="1100" height="825" loading="lazy"
-               alt="Franz sitzt im Schneidersitz in einem Holzraum, warmes Abendlicht fällt herein">
-        </div>
-        <span class="nr">Zwei</span>
-        <h3>Einzelbegleitung</h3>
-        <p>Der längere Weg: mehrere Monate an deiner Seite, mit Sessions, Integration
-          und allem, was zwischendrin passiert. Individuell zugeschnitten.</p>
-        <a class="tlink" href="begleitung.html">Die Begleitung <span>→</span></a>
-      </article>
-
-      <div class="orn" aria-hidden="true"><span>◆</span></div>
-
-      <article class="blatt rise">
-        <div class="shot rise-img">
-          <img src="assets/img/blatt-kreis-1100.jpg"
-               srcset="assets/img/blatt-kreis-700.jpg 700w, assets/img/blatt-kreis-1100.jpg 1100w"
-               sizes="(max-width: 900px) 92vw, 46rem" width="1100" height="825" loading="lazy"
-               alt="Franz steht mit anderen in einem Kreis und hält zwei Hände">
-        </div>
-        <span class="nr">Drei</span>
-        <h3>Workshops &amp; Retreats</h3>
-        <p>In der Gruppe geht manches schneller — weil du siehst, dass du damit nicht allein bist.
-          Ein Abend, ein Wochenende, ein Kreis.</p>
-        <!-- HIER: Link zu den Terminen oder zum Shop -->
-        <a class="tlink" href="#kontakt">Termine anfragen <span>→</span></a>
-      </article>
-
-      <div class="orn" aria-hidden="true"><span>◆</span></div>
-
-      <article class="blatt rise">
-        <div class="shot rise-img">
-          <img src="assets/img/blatt-workshop-1100.jpg"
-               srcset="assets/img/blatt-workshop-700.jpg 700w, assets/img/blatt-workshop-1100.jpg 1100w"
-               sizes="(max-width: 900px) 92vw, 46rem" width="1100" height="825" loading="lazy"
-               alt="Franz sitzt im Workshop-Raum und erklärt etwas mit den Händen">
-        </div>
-        <!-- Aus Franz' Sprachnachricht: die Seite ist auch Visitenkarte für
-             Veranstalter, Festivals, Retreats und Online-Akademien. -->
-        <span class="nr">Vier</span>
-        <h3>Für Veranstalter</h3>
-        <p>Festivals, Retreats, Online-Akademien: Ich gebe Workshops, halte Vorträge und
-          arbeite in fremden Programmen mit. Sag mir, was du planst.</p>
-        <a class="tlink" href="#kontakt">Anfragen <span>→</span></a>
-      </article>
+<!-- ═══ 6 · ANGEBOT ZWEI — Einzelbegleitung ═══ -->
+<section class="offer flip deep">
+  <div class="wrap offer-grid">
+    <figure class="fig rv-img">
+      <img src="assets/img/weg-ins-licht-900.jpg"
+           srcset="assets/img/weg-ins-licht-560.jpg 560w, assets/img/weg-ins-licht-900.jpg 900w, assets/img/weg-ins-licht-1300.jpg 1300w"
+           sizes="(max-width: 899px) 92vw, 520px" width="900" height="1125" loading="lazy"
+           alt="Franz geht barfuß über den Strand auf die tief stehende Sonne zu">
+    </figure>
+    <div class="txt">
+      <span class="eyebrow rv">Zwei · Über Monate</span>
+      <h2 class="rv" style="--d:.1s">Der längere Weg — <em>mit</em> jemandem.</h2>
+      <p class="rv" style="--d:.2s">Mehrere Monate an deiner Seite: Sessions, Integration und alles, was zwischendrin
+        passiert. Rahmen und Investition klären wir erst, wenn wir wissen, worum es bei dir geht.</p>
+      <div class="meta rv" style="--d:.3s"><span class="chip">Individuell</span><span class="chip">Nach der ersten Session</span></div>
+      <a class="tlink rv" style="--d:.4s" href="begleitung.html"><b>Die Begleitung <span>→</span></b></a>
     </div>
   </div>
 </section>
 
-<!-- ═══ 7 · ZITAT-BAND ═══ -->
-<section class="quoteband">
-  <img src="assets/img/abendlicht-1500.jpg"
-       srcset="assets/img/abendlicht-900.jpg 900w, assets/img/abendlicht-1500.jpg 1500w, assets/img/abendlicht-2000.jpg 2000w"
-       sizes="100vw" width="1500" height="625" loading="lazy" alt="">
-  <div class="wrap">
-    <!-- HIER: Zitat -->
-    <blockquote>Was wir überdenken, unterfühlen wir.</blockquote>
-    <cite>Franz Heinrich</cite>
+<!-- ═══ 7 · ANGEBOT DREI — Workshops, Retreats, Veranstalter ═══ -->
+<section class="offer">
+  <div class="wrap offer-grid">
+    <figure class="fig rv-img">
+      <img src="assets/img/kreis-haende-900.jpg"
+           srcset="assets/img/kreis-haende-560.jpg 560w, assets/img/kreis-haende-900.jpg 900w"
+           sizes="(max-width: 899px) 92vw, 520px" width="900" height="1125" loading="lazy"
+           alt="Franz steht mit anderen in einem Kreis und hält zwei Hände">
+    </figure>
+    <div class="txt">
+      <span class="eyebrow rv">Drei · In der Gruppe</span>
+      <h2 class="rv" style="--d:.1s">Workshops &amp; Retreats.</h2>
+      <p class="rv" style="--d:.2s">Ein Abend, ein Wochenende, ein Kreis. Manches geht in der Gruppe schneller —
+        weil du siehst, dass du damit nicht allein bist. Auch buchbar für Festivals, Retreats
+        und Online-Akademien.</p>
+      <!-- HIER: Link zu Terminen / Shop -->
+      <div class="meta rv" style="--d:.3s"><span class="chip chip-hot">Neue Termine in Arbeit</span></div>
+      <a class="tlink rv" style="--d:.4s" href="#kontakt"><b>Termine &amp; Anfragen <span>→</span></b></a>
+    </div>
   </div>
 </section>
 
-<!-- ═══ 8 · DIE METHODE ═══ -->
-<section class="section" id="methode">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Die Methode</span>
-      <h2>Wie ich arbeite, kurz erklärt.</h2>
-      <!-- HIER: Franz wollte hier mehr Tiefe — N.E.R. plus alles, was er sonst
-           noch mitbringt (Possibility Management usw.). -->
-      <p class="lead">Der Kern ist Neo Emotional Release nach David Manning: körperorientierte
-        Prozessarbeit, die nicht übers Verstehen geht, sondern über das, was dein Körper hält.
-        Dazu kommt, was ich mir sonst noch angeeignet habe — unter anderem Possibility Management.
-        Vier Dinge greifen dabei immer ineinander.</p>
-    </div>
-    <div class="quad rise">
-      <!-- HIER: die vier Elemente -->
-      <div><span class="n">01</span><h3>Berührung</h3><p>Gezielter Druck an Stellen, an denen dein Körper Spannung parkt. Kein Wellness — eine Einladung an etwas, das raus will.</p></div>
-      <div><span class="n">02</span><h3>Atem</h3><p>Der Atem bringt dich an Orte, um die dein Kopf gern einen Bogen macht — und hält dich gleichzeitig hier.</p></div>
-      <div><span class="n">03</span><h3>Stimme</h3><p>Ich begleite dich durch den ganzen Prozess. Du musst nichts erklären, nichts leisten, nichts richtig machen.</p></div>
-      <div><span class="n">04</span><h3>Innere Anteile</h3><p>Wir geben den Seiten in dir Raum, die lange keiner sehen durfte. Auch der, die sich schämt.</p></div>
-    </div>
-    <p class="mt-3"><a class="tlink" href="sessions.html">Eine Session von innen <span>→</span></a></p>
-  </div>
+<!-- ═══ 8 · STIMME ZWEI ═══ -->
+<section class="voice">
+  <img src="assets/img/band-berge-1500.jpg"
+       srcset="assets/img/band-berge-900.jpg 900w, assets/img/band-berge-1500.jpg 1500w, assets/img/band-berge-2200.jpg 2200w"
+       sizes="100vw" width="1500" height="750" loading="lazy" alt="">
+  <blockquote class="rv">
+    <p class="sterne" aria-hidden="true">★★★★★</p>
+    <p class="zitat">„Er hält den Raum so, dass ich mich nicht erklären musste."</p>
+    <footer>Platzhalter · Vorname, Ort</footer>
+  </blockquote>
 </section>
 
 <!-- ═══ 9 · ÜBER MICH ═══ -->
-<section class="section deep" id="ueber">
+<section class="section deep about" id="ueber">
   <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Über mich</span>
+    <div class="about-pics">
+      <figure class="rv-img">
+        <img src="assets/img/franz-herz-900.jpg"
+             srcset="assets/img/franz-herz-560.jpg 560w, assets/img/franz-herz-900.jpg 900w, assets/img/franz-herz-1300.jpg 1300w"
+             sizes="(max-width: 640px) 92vw, 30rem" width="900" height="1125" loading="lazy"
+             alt="Franz Heinrich, die Hand auf dem Herzen, vor einer geschnitzten Holzwand">
+        <figcaption>Franz Heinrich</figcaption>
+      </figure>
+      <figure class="rv-img" style="--d:.15s">
+        <img src="assets/img/franz-frech-900.jpg"
+             srcset="assets/img/franz-frech-560.jpg 560w, assets/img/franz-frech-900.jpg 900w"
+             sizes="(max-width: 640px) 92vw, 24rem" width="900" height="1125" loading="lazy"
+             alt="Franz streckt einem Regenbogen die Zunge raus">
+        <figcaption>UnVerschämt</figcaption>
+      </figure>
     </div>
-    <figure class="portraet rise-img">
-      <img src="assets/img/franz-portrait-840.jpg"
-           srcset="assets/img/franz-portrait-560.jpg 560w, assets/img/franz-portrait-840.jpg 840w, assets/img/franz-portrait-1200.jpg 1200w"
-           sizes="(max-width: 560px) 92vw, 30rem" width="840" height="1050" loading="lazy"
-           alt="Porträt von Franz Heinrich vor bewölktem Himmel mit Regenbogen">
-      <figcaption>Franz Heinrich</figcaption>
-    </figure>
-    <!-- HIER: Über-mich-Text — der wichtigste Text der ganzen Seite -->
-    <h2 class="rise" style="max-width:20ch;margin-inline:auto">Ich kenne Scham nicht aus Büchern.</h2>
-    <div class="measure-narrow mt-2">
-      <p class="lead rise d1">Kleinmachen, verstecken, den ganzen Tag gegen das eigene Gefühl anarbeiten —
-        das war jahrelang mein Normalzustand.</p>
-      <p class="mt-2 muted rise d1">Heute begleite ich Menschen genau dorthin, wo es weich wird. Mit warmen Augen,
-        echter Neugier und einer ordentlichen Portion Bodenständigkeit. Ich glaube nicht, dass du
-        repariert werden musst. Ich glaube, dass du nie gelernt hast, dich anzuschauen, ohne zusammenzuzucken.</p>
-      <p class="mt-2 muted rise d2">Meine Arbeit sorgt dafür, dass du das nicht nur denkst, sondern spürst.
-        Damit du gesehen wirst, gehört wirst — und das, was du hier zu tun hast, aus voller Kraft tun kannst.</p>
+    <span class="eyebrow rv">Über mich</span>
+    <!-- HIER: der wichtigste Text der Seite — kurz halten -->
+    <h2 class="rv" style="--d:.1s">Ich kenne Scham nicht aus Büchern.</h2>
+    <p class="lead rv" style="--d:.2s">Kleinmachen, verstecken, gegen das eigene Gefühl anarbeiten —
+      das war jahrelang mein Normalzustand. Heute begleite ich Menschen genau dorthin, wo es weich wird.
+      Warm, neugierig, bodenständig.</p>
+    <div class="werte rv" style="--d:.3s">
+      <span class="chip">Zertifizierter N.E.R.-Practitioner</span><span class="chip">Possibility Management</span>
     </div>
-    <div class="werte rise d2">
-      <span class="chip">UnVerschämt</span><span class="chip">Herzlich</span><span class="chip">Bodenständig</span>
-    </div>
-
-    <!-- HIER: zweites Video — Franz wollte „einfach fünf Minuten über mich labern".
-         Datei: assets/video/franz-ueber-mich.mp4 -->
-    <div class="videostage videostage--small mt-3 rise-img">
-      <img src="assets/img/ueber-video-860.jpg"
-           srcset="assets/img/ueber-video-560.jpg 560w, assets/img/ueber-video-860.jpg 860w"
-           sizes="(max-width: 560px) 92vw, 34rem" width="860" height="645" loading="lazy"
+    <!-- HIER: zweites Video — „fünf Minuten über mich". Datei: assets/video/franz-ueber-mich.mp4 -->
+    <div class="videostage videostage--small mt-3 rv-img" style="--d:.2s">
+      <img src="assets/img/ueber-video-860.jpg" srcset="assets/img/ueber-video-560.jpg 560w, assets/img/ueber-video-860.jpg 860w"
+           sizes="(max-width: 560px) 92vw, 32rem" width="860" height="645" loading="lazy"
            alt="Franz steht am Strand, die Hand auf dem eigenen Herzen">
-      <button class="video-play" type="button" data-video="ueber">
-        <span class="disc" aria-hidden="true">
-          <svg width="20" height="24" viewBox="0 0 20 24" fill="currentColor"><path d="M0 0l20 12L0 24z"/></svg>
-        </span>
+      <button class="video-play video-open" type="button">
+        <span class="disc" aria-hidden="true"><svg width="18" height="22" viewBox="0 0 20 24" fill="currentColor"><path d="M0 0l20 12L0 24z"/></svg></span>
         <span class="cap">Fünf Minuten über mich</span>
       </button>
     </div>
   </div>
 </section>
 
-<!-- ═══ 10 · STIMMEN ═══ -->
-<section class="section">
+<!-- ═══ 10 · DEIN WEG — drei Schritte ═══ -->
+<section class="section" id="weg">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">Stimmen</span>
-      <h2>Was Menschen sagen, die schon da waren.</h2>
-      <!-- HIER: echte Zitate einsetzen. Franz möchte zusätzlich seine
-           Google-Rezensionen einbinden — Hinweis dazu im Wunsch-Register (D8). -->
-      <p class="lead">Platzhalter — hier kommen echte Rückmeldungen aus deinen Sessions und Retreats hin,
-        später ergänzt um deine Google-Rezensionen.</p>
+      <span class="eyebrow rv">Dein Weg mit mir</span>
+      <h2 class="rv" style="--d:.1s">Drei Schritte. Kein Abo, kein Trichter.</h2>
     </div>
-    <div class="stimmen">
-      <blockquote class="stimme rise">
-        <p class="sterne" aria-hidden="true">★★★★★</p>
-        <p class="zitat">„Ich habe zwei Jahre Therapie gemacht und alles verstanden. Bei Franz habe ich es zum ersten Mal gefühlt."</p>
-        <footer>Platzhalter · Vorname, Ort</footer>
-      </blockquote>
-      <blockquote class="stimme rise d1">
-        <p class="sterne" aria-hidden="true">★★★★★</p>
-        <p class="zitat">„Er hält den Raum so, dass ich mich nicht erklären musste. Das kannte ich vorher nicht."</p>
-        <footer>Platzhalter · Vorname, Ort</footer>
-      </blockquote>
-      <blockquote class="stimme rise d2">
-        <p class="sterne" aria-hidden="true">★★★★★</p>
-        <p class="zitat">„Nach der Session bin ich zum ersten Mal seit Jahren wieder laut gewesen. Einfach so."</p>
-        <footer>Platzhalter · Vorname, Ort</footer>
-      </blockquote>
+    <div class="steps">
+      <div class="step rv" style="--d:.1s">
+        <span class="num">01</span>
+        <h3>Kennenlern-Call</h3>
+        <p>30 Minuten. Wir schauen, was los ist und ob wir zusammenpassen.</p>
+        <span class="chip chip-hot">Kostenlos</span>
+      </div>
+      <div class="step rv" style="--d:.2s">
+        <span class="num">02</span>
+        <h3>Schnupper-Session</h3>
+        <p>Eine ganze Session. Danach weißt du aus dem Körper heraus, ob das dein Weg ist.</p>
+        <!-- HIER: Preis der Schnupper-Session -->
+        <span class="chip">Erste Session</span>
+      </div>
+      <div class="step rv" style="--d:.3s">
+        <span class="num">03</span>
+        <h3>Deine Begleitung</h3>
+        <p>Wenn wir beide Lust darauf haben: mehrere Monate in einem Rahmen, den wir gemeinsam bauen.</p>
+        <span class="chip">Individuell</span>
+      </div>
+    </div>
+    <div class="btn-row rv" style="--d:.3s">
+      <a class="btn btn-orange btn-arrow" href="#kontakt">Kennenlern-Call buchen</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ 11 · KOSTENLOS & SHOP ═══ -->
+<!-- ═══ 11 · KOSTENLOS & KLEINES ═══ -->
 <section class="section deep" id="kostenlos">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">Kostenlos &amp; Shop</span>
-      <h2>Erst reinschnuppern. Dann entscheiden.</h2>
-      <p class="lead">Du musst nicht sofort buchen. Hier ist genug, um herauszufinden,
-        ob dir meine Art überhaupt liegt — und ein paar kleine Sachen für zwischendurch.</p>
+      <span class="eyebrow rv">Kostenlos &amp; Kleines</span>
+      <h2 class="rv" style="--d:.1s">Erst reinschnuppern.</h2>
     </div>
-
-    <!-- HIER: die kostenlosen Sachen -->
-    <div class="frei">
-      <a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer" class="rise">
-        <h3>Gespräche mit Franz Heinrich</h3>
-        <p>Meine Gespräche zum Hören — über Scham, Körper und alles, was sonst niemand ausspricht. Auf Spotify.</p>
+    <div class="frei rv" style="--d:.2s">
+      <a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer">
+        <div><span class="tag">Podcast · kostenlos</span><h3>Gespräche mit Franz Heinrich</h3><p>Über Scham, Körper und alles, was sonst niemand ausspricht.</p></div>
         <span class="go">Anhören ↗</span>
       </a>
-      <a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer" class="rise d1">
-        <h3>@franz.unverschaemt</h3>
-        <p>Der ehrlichste Blick auf meine Arbeit — und auf mich. Kurze Gedanken, Einblicke, Termine.</p>
-        <span class="go">Folgen ↗</span>
-      </a>
-      <a href="#newsletter" class="rise d2">
-        <h3>Das kleine Scham-Handbuch</h3>
-        <p>Kostenlos zum Newsletter: was Scham eigentlich ist, woran du sie im Alltag erkennst und was in dem Moment hilft.</p>
+      <a href="#newsletter">
+        <div><span class="tag">PDF · kostenlos</span><h3>Das kleine Scham-Handbuch</h3><p>Woran du Scham im Alltag erkennst und was in dem Moment hilft.</p></div>
         <span class="go">Holen →</span>
       </a>
-    </div>
-
-    <!-- HIER: kleine Angebote. Die Bezahlung läuft später über deinen Anbieter
-         (elopage, CopeCart, PayPal …) — hier trägst du nur den Link ein. -->
-    <div class="orn" aria-hidden="true"><span>◆</span></div>
-    <h3 style="font-size:var(--t-2)">Kleine Angebote</h3>
-    <p class="small muted mt-1" style="max-width:44rem;margin-inline:auto">Platzhalter — Preise und Links kommen von dir.
-      Bezahlt wird beim Anbieter, die Beschreibung bleibt hier in deinem Design.</p>
-    <div class="shopgrid measure mt-2">
-      <div class="ware rise">
-        <h3>Morgen-Ritual</h3>
-        <p>Eine geführte Aufnahme für die ersten zwanzig Minuten des Tages — damit du im Körper
-          startest und nicht im Kopf.</p>
-        <span class="preis">— €</span>
-        <a class="btn btn-navy btn-arrow" href="#kontakt">Bald buchbar</a>
-      </div>
-      <div class="ware rise d1">
-        <h3>Meditations-Workshop</h3>
-        <p>Aufzeichnung eines Online-Workshops: Wie du deinen Emotionen begegnest, ohne dich in
-          ihnen zu verlieren.</p>
-        <span class="preis">— €</span>
-        <a class="btn btn-navy btn-arrow" href="#kontakt">Bald buchbar</a>
-      </div>
-      <div class="ware rise d2">
-        <h3>Self-Study</h3>
-        <p>Der größere Kurs: mein Weg durch Scham in einzelnen Schritten, zum Selbst-Durcharbeiten
-          in deinem Tempo.</p>
-        <span class="preis">— €</span>
-        <a class="btn btn-navy btn-arrow" href="#kontakt">In Arbeit</a>
-      </div>
+      <a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer">
+        <div><span class="tag">Instagram</span><h3>@franz.unverschaemt</h3><p>Der ehrlichste Blick auf meine Arbeit — und auf mich.</p></div>
+        <span class="go">Folgen ↗</span>
+      </a>
+      <!-- HIER: kleine Angebote — Preise und Links kommen von dir, bezahlt wird beim Anbieter -->
+      <a href="#kontakt">
+        <div><span class="tag">Aufnahme · bald</span><h3>Morgen-Ritual</h3><p>Zwanzig Minuten, damit du im Körper startest und nicht im Kopf.</p></div>
+        <span class="go">Bald →</span>
+      </a>
+      <a href="#kontakt">
+        <div><span class="tag">Self-Study · in Arbeit</span><h3>Mein Weg durch Scham</h3><p>Der größere Kurs, zum Durcharbeiten in deinem Tempo.</p></div>
+        <span class="go">Bald →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -497,22 +368,18 @@
 <!-- ═══ 12 · NEWSLETTER ═══ -->
 <section class="section-tight" id="newsletter">
   <div class="wrap">
-    <div class="newsletter measure rise">
+    <div class="newsletter measure rv">
       <span class="eyebrow">Newsletter</span>
-      <!-- HIER: Newsletter-Text und das Goodie -->
+      <!-- HIER: Newsletter-Text -->
       <h2>Ab und zu ein Brief. Kein Marketing.</h2>
-      <p class="lead mt-2" style="margin-inline:auto">Was mich gerade beschäftigt, neue Termine,
-        ehrliche Gedanken zur Arbeit mit Scham. Zur Anmeldung bekommst du das kleine
-        Scham-Handbuch als PDF.</p>
-      <!-- HIER: Der Anbieter (Brevo, MailerLite, …) wird bei der Umsetzung
-           eingetragen und in der Datenschutzerklärung erklärt. -->
+      <p class="lead mt-2" style="margin-inline:auto">Zur Anmeldung bekommst du das kleine Scham-Handbuch als PDF.</p>
+      <!-- HIER: Anbieter (Brevo, MailerLite …) wird bei der Umsetzung eingetragen -->
       <form class="nl-form" id="nlform" novalidate>
-        <label for="nl-mail" style="position:absolute;left:-9999px">Deine E-Mail-Adresse</label>
+        <label class="vh" for="nl-mail">Deine E-Mail-Adresse</label>
         <input id="nl-mail" name="email" type="email" placeholder="Deine E-Mail-Adresse" autocomplete="email" required>
         <button class="btn btn-orange" type="submit">Handbuch holen</button>
       </form>
-      <p class="small mt-1">Abmelden geht jederzeit mit einem Klick. Keine Weitergabe an Dritte.
-        <a href="datenschutz.html">Datenschutz</a>.</p>
+      <p class="small mt-1">Jederzeit abmeldbar. Keine Weitergabe. <a href="datenschutz.html">Datenschutz</a>.</p>
     </div>
   </div>
 </section>
@@ -521,29 +388,26 @@
 <section class="section deep">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">Passt das?</span>
-      <h2>Für wen das hier ist — und für wen nicht.</h2>
+      <span class="eyebrow rv">Ehrlich gesagt</span>
+      <h2 class="rv" style="--d:.1s">Für wen das hier ist — und für wen nicht.</h2>
     </div>
     <div class="passt">
-      <div class="rise">
-        <h3>Du bist hier richtig, wenn du …</h3>
+      <div class="rv" style="--d:.2s">
+        <h3>Richtig, wenn du …</h3>
         <ul>
-          <li>nicht noch mehr über dich reden, sondern dich endlich wieder spüren willst</li>
-          <li>an derselben Stelle stehst, obwohl du längst so viel verstanden hast</li>
+          <li>dich endlich wieder spüren willst, statt noch mehr zu reden</li>
+          <li>längst viel verstanden hast — und trotzdem feststeckst</li>
           <li>eine Begleitung suchst, die warm ist und trotzdem ehrlich</li>
-          <li>bereit bist, deinen Emotionen wieder zu trauen — auch den unbequemen</li>
         </ul>
       </div>
-      <div class="rise d1">
-        <h3>… und wann etwas anderes dran ist</h3>
-        <div class="warn mt-1">
+      <div class="rv" style="--d:.3s">
+        <h3>Etwas anderes, wenn …</h3>
+        <div class="warn">
           <p class="small">Coaching und Neo Emotional Release sind Prozess- und Persönlichkeitsarbeit —
-            kein Heilverfahren. Sie ersetzen weder Psychotherapie noch ärztliche Behandlung.
-            Wenn du in einer akuten Krise steckst oder eine Erkrankung behandeln lassen willst,
-            ist ärztliche oder psychotherapeutische Hilfe der richtige erste Schritt. Das sage ich
-            dir im Gespräch genauso deutlich.</p>
-          <p class="small mt-1"><strong>Sofort erreichbar:</strong> Notruf 112 · Telefonseelsorge
-            0800&nbsp;111&nbsp;0&nbsp;111 (kostenlos, rund um die Uhr) · Krisendienst Bayern 0800&nbsp;655&nbsp;3000</p>
+            kein Heilverfahren und kein Ersatz für Psychotherapie oder ärztliche Behandlung.
+            In einer akuten Krise ist ärztliche oder therapeutische Hilfe der erste Schritt.</p>
+          <p class="small mt-1"><strong>Sofort erreichbar:</strong> Notruf 112 · Telefonseelsorge 0800&nbsp;111&nbsp;0&nbsp;111 ·
+            Krisendienst Bayern 0800&nbsp;655&nbsp;3000</p>
         </div>
       </div>
     </div>
@@ -554,67 +418,42 @@
 <section class="section" id="kontakt">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">Kontakt</span>
-      <h2>Lass uns reden.</h2>
-      <p class="lead">Am einfachsten suchst du dir direkt einen Termin aus.
-        Wenn dir Schreiben leichter fällt, geht das genauso.</p>
+      <span class="eyebrow rv">Kontakt</span>
+      <h2 class="rv" style="--d:.1s">Lass uns reden.</h2>
+      <p class="lead rv" style="--d:.2s">30 Minuten, kostenlos, unverbindlich. Danach weißt du mehr.</p>
     </div>
-
-    <div class="kontakt-wege">
-      <!-- HIER: Link zu deinem Kalender (Calendly, Google-Terminplaner …).
-           Solange keiner da ist, führt der Button zum Formular. -->
+    <div class="kontakt-wege rv" style="--d:.3s">
+      <!-- HIER: Kalender-Link (Calendly, Google-Terminplaner …) — bis dahin zum Formular -->
       <a class="btn btn-orange btn-arrow" href="#kontaktform">Kennenlern-Call aussuchen</a>
-      <!-- HIER: WhatsApp — deine Nummer als https://wa.me/49… eintragen -->
-      <a class="btn btn-line btn-arrow" href="#kontaktform">Per WhatsApp schreiben</a>
+      <!-- HIER: WhatsApp — https://wa.me/49… -->
+      <a class="btn btn-line btn-arrow" href="#kontaktform">Per WhatsApp</a>
     </div>
-
-    <ul class="kontakt-liste">
+    <ul class="kontakt-liste rv" style="--d:.4s">
       <li>
-        <!-- E-Mail steht bewusst NICHT im Quelltext: Franz bekommt sonst
-             Bot-Spam. Die Adresse wird erst per JavaScript zusammengesetzt. -->
+        <!-- E-Mail steht bewusst nicht im Quelltext (Bot-Spam) — wird per JavaScript zusammengesetzt -->
         <a href="#kontaktform" class="mail-link" data-u="info" data-d="franzheinrich.com">
           <span class="k">E-Mail</span><span class="v" data-mail-text>Adresse anzeigen</span>
         </a>
       </li>
       <li><a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer"><span class="k">Instagram</span><span class="v">@franz.unverschaemt</span></a></li>
-      <li><a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer"><span class="k">Zum Hören</span><span class="v">Gespräche mit Franz</span></a></li>
     </ul>
 
-    <div class="orn" aria-hidden="true"><span>◆</span></div>
-
-    <p class="form-hint">Design-Vorschau: Dieses Formular versendet noch nichts. Im Live-Betrieb landet
-      deine Nachricht direkt in Franz’ Postfach.</p>
-    <form class="form-grid" id="kontaktform" novalidate>
-      <div class="field">
-        <label for="f-name">Dein Name</label>
-        <input id="f-name" name="name" type="text" autocomplete="name" required>
+    <details class="formbox mt-3" id="kontaktform">
+      <summary><span class="tlink"><b>Lieber schreiben? <span>↓</span></b></span></summary>
+      <div class="inner">
+        <p class="form-hint">Design-Vorschau: Dieses Formular versendet noch nichts.</p>
+        <form class="form-grid" id="kform" novalidate>
+          <div class="field"><label for="f-name">Dein Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-mail">Deine E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+          <div class="field full"><label for="f-text">Deine Nachricht</label><textarea id="f-text" name="nachricht" required></textarea></div>
+          <div class="field full center">
+            <button class="btn btn-orange btn-arrow" type="submit" style="margin-inline:auto">Nachricht senden</button>
+            <p class="form-note mt-1">Bitte keine sensiblen Gesundheitsdaten übers Formular. Deine Daten bleiben bei Franz.
+              <a href="datenschutz.html">Datenschutz</a>.</p>
+          </div>
+        </form>
       </div>
-      <div class="field">
-        <label for="f-mail">Deine E-Mail</label>
-        <input id="f-mail" name="email" type="email" autocomplete="email" required>
-      </div>
-      <div class="field full">
-        <label for="f-thema">Worum geht es?</label>
-        <select id="f-thema" name="thema">
-          <option>Kennenlern-Call</option>
-          <option>Schnupper-Session (1:1)</option>
-          <option>Einzelbegleitung</option>
-          <option>Workshops &amp; Retreats</option>
-          <option>Anfrage als Veranstalter</option>
-          <option>Etwas anderes</option>
-        </select>
-      </div>
-      <div class="field full">
-        <label for="f-text">Deine Nachricht</label>
-        <textarea id="f-text" name="nachricht" required></textarea>
-      </div>
-      <div class="field full center">
-        <button class="btn btn-orange btn-arrow" type="submit" style="margin-inline:auto">Nachricht senden</button>
-        <p class="form-note mt-1">Bitte schick keine sensiblen Gesundheitsdaten übers Formular —
-          alles Weitere besprechen wir im geschützten Gespräch. Deine Daten bleiben bei Franz:
-          keine Weitergabe. <a href="datenschutz.html">Datenschutz</a>.</p>
-      </div>
-    </form>
+    </details>
   </div>
 </section>
 </main>
@@ -624,25 +463,20 @@
   <div class="wrap">
     <span class="brand">
       <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
-        <rect width="64" height="64" rx="10" fill="#f7f1e6"/>
+        <rect width="64" height="64" rx="10" fill="#e96a2c"/>
         <text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#023047">FH</text>
-        <rect x="17" y="48" width="30" height="4" rx="2" fill="#e96a2c"/>
       </svg>
       <span class="name">Franz&nbsp;Heinrich</span>
       <span class="rolle">Scham &amp; Emotionen</span>
     </span>
-    <p class="small">Körperorientiertes Scham-Coaching mit Neo Emotional Release.
-      1:1 online und vor Ort, dazu Workshops und Retreats.</p>
+    <p class="small">Körperorientiertes Scham-Coaching mit Neo Emotional Release. 1:1 online und vor Ort, Workshops, Retreats.</p>
     <nav aria-label="Footer">
       <ul class="footer-nav">
-        <li><a href="#weg">Dein Weg</a></li>
-        <li><a href="#arbeiten">So arbeiten wir</a></li>
-        <li><a href="#methode">Die Methode</a></li>
-        <li><a href="#ueber">Über mich</a></li>
         <li><a href="sessions.html">Sessions</a></li>
-        <li><a href="begleitung.html">Einzelbegleitung</a></li>
+        <li><a href="begleitung.html">Begleitung</a></li>
         <li><a href="links.html">Alle Links</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+        <li><a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
       </ul>
     </nav>
     <div class="footer-bottom">
@@ -656,26 +490,27 @@
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video">
   <div class="lightbox-inner">
     <button class="lightbox-x" id="lightbox-x" aria-label="Schließen">&times;</button>
-    <!-- HIER: sobald die MP4 existiert, den Hinweis unten löschen und dieses
-         video-Element einkommentieren (für das Über-mich-Video analog mit
-         assets/video/franz-ueber-mich.mp4):
-    <video controls playsinline poster="assets/img/gruppe-wiese-1100.jpg">
+    <!-- HIER: sobald assets/video/franz-intro.mp4 existiert, den Hinweis löschen und einkommentieren:
+    <video controls playsinline poster="assets/img/hero-licht-d-1200.jpg">
       <source src="assets/video/franz-intro.mp4" type="video/mp4">
     </video>
     -->
     <div class="lightbox-note">
       <p><strong>Design-Vorschau</strong></p>
       <p class="small mt-1">Hier läuft später dein Video — der Platz dafür steht schon.
-        Wir brauchen dazu nur eine web-taugliche Datei (MP4, ca. 60–90&nbsp;Sekunden).</p>
+        Wir brauchen nur eine web-taugliche Datei (MP4, 60–90&nbsp;Sekunden).</p>
     </div>
   </div>
 </div>
 
 <script>
-/* Nav: fester Hintergrund ab dem ersten Scrollen */
+/* Masthead: über dem Hero durchsichtig, danach hell; ab dem ersten Scrollen mit Fläche */
 (function(){
-  var nav=document.getElementById('nav');
-  function onScroll(){nav.classList.toggle('solid',window.scrollY>8);}
+  var nav=document.getElementById('nav'),hero=document.getElementById('hero');
+  function onScroll(){
+    nav.classList.toggle('solid',window.scrollY>8);
+    if(hero){nav.classList.toggle('over',hero.getBoundingClientRect().bottom>nav.offsetHeight);}
+  }
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 })();
 
@@ -693,65 +528,51 @@
   });});
 })();
 
-/* Ankündigungs-Banner: einmal geschlossen, bleibt zu */
-(function(){
-  var x=document.getElementById('announce-x'),key='fh-announce-2026-09';
-  if(!x)return;
-  try{ if(localStorage.getItem(key)==='off') document.body.classList.add('announce-off'); }catch(e){}
-  x.addEventListener('click',function(){
-    document.body.classList.add('announce-off');
-    try{localStorage.setItem(key,'off');}catch(e){}
-  });
-})();
-
 /* E-Mail-Adresse erst im Browser zusammensetzen — hält Adress-Sammler fern */
 (function(){
   document.querySelectorAll('.mail-link').forEach(function(a){
     var adr=a.dataset.u+String.fromCharCode(64)+a.dataset.d;
     a.setAttribute('href','mailto:'+adr);
-    var t=a.querySelector('[data-mail-text]');
-    if(t) t.textContent=adr;
+    var t=a.querySelector('[data-mail-text]');if(t)t.textContent=adr;
   });
 })();
 
-/* Auftauchen: Bild & Text erscheinen beim Scrollen (einmalig) */
+/* Auftauchen beim Scrollen (einmalig, gestaffelt über --d) */
 (function(){
-  var els=document.querySelectorAll('.rise, .rise-img');
+  var els=document.querySelectorAll('.rv, .rv-img');
   function show(el){el.classList.add('in');}
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){
-    els.forEach(show);return;
-  }
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(show);return;}
   var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){show(e.target);io.unobserve(e.target);} });
-  },{threshold:.14,rootMargin:'0px 0px -6% 0px'});
-  els.forEach(function(el){
-    if(el.getBoundingClientRect().top < window.innerHeight*0.9){show(el);} else {io.observe(el);}
-  });
+    entries.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){ if(el.getBoundingClientRect().top<window.innerHeight*0.92){show(el);} else {io.observe(el);} });
 })();
 
-/* Video-Lightbox (beide Video-Plätze) */
+/* Video-Lightbox (Hero-Play + Über-mich-Video) */
 (function(){
   var box=document.getElementById('lightbox'),close=document.getElementById('lightbox-x');
   if(!box)return;
   function hide(){box.classList.remove('on');var v=box.querySelector('video');if(v)v.pause();}
-  document.querySelectorAll('.video-play').forEach(function(b){
-    b.addEventListener('click',function(){box.classList.add('on');close.focus();});
-  });
+  document.querySelectorAll('.video-open').forEach(function(b){b.addEventListener('click',function(){box.classList.add('on');close.focus();});});
   close.addEventListener('click',hide);
   box.addEventListener('click',function(e){if(e.target===box)hide();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});
 })();
 
+/* Formular-Klappe: Anker #kontaktform öffnet sie */
+(function(){
+  var d=document.getElementById('kontaktform');if(!d)return;
+  document.querySelectorAll('a[href="#kontaktform"]').forEach(function(a){a.addEventListener('click',function(){d.open=true;});});
+  if(location.hash==='#kontaktform')d.open=true;
+})();
+
 /* Formulare: in der Vorschau nur bestätigen, nicht senden */
 (function(){
-  ['kontaktform','nlform'].forEach(function(id){
-    var f=document.getElementById(id);
-    if(!f)return;
+  ['kform','nlform'].forEach(function(id){
+    var f=document.getElementById(id);if(!f)return;
     f.addEventListener('submit',function(e){
-      e.preventDefault();
-      var b=f.querySelector('button[type=submit]');
-      b.textContent='Danke — in der Vorschau wird noch nichts gesendet';
-      b.disabled=true;
+      e.preventDefault();var b=f.querySelector('button[type=submit]');
+      b.textContent='Danke — in der Vorschau wird noch nichts gesendet';b.disabled=true;
     });
   });
 })();
