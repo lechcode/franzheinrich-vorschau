@@ -2,13 +2,18 @@
 <!--
   ╔══════════════════════════════════════════════════════════════════════════╗
   ║  FRANZ HEINRICH — Scham-Coaching & Neo Emotional Release                  ║
-  ║  Unverbindliche DESIGN-VORSCHAU · Lechcode · Stand 05.09.2026             ║
+  ║  Unverbindliche DESIGN-VORSCHAU · Lechcode · Stand 11.09.2026             ║
   ╠══════════════════════════════════════════════════════════════════════════╣
-  ║  RUNDE 6 — Aushängeschild. Mobile first, weniger ist mehr.                ║
-  ║  · Hero: Video-Bühne, Text darüber (Vorbild thewellpaidpriestess.com)    ║
-  ║  · jede Sektion trägt eine Idee und bekommt einen ganzen Bildschirm       ║
-  ║  · Angebote als volle Bild/Text-Sektionen, Stimmen als Statement-Bänder   ║
-  ║  · Texte halbiert — Franz schreibt sie ohnehin selbst (HIER:-Marken)      ║
+  ║  RUNDE 7 — Franz' Feedback vom 09.09. eingearbeitet:                      ║
+  ║  · Menü: Über mich · Shop · [Logo] · So kannst du mit mir arbeiten ▾ ·   ║
+  ║    Kontakt · Instagram/Mail/Spotify · Kennenlern-Call oben rechts        ║
+  ║  · Übersicht „So kannst du mit mir arbeiten" als fünf Kreise direkt      ║
+  ║    unter dem Hero — Begleitung, 1:1, Events & Retreats, Gruppen, Kostenlos║
+  ║  · Kennenlern-Call nicht mehr „in die Fresse" im Hero, sondern oben rechts║
+  ║  · Video-Testimonial-Platz, Google-Rezensionen ganz unten                 ║
+  ║  · „Für wen / für wen nicht" von der Startseite auf begleitung.html      ║
+  ║  · DE/EN-Umschalter (assets/i18n-en.js)                                   ║
+  ║  Alle Texte sind VORSCHLÄGE — Franz schreibt sie selbst (HIER:-Marken).   ║
   ╚══════════════════════════════════════════════════════════════════════════╝
 -->
 <html lang="de">
@@ -18,7 +23,7 @@
 <script>document.documentElement.classList.add('js');if(location.search.indexOf('foto')>-1)document.documentElement.classList.add('foto');</script>
 <!-- ENTFERNEN, sobald Franz live gehen will (Impressum, Datenschutz, AGB sind da) -->
 <meta name="robots" content="noindex, nofollow">
-<title>Franz Heinrich — Scham-Coaching &amp; Neo Emotional Release</title>
+<title data-t="meta.title">Franz Heinrich — Scham-Coaching &amp; Neo Emotional Release</title>
 <meta name="description" content="Franz Heinrich begleitet Menschen durch Scham — körperorientiert mit Neo Emotional Release. 1:1-Sessions online und vor Ort, Workshops und Retreats. Start mit einem kostenlosen Kennenlern-Call.">
 <meta property="og:title" content="Franz Heinrich — Da ist nichts an dir, das weg muss.">
 <meta property="og:description" content="Körperorientiertes Scham-Coaching mit Neo Emotional Release. 1:1, Workshops, Retreats.">
@@ -52,23 +57,24 @@
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 
-<!-- ═══ MASTHEAD — liegt über dem Video, wird nach dem Hero fest und hell ═══ -->
+<!-- ═══ MASTHEAD — Franz' Reihenfolge: Über mich · Shop · [Logo] · So kannst du mit mir arbeiten ▾ · Kontakt · Icons · Call ═══ -->
 <header class="nav fixed over" id="nav">
   <div class="wrap masthead">
     <div class="mh-side mh-side-l">
       <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
+      <button class="lang desktop" id="lang-desktop" type="button" aria-label="Switch to English">EN</button>
       <nav aria-label="Menü links">
       <ul class="mh-left">
-        <li><a class="navlink" href="#arbeiten">Angebote</a></li>
-        <li><a class="navlink" href="#weg">Dein Weg</a></li>
+        <li><a class="navlink" href="about.html" data-t="nav.about">Über mich</a></li>
+        <li><a class="navlink" href="#shop" data-t="nav.shop">Shop</a></li>
       </ul>
       </nav>
     </div>
 
     <a class="brand" href="#top" aria-label="Franz Heinrich — zum Seitenanfang">
-      <!-- HIER: Logo. Bis es ein richtiges gibt, tragen die Initialen die Marke. -->
+      <!-- HIER: Logo. Franz: „nichts Besonderes, aber passt" — bleibt vorerst. -->
       <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
         <rect width="64" height="64" rx="10" fill="#e96a2c"/>
         <text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#023047">FH</text>
@@ -80,31 +86,56 @@
     <div class="mh-side mh-side-r">
       <nav aria-label="Menü rechts">
       <ul class="mh-right">
-        <li><a class="navlink" href="#ueber">Über mich</a></li>
-        <li><a class="navlink" href="#kostenlos">Kostenlos</a></li>
+        <li class="mh-dd" id="mh-dd">
+          <button class="navlink" type="button" aria-expanded="false" aria-controls="dd-arbeiten" data-t="nav.work">So kannst du mit mir arbeiten</button>
+          <!-- Das Raster, das Franz wollte: 1:1 Sessions, Retreats & Events, Gruppenangebote, Free — plus die Begleitung -->
+          <div class="dd" id="dd-arbeiten">
+            <a href="begleitung.html"><img src="assets/img/kreis-begleitung-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.begleitung.t">Einzelbegleitung</b><small data-t="dd.begleitung.s">Mehrere Monate an deiner Seite</small></span></a>
+            <a href="sessions.html"><img src="assets/img/kreis-sessions-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.sessions.t">1:1 Sessions</b><small data-t="dd.sessions.s">Neo Emotional Release, online oder vor Ort</small></span></a>
+            <a href="#events"><img src="assets/img/kreis-events-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.events.t">Events &amp; Retreats</b><small data-t="dd.events.s">Ein Abend, ein Wochenende, ein Kreis</small></span></a>
+            <a href="#gruppen"><img src="assets/img/kreis-gruppen-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.gruppen.t">Gruppenangebote</b><small data-t="dd.gruppen.s">Regelmäßige Kreise, online und vor Ort</small></span></a>
+            <a href="#kostenlos" class="dd-frei"><img src="assets/img/kreis-frei-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.frei.t">Kostenlos</b><small data-t="dd.frei.s">Podcast, Handbuch, Newsletter</small></span></a>
+          </div>
+        </li>
+        <li><a class="navlink" href="#kontakt" data-t="nav.contact">Kontakt</a></li>
       </ul>
       </nav>
-      <a class="btn btn-navy btn-arrow mh-cta" href="#kontakt">Kennenlern-Call</a>
+      <ul class="mh-social" aria-label="Kanäle">
+        <li><a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a></li>
+        <li><a href="#kontakt" class="mail-link" data-u="info" data-d="franzheinrich.com" aria-label="E-Mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a1 1 0 011 1v14a1 1 0 01-1 1H2a1 1 0 01-1-1V5a1 1 0 011-1zm1 2.5V18h18V6.5l-9 6-9-6zM3.6 6l8.4 5.6L20.4 6H3.6z"/></svg></a></li>
+        <li><a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer" aria-label="Spotify"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 100 24 12 12 0 000-24zm5.5 17.3a.75.75 0 01-1 .25c-2.8-1.7-6.4-2.1-10.6-1.2a.75.75 0 01-.3-1.5c4.6-1 8.5-.6 11.7 1.4.3.2.4.7.2 1zm1.5-3.3a.9.9 0 01-1.3.3c-3.2-2-8.2-2.6-12-1.4a.9.9 0 11-.5-1.8c4.3-1.3 9.8-.7 13.5 1.6.4.3.6.9.3 1.3zm.1-3.4C15.3 8.3 9 8.1 5.3 9.2a1.1 1.1 0 11-.7-2.1c4.3-1.3 11.3-1 15.7 1.6a1.1 1.1 0 01-1.2 1.9z"/></svg></a></li>
+      </ul>
+      <a class="btn btn-navy btn-arrow mh-cta" href="#kontakt" data-t="nav.cta">Kennenlern-Call</a>
     </div>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#arbeiten">Angebote</a>
-  <a href="#weg">Dein Weg</a>
-  <a href="#ueber">Über mich</a>
-  <a href="#kostenlos">Kostenlos</a>
-  <a class="btn btn-orange btn-arrow" href="#kontakt">Kennenlern-Call</a>
+  <a href="about.html" data-t="nav.about">Über mich</a>
+  <a href="#shop" data-t="nav.shop">Shop</a>
+  <span class="mm-group" data-t="nav.work">So kannst du mit mir arbeiten</span>
+  <a class="mm-sub" href="begleitung.html" data-t="dd.begleitung.t">Einzelbegleitung</a>
+  <a class="mm-sub" href="sessions.html" data-t="dd.sessions.t">1:1 Sessions</a>
+  <a class="mm-sub" href="#events" data-t="dd.events.t">Events &amp; Retreats</a>
+  <a class="mm-sub" href="#gruppen" data-t="dd.gruppen.t">Gruppenangebote</a>
+  <a class="mm-sub" href="#kostenlos" data-t="dd.frei.t">Kostenlos</a>
+  <a href="#kontakt" data-t="nav.contact">Kontakt</a>
+  <a class="btn btn-orange btn-arrow" href="#kontakt" data-t="nav.cta">Kennenlern-Call</a>
+  <div class="mm-social">
+    <a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a>
+    <a href="#kontakt" class="mail-link" data-u="info" data-d="franzheinrich.com" aria-label="E-Mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a1 1 0 011 1v14a1 1 0 01-1 1H2a1 1 0 01-1-1V5a1 1 0 011-1zm1 2.5V18h18V6.5l-9 6-9-6zM3.6 6l8.4 5.6L20.4 6H3.6z"/></svg></a>
+    <a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer" aria-label="Spotify"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 100 24 12 12 0 000-24zm5.5 17.3a.75.75 0 01-1 .25c-2.8-1.7-6.4-2.1-10.6-1.2a.75.75 0 01-.3-1.5c4.6-1 8.5-.6 11.7 1.4.3.2.4.7.2 1zm1.5-3.3a.9.9 0 01-1.3.3c-3.2-2-8.2-2.6-12-1.4a.9.9 0 11-.5-1.8c4.3-1.3 9.8-.7 13.5 1.6.4.3.6.9.3 1.3zm.1-3.4C15.3 8.3 9 8.1 5.3 9.2a1.1 1.1 0 11-.7-2.1c4.3-1.3 11.3-1 15.7 1.6a1.1 1.1 0 01-1.2 1.9z"/></svg></a>
+  </div>
+  <button class="lang" id="lang-mobile" type="button" aria-label="Switch to English">EN</button>
 </div>
 
 <main id="main">
 <span id="top"></span>
 
-<!-- ═══ 1 · HERO — Video-Bühne, der Text liegt darüber ═══
-     HIER: Sobald eine web-taugliche MP4 vorliegt (H.264, ≤ 10 MB, ohne Ton,
-     60–90 s), unter assets/video/franz-hero.mp4 ablegen und das video-Element
-     unten einkommentieren — es läuft dann stumm im Hintergrund. Der Play-Knopf
-     öffnet die Fassung mit Ton (assets/video/franz-intro.mp4) in der Lightbox. -->
+<!-- ═══ 1 · HERO — Video-Bühne, Text darüber. Der Kennenlern-Call sitzt oben rechts im Menü,
+     nicht mehr als Knopf im Hero (Franz: „nicht so direkt in die Fresse"). ═══
+     HIER: MP4 (H.264, ≤ 10 MB, ohne Ton, 60–90 s) unter assets/video/franz-hero.mp4 ablegen und
+     das video-Element einkommentieren. Der Play-Knopf öffnet die Fassung mit Ton in der Lightbox. -->
 <section class="hero" id="hero">
   <div class="hero-media" aria-hidden="true">
     <picture>
@@ -126,52 +157,88 @@
     <button class="hero-play video-open in-up" type="button" aria-label="Video abspielen: Wie ich Raum halte" style="--d:0s">
       <svg width="22" height="26" viewBox="0 0 20 24" fill="currentColor" aria-hidden="true"><path d="M0 0l20 12L0 24z"/></svg>
     </button>
-    <!-- HIER: Eyebrow -->
-    <span class="eyebrow in-up" style="--d:.1s">Scham-Coaching · Neo Emotional Release</span>
-    <!-- HIER: Überschrift. Das kursive Wort ist der Akzent. -->
-    <h1 class="in-up" style="--d:.25s">Da ist nichts an dir, das <em>weg</em> muss.</h1>
-    <!-- HIER: ein Satz, mehr nicht -->
-    <p class="hero-sub in-up" style="--d:.4s">Körperarbeit für alles, was du zu lange
+    <span class="eyebrow in-up" style="--d:.1s" data-t="hero.eyebrow">Scham-Coaching · Neo Emotional Release</span>
+    <!-- HIER: Überschrift — Franz will die Erklärung am Anfang selbst umschreiben -->
+    <h1 class="in-up" style="--d:.25s" data-t="hero.h1">Da ist nichts an dir, das <em>weg</em> muss.</h1>
+    <p class="hero-sub in-up" style="--d:.4s" data-t="hero.sub">Körperarbeit für alles, was du zu lange
       runtergeschluckt hast. Einzeln, in Workshops, auf Retreats.</p>
     <p class="hero-id in-up" style="--d:.5s">
       <img src="assets/img/franz-avatar-160.jpg" srcset="assets/img/franz-avatar-320.jpg 2x" width="44" height="44" alt="">
-      <span><b>Franz Heinrich</b>Coach für Scham &amp; Emotionen</span>
+      <span><b>Franz Heinrich</b><span data-t="hero.role">Coach für Scham &amp; Emotionen</span></span>
     </p>
-    <div class="btn-row hero-cta in-up" style="--d:.6s">
-      <a class="btn btn-orange btn-arrow" href="#kontakt">Kennenlern-Call — kostenlos</a>
-    </div>
-    <a class="tlink in-up" href="#arbeiten" style="--d:.7s"><b>So arbeite ich <span>→</span></b></a>
+    <a class="tlink in-up" href="#arbeiten" style="--d:.65s"><b data-t="hero.link">So kannst du mit mir arbeiten <span>↓</span></b></a>
   </div>
   <span class="hero-scroll" aria-hidden="true"></span>
 </section>
 
-<!-- ═══ 2 · STATEMENT — Kennst du das? ═══ -->
+<!-- ═══ 2 · ÜBERSICHT — die fünf Kreise, die Franz wollte (Bild, Titel, eine Zeile, Link) ═══ -->
+<section class="section" id="arbeiten">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rv" data-t="work.eyebrow">So kannst du mit mir arbeiten</span>
+      <h2 class="rv" style="--d:.1s" data-t="work.h2">Fünf Wege. Such dir einen aus.</h2>
+    </div>
+    <div class="kreise">
+      <a class="kreis rv" style="--d:.1s" href="begleitung.html">
+        <span class="ring rv-img"><img src="assets/img/kreis-begleitung-480.jpg" srcset="assets/img/kreis-begleitung-800.jpg 2x" width="480" height="480" loading="lazy" alt="Franz geht am Strand auf die Sonne zu"></span>
+        <b data-t="work.begleitung.t">Einzelbegleitung</b>
+        <small data-t="work.begleitung.s">Mehrere Monate an deiner Seite. Dein Rahmen, dein Tempo.</small>
+        <span class="go" data-t="work.go">Mehr dazu</span>
+      </a>
+      <a class="kreis rv" style="--d:.18s" href="sessions.html">
+        <span class="ring rv-img"><img src="assets/img/kreis-sessions-480.jpg" srcset="assets/img/kreis-sessions-800.jpg 2x" width="480" height="480" loading="lazy" alt="Franz arbeitet mit den Händen am Kopf eines Klienten"></span>
+        <b data-t="work.sessions.t">1:1 Sessions</b>
+        <small data-t="work.sessions.s">Eine ganze Session Neo Emotional Release. Online oder vor Ort.</small>
+        <span class="go" data-t="work.go">Mehr dazu</span>
+      </a>
+      <a class="kreis rv" style="--d:.26s" href="#events">
+        <span class="ring rv-img"><img src="assets/img/kreis-events-480.jpg" srcset="assets/img/kreis-events-800.jpg 2x" width="480" height="480" loading="lazy" alt="Franz steht in einem Kreis und hält Hände"></span>
+        <b data-t="work.events.t">Events &amp; Retreats</b>
+        <small data-t="work.events.s">Ein Abend, ein Wochenende, ein Kreis — manches geht gemeinsam schneller.</small>
+        <span class="go" data-t="work.go">Mehr dazu</span>
+      </a>
+      <a class="kreis rv" style="--d:.34s" href="#gruppen">
+        <span class="ring rv-img"><img src="assets/img/kreis-gruppen-480.jpg" srcset="assets/img/kreis-gruppen-800.jpg 2x" width="480" height="480" loading="lazy" alt="Gruppe auf der Wiese, Hände auf dem Herzen"></span>
+        <b data-t="work.gruppen.t">Gruppenangebote</b>
+        <small data-t="work.gruppen.s">Regelmäßige Kreise, online und vor Ort.</small>
+        <span class="go" data-t="work.go">Mehr dazu</span>
+      </a>
+      <a class="kreis kreis-frei rv" style="--d:.42s" href="#kostenlos">
+        <span class="ring rv-img"><img src="assets/img/kreis-frei-480.jpg" srcset="assets/img/kreis-frei-800.jpg 2x" width="480" height="480" loading="lazy" alt="Franz mit Laptop in einer Bambushütte"></span>
+        <b data-t="work.frei.t">Kostenlos</b>
+        <small data-t="work.frei.s">Podcast, das kleine Scham-Handbuch, Newsletter.</small>
+        <span class="go" data-t="work.go">Mehr dazu</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 3 · STATEMENT — Kennst du das? ═══ -->
 <section class="section deep statement">
   <div class="wrap">
-    <span class="eyebrow rv">Kennst du das?</span>
+    <span class="eyebrow rv" data-t="kennst.eyebrow">Kennst du das?</span>
     <!-- HIER: der Satz, der trifft -->
-    <h2 class="rv" style="--d:.1s">Du hast alles verstanden.<br>Und trotzdem ändert sich nichts.</h2>
+    <h2 class="rv" style="--d:.1s" data-t="kennst.h2">Du hast alles verstanden.<br>Und trotzdem ändert sich nichts.</h2>
     <ul class="saetze">
-      <li class="rv" style="--d:.2s">Außen läuft es. Innen bist du taub oder einfach müde.</li>
-      <li class="rv" style="--d:.3s">Du zeigst dich genau so weit, wie es sicher ist.</li>
-      <li class="rv" style="--d:.4s">Und irgendwo drunter: „Mit mir stimmt was nicht."</li>
+      <li class="rv" style="--d:.2s" data-t="kennst.1">Außen läuft es. Innen bist du taub oder einfach müde.</li>
+      <li class="rv" style="--d:.3s" data-t="kennst.2">Du zeigst dich genau so weit, wie es sicher ist.</li>
+      <li class="rv" style="--d:.4s" data-t="kennst.3">Und irgendwo drunter: „Mit mir stimmt was nicht."</li>
     </ul>
-    <!-- HIER: der Dreh -->
-    <p class="dreh rv" style="--d:.5s">Das ist keine Schwäche. Das ist Scham — und sie tut nur ihren alten Job:
+    <p class="dreh rv" style="--d:.5s" data-t="kennst.dreh">Das ist keine Schwäche. Das ist Scham — und sie tut nur ihren alten Job:
       dich schützen. Sie darf jetzt etwas Neues lernen.</p>
   </div>
 </section>
 
-<!-- ═══ 3 · LAUFBAND — HIER: dein Satz ═══ -->
+<!-- ═══ 4 · LAUFBAND — Franz mag das Element, der Text passt ihm nicht. HIER: seine Sätze. ═══ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Du bist nicht zu viel</span><span>Du warst nur zu lange leise</span><span>UnVerschämt</span>
-    <span>Du bist nicht zu viel</span><span>Du warst nur zu lange leise</span><span>UnVerschämt</span>
+    <span data-t="marquee.1">Du bist nicht zu viel</span><span data-t="marquee.2">Du warst nur zu lange leise</span><span data-t="marquee.3">UnVerschämt</span>
+    <span data-t="marquee.1">Du bist nicht zu viel</span><span data-t="marquee.2">Du warst nur zu lange leise</span><span data-t="marquee.3">UnVerschämt</span>
   </div>
 </div>
 
-<!-- ═══ 4 · ANGEBOT EINS — 1:1 Session ═══ -->
-<section class="offer" id="arbeiten">
+<!-- ═══ 5 · ANGEBOT EINS — 1:1 Session ═══ -->
+<section class="offer" id="sessions">
   <div class="wrap offer-grid">
     <figure class="fig rv-img">
       <img src="assets/img/session-koerper-853.jpg"
@@ -180,31 +247,30 @@
            alt="Franz arbeitet mit den Händen am Kopf eines liegenden Klienten">
     </figure>
     <div class="txt">
-      <span class="eyebrow rv">Eins · Einzeln</span>
-      <h2 class="rv" style="--d:.1s">Eine Session, die im <em>Körper</em> ankommt.</h2>
-      <!-- HIER: drei Zeilen, nicht mehr -->
-      <p class="rv" style="--d:.2s">Neo Emotional Release: Atem, Druckpunkte, meine Stimme. Du musst nichts
+      <span class="eyebrow rv" data-t="o1.eyebrow">Eins · Einzeln</span>
+      <h2 class="rv" style="--d:.1s" data-t="o1.h2">Eine Session, die im <em>Körper</em> ankommt.</h2>
+      <p class="rv" style="--d:.2s" data-t="o1.p">Neo Emotional Release: Atem, Druckpunkte, meine Stimme. Du musst nichts
         erklären und nichts richtig machen. Online oder vor Ort.</p>
-      <div class="meta rv" style="--d:.3s"><span class="chip">90 Minuten</span><span class="chip">Online · Vor Ort</span></div>
-      <a class="tlink rv" style="--d:.4s" href="sessions.html"><b>Eine Session von innen <span>→</span></b></a>
+      <div class="meta rv" style="--d:.3s"><span class="chip" data-t="o1.c1">90 Minuten</span><span class="chip" data-t="o1.c2">Online · Vor Ort</span></div>
+      <a class="tlink rv" style="--d:.4s" href="sessions.html"><b data-t="o1.link">Eine Session von innen <span>→</span></b></a>
     </div>
   </div>
 </section>
 
-<!-- ═══ 5 · STIMME — HIER: echtes Zitat + Freigabe ═══ -->
+<!-- ═══ 6 · STIMME (Text) — HIER: echtes Zitat + Freigabe ═══ -->
 <section class="voice">
   <img src="assets/img/band-licht-1500.jpg"
        srcset="assets/img/band-licht-900.jpg 900w, assets/img/band-licht-1500.jpg 1500w, assets/img/band-licht-2200.jpg 2200w"
        sizes="100vw" width="1500" height="750" loading="lazy" alt="">
   <blockquote class="rv">
     <p class="sterne" aria-hidden="true">★★★★★</p>
-    <p class="zitat">„Zwei Jahre Therapie, alles verstanden. Bei Franz habe ich es zum ersten Mal gefühlt."</p>
-    <footer>Platzhalter · Vorname, Ort</footer>
+    <p class="zitat" data-t="v1.zitat">„Zwei Jahre Therapie, alles verstanden. Bei Franz habe ich es zum ersten Mal gefühlt."</p>
+    <footer data-t="v1.wer">Platzhalter · Vorname, Ort</footer>
   </blockquote>
 </section>
 
-<!-- ═══ 6 · ANGEBOT ZWEI — Einzelbegleitung ═══ -->
-<section class="offer flip deep">
+<!-- ═══ 7 · ANGEBOT ZWEI — Einzelbegleitung ═══ -->
+<section class="offer flip deep" id="begleitung">
   <div class="wrap offer-grid">
     <figure class="fig rv-img">
       <img src="assets/img/weg-ins-licht-900.jpg"
@@ -213,18 +279,18 @@
            alt="Franz geht barfuß über den Strand auf die tief stehende Sonne zu">
     </figure>
     <div class="txt">
-      <span class="eyebrow rv">Zwei · Über Monate</span>
-      <h2 class="rv" style="--d:.1s">Der längere Weg — <em>mit</em> jemandem.</h2>
-      <p class="rv" style="--d:.2s">Mehrere Monate an deiner Seite: Sessions, Integration und alles, was zwischendrin
+      <span class="eyebrow rv" data-t="o2.eyebrow">Zwei · Über Monate</span>
+      <h2 class="rv" style="--d:.1s" data-t="o2.h2">Der längere Weg — <em>mit</em> jemandem.</h2>
+      <p class="rv" style="--d:.2s" data-t="o2.p">Mehrere Monate an deiner Seite: Sessions, Integration und alles, was zwischendrin
         passiert. Rahmen und Investition klären wir erst, wenn wir wissen, worum es bei dir geht.</p>
-      <div class="meta rv" style="--d:.3s"><span class="chip">Individuell</span><span class="chip">Nach der ersten Session</span></div>
-      <a class="tlink rv" style="--d:.4s" href="begleitung.html"><b>Die Begleitung <span>→</span></b></a>
+      <div class="meta rv" style="--d:.3s"><span class="chip" data-t="o2.c1">Individuell</span><span class="chip" data-t="o2.c2">Nach der ersten Session</span></div>
+      <a class="tlink rv" style="--d:.4s" href="begleitung.html"><b data-t="o2.link">Die Begleitung <span>→</span></b></a>
     </div>
   </div>
 </section>
 
-<!-- ═══ 7 · ANGEBOT DREI — Workshops, Retreats, Veranstalter ═══ -->
-<section class="offer">
+<!-- ═══ 8 · ANGEBOT DREI — Events & Retreats ═══ -->
+<section class="offer" id="events">
   <div class="wrap offer-grid">
     <figure class="fig rv-img">
       <img src="assets/img/kreis-haende-900.jpg"
@@ -233,222 +299,239 @@
            alt="Franz steht mit anderen in einem Kreis und hält zwei Hände">
     </figure>
     <div class="txt">
-      <span class="eyebrow rv">Drei · In der Gruppe</span>
-      <h2 class="rv" style="--d:.1s">Workshops &amp; Retreats.</h2>
-      <p class="rv" style="--d:.2s">Ein Abend, ein Wochenende, ein Kreis. Manches geht in der Gruppe schneller —
+      <span class="eyebrow rv" data-t="o3.eyebrow">Drei · Gemeinsam</span>
+      <h2 class="rv" style="--d:.1s" data-t="o3.h2">Events &amp; Retreats.</h2>
+      <p class="rv" style="--d:.2s" data-t="o3.p">Ein Abend, ein Wochenende, ein Kreis. Manches geht in der Gruppe schneller —
         weil du siehst, dass du damit nicht allein bist. Auch buchbar für Festivals, Retreats
         und Online-Akademien.</p>
-      <!-- HIER: Link zu Terminen / Shop -->
-      <div class="meta rv" style="--d:.3s"><span class="chip chip-hot">Neue Termine in Arbeit</span></div>
-      <a class="tlink rv" style="--d:.4s" href="#kontakt"><b>Termine &amp; Anfragen <span>→</span></b></a>
+      <!-- HIER: Termine / Shop-Link -->
+      <div class="meta rv" style="--d:.3s"><span class="chip chip-hot" data-t="o3.c1">Neue Termine in Arbeit</span></div>
+      <a class="tlink rv" style="--d:.4s" href="#kontakt"><b data-t="o3.link">Termine &amp; Anfragen <span>→</span></b></a>
     </div>
   </div>
 </section>
 
-<!-- ═══ 8 · STIMME ZWEI ═══ -->
-<section class="voice">
-  <img src="assets/img/band-berge-1500.jpg"
-       srcset="assets/img/band-berge-900.jpg 900w, assets/img/band-berge-1500.jpg 1500w, assets/img/band-berge-2200.jpg 2200w"
-       sizes="100vw" width="1500" height="750" loading="lazy" alt="">
-  <blockquote class="rv">
-    <p class="sterne" aria-hidden="true">★★★★★</p>
-    <p class="zitat">„Er hält den Raum so, dass ich mich nicht erklären musste."</p>
-    <footer>Platzhalter · Vorname, Ort</footer>
-  </blockquote>
+<!-- ═══ 9 · STIMME (Video) — Franz möchte irgendwo ein Video-Testimonial. HIER: Datei assets/video/stimme-1.mp4 ═══ -->
+<section class="section deep">
+  <div class="wrap">
+    <span class="eyebrow rv" data-t="vt.eyebrow">Eine Stimme</span>
+    <div class="vt-wrap rv" style="--d:.1s">
+      <div class="videostage">
+        <img src="assets/img/gruppe-wiese-1100.jpg" srcset="assets/img/gruppe-wiese-700.jpg 700w, assets/img/gruppe-wiese-1100.jpg 1100w"
+             sizes="(max-width: 760px) 92vw, 46rem" width="1100" height="733" loading="lazy" alt="Franz mit einer Gruppe auf der Wiese, Hände auf dem Herzen">
+        <button class="video-play video-open" type="button">
+          <span class="disc" aria-hidden="true"><svg width="18" height="22" viewBox="0 0 20 24" fill="currentColor"><path d="M0 0l20 12L0 24z"/></svg></span>
+          <span class="cap" data-t="vt.cap">Video-Testimonial — Platzhalter</span>
+        </button>
+      </div>
+      <footer data-t="vt.wer">Platzhalter · Vorname, Ort</footer>
+    </div>
+  </div>
 </section>
 
-<!-- ═══ 9 · ÜBER MICH ═══ -->
+<!-- ═══ 10 · ANGEBOT VIER — Gruppenangebote ═══ -->
+<section class="offer flip" id="gruppen">
+  <div class="wrap offer-grid">
+    <figure class="fig rv-img">
+      <img src="assets/img/franz-reden-900.jpg"
+           srcset="assets/img/franz-reden-560.jpg 560w, assets/img/franz-reden-900.jpg 900w"
+           sizes="(max-width: 899px) 92vw, 520px" width="900" height="1125" loading="lazy"
+           alt="Franz erklärt etwas mit den Händen, im Hintergrund Olivenbäume">
+    </figure>
+    <div class="txt">
+      <span class="eyebrow rv" data-t="o4.eyebrow">Vier · Regelmäßig</span>
+      <h2 class="rv" style="--d:.1s" data-t="o4.h2">Gruppenangebote.</h2>
+      <!-- HIER: Franz' Gruppenformate (Man Circle, Online-Kreis …) -->
+      <p class="rv" style="--d:.2s" data-t="o4.p">Regelmäßige Kreise, online und vor Ort — ein Raum, der offen bleibt, mit Menschen,
+        die deinen Weg kennen. Details folgen, sobald der erste Kreis steht.</p>
+      <div class="meta rv" style="--d:.3s"><span class="chip" data-t="o4.c1">In Arbeit</span></div>
+      <a class="tlink rv" style="--d:.4s" href="#newsletter"><b data-t="o4.link">Bescheid bekommen <span>→</span></b></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 11 · ÜBER MICH — kurz; die ganze Geschichte steht auf about.html ═══ -->
 <section class="section deep about" id="ueber">
   <div class="wrap">
     <div class="about-pics">
       <figure class="rv-img">
         <img src="assets/img/franz-herz-900.jpg"
              srcset="assets/img/franz-herz-560.jpg 560w, assets/img/franz-herz-900.jpg 900w, assets/img/franz-herz-1300.jpg 1300w"
-             sizes="(max-width: 640px) 92vw, 30rem" width="900" height="1125" loading="lazy"
+             sizes="(max-width: 640px) 55vw, 30rem" width="900" height="1125" loading="lazy"
              alt="Franz Heinrich, die Hand auf dem Herzen, vor einer geschnitzten Holzwand">
         <figcaption>Franz Heinrich</figcaption>
       </figure>
       <figure class="rv-img" style="--d:.15s">
         <img src="assets/img/franz-frech-900.jpg"
              srcset="assets/img/franz-frech-560.jpg 560w, assets/img/franz-frech-900.jpg 900w"
-             sizes="(max-width: 640px) 92vw, 24rem" width="900" height="1125" loading="lazy"
+             sizes="(max-width: 640px) 38vw, 24rem" width="900" height="1125" loading="lazy"
              alt="Franz streckt einem Regenbogen die Zunge raus">
         <figcaption>UnVerschämt</figcaption>
       </figure>
     </div>
-    <span class="eyebrow rv">Über mich</span>
-    <!-- HIER: der wichtigste Text der Seite — kurz halten -->
-    <h2 class="rv" style="--d:.1s">Ich kenne Scham nicht aus Büchern.</h2>
-    <p class="lead rv" style="--d:.2s">Kleinmachen, verstecken, gegen das eigene Gefühl anarbeiten —
+    <span class="eyebrow rv" data-t="about.eyebrow">Über mich</span>
+    <h2 class="rv" style="--d:.1s" data-t="about.h2">Ich kenne Scham nicht aus Büchern.</h2>
+    <p class="lead rv" style="--d:.2s" data-t="about.p">Kleinmachen, verstecken, gegen das eigene Gefühl anarbeiten —
       das war jahrelang mein Normalzustand. Heute begleite ich Menschen genau dorthin, wo es weich wird.
       Warm, neugierig, bodenständig.</p>
     <div class="werte rv" style="--d:.3s">
-      <span class="chip">Zertifizierter N.E.R.-Practitioner</span><span class="chip">Possibility Management</span>
+      <span class="chip" data-t="about.c1">Zertifizierter N.E.R.-Practitioner</span><span class="chip" data-t="about.c2">Possibility Management</span>
     </div>
-    <!-- HIER: zweites Video — „fünf Minuten über mich". Datei: assets/video/franz-ueber-mich.mp4 -->
     <div class="videostage videostage--small mt-3 rv-img" style="--d:.2s">
       <img src="assets/img/ueber-video-860.jpg" srcset="assets/img/ueber-video-560.jpg 560w, assets/img/ueber-video-860.jpg 860w"
            sizes="(max-width: 560px) 92vw, 32rem" width="860" height="645" loading="lazy"
            alt="Franz steht am Strand, die Hand auf dem eigenen Herzen">
       <button class="video-play video-open" type="button">
         <span class="disc" aria-hidden="true"><svg width="18" height="22" viewBox="0 0 20 24" fill="currentColor"><path d="M0 0l20 12L0 24z"/></svg></span>
-        <span class="cap">Fünf Minuten über mich</span>
+        <span class="cap" data-t="about.cap">Fünf Minuten über mich</span>
       </button>
     </div>
+    <p class="mt-3 rv"><a class="tlink" href="about.html"><b data-t="about.link">Meine ganze Geschichte <span>→</span></b></a></p>
   </div>
 </section>
 
-<!-- ═══ 10 · DEIN WEG — drei Schritte ═══ -->
+<!-- ═══ 12 · DEIN WEG — Franz ist unschlüssig, findet es aber „geil". Bleibt, der Call-Knopf sitzt hier statt im Hero. ═══ -->
 <section class="section" id="weg">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow rv">Dein Weg mit mir</span>
-      <h2 class="rv" style="--d:.1s">Drei Schritte. Kein Abo, kein Trichter.</h2>
+      <span class="eyebrow rv" data-t="weg.eyebrow">Dein Weg mit mir</span>
+      <h2 class="rv" style="--d:.1s" data-t="weg.h2">Drei Schritte. Kein Abo, kein Trichter.</h2>
     </div>
     <div class="steps">
       <div class="step rv" style="--d:.1s">
         <span class="num">01</span>
-        <h3>Kennenlern-Call</h3>
-        <p>30 Minuten. Wir schauen, was los ist und ob wir zusammenpassen.</p>
-        <span class="chip chip-hot">Kostenlos</span>
+        <h3 data-t="weg.1.t">Kennenlern-Call</h3>
+        <p data-t="weg.1.p">30 Minuten. Wir schauen, was los ist und ob wir zusammenpassen.</p>
+        <span class="chip chip-hot" data-t="weg.1.c">Kostenlos</span>
       </div>
       <div class="step rv" style="--d:.2s">
         <span class="num">02</span>
-        <h3>Schnupper-Session</h3>
-        <p>Eine ganze Session. Danach weißt du aus dem Körper heraus, ob das dein Weg ist.</p>
-        <!-- HIER: Preis der Schnupper-Session -->
-        <span class="chip">Erste Session</span>
+        <h3 data-t="weg.2.t">Schnupper-Session</h3>
+        <p data-t="weg.2.p">Eine ganze Session. Danach weißt du aus dem Körper heraus, ob das dein Weg ist.</p>
+        <span class="chip" data-t="weg.2.c">Erste Session</span>
       </div>
       <div class="step rv" style="--d:.3s">
         <span class="num">03</span>
-        <h3>Deine Begleitung</h3>
-        <p>Wenn wir beide Lust darauf haben: mehrere Monate in einem Rahmen, den wir gemeinsam bauen.</p>
-        <span class="chip">Individuell</span>
+        <h3 data-t="weg.3.t">Deine Begleitung</h3>
+        <p data-t="weg.3.p">Wenn wir beide Lust darauf haben: mehrere Monate in einem Rahmen, den wir gemeinsam bauen.</p>
+        <span class="chip" data-t="weg.3.c">Individuell</span>
       </div>
     </div>
     <div class="btn-row rv" style="--d:.3s">
-      <a class="btn btn-orange btn-arrow" href="#kontakt">Kennenlern-Call buchen</a>
+      <a class="btn btn-orange btn-arrow" href="#kontakt" data-t="weg.cta">Kennenlern-Call buchen</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ 11 · KOSTENLOS & KLEINES ═══ -->
+<!-- ═══ 13 · KOSTENLOS & SHOP — Franz mag den Block, will ihn nur umbenennen ═══ -->
 <section class="section deep" id="kostenlos">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow rv">Kostenlos &amp; Kleines</span>
-      <h2 class="rv" style="--d:.1s">Erst reinschnuppern.</h2>
+      <span class="eyebrow rv" data-t="frei.eyebrow">Reinschnuppern</span>
+      <h2 class="rv" style="--d:.1s" data-t="frei.h2">Kostenlos &amp; Kleines.</h2>
     </div>
+    <!-- HIER: Podcast/Instagram per Einbettung statt Link? Franz ist unschlüssig — wir zeigen erst die Links. -->
     <div class="frei rv" style="--d:.2s">
       <a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer">
-        <div><span class="tag">Podcast · kostenlos</span><h3>Gespräche mit Franz Heinrich</h3><p>Über Scham, Körper und alles, was sonst niemand ausspricht.</p></div>
-        <span class="go">Anhören ↗</span>
+        <div><span class="tag" data-t="frei.1.tag">Podcast · kostenlos</span><h3 data-t="frei.1.t">Gespräche mit Franz Heinrich</h3><p data-t="frei.1.p">Über Scham, Körper und alles, was sonst niemand ausspricht.</p></div>
+        <span class="go" data-t="frei.1.go">Anhören ↗</span>
       </a>
       <a href="#newsletter">
-        <div><span class="tag">PDF · kostenlos</span><h3>Das kleine Scham-Handbuch</h3><p>Woran du Scham im Alltag erkennst und was in dem Moment hilft.</p></div>
-        <span class="go">Holen →</span>
+        <div><span class="tag" data-t="frei.2.tag">PDF · kostenlos</span><h3 data-t="frei.2.t">Das kleine Scham-Handbuch</h3><p data-t="frei.2.p">Woran du Scham im Alltag erkennst und was in dem Moment hilft.</p></div>
+        <span class="go" data-t="frei.2.go">Holen →</span>
       </a>
       <a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer">
-        <div><span class="tag">Instagram</span><h3>@franz.unverschaemt</h3><p>Der ehrlichste Blick auf meine Arbeit — und auf mich.</p></div>
-        <span class="go">Folgen ↗</span>
+        <div><span class="tag" data-t="frei.3.tag">Instagram</span><h3 data-t="frei.3.t">@franz.unverschaemt</h3><p data-t="frei.3.p">Der ehrlichste Blick auf meine Arbeit — und auf mich.</p></div>
+        <span class="go" data-t="frei.3.go">Folgen ↗</span>
       </a>
-      <!-- HIER: kleine Angebote — Preise und Links kommen von dir, bezahlt wird beim Anbieter -->
+    </div>
+    <span id="shop"></span>
+    <h3 class="mt-3" style="font-size:var(--t-2)" data-t="shop.h3">Shop</h3>
+    <!-- HIER: Preise und Links kommen von Franz, bezahlt wird beim Anbieter -->
+    <div class="frei rv mt-2" style="--d:.1s">
       <a href="#kontakt">
-        <div><span class="tag">Aufnahme · bald</span><h3>Morgen-Ritual</h3><p>Zwanzig Minuten, damit du im Körper startest und nicht im Kopf.</p></div>
-        <span class="go">Bald →</span>
+        <div><span class="tag" data-t="shop.1.tag">Aufnahme · bald</span><h3 data-t="shop.1.t">Morgen-Ritual</h3><p data-t="shop.1.p">Zwanzig Minuten, damit du im Körper startest und nicht im Kopf.</p></div>
+        <span class="go" data-t="shop.1.go">Bald →</span>
       </a>
       <a href="#kontakt">
-        <div><span class="tag">Self-Study · in Arbeit</span><h3>Mein Weg durch Scham</h3><p>Der größere Kurs, zum Durcharbeiten in deinem Tempo.</p></div>
-        <span class="go">Bald →</span>
+        <div><span class="tag" data-t="shop.2.tag">Self-Study · in Arbeit</span><h3 data-t="shop.2.t">Mein Weg durch Scham</h3><p data-t="shop.2.p">Der größere Kurs, zum Durcharbeiten in deinem Tempo.</p></div>
+        <span class="go" data-t="shop.2.go">Bald →</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ═══ 12 · NEWSLETTER ═══ -->
+<!-- ═══ 14 · NEWSLETTER ═══ -->
 <section class="section-tight" id="newsletter">
   <div class="wrap">
     <div class="newsletter measure rv">
-      <span class="eyebrow">Newsletter</span>
-      <!-- HIER: Newsletter-Text -->
-      <h2>Ab und zu ein Brief. Kein Marketing.</h2>
-      <p class="lead mt-2" style="margin-inline:auto">Zur Anmeldung bekommst du das kleine Scham-Handbuch als PDF.</p>
+      <span class="eyebrow" data-t="nl.eyebrow">Newsletter</span>
+      <h2 data-t="nl.h2">Ab und zu ein Brief. Kein Marketing.</h2>
+      <p class="lead mt-2" style="margin-inline:auto" data-t="nl.p">Zur Anmeldung bekommst du das kleine Scham-Handbuch als PDF.</p>
       <!-- HIER: Anbieter (Brevo, MailerLite …) wird bei der Umsetzung eingetragen -->
       <form class="nl-form" id="nlform" novalidate>
         <label class="vh" for="nl-mail">Deine E-Mail-Adresse</label>
-        <input id="nl-mail" name="email" type="email" placeholder="Deine E-Mail-Adresse" autocomplete="email" required>
-        <button class="btn btn-orange" type="submit">Handbuch holen</button>
+        <input id="nl-mail" name="email" type="email" placeholder="Deine E-Mail-Adresse" autocomplete="email" required data-t-ph="nl.ph">
+        <button class="btn btn-orange" type="submit" data-t="nl.btn">Handbuch holen</button>
       </form>
-      <p class="small mt-1">Jederzeit abmeldbar. Keine Weitergabe. <a href="datenschutz.html">Datenschutz</a>.</p>
+      <p class="small mt-1" data-t="nl.small">Jederzeit abmeldbar. Keine Weitergabe. <a href="datenschutz.html">Datenschutz</a>.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══ 13 · PASST DAS? ═══ -->
-<section class="section deep">
+<!-- ═══ 15 · GOOGLE-REZENSIONEN — Franz will sie „wahrscheinlich ganz unten". HIER: sein Google-Link. ═══ -->
+<section class="section" id="google">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow rv">Ehrlich gesagt</span>
-      <h2 class="rv" style="--d:.1s">Für wen das hier ist — und für wen nicht.</h2>
+      <span class="eyebrow rv" data-t="google.eyebrow">Auf Google</span>
+      <h2 class="rv" style="--d:.1s" data-t="google.h2">Das sagen Menschen auf Google.</h2>
     </div>
-    <div class="passt">
-      <div class="rv" style="--d:.2s">
-        <h3>Richtig, wenn du …</h3>
-        <ul>
-          <li>dich endlich wieder spüren willst, statt noch mehr zu reden</li>
-          <li>längst viel verstanden hast — und trotzdem feststeckst</li>
-          <li>eine Begleitung suchst, die warm ist und trotzdem ehrlich</li>
-        </ul>
-      </div>
-      <div class="rv" style="--d:.3s">
-        <h3>Etwas anderes, wenn …</h3>
-        <div class="warn">
-          <p class="small">Coaching und Neo Emotional Release sind Prozess- und Persönlichkeitsarbeit —
-            kein Heilverfahren und kein Ersatz für Psychotherapie oder ärztliche Behandlung.
-            In einer akuten Krise ist ärztliche oder therapeutische Hilfe der erste Schritt.</p>
-          <p class="small mt-1"><strong>Sofort erreichbar:</strong> Notruf 112 · Telefonseelsorge 0800&nbsp;111&nbsp;0&nbsp;111 ·
-            Krisendienst Bayern 0800&nbsp;655&nbsp;3000</p>
-        </div>
-      </div>
+    <div class="google rv" style="--d:.2s">
+      <span class="glogo" aria-hidden="true">Google</span>
+      <p class="sterne" aria-hidden="true">★★★★★</p>
+      <p class="g" data-t="google.g">Platzhalter · 5,0 von 5</p>
+      <p class="n" data-t="google.n">Hier erscheinen deine Google-Rezensionen, sobald du uns den Link schickst.</p>
+      <a class="tlink mt-1" href="#kontakt"><b data-t="google.link">Rezensionen auf Google lesen ↗</b></a>
     </div>
   </div>
 </section>
 
-<!-- ═══ 14 · KONTAKT ═══ -->
-<section class="section" id="kontakt">
+<!-- ═══ 16 · KONTAKT ═══ -->
+<section class="section deep" id="kontakt">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow rv">Kontakt</span>
-      <h2 class="rv" style="--d:.1s">Lass uns reden.</h2>
-      <p class="lead rv" style="--d:.2s">30 Minuten, kostenlos, unverbindlich. Danach weißt du mehr.</p>
+      <span class="eyebrow rv" data-t="kontakt.eyebrow">Kontakt</span>
+      <h2 class="rv" style="--d:.1s" data-t="kontakt.h2">Lass uns reden.</h2>
+      <p class="lead rv" style="--d:.2s" data-t="kontakt.p">30 Minuten, kostenlos, unverbindlich. Danach weißt du mehr.</p>
     </div>
     <div class="kontakt-wege rv" style="--d:.3s">
       <!-- HIER: Kalender-Link (Calendly, Google-Terminplaner …) — bis dahin zum Formular -->
-      <a class="btn btn-orange btn-arrow" href="#kontaktform">Kennenlern-Call aussuchen</a>
+      <a class="btn btn-orange btn-arrow" href="#kontaktform" data-t="kontakt.btn">Kennenlern-Call aussuchen</a>
       <!-- HIER: WhatsApp — https://wa.me/49… -->
-      <a class="btn btn-line btn-arrow" href="#kontaktform">Per WhatsApp</a>
+      <a class="btn btn-line btn-arrow" href="#kontaktform" data-t="kontakt.wa">Per WhatsApp</a>
     </div>
     <ul class="kontakt-liste rv" style="--d:.4s">
       <li>
         <!-- E-Mail steht bewusst nicht im Quelltext (Bot-Spam) — wird per JavaScript zusammengesetzt -->
         <a href="#kontaktform" class="mail-link" data-u="info" data-d="franzheinrich.com">
-          <span class="k">E-Mail</span><span class="v" data-mail-text>Adresse anzeigen</span>
+          <span class="k" data-t="kontakt.mail">E-Mail</span><span class="v" data-mail-text>Adresse anzeigen</span>
         </a>
       </li>
       <li><a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer"><span class="k">Instagram</span><span class="v">@franz.unverschaemt</span></a></li>
+      <li><a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer"><span class="k">Spotify</span><span class="v">Gespräche mit Franz</span></a></li>
     </ul>
 
     <details class="formbox mt-3" id="kontaktform">
-      <summary><span class="tlink"><b>Lieber schreiben? <span>↓</span></b></span></summary>
+      <summary><span class="tlink"><b data-t="kontakt.form">Lieber schreiben? <span>↓</span></b></span></summary>
       <div class="inner">
-        <p class="form-hint">Design-Vorschau: Dieses Formular versendet noch nichts.</p>
+        <p class="form-hint" data-t="kontakt.hint">Design-Vorschau: Dieses Formular versendet noch nichts.</p>
         <form class="form-grid" id="kform" novalidate>
-          <div class="field"><label for="f-name">Dein Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
-          <div class="field"><label for="f-mail">Deine E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
-          <div class="field full"><label for="f-text">Deine Nachricht</label><textarea id="f-text" name="nachricht" required></textarea></div>
+          <div class="field"><label for="f-name" data-t="f.name">Dein Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-mail" data-t="f.mail">Deine E-Mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+          <div class="field full"><label for="f-text" data-t="f.text">Deine Nachricht</label><textarea id="f-text" name="nachricht" required></textarea></div>
           <div class="field full center">
-            <button class="btn btn-orange btn-arrow" type="submit" style="margin-inline:auto">Nachricht senden</button>
-            <p class="form-note mt-1">Bitte keine sensiblen Gesundheitsdaten übers Formular. Deine Daten bleiben bei Franz.
+            <button class="btn btn-orange btn-arrow" type="submit" style="margin-inline:auto" data-t="f.send">Nachricht senden</button>
+            <p class="form-note mt-1" data-t="f.note">Bitte keine sensiblen Gesundheitsdaten übers Formular. Deine Daten bleiben bei Franz.
               <a href="datenschutz.html">Datenschutz</a>.</p>
           </div>
         </form>
@@ -469,19 +552,20 @@
       <span class="name">Franz&nbsp;Heinrich</span>
       <span class="rolle">Scham &amp; Emotionen</span>
     </span>
-    <p class="small">Körperorientiertes Scham-Coaching mit Neo Emotional Release. 1:1 online und vor Ort, Workshops, Retreats.</p>
+    <p class="small" data-t="foot.p">Körperorientiertes Scham-Coaching mit Neo Emotional Release. 1:1 online und vor Ort, Workshops, Retreats.</p>
     <nav aria-label="Footer">
       <ul class="footer-nav">
-        <li><a href="sessions.html">Sessions</a></li>
-        <li><a href="begleitung.html">Begleitung</a></li>
-        <li><a href="links.html">Alle Links</a></li>
+        <li><a href="sessions.html" data-t="foot.sessions">Sessions</a></li>
+        <li><a href="begleitung.html" data-t="foot.begleitung">Begleitung</a></li>
+        <li><a href="about.html" data-t="foot.about">Über mich</a></li>
+        <li><a href="links.html" data-t="foot.links">Alle Links</a></li>
         <li><a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer">Spotify</a></li>
         <li><a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
       </ul>
     </nav>
     <div class="footer-bottom">
-      <span>© 2026 Franz Heinrich · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a></span>
-      <span>Unverbindliche Design-Vorschau · Konzept &amp; Code: Lechcode, Landsberg am Lech</span>
+      <span data-t="foot.legal">© 2026 Franz Heinrich · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a></span>
+      <span data-t="foot.note">Unverbindliche Design-Vorschau · Konzept &amp; Code: Lechcode, Landsberg am Lech</span>
     </div>
   </div>
 </footer>
@@ -496,13 +580,14 @@
     </video>
     -->
     <div class="lightbox-note">
-      <p><strong>Design-Vorschau</strong></p>
-      <p class="small mt-1">Hier läuft später dein Video — der Platz dafür steht schon.
+      <p><strong data-t="lb.t">Design-Vorschau</strong></p>
+      <p class="small mt-1" data-t="lb.p">Hier läuft später dein Video — der Platz dafür steht schon.
         Wir brauchen nur eine web-taugliche Datei (MP4, 60–90&nbsp;Sekunden).</p>
     </div>
   </div>
 </div>
 
+<script src="assets/i18n-en.js" defer></script>
 <script>
 /* Masthead: über dem Hero durchsichtig, danach hell; ab dem ersten Scrollen mit Fläche */
 (function(){
@@ -512,6 +597,15 @@
     if(hero){nav.classList.toggle('over',hero.getBoundingClientRect().bottom>nav.offsetHeight);}
   }
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();
+
+/* Aufklapp-Raster „So kannst du mit mir arbeiten": Klick/Touch, Hover läuft über CSS */
+(function(){
+  var dd=document.getElementById('mh-dd');if(!dd)return;
+  var btn=dd.querySelector('button');
+  btn.addEventListener('click',function(){var o=dd.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
+  document.addEventListener('click',function(e){if(!dd.contains(e.target)){dd.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
 })();
 
 /* Burger-Menü */
@@ -548,7 +642,7 @@
   els.forEach(function(el){ if(el.getBoundingClientRect().top<window.innerHeight*0.92){show(el);} else {io.observe(el);} });
 })();
 
-/* Video-Lightbox (Hero-Play + Über-mich-Video) */
+/* Video-Lightbox (alle Play-Knöpfe) */
 (function(){
   var box=document.getElementById('lightbox'),close=document.getElementById('lightbox-x');
   if(!box)return;
@@ -575,6 +669,39 @@
       b.textContent='Danke — in der Vorschau wird noch nichts gesendet';b.disabled=true;
     });
   });
+})();
+
+/* DE/EN-Umschalter: Texte aus assets/i18n-en.js, Deutsch bleibt im HTML.
+   Franz schreibt Deutsch, die Übersetzung wird erzeugt, er korrigiert sie in der JS-Datei. */
+(function(){
+  var KEY='fh-lang';
+  function apply(lang){
+    var en=window.FH_EN||{};
+    document.querySelectorAll('[data-t]').forEach(function(el){
+      var k=el.getAttribute('data-t');
+      if(!el.dataset.de)el.dataset.de=el.innerHTML;
+      if(lang==='en'&&en[k]!==undefined)el.innerHTML=en[k]; else el.innerHTML=el.dataset.de;
+    });
+    document.querySelectorAll('[data-t-ph]').forEach(function(el){
+      var k=el.getAttribute('data-t-ph');
+      if(!el.dataset.de)el.dataset.de=el.placeholder;
+      el.placeholder=(lang==='en'&&en[k])?en[k]:el.dataset.de;
+    });
+    document.documentElement.lang=lang;
+    document.querySelectorAll('.lang').forEach(function(b){b.textContent=lang==='en'?'DE':'EN';b.setAttribute('aria-label',lang==='en'?'Auf Deutsch umschalten':'Switch to English');});
+    /* E-Mail-Links nach dem Textwechsel erneut befüllen */
+    document.querySelectorAll('.mail-link [data-mail-text]').forEach(function(t){var a=t.closest('.mail-link');t.textContent=a.dataset.u+String.fromCharCode(64)+a.dataset.d;});
+  }
+  function current(){try{return localStorage.getItem(KEY)||'de';}catch(e){return 'de';}}
+  function boot(){
+    apply(current());
+    document.querySelectorAll('.lang').forEach(function(b){b.addEventListener('click',function(){
+      var next=current()==='en'?'de':'en';
+      try{localStorage.setItem(KEY,next);}catch(e){}
+      apply(next);
+    });});
+  }
+  if(window.FH_EN)boot(); else window.addEventListener('load',boot);
 })();
 </script>
 </body>

@@ -643,3 +643,153 @@ details.formbox .inner{margin-top:var(--sp-3)}
 
 /* ---- 35 · Über-mich-Bilder auch am Handy nebeneinander (weniger Scrollen) - */
 .about-pics{grid-template-columns:1.25fr .85fr;align-items:end}
+
+/* ============================================================================
+   RUNDE 7 · 11.09.2026 — Franz' Feedback zum ersten Entwurf eingearbeitet
+   ========================================================================== */
+
+/* ---- 36 · Masthead: Aufklapp-Raster, Social-Icons, Sprache ------------- */
+.mh-dd{position:relative}
+.mh-dd > .navlink{background:none;border:0;cursor:pointer;font:inherit;display:inline-flex;align-items:center;gap:.5em;
+  font-size:var(--t--2);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+.mh-dd > .navlink::after{content:"";width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+  transform:rotate(45deg) translateY(-2px);transition:transform .25s var(--ease)}
+.mh-dd.open > .navlink::after,.mh-dd:hover > .navlink::after{transform:rotate(225deg) translateY(-1px)}
+.nav.over .mh-dd > .navlink{color:var(--cream)}
+.dd{position:absolute;left:50%;top:calc(100% + 16px);transform:translate(-50%,8px);
+  width:min(38rem,calc(100vw - 40px));background:var(--cream);color:var(--ink);border-radius:var(--radius);
+  box-shadow:0 30px 70px -24px rgba(2,48,71,.55);padding:14px;display:grid;grid-template-columns:repeat(2,1fr);gap:6px;
+  opacity:0;visibility:hidden;transition:opacity .22s var(--ease),transform .22s var(--ease),visibility .22s;z-index:5;text-align:left}
+.dd::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+.mh-dd:hover .dd,.mh-dd:focus-within .dd,.mh-dd.open .dd{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.dd a{display:grid;grid-template-columns:54px 1fr;gap:12px;align-items:center;padding:10px;border-radius:8px;text-decoration:none;color:var(--ink);transition:background .2s var(--ease)}
+.dd a:hover{background:var(--cream-2)}
+.dd img{width:54px;height:54px;border-radius:50%;object-fit:cover;border:2px solid var(--orange)}
+.dd b{display:block;font-family:var(--display);font-weight:400;font-size:var(--t-0);line-height:1.15}
+.dd small{display:block;font-size:var(--t--2);color:var(--ink-soft);margin-top:.2em;text-transform:none;letter-spacing:0;font-weight:500}
+.dd a.dd-frei{grid-column:1 / -1;background:var(--navy);color:var(--cream)}
+.dd a.dd-frei:hover{background:var(--navy-3)}
+.dd a.dd-frei small{color:var(--sand)}
+
+.mh-social{display:flex;gap:8px;list-style:none;align-items:center}
+.mh-social a{width:34px;height:34px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;
+  color:var(--ink-soft);opacity:.85;transition:opacity .2s,transform .2s var(--ease)}
+.mh-social a:hover{opacity:1;transform:translateY(-2px)}
+.mh-social svg{width:15px;height:15px;fill:currentColor}
+.nav.over .mh-social a{color:var(--cream)}
+@media (max-width:1499px){.mh-social{display:none}}
+
+.lang{font-size:var(--t--2);font-weight:700;letter-spacing:.2em;text-transform:uppercase;background:none;
+  border:1.5px solid currentColor;border-radius:999px;padding:.4em .75em;color:var(--ink-soft);cursor:pointer;opacity:.85;line-height:1}
+.lang:hover{opacity:1}
+.nav.over .lang{color:var(--cream)}
+.mobile-menu .lang{color:var(--cream);margin-top:var(--sp-1)}
+.mobile-menu .mm-group{font-size:var(--t--2);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sky);margin-top:var(--sp-1)}
+.mobile-menu a.mm-sub{font-size:var(--t-1);font-family:var(--body);color:var(--sand)}
+.mobile-menu .mm-social{display:flex;gap:14px;margin-top:var(--sp-2)}
+.mobile-menu .mm-social a{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(247,241,230,.5);display:grid;place-items:center;color:var(--cream)}
+.mobile-menu .mm-social svg{width:18px;height:18px;fill:currentColor}
+@media (max-width:1080px){.lang.desktop{display:none}}
+
+/* ---- 37 · Übersicht: fünf Kreise ---------------------------------------- */
+.kreise{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(20px,3vw,40px) clamp(12px,2.2vw,28px);max-width:66rem;margin-inline:auto}
+.kreis{width:min(41vw,196px);text-decoration:none;color:inherit;display:grid;justify-items:center;gap:.55em;text-align:center}
+.kreis .ring{width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;padding:5px;background:var(--cream);
+  border:2.5px solid var(--orange);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.kreis .ring img{width:100%;height:100%;object-fit:cover;border-radius:50%;transition:transform .8s var(--ease)}
+.kreis:hover .ring{transform:translateY(-5px) rotate(-3deg);box-shadow:0 18px 34px -18px rgba(2,48,71,.5)}
+.kreis:hover .ring img{transform:scale(1.06)}
+.kreis b{font-family:var(--display);font-weight:400;font-size:var(--t-1);line-height:1.18;margin-top:.4em}
+.kreis small{font-size:var(--t--1);color:var(--ink-soft);line-height:1.4;max-width:22ch}
+.kreis .go{font-size:var(--t--2);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-deep);margin-top:.2em}
+.kreis.kreis-frei .ring{border-style:dashed}
+@media (min-width:900px){.kreis{width:186px}}
+
+/* ---- 38 · Video-Stimme, Google-Rezensionen ------------------------------ */
+.vt-wrap{max-width:46rem;margin-inline:auto}
+.vt-wrap .videostage{aspect-ratio:16/9;max-width:none}
+.vt-wrap footer{margin-top:var(--sp-1);font-size:var(--t--2);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sky)}
+
+.google{max-width:38rem;margin-inline:auto;border:2px solid var(--rule);border-radius:var(--radius);padding:var(--sp-2);
+  display:grid;gap:.5em;justify-items:center}
+.google .sterne{margin:0;color:var(--orange-deep);letter-spacing:.24em;font-size:var(--t-0)}
+.google .g{font-family:var(--display);font-size:var(--t-2);line-height:1.2}
+.google .n{font-size:var(--t--1);color:var(--ink-soft)}
+.google .glogo{font-weight:700;letter-spacing:.02em;font-size:var(--t--1);color:var(--ink-faint)}
+
+/* ---- 39 · Sessions: Timeline + Fakten ---------------------------------- */
+.tl{list-style:none;position:relative;max-width:40rem;margin-inline:auto;text-align:left;padding-left:2.4rem}
+.tl::before{content:"";position:absolute;left:.62rem;top:.5em;bottom:1.2em;width:2px;background:var(--rule)}
+.tl li{position:relative;padding-bottom:var(--sp-2)}
+.tl li::before{content:"";position:absolute;left:-2.4rem;top:.3em;width:16px;height:16px;border-radius:50%;background:var(--orange);
+  border:3px solid var(--cream);box-shadow:0 0 0 2px var(--orange)}
+.tl .zeit{display:block;font-size:var(--t--2);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint)}
+.tl b{display:block;font-family:var(--display);font-weight:400;font-size:var(--t-1);margin:.15em 0 .3em}
+.tl p{text-align:left;color:var(--ink-soft);font-size:var(--t--1);max-width:40ch}
+
+.fakten{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--rule);border-radius:var(--radius);overflow:hidden;max-width:52rem;margin-inline:auto}
+@media (min-width:720px){.fakten{grid-template-columns:repeat(4,1fr)}}
+.fakten > div{background:var(--cream);padding:var(--sp-2) var(--sp-1);display:grid;gap:.3em;justify-items:center}
+.fakten .k{font-size:var(--t--2);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint)}
+.fakten .v{font-family:var(--display);font-size:var(--t-2);line-height:1.1}
+.fakten .s{font-size:var(--t--1);color:var(--ink-soft)}
+
+/* ---- 40 · Begleitung: „Das ist drin" ----------------------------------- */
+.drin{list-style:none;max-width:38rem;margin-inline:auto;display:grid;gap:10px;text-align:left}
+.drin li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;padding:14px 16px;border:2px solid var(--rule-deep);border-radius:var(--radius)}
+.drin .n{font-family:var(--display);font-size:var(--t-2);color:var(--orange);line-height:1;min-width:1.4em}
+.drin b{display:block;font-weight:700;color:var(--cream)}
+.drin small{display:block;color:var(--paper-soft);font-size:var(--t--1);line-height:1.5;text-align:left}
+.drin li.plus{border-style:dashed}
+
+/* ---- 41 · Steckbrief (About) ------------------------------------------- */
+.steckbrief{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--rule);border-radius:var(--radius);overflow:hidden;max-width:52rem;margin-inline:auto;text-align:left}
+@media (min-width:720px){.steckbrief{grid-template-columns:repeat(3,1fr)}}
+.steckbrief > div{background:var(--cream);padding:var(--sp-1) var(--sp-1)}
+.steckbrief .k{display:block;font-size:var(--t--2);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.3em}
+.steckbrief .v{font-family:var(--display);font-size:var(--t-1);line-height:1.2}
+.liste-plain{list-style:none;max-width:40rem;margin-inline:auto;text-align:left;display:grid;gap:.6em}
+.liste-plain li{position:relative;padding-left:1.5em;font-size:var(--t-0);line-height:1.55;text-align:left}
+.liste-plain li::before{content:"";position:absolute;left:0;top:.6em;width:9px;height:9px;background:var(--orange);border-radius:2px}
+.deep .liste-plain li{color:var(--paper-soft)}
+.zitat-split{display:grid;gap:var(--sp-2);align-items:center;max-width:62rem;margin-inline:auto}
+.zitat-split img{width:100%;border-radius:var(--radius)}
+.zitat-split blockquote p{font-family:var(--display);font-size:var(--t-3);line-height:1.15;text-align:center}
+@media (min-width:860px){.zitat-split{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}.zitat-split blockquote p{text-align:left}}
+
+/* ---- 42 · Links-Seite in Orange & Blau (Franz' Wunsch) ----------------- */
+body.links-navy{background:var(--navy);color:var(--cream)}
+body.links-navy .lead,body.links-navy .small{color:var(--sand)}
+body.links-navy .linkhub a{background:transparent;border-color:var(--orange);color:var(--cream)}
+body.links-navy .linkhub a:hover{background:rgba(233,106,44,.16)}
+body.links-navy .linkhub .lh-s{color:var(--sand)}
+body.links-navy .linkhub .lh-go,body.links-navy .linkhub .lh-ico{color:var(--orange);font-size:24px}
+body.links-navy .linkhub a.hot{background:var(--orange);border-color:var(--orange);color:var(--navy)}
+body.links-navy .linkhub a.hot .lh-t{font-size:21px}
+body.links-navy .linkhub a.hot .lh-go,body.links-navy .linkhub a.hot .lh-ico{color:var(--navy)}
+body.links-navy .linkhub a.hot:hover{background:#f2884f}
+body.links-navy a{text-decoration-color:rgba(233,106,44,.85)}
+
+/* ---- 43 · Nachträge Runde 7 -------------------------------------------- */
+.mh-dd > .navlink:hover{color:var(--navy)}
+.wrap-narrow{width:min(44rem, 100% - clamp(28px,6vw,108px));margin-inline:auto}
+.eyebrow--center{margin-inline:auto}
+body.links-navy h1,body.links-navy h2,body.links-navy h3{color:var(--cream)}
+/* Masthead-Balance (Runde 7): rechts sitzen Aufklapp-Raster, Kontakt, Icons und Call — damit die Marke
+   trotzdem mittig bleibt, bekommt der Masthead mehr Breite und der Sprachschalter sitzt ganz links. */
+.nav .wrap{width:min(1400px, 100% - clamp(28px,6vw,108px))}
+.lang.desktop{margin-right:auto}
+.hero h1 em{color:var(--orange)}
+.mh-dd > .navlink,.mh-cta{white-space:nowrap}
+/* Timeline-Stationen linksbündig (schlägt .section li) · About: Story-Block + Zitat-Autor */
+.tl li{text-align:left}
+.zitat-split .story{text-align:center}
+.zitat-split .story h2,.zitat-split .story p{text-align:center;margin-inline:auto}
+.zitat-split blockquote footer{margin-top:var(--sp-2);font-size:var(--t--2);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);text-align:center}
+@media (min-width:860px){
+  .zitat-split .story,.zitat-split .story h2,.zitat-split .story p{text-align:left;margin-inline:0}
+  .zitat-split .story .eyebrow{margin-inline:0;text-align:left}
+  .zitat-split .story .eyebrow::before{margin-inline:0}
+  .zitat-split blockquote footer{text-align:left}
+}
+.drin li{text-align:left}

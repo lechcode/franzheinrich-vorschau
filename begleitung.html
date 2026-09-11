@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <!--
-  FRANZ HEINRICH — Einzelbegleitung (Tiefen-Seite)
-  Design-Vorschau · Lechcode · 03.09.2026
-  Ersetzt das alte „UnVerschämt Training" (Franz, 26.08.: nie greifbar gewesen,
-  geht eher über 8–9 Monate). Bewusst OHNE Preise und ohne festes Paket —
-  Rahmen und Investition entstehen im Kennenlern-Call.
-  Alle Texte sind Vorschläge — Stellen mit „HIER:" markiert.
+  FRANZ HEINRICH — Einzelbegleitung (Tiefen-Seite, sein High-Ticket-Angebot)
+  Design-Vorschau · Lechcode · Runde 7 · 11.09.2026
+  Franz' Feedback vom 09.09.:
+    · „Für wen das hier ist und für wen nicht" gehört NICHT auf die Startseite,
+      sondern hierher — „das ist für die Menschen, die das und das wollen, eins,
+      zwei, drei, und dann: das ist was für dich, wenn … / nichts für dich, wenn …"
+    · „Was ist dabei?" — er schwankt zwischen individuell und festem Paket
+      (Emotional-Release-Sessions, Integrations-Sessions als Walk & Talk,
+      psychosomatische Toolbox, WhatsApp-Support, Videokurs). Beides steht hier
+      als Vorschlag nebeneinander, damit er sich entscheiden kann.
+  Weiterhin OHNE Preise. Alle Texte sind Vorschläge — Stellen mit „HIER:" markiert.
 -->
 <html lang="de">
 <head>
@@ -36,21 +41,30 @@
       </button>
       <nav aria-label="Menü links">
       <ul class="mh-left">
-        <li><a class="navlink" href="index.html#weg">Dein Weg</a></li>
-        <li><a class="navlink" href="sessions.html">Sessions</a></li>
+        <li><a class="navlink" href="about.html">Über mich</a></li>
+        <li><a class="navlink" href="index.html#shop">Shop</a></li>
       </ul>
       </nav>
     </div>
     <a class="brand" href="index.html" aria-label="Franz Heinrich — zur Startseite">
-      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#023047"/><text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#f7f1e6">FH</text><rect x="17" y="48" width="30" height="4" rx="2" fill="#e96a2c"/></svg>
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#e96a2c"/><text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#023047">FH</text></svg>
       <span class="name">Franz&nbsp;Heinrich</span>
       <span class="rolle">Scham &amp; Emotionen</span>
     </a>
     <div class="mh-side mh-side-r">
       <nav aria-label="Menü rechts">
       <ul class="mh-right">
-        <li><a class="navlink" href="begleitung.html" aria-current="page">Begleitung</a></li>
-        <li><a class="navlink" href="index.html#ueber">Über mich</a></li>
+        <li class="mh-dd" id="mh-dd">
+          <button class="navlink" type="button" aria-expanded="false" aria-controls="dd-arbeiten">So kannst du mit mir arbeiten</button>
+          <div class="dd" id="dd-arbeiten">
+            <a href="begleitung.html" aria-current="page"><img src="assets/img/kreis-begleitung-480.jpg" width="54" height="54" alt=""><span><b>Einzelbegleitung</b><small>Mehrere Monate an deiner Seite</small></span></a>
+            <a href="sessions.html"><img src="assets/img/kreis-sessions-480.jpg" width="54" height="54" alt=""><span><b>1:1 Sessions</b><small>Neo Emotional Release, online oder vor Ort</small></span></a>
+            <a href="index.html#events"><img src="assets/img/kreis-events-480.jpg" width="54" height="54" alt=""><span><b>Events &amp; Retreats</b><small>Ein Abend, ein Wochenende, ein Kreis</small></span></a>
+            <a href="index.html#gruppen"><img src="assets/img/kreis-gruppen-480.jpg" width="54" height="54" alt=""><span><b>Gruppenangebote</b><small>Regelmäßige Kreise, online und vor Ort</small></span></a>
+            <a href="index.html#kostenlos" class="dd-frei"><img src="assets/img/kreis-frei-480.jpg" width="54" height="54" alt=""><span><b>Kostenlos</b><small>Podcast, Handbuch, Newsletter</small></span></a>
+          </div>
+        </li>
+        <li><a class="navlink" href="index.html#kontakt">Kontakt</a></li>
       </ul>
       </nav>
       <a class="btn btn-navy btn-arrow mh-cta" href="index.html#kontakt">Kennenlern-Call</a>
@@ -59,11 +73,16 @@
 </header>
 
 <div class="mobile-menu" id="mobile-menu">
-  <a href="index.html#weg">Dein Weg</a>
-  <a href="sessions.html">Sessions</a>
-  <a href="begleitung.html">Begleitung</a>
-  <a href="index.html#ueber">Über mich</a>
-  <a href="index.html#kontakt">Kennenlern-Call</a>
+  <a href="about.html">Über mich</a>
+  <a href="index.html#shop">Shop</a>
+  <span class="mm-group">So kannst du mit mir arbeiten</span>
+  <a class="mm-sub" href="begleitung.html">Einzelbegleitung</a>
+  <a class="mm-sub" href="sessions.html">1:1 Sessions</a>
+  <a class="mm-sub" href="index.html#events">Events &amp; Retreats</a>
+  <a class="mm-sub" href="index.html#gruppen">Gruppenangebote</a>
+  <a class="mm-sub" href="index.html#kostenlos">Kostenlos</a>
+  <a href="index.html#kontakt">Kontakt</a>
+  <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Kennenlern-Call</a>
 </div>
 
 <main id="main">
@@ -75,55 +94,74 @@
     <!-- HIER: Überschrift + Einleitung -->
     <h1 class="rise">Manches braucht länger als <em>eine</em> Session.</h1>
     <p class="lead rise d1">Die Einzelbegleitung ist für Menschen, die nicht an einem Thema arbeiten wollen,
-      sondern an ihrem Verhältnis zu sich selbst. Sie hat keine feste Länge und kein Paket-Etikett —
-      wir bauen den Rahmen, wenn wir wissen, worum es bei dir geht.</p>
+      sondern an ihrem Verhältnis zu sich selbst. Mehrere Monate, ein Rahmen, der trägt — und jemand,
+      der dich auch dann kennt, wenn es unbequem wird.</p>
   </div>
 </section>
 
-<!-- ═══ BILD + EINSTIEG ═══ -->
-<section class="section-tight">
+<!-- ═══ BILD ═══ -->
+<section class="section-tight" style="padding-top:0">
   <div class="wrap">
     <figure class="rise-img" style="max-width:100%">
       <img src="assets/img/weg-ins-licht-1300.jpg"
            srcset="assets/img/weg-ins-licht-560.jpg 560w, assets/img/weg-ins-licht-900.jpg 900w, assets/img/weg-ins-licht-1300.jpg 1300w"
            sizes="(max-width: 1180px) 94vw, 1120px" width="1300" height="1625"
-           style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 40%" loading="lazy"
+           style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 40%;border-radius:var(--radius)" loading="lazy"
            alt="Franz geht barfuß über den Strand auf die tief stehende Sonne zu, langer Schatten hinter ihm">
     </figure>
   </div>
 </section>
 
-<!-- ═══ FÜR WEN ═══ -->
+<!-- ═══ FÜR WEN — von der Startseite hierher gezogen (Franz: „bei meinem High-Ticket-Angebot") ═══ -->
 <section class="section deep">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Für wen</span>
-      <h2>Wenn Verstehen längst nicht mehr das Problem ist.</h2>
+      <h2>Für Menschen, die drei Dinge wollen.</h2>
     </div>
-    <div class="passt">
+    <!-- HIER: Franz' „das und das und das" — eins, zwei, drei -->
+    <div class="steps" style="max-width:56rem">
+      <div class="step rise" style="--d:.1s">
+        <span class="num">01</span>
+        <h3>Endlich fühlen</h3>
+        <p>Nicht noch mehr verstehen. Du hast genug verstanden.</p>
+      </div>
+      <div class="step rise" style="--d:.2s">
+        <span class="num">02</span>
+        <h3>Ein Muster lösen</h3>
+        <p>Nicht ein Ereignis, sondern das, was sich durch dein ganzes Leben zieht.</p>
+      </div>
+      <div class="step rise" style="--d:.3s">
+        <span class="num">03</span>
+        <h3>Jemanden, der bleibt</h3>
+        <p>Über Monate — nicht nur, wenn es gerade brennt.</p>
+      </div>
+    </div>
+    <div class="passt mt-3" style="max-width:56rem">
       <div class="rise">
-        <h3>Das erkennst du wieder</h3>
+        <h3>Das ist was für dich, wenn</h3>
         <ul>
-          <!-- HIER: die Wiedererkennungs-Punkte -->
-          <li>Du funktionierst zuverlässig — und merkst erst am Wochenende, wie leer das ist.</li>
-          <li>Du hast einzelne Sessions gemacht und willst jetzt, dass es hält.</li>
-          <li>Es geht nicht um ein Ereignis, sondern um ein Muster, das dein ganzes Leben durchzieht.</li>
-          <li>Du willst jemanden, der über Monate mitgeht und dich auch dann kennt, wenn es unbequem wird.</li>
+          <!-- HIER: deine Kriterien -->
+          <li>du dich schon lange verstehst und trotzdem nichts anders wird</li>
+          <li>du funktionierst — und am Wochenende merkst, wie leer das ist</li>
+          <li>du einzelne Sessions gemacht hast und jetzt willst, dass es hält</li>
+          <li>du bereit bist, dich regelmäßig hinzusetzen, auch wenn gerade nichts brennt</li>
         </ul>
       </div>
       <div class="rise d1">
-        <h3>Das brauchst du dafür</h3>
+        <h3>Das ist nichts für dich, wenn</h3>
         <ul>
-          <li>Die Bereitschaft, dich regelmäßig hinzusetzen — auch, wenn gerade nichts brennt.</li>
-          <li>Ein Stück Ehrlichkeit mir gegenüber, und noch mehr dir gegenüber.</li>
-          <li>Geduld. Dein System hat Jahre gebraucht, um so zu werden. Es darf ein paar Monate haben.</li>
+          <li>du eine Diagnose oder Behandlung suchst — dafür bin ich nicht der Richtige</li>
+          <li>du gerade in einer akuten Krise steckst; dann zuerst ärztliche oder therapeutische Hilfe</li>
+          <li>du willst, dass ich dir sage, was du tun sollst</li>
+          <li>du eine schnelle Lösung erwartest, die ohne dein Zutun funktioniert</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ WIE ES ABLÄUFT ═══ -->
+<!-- ═══ WIE ES ABLÄUFT — kein Curriculum, drei Phasen (bleibt) ═══ -->
 <section class="section">
   <div class="wrap">
     <div class="head">
@@ -132,7 +170,6 @@
       <p class="lead">Ich arbeite nicht in Wochen 1 bis 8. Ich arbeite mit dem, was da ist —
         in einer Struktur, die trägt, wenn gerade nichts trägt.</p>
     </div>
-
     <div class="weg">
       <!-- HIER: die Phasen der Begleitung -->
       <article class="weg-step rise">
@@ -140,31 +177,26 @@
         <div>
           <h3>Anfang: Boden bauen</h3>
           <p>Wir schauen uns an, wie dein System heute funktioniert — wo es dicht macht, wo es
-            überschießt, was es schützt. Erst wenn du dich sicher fühlst, gehen wir tiefer.
-            Alles andere hält nicht.</p>
+            überschießt, was es schützt. Erst wenn du dich sicher fühlst, gehen wir tiefer.</p>
         </div>
         <div class="weg-side"><span class="chip">Die ersten Wochen</span></div>
       </article>
-
       <article class="weg-step rise">
         <div class="weg-num">02</div>
         <div>
           <h3>Mitte: das, worum es wirklich geht</h3>
           <p>Hier passiert die eigentliche Arbeit. Wir gehen an die Stellen, um die du bisher
             herumgelaufen bist — mit Körperarbeit, mit Gesprächen, mit dem, was zwischen den
-            Terminen im Alltag hochkommt. Das ist der Abschnitt, in dem es sich manchmal
-            schlechter anfühlt, bevor es besser wird. Deshalb bin ich dabei.</p>
+            Terminen im Alltag hochkommt. Deshalb bin ich dabei.</p>
         </div>
         <div class="weg-side"><span class="chip">Der längste Teil</span></div>
       </article>
-
       <article class="weg-step rise">
         <div class="weg-num">03</div>
         <div>
           <h3>Ende: allein weitergehen können</h3>
           <p>Das Ziel ist nicht, dass du bei mir bleibst. Das Ziel ist, dass du merkst, wann etwas
-            in dir eng wird — und weißt, was du dann tust. Wir schließen bewusst ab, statt
-            auszuschleichen.</p>
+            in dir eng wird — und weißt, was du dann tust. Wir schließen bewusst ab.</p>
         </div>
         <div class="weg-side"><span class="chip">Abschluss</span></div>
       </article>
@@ -172,8 +204,31 @@
   </div>
 </section>
 
+<!-- ═══ DAS IST DRIN — Franz' Bausteine aus der Sprachnachricht als Vorschlag. Zahlen sind Platzhalter. ═══ -->
+<section class="section deep" id="drin">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Das ist drin</span>
+      <h2>Was du bekommst.</h2>
+      <p class="lead">Kein Wochenplan. Eine Ausstattung, die dich durch die Monate trägt.</p>
+    </div>
+    <!-- HIER: Anzahl und Bausteine — Franz entscheidet, ob fest oder individuell (siehe unten) -->
+    <ol class="drin rise">
+      <li><span class="n">6</span><span><b>Emotional-Release-Sessions</b><small>Die Körperarbeit. Online oder vor Ort, im Rhythmus, der zu dir passt.</small></span></li>
+      <li><span class="n">6</span><span><b>Integrations-Sessions — Walk &amp; Talk</b><small>Zu Fuß, im Gespräch: was die Sessions bewegt haben und was davon in deinen Alltag darf.</small></span></li>
+      <li><span class="n">1</span><span><b>Psychosomatische Toolbox</b><small>Deine Werkzeuge für die Momente, in denen ich nicht daneben sitze.</small></span></li>
+      <li><span class="n">∞</span><span><b>WhatsApp-Support</b><small>Zwischen den Terminen. Für die Stelle, an der es gerade eng wird — nicht erst nächste Woche.</small></span></li>
+      <li class="plus"><span class="n">+</span><span><b>Videokurs „Mein Weg durch Scham"</b><small>Zum Nachschauen, wann du willst. Inklusive.</small></span></li>
+    </ol>
+    <p class="mt-3 small" style="max-width:40rem;margin-inline:auto;color:var(--paper-soft)">
+      Oder ganz individuell: Wir bauen den Rahmen erst, wenn wir wissen, worum es bei dir geht.
+      <!-- HIER: Franz entscheidet — Paket oder individuell; beides steht als Vorschlag da -->
+    </p>
+  </div>
+</section>
+
 <!-- ═══ RAHMEN ═══ -->
-<section class="section deep">
+<section class="section">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Rahmen</span>
@@ -183,22 +238,22 @@
       <div class="rise">
         <h3>Dauer &amp; Rhythmus</h3>
         <p>Erfahrungsgemäß landen wir bei mehreren Monaten. Wie viele und in welchem Abstand
-          wir uns sehen, legen wir gemeinsam fest — nicht vorab und nicht nach Paketgröße.</p>
+          wir uns sehen, legen wir gemeinsam fest.</p>
       </div>
       <div class="rise d1">
         <h3>Wo</h3>
-        <!-- HIER: Orte bestätigen (offener Punkt C3) -->
-        <p>Online von überall. Vor Ort in München und Regensburg, und wenn ich unterwegs bin,
-          finden wir eine Lösung — die meisten Begleitungen laufen ohnehin gemischt.</p>
+        <!-- HIER: Orte bestätigen (offener Punkt D3) -->
+        <p>Online von überall. Vor Ort in München und Regensburg — die meisten Begleitungen
+          laufen ohnehin gemischt.</p>
       </div>
       <div class="rise d2">
         <h3>Investition</h3>
         <!-- HIER: bewusst ohne Zahl. Falls Franz eine Spanne nennen will: hier eintragen. -->
         <p>Die klären wir im Kennenlern-Call, sobald klar ist, was du brauchst. Ich nenne dir
-          eine Zahl, keine Preisliste — und du entscheidest in Ruhe danach.</p>
+          eine Zahl, keine Preisliste.</p>
       </div>
     </div>
-    <p class="mt-3 small muted" style="max-width:52em">
+    <p class="mt-3 small muted" style="max-width:52em;margin-inline:auto">
       Coaching und Neo Emotional Release sind Prozess- und Persönlichkeitsarbeit und ersetzen weder
       Psychotherapie noch ärztliche Behandlung. In akuten Krisen: Notruf 112 · Telefonseelsorge
       0800&nbsp;111&nbsp;0&nbsp;111 · Krisendienst Bayern 0800&nbsp;655&nbsp;3000.
@@ -209,7 +264,7 @@
 <!-- ═══ CTA ═══ -->
 <section class="cta-band">
   <div class="wrap">
-    <span class="eyebrow eyebrow--center">Nächster Schritt</span>
+    <span class="eyebrow">Nächster Schritt</span>
     <h2>Der Weg dahin führt über eine Session.</h2>
     <p class="lead">Wir telefonieren, danach machen wir eine erste Session zusammen.
       Über eine längere Begleitung reden wir erst, wenn du weißt, wie sich meine Arbeit anfühlt.</p>
@@ -220,31 +275,20 @@
 
 <footer class="footer">
   <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <span class="brand"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#f7f1e6"/><text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#023047">FH</text><rect x="17" y="48" width="30" height="4" rx="2" fill="#e96a2c"/></svg><span class="name">Franz&nbsp;Heinrich</span></span>
-        <p class="small muted" style="max-width:32em">Körperorientiertes Scham-Coaching mit Neo Emotional Release.
-          1:1 online und vor Ort, dazu Workshops und Retreats.</p>
-      </div>
-      <div>
-        <h3>Seiten</h3>
-        <ul>
-          <li><a href="index.html">Start</a></li>
-          <li><a href="sessions.html">Sessions</a></li>
-          <li><a href="begleitung.html">Einzelbegleitung</a></li>
-          <li><a href="index.html#kontakt">Kontakt</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Mehr</h3>
-        <ul>
-          <li><a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-          <li><a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer">Spotify</a></li>
-          <li><a href="index.html#kontakt">Kontakt</a></li>
-          <li><a href="links.html">Alle Links</a></li>
-        </ul>
-      </div>
-    </div>
+    <span class="brand">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#e96a2c"/><text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#023047">FH</text></svg>
+      <span class="name">Franz&nbsp;Heinrich</span>
+      <span class="rolle">Scham &amp; Emotionen</span>
+    </span>
+    <nav aria-label="Footer">
+      <ul class="footer-nav">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="sessions.html">Sessions</a></li>
+        <li><a href="about.html">Über mich</a></li>
+        <li><a href="links.html">Alle Links</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
     <div class="footer-bottom">
       <span>© 2026 Franz Heinrich · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a></span>
       <span>Unverbindliche Design-Vorschau · Konzept &amp; Code: Lechcode, Landsberg am Lech</span>
@@ -254,23 +298,20 @@
 
 <script>
 (function(){
-  var b=document.getElementById('burger'),m=document.getElementById('mobile-menu');
-  if(!b||!m)return;
-  b.addEventListener('click',function(){
-    var open=document.body.classList.toggle('menu-open');
-    b.setAttribute('aria-expanded',open?'true':'false');
-    b.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');
-  });
-  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
-    document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');
-  });});
+  var dd=document.getElementById('mh-dd');if(!dd)return;var btn=dd.querySelector('button');
+  btn.addEventListener('click',function(){var o=dd.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
+  document.addEventListener('click',function(e){if(!dd.contains(e.target)){dd.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
 })();
 (function(){
-  var els=document.querySelectorAll('.rise, .rise-img');
-  function show(el){el.classList.add('in');}
+  var b=document.getElementById('burger'),m=document.getElementById('mobile-menu');if(!b||!m)return;
+  b.addEventListener('click',function(){var open=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',open?'true':'false');b.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');});});
+})();
+(function(){
+  var els=document.querySelectorAll('.rise, .rise-img');function show(el){el.classList.add('in');}
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(show);return;}
   var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});},{threshold:.14,rootMargin:'0px 0px -6% 0px'});
-  els.forEach(function(el){ if(el.getBoundingClientRect().top < window.innerHeight*0.9){show(el);} else {io.observe(el);} });
+  els.forEach(function(el){if(el.getBoundingClientRect().top<window.innerHeight*0.9){show(el);}else{io.observe(el);}});
 })();
 </script>
 </body>

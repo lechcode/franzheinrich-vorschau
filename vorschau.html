@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <!--
-  FRANZ HEINRICH — Enthüllungs-/Vorschauseite (das, was Franz zuerst sieht)
-  Runde 3 · Lechcode · 03.09.2026
-  Ersetzt die Fassung vom 12.06.2026. Der Befund zur ALTEN WordPress-Seite ist
-  unverändert übernommen (er stimmt weiterhin); alles, was die neue Seite
-  beschreibt, ist auf den Neubau angepasst.
-  Messwerte: eigene Messung am 03.09.2026 (Dateigrößen + Requests, s. unten).
+  FRANZ HEINRICH — Vorschauseite (das, was Franz zuerst sieht)
+  Runde 7 · Lechcode · 11.09.2026
+  Antwort auf Franz' Feedback-Sprachnachricht vom 09.09.2026: Punkt für Punkt,
+  was daraus geworden ist, und was wir noch von ihm brauchen.
+  Messwerte: eigene Messung am 11.09.2026 (Dateigrößen + Anfragen, s. unten).
 -->
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Franz, schau mal — deine neue Seite</title>
-<meta property="og:title" content="Franz, schau mal — deine neue Seite">
-<meta property="og:description" content="Nach unserem Gespräch neu gebaut: mit deinen Fotos, deinem Prozess und den Seiten, die dir gefallen.">
+<title>Franz, dein Feedback ist drin</title>
+<meta property="og:title" content="Franz, dein Feedback ist drin">
+<meta property="og:description" content="Neues Menü mit Aufklapp-Raster, fünf Kreise, eigene Über-mich-Seite, Timeline, Englisch-Schalter — Punkt für Punkt aus deiner Sprachnachricht.">
 <meta property="og:image" content="assets/vorschau/neu-desktop.jpg">
 <meta name="theme-color" content="#023047">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23023047'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23f7f1e6'%3EFH%3C/text%3E%3Crect x='17' y='48' width='30' height='4' rx='2' fill='%23e96a2c'/%3E%3C/svg%3E">
@@ -37,10 +36,7 @@
       display:grid;place-items:center;font-size:20px;font-weight:700}
   .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
 
-  .duo-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-  @media (max-width:660px){.duo-2{grid-template-columns:1fr}}
-
-  .handys{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--sp-2);max-width:660px}
+  .handys{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--sp-2);max-width:660px;margin-inline:auto}
   .handys figure{margin:0}
   .handys img{width:100%;border:2px solid var(--rule);border-radius:var(--radius)}
   .handys figcaption{margin-top:.7em;font-size:var(--t--1);color:var(--ink-soft)}
@@ -48,43 +44,35 @@
   .deep .handys img{border-color:var(--rule-deep)}
 
   .zahlen{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;background:var(--rule)}
-  .deep .zahlen{background:var(--rule-deep)}
   .zahlen > div{background:var(--cream);padding:var(--sp-2)}
-  .deep .zahlen > div{background:var(--navy)}
   .zahlen b{display:block;font-family:var(--display);font-weight:400;font-size:var(--t-3);color:var(--orange-deep);line-height:1}
-  .deep .zahlen b{color:var(--orange)}
   .zahlen p{margin-top:.6em;font-size:var(--t--1);color:var(--ink-soft)}
-  .deep .zahlen p{color:var(--paper-soft)}
 
-  table.gegen{width:100%;border-collapse:collapse;font-size:var(--t--1)}
-  table.gegen th,table.gegen td{text-align:left;padding:var(--sp-1) .8em;border-bottom:2px solid var(--rule);vertical-align:top}
-  table.gegen th{font-family:var(--body);font-weight:700;font-size:var(--t--2);letter-spacing:.14em;
-                 text-transform:uppercase;color:var(--ink-faint)}
-  table.gegen td:first-child{color:var(--ink);font-weight:700}
-  table.gegen td.alt{color:var(--ink-faint)}
-  table.gegen td.neu{color:var(--orange-deep);font-weight:700}
-  .deep table.gegen th,.deep table.gegen td{border-bottom-color:var(--rule-deep)}
-  .deep table.gegen th{color:var(--paper-faint)}
-  .deep table.gegen td:first-child{color:var(--cream)}
-  .deep table.gegen td.alt{color:var(--paper-soft)}
-  .deep table.gegen td.neu{color:var(--sky)}
+  /* Feedback → Umsetzung */
+  table.fb{width:100%;border-collapse:collapse;font-size:var(--t--1);text-align:left}
+  table.fb th,table.fb td{padding:var(--sp-1) .8em;border-bottom:1px solid var(--rule-deep);vertical-align:top;text-align:left}
+  table.fb th{font-family:var(--body);font-weight:700;font-size:var(--t--2);letter-spacing:.14em;text-transform:uppercase;color:var(--paper-faint)}
+  table.fb td:first-child{color:var(--cream);font-weight:700;width:34%}
+  table.fb td:last-child{color:var(--paper-soft)}
+  table.fb td em{color:var(--sky);font-style:normal}
+  table.fb .ok::before{content:"✓ ";color:var(--orange)}
+  table.fb .offen::before{content:"○ ";color:var(--sky)}
   .scrollx{overflow-x:auto}
 
-  .befund{display:grid;gap:var(--sp-2);border-top:2px solid var(--rule)}
-  .deep .befund{border-top-color:var(--rule-deep)}
-  .befund > div{border-bottom:2px solid var(--rule);padding-bottom:var(--sp-2)}
-  .deep .befund > div{border-bottom-color:var(--rule-deep)}
-  .befund h3{font-size:var(--t-1);margin-bottom:.5em}
-  .befund p{color:var(--ink-soft);font-size:var(--t--1);line-height:1.72;max-width:64ch}
-  .deep .befund p{color:var(--paper-soft)}
-
-  .liste{list-style:none;display:grid;gap:var(--sp-1);margin-top:var(--sp-2)}
-  .liste li{position:relative;padding-left:1.7em;font-size:var(--t--1);line-height:1.7;color:var(--ink-soft)}
+  .liste{list-style:none;display:grid;gap:var(--sp-1);margin-top:var(--sp-2);max-width:46rem;margin-inline:auto;text-align:left}
+  .liste li{position:relative;padding-left:1.7em;font-size:var(--t--1);line-height:1.7;color:var(--ink-soft);text-align:left}
   .liste li::before{content:"→";position:absolute;left:0;top:0;color:var(--orange-deep);font-weight:700}
   .liste strong{color:var(--ink)}
   .deep .liste li{color:var(--paper-soft)}
   .deep .liste li::before{color:var(--orange)}
   .deep .liste strong{color:var(--cream)}
+
+  .seiten{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--sp-2);max-width:64rem;margin-inline:auto;text-align:left}
+  .seiten a{display:block;text-decoration:none;color:inherit;border:2px solid var(--rule);border-radius:var(--radius);padding:var(--sp-2) var(--sp-1);transition:transform .2s var(--ease),border-color .2s}
+  .seiten a:hover{transform:translateY(-3px);border-color:var(--orange)}
+  .seiten b{display:block;font-family:var(--display);font-weight:400;font-size:var(--t-1);margin-bottom:.35em}
+  .seiten p{font-size:var(--t--1);color:var(--ink-soft);text-align:left}
+  .seiten .neu{display:inline-block;font-size:var(--t--2);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-deep);margin-bottom:.6em}
 
   .lcbook{background:var(--navy);color:var(--paper);border-top:2px solid var(--rule-deep);
           padding-block:var(--sp-4);text-align:center}
@@ -93,7 +81,6 @@
   .lcbook-eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--sky);
       font-size:var(--t--2);font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:var(--sp-2)}
 </style>
-
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
@@ -107,69 +94,79 @@
 
 <main id="main">
 
-<!-- ═══ HERO ═══ -->
+<!-- ═══ KOPF ═══ -->
 <section class="pagehead">
   <div class="wrap">
-    <span class="eyebrow">Dein Aushängeschild · Brand Kit · Sprachnachricht</span>
-    <h1>Franz, das ist dein <em>Aushängeschild</em>.</h1>
-    <p class="lead">Weniger Text, mehr Wirkung: Das Video steht ganz oben und deine Aussage liegt darüber.
-      Jede Sektion trägt genau eine Idee und bekommt dafür einen ganzen Bildschirm — zuerst fürs
-      Handy gebaut, dann für den grossen Schirm. Farben, Schriften, Fotos, Prozess: alles von dir.</p>
-    <p class="mt-2"><a class="btn btn-orange btn-arrow" href="index.html">Deine neue Seite ansehen</a></p>
+    <span class="eyebrow">Runde 2 · Deine Sprachnachricht vom 9. September</span>
+    <h1>Franz, dein Feedback ist <em>drin</em>.</h1>
+    <p class="lead">Wir sind deine Nachricht Punkt für Punkt durchgegangen: neues Menü mit Aufklapp-Raster,
+      die fünf Wege als Kreise direkt unter dem Video, eine eigene Über-mich-Seite in deiner Gliederung,
+      die Sessions als Timeline, „Das ist drin" bei der Begleitung, Google ganz unten — und die Seite
+      spricht jetzt auch Englisch.</p>
+    <p class="mt-2"><a class="btn btn-orange btn-arrow" href="index.html">Deine Seite ansehen</a></p>
   </div>
 </section>
 
-<!-- ═══ WAS WIR MITGENOMMEN HABEN ═══ -->
+<!-- ═══ FEEDBACK → UMSETZUNG ═══ -->
 <section class="section deep">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">Dein Input</span>
-      <h2>Was aus dem Gespräch in die Seite gewandert ist.</h2>
+      <span class="eyebrow">Punkt für Punkt</span>
+      <h2>Was du gesagt hast — und was daraus wurde.</h2>
     </div>
-    <div class="duo duo-2">
-      <div>
-        <h3>Dein Verkaufsprozess</h3>
-        <p>Kennenlern-Call → Schnupper-Session → individuelle Begleitung. Genau so steht er jetzt
-          als „Dein Weg mit mir" im Zentrum der Seite — nummeriert, mit einem Satz pro Schritt.
-          Das „UnVerschämt Training" ist raus, wie besprochen.</p>
-      </div>
-      <div>
-        <h3>Deine drei Vorbilder</h3>
-        <p>Die nummerierte Journey von David Bedrick. Von Ashley Velvet Frost: alles auf der
-          Startseite, dazu zwei Seiten mit echter Tiefe, und Bilder, die beim Scrollen auftauchen.
-          Von Hannah: der Reiter „So kannst du mit mir arbeiten", ein „Kostenlos"-Bereich
-          und das News-Banner ganz oben.</p>
-      </div>
-      <div>
-        <h3>Dein Brand Kit</h3>
-        <p>Navy, Warm Orange und Cream, dazu DM Serif Display und Manrope — genau so, wie du es
-          geschickt hast. Die Seite erfindet keine eigene Optik, sie setzt deine um.
-          Nur eine Sache haben wir angepasst: Orange ist bei kleiner Schrift schwer zu lesen,
-          deshalb trägt es Flächen und Buttons, und der kleine Text bleibt Navy.</p>
-      </div>
-      <div>
-        <h3>Deine Fotos</h3>
-        <p>Aus deinem Drive: du am Strand mit der Sonne in der Hand, die Körperarbeit im Raum,
-          der Kreis auf der Wiese, dein Lachen unterm Regenbogen. Zehn Bilder, alle von dir,
-          keine Symbolbilder. Die alten Seiten-Fotos sind komplett raus.</p>
-      </div>
-      <div>
-        <h3>Und Platz für ein Video</h3>
-        <p>Du hattest gefragt, ob ganz oben ein Video geht. Der Platz dafür ist gebaut und sichtbar —
-          uns fehlt nur noch eine web-taugliche Datei. Deine beiden Drive-Clips sind
-          21 und 62 MB im iPhone-Format; fürs Web brauchen wir eine MP4 mit rund 60–90 Sekunden.</p>
-      </div>
+    <div class="scrollx">
+      <table class="fb">
+        <thead><tr><th scope="col">Du</th><th scope="col">Jetzt auf der Seite</th></tr></thead>
+        <tbody>
+          <tr><td>„Die Farben, das ist geil."</td><td class="ok">Bleiben genau so. Navy, Orange, Cream — dein Kit.</td></tr>
+          <tr><td>Auf Englisch umschalten</td><td class="ok">Schalter <em>EN</em> oben links (am Handy im Menü). Genau wie du es dir vorgestellt hast: Du schreibst Deutsch, wir übersetzen, du korrigierst — die Startseite ist schon komplett übersetzt, die Unterseiten folgen, sobald deine deutschen Texte stehen.</td></tr>
+          <tr><td>Google-Rezensionen, „wahrscheinlich ganz unten"</td><td class="offen">Block <em>„Das sagen Menschen auf Google"</em> sitzt direkt vor dem Kontakt. Schick uns den Link, dann füllen wir ihn.</td></tr>
+          <tr><td>Logo: „nichts Besonderes, aber passt"</td><td class="ok">Bleibt. Wenn du irgendwann ein richtiges willst, sag Bescheid.</td></tr>
+          <tr><td>Übersicht „So kannst du mit mir arbeiten": Begleitung, 1:1, Events &amp; Retreats, Gruppen, Free — als Rad oder Kreise mit Bild und Text</td><td class="ok"><em>Fünf Kreise</em> direkt unter dem Video: Bild, Titel, ein Satz, Link. „Kostenlos" ist gestrichelt umrandet, damit es sich abhebt. Das drehbare Rad haben wir bewusst nicht gebaut — am Handy sind Kreise klarer und schneller.</td></tr>
+          <tr><td>Leiste oben: Über mich · Shop · Logo · So kannst du mit mir arbeiten (als Raster) · Kontakt — plus Icons für Instagram, Mail, Spotify</td><td class="ok">Genau so. <em>„So kannst du mit mir arbeiten"</em> klappt als Raster auf: Begleitung, 1:1 Sessions, Events &amp; Retreats, Gruppenangebote, Kostenlos — jeweils mit Bild. Die drei Icons sitzen rechts daneben (auf breiten Bildschirmen; am Handy stehen sie im Menü).</td></tr>
+          <tr><td>Kennenlern-Call oben rechts — aber nicht „so direkt in die Fresse"</td><td class="ok">Der Knopf sitzt oben rechts. Im Video-Bereich gibt es keinen orangen Knopf mehr, nur den Link nach unten zu den fünf Wegen. Der orange Call-Knopf kommt erst bei „Dein Weg", nach der Erklärung.</td></tr>
+          <tr><td>„Dein Weg" — bist du unschlüssig</td><td class="offen">Bleibt drin, weiter unten. Schau es dir mit dem neuen Aufbau an — wenn es weg soll, ist es ein Handgriff.</td></tr>
+          <tr><td>Alle-Links-Seite nur in Orange und Blau</td><td class="ok">Umgefärbt: Navy-Grund, orange Rahmen, die wichtigste Kachel orange.</td></tr>
+          <tr><td>Sessions: deine Timeline statt der drei Schritte; Vor Ort / Online / Zeit / Preis; „Eine Session von innen" und das FAQ behalten; „für wen" raus</td><td class="offen">Timeline-Layout steht mit fünf Stationen als Platzhalter, darüber die Fakten-Leiste <em>Vor Ort · Online · Zeit · Preis</em>. FAQ bleibt, „für wen" ist raus. <strong>Achtung:</strong> Das PDF, das bei uns ankam, sind deine AGB — nicht die Timeline. Schick sie bitte noch einmal.</td></tr>
+          <tr><td>Das Laufband ist cool, der Text passt nicht</td><td class="offen">Element bleibt. Schick uns deine Sätze, wir tauschen sie.</td></tr>
+          <tr><td>Erklärung am Anfang schreibst du um</td><td class="offen">Alles Vorschlag, alles austauschbar — Sprachnachricht reicht.</td></tr>
+          <tr><td>Text-Testimonials zwischendrin, dazu ein Video-Testimonial</td><td class="ok">Die Text-Stimme bleibt, das Video-Testimonial hat seine Bühne nach „Events &amp; Retreats". Wir brauchen nur die Datei und das Okay der Person.</td></tr>
+          <tr><td>Eigene About-Seite: Hard Facts, Story, Zone of Genius, Training &amp; Zertifizierungen, Erfahrung &amp; Praxis, Teaching &amp; Facilitation, Random Facts, Zitat mit Bild</td><td class="ok"><em>about.html</em> — genau in dieser Reihenfolge, mit deinem Zitat „Deine Emotionen sind nicht das Problem, sondern deine Beziehung zu ihnen" und deinem Bild am Schluss. Alle Texte sind Platzhalter, bis deine kommen.</td></tr>
+          <tr><td>Reinschnuppern anders nennen; Podcast und Instagram einbetten oder nur verlinken?</td><td class="offen">Heißt jetzt „Kostenlos &amp; Kleines" (Vorschlag). Vorerst verlinkt. Einbetten geht (Spotify-Player, Instagram-Posts), kostet aber Ladezeit und braucht einen Datenschutz-Hinweis — deine Entscheidung.</td></tr>
+          <tr><td>„Für wen das hier ist und für wen nicht" auf die Begleitungsseite, nicht auf die Startseite</td><td class="ok">Verschoben. Auf der Begleitungsseite jetzt: „Für Menschen, die drei Dinge wollen" — dann „Das ist was für dich, wenn …" und „nichts für dich, wenn …".</td></tr>
+          <tr><td>Begleitung: was ist dabei? Fest oder individuell?</td><td class="offen">Modul <em>„Das ist drin"</em> mit deinen Bausteinen: Emotional-Release-Sessions, Integrations-Sessions als Walk &amp; Talk, psychosomatische Toolbox, WhatsApp-Support, Videokurs. Die Zahlen sind Platzhalter. Darunter steht der Satz „Oder ganz individuell" — du entscheidest, welche Variante bleibt.</td></tr>
+          <tr><td>Deine AGB (das PDF)</td><td class="ok">Eingebaut auf <em>agb.html</em>, nur gegliedert, nicht verändert. Dazu sechs Hinweise, die jemand mit Rechtskenntnis vor dem Live-Gang prüfen sollte.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DIE SEITEN ═══ -->
+<section class="section">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Zum Durchklicken</span>
+      <h2>Sechs Seiten, alle in deinem Look.</h2>
+    </div>
+    <div class="seiten">
+      <a href="index.html"><b>Startseite</b><p>Video, fünf Kreise, Kennst du das?, vier Angebote mit Stimmen dazwischen, Über mich, Dein Weg, Kostenlos &amp; Shop, Newsletter, Google, Kontakt.</p></a>
+      <a href="about.html"><span class="neu">Neu</span><b>Über mich</b><p>Steckbrief, Story, Zone of Genius, Ausbildung, Erfahrung, Lehre, Random Facts, dein Zitat.</p></a>
+      <a href="sessions.html"><span class="neu">Neu gebaut</span><b>1:1 Sessions</b><p>Fakten-Leiste, Timeline, Formate, FAQ.</p></a>
+      <a href="begleitung.html"><span class="neu">Neu gebaut</span><b>Einzelbegleitung</b><p>Für wen, drei Phasen, „Das ist drin", Rahmen.</p></a>
+      <a href="links.html"><span class="neu">Umgefärbt</span><b>Alle Links</b><p>Dein Linktree-Ersatz in Navy und Orange.</p></a>
+      <a href="agb.html"><span class="neu">Dein Text</span><b>AGB</b><p>Deine Bedingungen, gegliedert, mit Prüfhinweisen.</p></a>
     </div>
   </div>
 </section>
 
 <!-- ═══ VORHER / NACHHER ═══ -->
-<section class="section">
+<section class="section deep">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Vorher · Nachher</span>
       <h2>Zieh den Griff nach links und rechts.</h2>
-      <p class="lead">Links deine bisherige Seite, rechts der neue Entwurf. Beide Bilder zeigen
+      <p class="lead">Links deine bisherige Seite, rechts der aktuelle Entwurf. Beide Bilder zeigen
         denselben Ausschnitt am großen Bildschirm.</p>
     </div>
     <div class="ba" id="ba" style="--pos:50%">
@@ -184,13 +181,13 @@
 </section>
 
 <!-- ═══ HANDY ═══ -->
-<section class="section deep">
+<section class="section">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Und am Handy?</span>
       <h2>Dort entscheidet sich der erste Eindruck.</h2>
-      <p class="lead">Auf deiner bisherigen Seite läuft die Überschrift am Smartphone aus dem Bild.
-        Auf der neuen begrüßt dein Foto jeden Besucher, und darunter steht ein Satz, der ganz zu lesen ist.</p>
+      <p class="lead">Die Seite ist zuerst fürs Handy gebaut: Video, dein Satz, dein Gesicht mit Namen —
+        und ein Fingertipp weiter die fünf Wege als Kreise.</p>
     </div>
     <div class="handys">
       <figure>
@@ -198,172 +195,27 @@
         <figcaption><strong>Bisher</strong> — „…iere deine …am": die Headline läuft aus dem Bild.</figcaption>
       </figure>
       <figure>
-        <img src="assets/vorschau/neu-handy.jpg" width="390" height="844" loading="lazy" alt="Die neue Seite am Smartphone: Foto, Überschrift und Buttons vollständig sichtbar">
-        <figcaption><strong>Neu</strong> — dein Foto, alles lesbar, und ein klarer Weg zum Kennenlern-Call.</figcaption>
+        <img src="assets/vorschau/neu-handy.jpg" width="390" height="844" loading="lazy" alt="Die neue Seite am Smartphone: Video-Bühne, Überschrift und Namenszeile vollständig sichtbar">
+        <figcaption><strong>Neu</strong> — alles lesbar, kein Knopf im Gesicht, der Weg geht nach unten weiter.</figcaption>
       </figure>
     </div>
-    <p class="small mt-3 muted">Über 60&nbsp;% aller Website-Besuche kommen
-      heute vom Smartphone (StatCounter).</p>
   </div>
 </section>
 
 <!-- ═══ ZAHLEN ═══ -->
-<section class="section">
+<section class="section deep">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Die Zahlen</span>
       <h2>Und sie bleibt leicht — mit allen Fotos.</h2>
     </div>
     <div class="zahlen">
-      <div><b>0,3 MB</b><p>lädt beim ersten Bildschirm. Der Rest kommt erst, wenn du weiterscrollst.</p></div>
-      <div><b>0,7 MB</b><p>die komplette Startseite mit allen acht Fotos — bisher waren es 2,2 MB.</p></div>
-      <div><b>14</b><p>Anfragen pro Aufruf, alle an deinen eigenen Server. Bisher: 31 an fünf Server, davon vier fremde.</p></div>
+      <div><b>0,25 MB</b><p>lädt beim ersten Bildschirm — Video-Standbild, Schriften, dein Porträt. Der Rest kommt erst beim Scrollen.</p></div>
+      <div><b>1,1 MB</b><p>die komplette Startseite mit allen 23 Fotos. Bisher waren es 2,2 MB mit deutlich weniger Bildern.</p></div>
+      <div><b>23</b><p>Anfragen pro Aufruf, alle an deinen eigenen Server. Bisher: 31 an fünf Server, davon vier fremde.</p></div>
       <div><b>0</b><p>Cookies, kein Tracking, keine Verbindung zu Google — deshalb auch kein Cookie-Banner.</p></div>
     </div>
-    <p class="small muted mt-2">Eigene Messung am 03.09.2026
-      (übertragene Dateigrößen und Anfragen). Die Lighthouse-Werte messen wir neu, sobald die Seite
-      auf echtem Hosting liegt — der Vorgänger-Entwurf lag dort bei 100/100.</p>
-  </div>
-</section>
-
-<!-- ═══ AUF EINEN BLICK ═══ -->
-<section class="section deep">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Auf einen Blick</span>
-      <h2>Sechs Punkte im direkten Vergleich.</h2>
-    </div>
-    <div class="scrollx">
-      <table class="gegen">
-        <caption class="small" style="caption-side:bottom;text-align:left;padding-top:1em;color:var(--ink-soft)">
-          Vergleich der bisherigen und der neuen Website.
-        </caption>
-        <thead>
-          <tr><th scope="col">&nbsp;</th><th scope="col">Bisher</th><th scope="col">Neu</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Seitengewicht</td><td class="alt">2,2 MB</td><td class="neu">0,7 MB — mit allen Fotos</td></tr>
-          <tr><td>Mobiltauglich</td><td class="alt">Nein — Überschrift abgeschnitten, Menü bricht</td><td class="neu">Ja — geprüft von 320 bis 1920 px</td></tr>
-          <tr><td>Server-Anfragen</td><td class="alt">31 — an 5 Server, davon 4 fremde</td><td class="neu">14 — alle an deinen eigenen</td></tr>
-          <tr><td>Inhalt</td><td class="alt">4 von 6 Unterseiten waren Lorem-ipsum-Baustellen</td><td class="neu">Startseite plus zwei fertige Tiefen-Seiten, jede Zeile echt</td></tr>
-          <tr><td>Angebote</td><td class="alt">„UnVerschämt Training" als festes Paket</td><td class="neu">Dein echter Weg: Call → Session → Begleitung</td></tr>
-          <tr><td>Recht</td><td class="alt">Impressum leer, Datenschutzerklärung fehlt</td><td class="neu">Rechtsseiten vorbereitet, cookiefrei, Krisen-Hinweise drin</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ BEFUND ALTE SEITE ═══ -->
-<section class="section">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Was uns aufgefallen ist</span>
-      <h2>Das haben wir gleich mitkorrigiert.</h2>
-      <p class="lead">Alles ehrlich befundet, nichts dazuerfunden — und keine Panikmache,
-        keine Rechtsberatung. Wir zeigen dir jeden Punkt gern am Schirm.</p>
-    </div>
-    <div class="befund">
-      <div>
-        <h3>Dein Impressum war leer.</h3>
-        <p>Auf <code>/impressum</code> stand bisher nur die Überschrift — keine Anschrift, keine
-          E-Mail, kein Name. Für eine geschäftliche Website schreibt §&nbsp;5 DDG diese Angaben vor.
-          Auf der neuen Seite ist die Struktur fertig; es fehlen nur deine Daten.</p>
-      </div>
-      <div>
-        <h3>Eine Datenschutzerklärung gab es nicht.</h3>
-        <p>Der Footer-Text „Datenschutz" war gar kein Link — dein Kontaktformular verarbeitet aber
-          persönliche Daten, und genau darüber muss eine Website informieren (Art.&nbsp;13 DSGVO).
-          Die neue Erklärung schreiben wir passgenau, sobald die Seite live geht.</p>
-      </div>
-      <div>
-        <h3>Schriften kamen von Google-Servern.</h3>
-        <p>Beim Aufruf deiner Seite wird die IP-Adresse jedes Besuchers an Google übertragen — das
-          hat bereits Abmahnwellen ausgelöst (LG München I, 2022). Jetzt liegen alle Schriften auf
-          deinem eigenen Hosting, es geht keine Verbindung zu Google, und ein Cookie-Banner
-          braucht es nicht.</p>
-      </div>
-      <div>
-        <h3>Erfundene Bewertungen aus dem Template.</h3>
-        <p>Auf <code>/coaching</code> und <code>/retreats</code> standen englische Muster-Stimmen
-          („Jenny Martins, Industrial Desiger"), dazu ein abgelaufener Countdown („You missed out!")
-          und „$50"-Angebote aus der Vorlage. Erfundene Kundenstimmen und Fake-Verknappung gelten
-          als irreführende Werbung (§&nbsp;5 UWG). Auf der neuen Seite steht an dieser Stelle ein
-          klar markierter Platzhalter, bis du echte Stimmen hast.</p>
-      </div>
-      <div>
-        <h3>„Certified N.E.R. Therapist" ist jetzt „Practitioner".</h3>
-        <p>„Therapeut" ist in Deutschland geschütztes Terrain und für Coaches rechtlich angreifbar.
-          Deine eigene Impressums-Zeile sagt es übrigens genauso.</p>
-      </div>
-      <div>
-        <h3>Dein Browser-Tab hatte keinen Titel.</h3>
-        <p>Und Google keine Beschreibung deiner Seite. Jetzt: sauberer Titel, Beschreibung — und
-          beim Teilen per WhatsApp erscheint eine Vorschau mit deinem Foto.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ WAS DIE NEUE SEITE KANN ═══ -->
-<section class="section deep">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Was neu ist</span>
-      <h2>Und warum wir es so gebaut haben.</h2>
-    </div>
-    <ul class="liste">
-      <li><strong>Video zuerst, Text darüber.</strong> Wie bei thewellpaidpriestess.com: Die Bühne
-        ganz oben ist dein Video, deine Aussage liegt direkt darauf. Solange die Datei fehlt, trägt
-        das Abendlicht-Foto — Text nur über ruhigem Himmel, nie über einem Gesicht. Du selbst
-        stehst als kleines Porträt mit Namen direkt darunter, damit sofort klar ist, wer hier spricht.</li>
-      <li><strong>Eine Idee pro Bildschirm.</strong> Drei Angebote als volle Bild/Text-Sektionen,
-        dazwischen deine Stimmen als grosse Zitate auf ruhigen Bildbändern — genau die Dramaturgie,
-        die dir an der Priestess-Seite gefällt. Alles taucht beim Scrollen gestaffelt auf.</li>
-      <li><strong>Handy zuerst.</strong> Ein Daumen, eine Spalte, grosse Schrift, ein Knopf. Die Seite
-        ist am Handy gebaut und dann für den grossen Schirm erweitert, nicht umgekehrt.</li>
-      <li><strong>Texte halbiert.</strong> Kein Absatz länger als drei Zeilen. Was erklärt werden muss,
-        steht auf den zwei Tiefen-Seiten — die Startseite muss nur eins: packen.</li>
-      <li><strong>Bilder neu sortiert.</strong> Aus 47 Fotos die zehn, die wirklich tragen: Hand aufs Herz
-        vor der Holzwand als dein Porträt, der Regenbogen-Moment als Augenzwinkern, das Abendlicht
-        als Bühne, die Körperarbeit als Beweis. Jedes Bild eigens zugeschnitten, keines mehr zufällig.</li>
-      <li><strong>Dein Brand Kit ist das Gesetz.</strong> Navy, Warm Orange, Cream, Warm Sand,
-        Soft Blue — genau deine Werte, nichts dazuerfunden. Orange trägt die wichtigsten Buttons,
-        Navy den Rest; kleiner Text bleibt immer Navy auf Cream, damit alles gut lesbar ist.</li>
-      <li><strong>DM Serif Display und Manrope</strong>, beide aus deinem Kit und beide auf deinem
-        eigenen Hosting — es geht keine Anfrage an Google.</li>
-      <li><strong>Das Video steht ganz oben.</strong> Du wolltest keinen Text als Erstes, sondern
-        sehen, wie du Raum hältst. Genau so ist es gebaut: Video zuerst, Aussage darunter.
-        Ein zweiter Video-Platz sitzt bei „Über mich" für deine fünf Minuten über dich.</li>
-      <li><strong>Dein Weg als Herzstück.</strong> Drei nummerierte Schritte statt Paket-Kacheln.
-        Wer oben einsteigt, weiß nach zwanzig Sekunden, wie eine Zusammenarbeit mit dir anfängt.</li>
-      <li><strong>Bilder tauchen auf.</strong> Genau der Effekt, den du an Ashleys Sessions-Seite
-        magst — Bild und Text kommen leicht versetzt herein, nicht gleichzeitig. Wer „reduzierte
-        Bewegung" eingestellt hat, bekommt alles ruhig.</li>
-      <li><strong>Kostenlos &amp; Shop in einem Bereich.</strong> Podcast, Instagram und das kleine
-        Scham-Handbuch als Newsletter-Geschenk; darunter drei Karten für Morgen-Ritual,
-        Meditations-Workshop und Self-Study. Bezahlt wird später bei deinem Anbieter, wir tragen
-        nur den Link ein.</li>
-      <li><strong>Deine eigene Link-Seite</strong> statt Wonderlink oder Linktree:
-        <em>franzheinrich.com/links</em>. Sieht aus wie deine Marke, kostet nichts und schickt
-        alle Klicks auf deine eigene Domain.</li>
-      <li><strong>Ein Zeichen aus deinen Initialen.</strong> FH in Navy und Orange — als Logo im
-        Menü und als Symbol im Browser-Tab. Genau das, was du vorgeschlagen hast; ein grosses
-        Logo-Projekt braucht es dafür nicht.</li>
-      <li><strong>Gegen den Bot-Spam.</strong> Deine E-Mail-Adresse steht nicht mehr im Quelltext,
-        sondern wird erst im Browser zusammengesetzt. Adress-Sammler laufen ins Leere,
-        Menschen sehen sie ganz normal.</li>
-      <li><strong>Auch AGB sind vorbereitet</strong>, nicht nur Impressum und Datenschutz —
-        du hattest sie ausdrücklich angefragt.</li>
-      <li><strong>Zwei Seiten mit Tiefe.</strong> <em>Sessions</em> erklärt Schritt für Schritt,
-        was in einer Session passiert, inklusive „ist was für dich, wenn …" und „nichts für dich,
-        wenn …". <em>Einzelbegleitung</em> beschreibt den längeren Weg — bewusst ohne Preisliste,
-        weil du das im Call klärst.</li>
-      <li><strong>Verantwortung eingebaut.</strong> Ehrliche „Für wen nicht"-Box, Krisen-Hinweis
-        mit Telefonseelsorge und der klare Satz, dass Coaching keine Psychotherapie ersetzt.</li>
-      <li><strong>Änderbar per Sprachnachricht.</strong> Die Seite ist in klar benannte Blöcke
-        gegliedert, damit Klaus deine Änderungen sauber trifft.</li>
-    </ul>
+    <p class="small mt-2" style="color:var(--paper-soft)">Eigene Messung am 11.09.2026 (Dateigrößen und Anfragen der Startseite am großen Bildschirm).</p>
   </div>
 </section>
 
@@ -374,34 +226,27 @@
       <span class="eyebrow">Von dir</span>
       <h2>Damit daraus deine Seite wird.</h2>
       <p class="lead">Alles, was jetzt drinsteht, ist ein Vorschlag. Du wolltest die Texte selbst
-        schreiben — überschreib uns gnadenlos.</p>
+        schreiben — überschreib uns gnadenlos. Sprachnachricht reicht.</p>
     </div>
     <ul class="liste">
-      <li><strong>Deine Texte.</strong> Jede Stelle ist einzeln austauschbar. Schick sie, wie es
-        dir passt: Sprachnachricht, Notizen, Stichpunkte.</li>
-      <li><strong>Zwei Videos</strong> als MP4, je rund 60–90 Sekunden: das Intro ganz oben und deine
-        fünf Minuten bei „Über mich". Beide Plätze warten. Deine zwei Drive-Clips sind
-        iPhone-Aufnahmen mit 21 und 62 MB und im Browser nicht abspielbar — die müssen wir
-        umwandeln oder du schneidest gleich eine Web-Fassung.</li>
-      <li><strong>Der Preis der Schnupper-Session</strong> — sie ist bezahlt, steht aber gerade
-        ohne Zahl da. Nennen oder bewusst offen lassen?</li>
-      <li><strong>Deine Orte.</strong> München und Regensburg stehen noch von der alten Seite drin.
-        Stimmt das, jetzt wo du im Winter in Koh Phangan bist?</li>
-      <li><strong>Echte Stimmen</strong> von Menschen, die mit dir gearbeitet haben — plus deren Okay.</li>
-      <li><strong>Termine und Links</strong> für Workshops, Retreats und deinen Shop — plus die Preise
-        für Morgen-Ritual, Meditations-Workshop und Self-Study.</li>
-      <li><strong>Dein Kalender-Link</strong> (Calendly, Google-Terminplaner …) und deine
-        <strong>WhatsApp-Nummer</strong>. Solange die fehlen, führen beide Buttons zum Formular.</li>
-      <li><strong>Der Newsletter-Anbieter</strong> — und das kleine Scham-Handbuch als PDF, das
-        Menschen dafür bekommen.</li>
-      <li><strong>Deine Google-Rezensionen.</strong> Die lassen sich einbinden; weil dabei aber
-        Daten zu Google fliessen, klären wir vorher, ob wir sie live laden oder regelmässig
-        abholen und selbst anzeigen. Cookiefrei bleibt die Seite in beiden Fällen.</li>
-      <li><strong>Wer hat die Fotos gemacht?</strong> Bei Profi-Shootings liegt das Nutzungsrecht
-        oft beim Fotografen — das klären wir, bevor die Seite offiziell live geht.</li>
-      <li><strong>Impressums-Angaben</strong> — Anschrift, E-Mail, Telefon, USt-Status. Ohne sie
-        bleibt die Seite für Google gesperrt.</li>
-      <li><strong>Der Flyer</strong> zur Einzelbegleitung, den du angeboten hattest.</li>
+      <li><strong>Deine Timeline für die Sessions</strong> — das PDF, das ankam, waren die AGB.</li>
+      <li><strong>Der Google-Link</strong> zu deinen Rezensionen. Weil beim Live-Laden Daten zu Google fließen,
+        schlagen wir vor, die Rezensionen regelmäßig abzuholen und selbst anzuzeigen — cookiefrei.</li>
+      <li><strong>Deine Texte</strong>: Erklärung am Anfang, Laufband-Sätze, die About-Seite (Steckbrief, Story,
+        Zone of Genius, Ausbildung, Erfahrung, Lehre, Random Facts). Danach übersetzen wir, du korrigierst.</li>
+      <li><strong>Begleitung: fest oder individuell?</strong> Und wenn fest — wie viele Sessions, wie viele
+        Walk &amp; Talks, was genau ist die Toolbox?</li>
+      <li><strong>Der Preis der Session</strong> — du wolltest ihn auf der Sessions-Seite stehen haben; das Feld wartet.</li>
+      <li><strong>Das Video-Testimonial</strong> als Datei, plus das Okay der Person. Dazu <strong>echte Text-Stimmen</strong>.</li>
+      <li><strong>Zwei Videos</strong> als MP4, je rund 60–90 Sekunden: das Intro oben und deine fünf Minuten bei „Über mich".</li>
+      <li><strong>Podcast und Instagram</strong>: einbetten oder verlinken?</li>
+      <li><strong>Deine Orte.</strong> München und Regensburg stehen noch drin — stimmt das, jetzt mit Koh Phangan im Winter?</li>
+      <li><strong>Termine, Shop-Links und Preise</strong> für Events, Retreats, Morgen-Ritual, Self-Study.</li>
+      <li><strong>Kalender-Link und WhatsApp-Nummer</strong> — bis dahin führen beide Knöpfe aufs Formular.</li>
+      <li><strong>Newsletter-Anbieter</strong> und das kleine Scham-Handbuch als PDF.</li>
+      <li><strong>Wer hat die Fotos gemacht?</strong> Nutzungsrechte klären wir, bevor die Seite offiziell live geht.</li>
+      <li><strong>Impressums-Angaben</strong> — Anschrift, E-Mail, Telefon, USt-Status.</li>
+      <li><strong>AGB prüfen lassen</strong> — unsere Hinweise stehen unten auf der AGB-Seite.</li>
     </ul>
   </div>
 </section>
@@ -409,21 +254,18 @@
 <!-- ═══ CTA ═══ -->
 <section class="cta-band">
   <div class="wrap">
-    <span class="eyebrow eyebrow--center">Und jetzt</span>
+    <span class="eyebrow">Und jetzt</span>
     <h2>Schau sie dir in Ruhe an.</h2>
     <p class="lead">Danach telefonieren wir und gehen zusammen durch, was bleibt, was fliegt und
       was noch fehlt. Wie besprochen: Die Rechnung kommt erst, wenn der Entwurf steht und du
       damit zufrieden bist.</p>
-    <a class="btn btn-orange btn-arrow" href="index.html">Deine neue Seite ansehen</a>
+    <a class="btn btn-orange btn-arrow" href="index.html">Deine Seite ansehen</a>
     <p class="small mt-2" style="color:var(--paper-soft)">Lenny &amp; Michael · Lechcode, Landsberg am Lech</p>
   </div>
 </section>
 </main>
 
-<!-- ═══ TERMIN-BUCHUNG ═══
-     Übernommen aus Lennys Commit 5a03613 (16.06.2026): derselbe Kalender-Link,
-     nur in die Bildsprache der neuen Seite übersetzt. Cookiefrei — der Kalender
-     öffnet in einem neuen Tab. -->
+<!-- ═══ TERMIN-BUCHUNG — Kalender-Link aus Lennys Commit 5a03613, cookiefrei (neuer Tab) ═══ -->
 <section class="lcbook deep" aria-labelledby="lcbook-h">
   <div class="wrap-narrow center">
     <span class="lcbook-eyebrow">
@@ -434,7 +276,7 @@
     <p class="lead mt-2" style="margin-inline:auto;text-align:center">Such dir einfach einen Termin aus — rund 30 Minuten,
       ganz unverbindlich. Wir gehen zusammen durch die Seite, und du fragst, was du willst.</p>
     <p class="mt-2"><a class="btn btn-orange btn-arrow" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1vusFYCV6O45i109a0J5ruEFtWCT7iFsq5t4Mb2KvQmNhdkMtlddml9dx5V2jButjV2SUGapFg?gv=true" target="_blank" rel="noopener noreferrer">Termin aussuchen</a></p>
-    <p class="small mt-2" class="small muted" style="max-width:46ch;margin-inline:auto">Öffnet unseren Kalender in einem neuen Tab.
+    <p class="small mt-2" style="max-width:46ch;margin-inline:auto;color:var(--paper-soft)">Öffnet unseren Kalender in einem neuen Tab.
       Diese Seite bleibt komplett cookiefrei.</p>
   </div>
 </section>
@@ -442,7 +284,7 @@
 <footer class="footer">
   <div class="wrap">
     <div class="footer-bottom" style="margin-top:0;border-top:0">
-      <span>Unverbindliche Design-Vorschau für Franz Heinrich · Stand 03.09.2026</span>
+      <span>Unverbindliche Design-Vorschau für Franz Heinrich · Stand 11.09.2026</span>
       <span>Konzept &amp; Code: Lechcode, Landsberg am Lech</span>
     </div>
   </div>
