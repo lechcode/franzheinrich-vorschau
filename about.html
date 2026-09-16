@@ -32,13 +32,12 @@
 <header class="nav solid" id="nav">
   <div class="wrap masthead">
     <div class="mh-side mh-side-l">
-      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
+      <!-- Unterseiten sind noch nur deutsch: EN führt auf die englische Startseite -->
+      <button class="lang" id="lang-desktop" type="button" aria-label="Switch to English">EN</button>
       <nav aria-label="Menü links">
       <ul class="mh-left">
         <li><a class="navlink" href="about.html" aria-current="page">Über mich</a></li>
-        <li><a class="navlink" href="index.html#shop">Shop</a></li>
+        <li><a class="navlink" href="index.html#kostenlos">For Free</a></li>
       </ul>
       </nav>
     </div>
@@ -60,24 +59,25 @@
             <a href="index.html#kostenlos" class="dd-frei"><img src="assets/img/kreis-frei-480.jpg" width="54" height="54" alt=""><span><b>Kostenlos</b><small>Podcast, Handbuch, Newsletter</small></span></a>
           </div>
         </li>
-        <li><a class="navlink" href="index.html#kontakt">Kontakt</a></li>
       </ul>
       </nav>
       <a class="btn btn-navy btn-arrow mh-cta" href="index.html#kontakt">Kennenlern-Call</a>
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobile-menu">
   <a href="about.html">Über mich</a>
-  <a href="index.html#shop">Shop</a>
+  <a href="index.html#kostenlos">For Free</a>
   <span class="mm-group">So kannst du mit mir arbeiten</span>
   <a class="mm-sub" href="begleitung.html">Einzelbegleitung</a>
   <a class="mm-sub" href="sessions.html">1:1 Sessions</a>
   <a class="mm-sub" href="index.html#events">Events &amp; Retreats</a>
   <a class="mm-sub" href="index.html#gruppen">Gruppenangebote</a>
   <a class="mm-sub" href="index.html#kostenlos">Kostenlos</a>
-  <a href="index.html#kontakt">Kontakt</a>
   <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Kennenlern-Call</a>
 </div>
 
@@ -259,6 +259,9 @@
 </footer>
 
 <script>
+(function(){
+  document.querySelectorAll('.lang').forEach(function(b){b.addEventListener('click',function(){try{localStorage.setItem('fh-lang','en');}catch(e){}location.href='index.html';});});
+})();
 (function(){
   var dd=document.getElementById('mh-dd');if(!dd)return;var btn=dd.querySelector('button');
   btn.addEventListener('click',function(){var o=dd.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});

@@ -7,9 +7,8 @@
 window.FH_EN = {
   "meta.title": "Franz Heinrich — Shame Coaching & Neo Emotional Release",
   "nav.about": "About me",
-  "nav.shop": "Shop",
+  "nav.free": "For free",
   "nav.work": "Ways to work with me",
-  "nav.contact": "Contact",
   "nav.cta": "Intro call",
   "dd.begleitung.t": "1:1 Mentorship", "dd.begleitung.s": "Several months by your side",
   "dd.sessions.t": "1:1 Sessions", "dd.sessions.s": "Neo Emotional Release, online or in person",
@@ -17,11 +16,9 @@ window.FH_EN = {
   "dd.gruppen.t": "Group offers", "dd.gruppen.s": "Regular circles, online and in person",
   "dd.frei.t": "Free", "dd.frei.s": "Podcast, handbook, newsletter",
 
-  "hero.eyebrow": "Shame Coaching · Neo Emotional Release",
-  "hero.h1": "There is nothing about you that has to <em>go</em>.",
-  "hero.sub": "Bodywork for everything you have swallowed for too long. One-on-one, in workshops, on retreats.",
-  "hero.role": "Coach for shame & emotions",
-  "hero.link": "Ways to work with me <span>↓</span>",
+  "hero.role": "Shame & Emotional Release Expert",
+  "hero.h1": "“I guide you back into your <em>body</em> and through everything you have swallowed for too long.”",
+  "hero.cta": "Ways to work with me",
 
   "work.eyebrow": "Ways to work with me",
   "work.h2": "Five ways in. Pick one.",

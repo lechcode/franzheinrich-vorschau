@@ -256,7 +256,7 @@ body.announce-off .announce{display:none}
 .brand .name{font-family:var(--display);font-size:var(--t-1);letter-spacing:.01em;line-height:1;white-space:nowrap}
 .brand .rolle{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);line-height:1}
 
-.burger{display:none;background:none;border:0;padding:10px;cursor:pointer;margin-right:auto}
+.burger{display:none;background:none;border:0;padding:10px;cursor:pointer;margin-left:auto}
 .burger span{display:block;width:24px;height:2.5px;border-radius:2px;background:var(--navy);margin:5px 0;transition:transform .3s var(--ease),opacity .2s,background .3s}
 body.menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
 body.menu-open .burger span:nth-child(2){opacity:0}
@@ -276,7 +276,7 @@ body.menu-open{overflow:hidden}
 .mobile-menu .btn{font-family:var(--body);margin-top:var(--sp-2)}
 .mobile-menu a.btn-orange{color:var(--navy)}
 
-@media (max-width:1080px){
+@media (max-width:1180px){
   .mh-left,.mh-right{display:none}
   .burger{display:block}
   .mh-cta{display:none}
@@ -284,7 +284,8 @@ body.menu-open{overflow:hidden}
   .brand .rolle{display:none}
 }
 
-/* ---- 9 · Hero: Video-Bühne, Text darüber ------------------------------- */
+/* ---- 9 · Hero: Video-Bühne, Text darüber — seit 16.09. UNGENUTZT (Michael: Video vorerst raus,
+        Bild-Kopf in Block 44). Bleibt für die Rückkehr des Videos. ------------ */
 .hero{
   position:relative;isolation:isolate;overflow:hidden;
   min-height:100svh;display:grid;align-items:end;
@@ -319,10 +320,10 @@ body.menu-open{overflow:hidden}
 .hero-scroll{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);width:1px;height:38px;background:linear-gradient(rgba(247,241,230,0),rgba(247,241,230,.8));animation:drop 2.2s var(--ease) infinite}
 @keyframes drop{0%{transform:translateX(-50%) scaleY(0);transform-origin:top}55%{transform:translateX(-50%) scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:translateX(-50%) scaleY(0);transform-origin:bottom}}
 /* Einzug beim Laden */
-.js .hero .in-up{opacity:0;transform:translateY(18px);animation:up .9s var(--ease-out) forwards;animation-delay:var(--d,0s)}
+.js .in-up{opacity:0;transform:translateY(18px);animation:up .9s var(--ease-out) forwards;animation-delay:var(--d,0s)}
 @keyframes up{to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.js .hero .in-up{opacity:1;transform:none;animation:none}.hero-scroll{animation:none}}
-.js.foto .hero .in-up{opacity:1;transform:none;animation:none}
+@media (prefers-reduced-motion:reduce){.js .in-up{opacity:1;transform:none;animation:none}.hero-scroll{animation:none}}
+.js.foto .in-up{opacity:1;transform:none;animation:none}
 @media (min-width:900px){
   .hero{align-items:center;padding-top:calc(var(--nav-h) + var(--sp-2))}
   .hero-play{width:84px;height:84px;margin-bottom:var(--sp-3)}
@@ -689,7 +690,6 @@ details.formbox .inner{margin-top:var(--sp-3)}
 .mobile-menu .mm-social{display:flex;gap:14px;margin-top:var(--sp-2)}
 .mobile-menu .mm-social a{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(247,241,230,.5);display:grid;place-items:center;color:var(--cream)}
 .mobile-menu .mm-social svg{width:18px;height:18px;fill:currentColor}
-@media (max-width:1080px){.lang.desktop{display:none}}
 
 /* ---- 37 · Übersicht: fünf Kreise ---------------------------------------- */
 .kreise{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(20px,3vw,40px) clamp(12px,2.2vw,28px);max-width:66rem;margin-inline:auto}
@@ -777,8 +777,7 @@ body.links-navy a{text-decoration-color:rgba(233,106,44,.85)}
 body.links-navy h1,body.links-navy h2,body.links-navy h3{color:var(--cream)}
 /* Masthead-Balance (Runde 7): rechts sitzen Aufklapp-Raster, Kontakt, Icons und Call — damit die Marke
    trotzdem mittig bleibt, bekommt der Masthead mehr Breite und der Sprachschalter sitzt ganz links. */
-.nav .wrap{width:min(1400px, 100% - clamp(28px,6vw,108px))}
-.lang.desktop{margin-right:auto}
+.mh-side-l .lang{margin-right:auto}
 .hero h1 em{color:var(--orange)}
 .mh-dd > .navlink,.mh-cta{white-space:nowrap}
 /* Timeline-Stationen linksbündig (schlägt .section li) · About: Story-Block + Zitat-Autor */
@@ -793,3 +792,28 @@ body.links-navy h1,body.links-navy h2,body.links-navy h3{color:var(--cream)}
   .zitat-split blockquote footer{text-align:left}
 }
 .drin li{text-align:left}
+
+/* ---- 44 · Bild-Kopf statt Video-Bühne (16.09.2026, Michaels Ansage) --------
+   Großes Bild von Franz, darunter Name + Titel, darunter sein Zitat, darunter
+   der Knopf zu den fünf Wegen. Handy: Bild randlos, quadratisch. Desktop: Bild
+   in der Seitenbreite mit Radius, Höhe an den Bildschirm gekoppelt. ---------- */
+.kopf{text-align:center;padding-bottom:var(--sp-3)}
+.kopf-bild{margin:0;overflow:hidden;background:var(--sand)}
+.kopf-bild img{display:block;width:100%;height:auto;object-fit:cover;object-position:50% 30%}
+@media (max-width:899px){.kopf-bild img{aspect-ratio:1}}
+@media (min-width:900px){
+  .kopf{padding-top:var(--sp-1)}
+  .kopf-bild{width:min(1180px, 100% - clamp(28px,6vw,108px));margin-inline:auto;border-radius:var(--radius)}
+  .kopf-bild img{height:clamp(340px, 50vh, 600px)}
+  .js.foto .kopf-bild img{height:560px}
+}
+.kopf-text{width:min(46rem, 100% - clamp(28px,6vw,80px));margin:var(--sp-2) auto 0}
+.kopf-name{font-family:var(--display);font-size:var(--t-2);line-height:1.1;color:var(--ink)}
+.kopf-rolle{margin-top:.55em;font-size:var(--t--2);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint)}
+.kopf h1{margin:var(--sp-1) auto 0;max-width:30ch;font-size:clamp(26px, 2vw + 17px, 42px);line-height:1.18;text-wrap:balance}
+.kopf h1 em{color:var(--orange-deep)}
+.kopf .btn{margin-top:var(--sp-2);padding-inline:1.15em}
+.btn-down::after{content:"↓";font-size:1.05em;line-height:1;transition:transform .22s var(--ease)}
+.btn-down:hover::after{transform:translateY(3px)}
+@media (max-width:1300px){.masthead{gap:14px}.mh-side{gap:14px}.mh-cta{padding:.8em 1.15em}}
+.nav .wrap{width:min(1400px, 100% - clamp(28px,6vw,108px))}
