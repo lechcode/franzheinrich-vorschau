@@ -817,3 +817,5 @@ body.links-navy h1,body.links-navy h2,body.links-navy h3{color:var(--cream)}
 .btn-down:hover::after{transform:translateY(3px)}
 @media (max-width:1300px){.masthead{gap:14px}.mh-side{gap:14px}.mh-cta{padding:.8em 1.15em}}
 .nav .wrap{width:min(1400px, 100% - clamp(28px,6vw,108px))}
+/* Michael 16.09.: im Desktop-Header kein FH-Zeichen — nur Name + Zeile. Am Handy bleibt es (Marke als Zeile). */
+@media (min-width:1181px){.masthead .brand .mark{display:none}}
