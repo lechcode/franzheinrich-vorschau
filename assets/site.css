@@ -804,8 +804,8 @@ body.links-navy h1,body.links-navy h2,body.links-navy h3{color:var(--cream)}
 @media (min-width:900px){
   .kopf{padding-top:var(--sp-1)}
   .kopf-bild{width:min(1180px, 100% - clamp(28px,6vw,108px));margin-inline:auto;border-radius:var(--radius)}
-  .kopf-bild img{height:clamp(340px, 50vh, 600px)}
-  .js.foto .kopf-bild img{height:560px}
+  /* Michael 16.09.: ganzer Kopf und Oberkörper — Bild zeigt den vollen 2:1-Ausschnitt, keine Höhenkopplung */
+  .kopf-bild img{height:auto;aspect-ratio:2/1}
 }
 .kopf-text{width:min(46rem, 100% - clamp(28px,6vw,80px));margin:var(--sp-2) auto 0}
 .kopf-name{font-family:var(--display);font-size:var(--t-2);line-height:1.1;color:var(--ink)}
