@@ -17,7 +17,7 @@ window.FH_EN = {
   "dd.frei.t": "Free", "dd.frei.s": "Podcast, handbook, newsletter",
 
   "hero.role": "Shame & Emotional Release Expert",
-  "hero.h1": "“I guide you <em>back into your body</em> and through everything you have swallowed for too long.”",
+  "hero.h1": "“I guide you <em>back into your body</em> to feel what you have swallowed for too long.”",
   "hero.cta": "Ways to work with me <span>↓</span>",
 
   "work.eyebrow": "Ways to work with me",
