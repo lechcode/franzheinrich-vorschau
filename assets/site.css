@@ -820,16 +820,18 @@ body.links-navy h1,body.links-navy h2,body.links-navy h3{color:var(--cream)}
 /* Michael 16.09.: im Desktop-Header kein FH-Zeichen — nur Name + Zeile. Am Handy bleibt es (Marke als Zeile). */
 @media (min-width:1181px){.masthead .brand .mark{display:none}}
 
-/* ---- 45 · Zitat auf dem Bild (Michael 16.09.) -----------------------------
-   Navy-Tafel mit Weichzeichner, nie über dem Gesicht: Desktop oben rechts auf
-   der freien Wand neben Franz, Handy unten am Bildrand. Darunter Name + Titel. */
+/* ---- 45 · Zitat auf dem Bild (Michael 16.09.: „in weißer Schrift über das Bild") ---------
+   Weißer Text direkt auf dem Foto, ohne Tafel. Lesbarkeit: Desktop links über den dunklen
+   Fensterläden mit sanftem Navy-Verlauf, Handy unten mit Verlauf zum Bildrand. Nie über dem Gesicht. */
 .kopf-bild{position:relative}
-.kopf-zitat{position:absolute;left:14px;right:14px;bottom:14px;padding:18px 20px;
-  background:rgba(2,48,71,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-  border-radius:var(--radius);color:var(--cream);text-align:left}
-.kopf-zitat h1{margin:0;max-width:none;font-size:clamp(20px,5.4vw,25px);line-height:1.22;color:var(--cream);text-align:left;text-wrap:pretty}
+.kopf-bild::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(2,48,71,0) 38%,rgba(2,48,71,.45) 62%,rgba(2,48,71,.88) 100%)}
+.kopf-zitat{position:absolute;z-index:1;left:18px;right:18px;bottom:18px;color:#fff;text-align:left}
+.kopf-zitat h1{margin:0;max-width:none;font-size:clamp(21px,5.6vw,26px);line-height:1.22;color:#fff;text-align:left;text-wrap:pretty;
+  text-shadow:0 2px 14px rgba(2,20,30,.55)}
 .kopf-zitat h1 em{color:var(--orange)}
 @media (min-width:900px){
-  .kopf-zitat{left:auto;bottom:auto;right:clamp(20px,3vw,44px);top:clamp(20px,3vw,44px);width:min(38%,29rem);padding:clamp(20px,2vw,32px)}
-  .kopf-zitat h1{font-size:clamp(20px,1.2vw+12px,30px)}
+  .kopf-bild::after{background:linear-gradient(100deg,rgba(2,48,71,.62) 0%,rgba(2,48,71,.34) 26%,rgba(2,48,71,0) 48%)}
+  .kopf-zitat{left:clamp(24px,3.4vw,52px);right:auto;bottom:auto;top:clamp(24px,3.4vw,52px);width:min(34%,26rem)}
+  .kopf-zitat h1{font-size:clamp(22px,1.35vw+12px,34px);line-height:1.18}
 }
