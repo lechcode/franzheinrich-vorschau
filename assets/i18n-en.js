@@ -18,7 +18,7 @@ window.FH_EN = {
 
   "hero.role": "Shame & Emotional Release Expert",
   "hero.h1": "“I guide you <em>back into your body</em> and through everything you have swallowed for too long.”",
-  "hero.cta": "Ways to work with me",
+  "hero.cta": "Ways to work with me <span>↓</span>",
 
   "work.eyebrow": "Ways to work with me",
   "work.h2": "Five ways in. Pick one.",

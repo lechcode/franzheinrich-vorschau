@@ -812,7 +812,7 @@ body.links-navy h1,body.links-navy h2,body.links-navy h3{color:var(--cream)}
 .kopf-rolle{margin-top:.55em;font-size:var(--t--2);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint)}
 .kopf h1{margin:var(--sp-1) auto 0;max-width:30ch;font-size:clamp(26px, 2vw + 17px, 42px);line-height:1.18;text-wrap:balance}
 .kopf h1 em{color:var(--orange-deep)}
-.kopf .btn{margin-top:var(--sp-2);padding-inline:1.15em}
+.kopf .tlink{margin-top:var(--sp-2)}
 .btn-down::after{content:"↓";font-size:1.05em;line-height:1;transition:transform .22s var(--ease)}
 .btn-down:hover::after{transform:translateY(3px)}
 @media (max-width:1300px){.masthead{gap:14px}.mh-side{gap:14px}.mh-cta{padding:.8em 1.15em}}
