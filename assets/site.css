@@ -232,31 +232,6 @@ a.navlink[aria-current="page"]{border-bottom:2px solid var(--orange);padding-bot
   border:1.5px solid currentColor;border-radius:999px;padding:.4em .75em;color:var(--fg);cursor:pointer;opacity:.86;line-height:1}
 .lang:hover{opacity:1}
 
-/* Aufklapp-Raster unter „Dein Weg" */
-.mh-dd{position:relative}
-.mh-dd > .navlink{background:none;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:.5em}
-.mh-dd > .navlink::after{content:"";width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
-  transform:rotate(45deg) translateY(-2px);transition:transform .25s var(--ease)}
-.mh-dd.open > .navlink::after,.mh-dd:hover > .navlink::after{transform:rotate(225deg) translateY(-1px)}
-.dd{position:absolute;left:50%;top:calc(100% + 16px);transform:translate(-50%,8px);
-  width:min(26rem,calc(100vw - 40px));background:var(--cream);color:var(--navy);border-radius:var(--radius);
-  box-shadow:0 30px 70px -24px rgba(0,0,0,.6);padding:12px;display:grid;gap:6px;
-  opacity:0;visibility:hidden;transition:opacity .22s var(--ease),transform .22s var(--ease),visibility .22s;z-index:5;text-align:left}
-.dd::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
-.mh-dd:hover .dd,.mh-dd:focus-within .dd,.mh-dd.open .dd{opacity:1;visibility:visible;transform:translate(-50%,0)}
-/* nach einem Klick auf einen Eintrag: zu, bis die Maus das Menü verlässt (site.js) */
-.mh-dd.zu .dd{opacity:0;visibility:hidden}
-.dd a{display:grid;grid-template-columns:auto 54px 1fr;gap:12px;align-items:center;padding:10px;border-radius:8px;text-decoration:none;color:var(--navy);transition:background .2s var(--ease)}
-.dd a:hover{background:var(--cream-2)}
-.dd .nr{font-family:var(--display);font-size:24px;color:var(--orange-deep);min-width:1.4em;text-align:center}
-.dd img{width:54px;height:54px;border-radius:50%;object-fit:cover;border:2px solid var(--orange)}
-.dd b{display:block;font-family:var(--display);font-weight:400;font-size:var(--t-0);line-height:1.15}
-.dd small{display:block;font-size:var(--t--2);color:#3d5a6c;margin-top:.2em;font-weight:500}
-.dd a.dd-start{background:var(--navy);color:var(--cream)}
-.dd a.dd-start:hover{background:var(--navy-3)}
-.dd a.dd-start .nr{color:var(--orange)}
-.dd a.dd-start small{color:var(--sand)}
-
 .burger{display:none;background:none;border:0;padding:10px;cursor:pointer;margin-left:auto}
 .burger span{display:block;width:24px;height:2.5px;border-radius:2px;background:var(--cream);margin:5px 0;transition:transform .3s var(--ease),opacity .2s}
 body.menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
@@ -273,8 +248,6 @@ body.menu-open .mobile-menu{opacity:1;visibility:visible}
 body.menu-open{overflow:hidden}
 .mobile-menu a{font-family:var(--display);font-size:var(--t-3);text-decoration:none;color:var(--cream)}
 .mobile-menu a:hover{color:var(--sky)}
-.mobile-menu .mm-group{font-size:var(--t--2);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sky);margin-top:var(--sp-1)}
-.mobile-menu a.mm-sub{font-size:var(--t-1);font-family:var(--body);color:var(--sand)}
 .mobile-menu .btn{font-family:var(--body);margin-top:var(--sp-2);color:var(--navy)}
 
 @media (max-width:1180px){

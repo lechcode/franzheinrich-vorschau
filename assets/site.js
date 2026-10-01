@@ -1,23 +1,10 @@
 /* ============================================================================
    FRANZ HEINRICH — gemeinsames Verhalten aller Seiten (Runde 9, 01.10.2026)
-   Aufklapp-Raster · Burger-Menü · Auftauchen · Video-Lightbox · Formular-Klappe
+   Burger-Menü · Auftauchen · Video-Lightbox · Formular-Klappe
    · Vorschau-Formulare · Sprachschalter DE/EN
    ========================================================================== */
 (function(){
   var d=document;
-
-  /* Aufklapp-Raster „Dein Weg": Klick/Touch; Hover und Tastatur laufen über CSS */
-  var dd=d.getElementById('mh-dd');
-  if(dd){
-    var ddBtn=dd.querySelector('button');
-    var ddSet=function(open){dd.classList.toggle('open',open);ddBtn.setAttribute('aria-expanded',open?'true':'false');};
-    ddBtn.addEventListener('click',function(){dd.classList.remove('zu');ddSet(!dd.classList.contains('open'));});
-    /* nach dem Klick auf einen Eintrag schließen — sonst hält :focus-within die Liste offen */
-    dd.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ddSet(false);a.blur();dd.classList.add('zu');});});
-    dd.addEventListener('mouseleave',function(){dd.classList.remove('zu');});
-    d.addEventListener('click',function(e){if(!dd.contains(e.target))ddSet(false);});
-    d.addEventListener('keydown',function(e){if(e.key==='Escape')ddSet(false);});
-  }
 
   /* Burger-Menü */
   var burger=d.getElementById('burger'),menu=d.getElementById('mobile-menu');
@@ -30,6 +17,14 @@
     burger.addEventListener('click',function(){menuSet(!d.body.classList.contains('menu-open'));});
     menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menuSet(false);});});
     d.addEventListener('keydown',function(e){if(e.key==='Escape')menuSet(false);});
+  }
+
+  /* Ankommen mit Anker (z. B. „Dein Weg" → index.html#weg): direkt hinspringen statt
+     von oben zu gleiten, und nach dem Laden der Bilder noch einmal nachjustieren */
+  var ziel=location.hash.length>1&&d.getElementById(location.hash.slice(1));
+  if(ziel){
+    var spring=function(){ziel.scrollIntoView({behavior:'instant',block:'start'});};
+    spring();window.addEventListener('load',spring);
   }
 
   /* Auftauchen beim Scrollen (einmalig, gestaffelt über --d) */

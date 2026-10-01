@@ -12,9 +12,6 @@ window.FH_EN = {
   "nav.weg": "Your path",
   "nav.free": "For free",
   "nav.cta": "Get to know me",
-  "dd.1.t": "1:1 Session", "dd.1.s": "The way in — online or in person",
-  "dd.2.t": "1:1 Mentorship", "dd.2.s": "Several months by your side",
-  "dd.3.t": "Retreat", "dd.3.s": "A few days in a group",
 
   "hero.role": "Shame & Emotional Release Expert",
   "hero.h1": "“I guide you <em>back into your body</em> to feel what you have swallowed for too long.”",
