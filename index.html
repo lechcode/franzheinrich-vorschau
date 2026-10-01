@@ -68,7 +68,17 @@
       <nav aria-label="Menü links">
       <ul class="mh-left">
         <li><a class="navlink" href="about.html" data-t="nav.about">Über mich</a></li>
-        <li><a class="navlink" href="#kostenlos" data-t="nav.free">For Free</a></li>
+        <li class="mh-dd" id="mh-dd">
+          <button class="navlink" type="button" aria-expanded="false" aria-controls="dd-arbeiten" data-t="nav.work">Meine Arbeit</button>
+          <!-- Das Raster, das Franz wollte: 1:1 Sessions, Retreats & Events, Gruppenangebote, Free — plus die Begleitung -->
+          <div class="dd" id="dd-arbeiten">
+            <a href="begleitung.html"><img src="assets/img/kreis-begleitung-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.begleitung.t">Einzelbegleitung</b><small data-t="dd.begleitung.s">Mehrere Monate an deiner Seite</small></span></a>
+            <a href="sessions.html"><img src="assets/img/kreis-sessions-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.sessions.t">1:1 Sessions</b><small data-t="dd.sessions.s">Neo Emotional Release, online oder vor Ort</small></span></a>
+            <a href="#events"><img src="assets/img/kreis-events-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.events.t">Events &amp; Retreats</b><small data-t="dd.events.s">Ein Abend, ein Wochenende, ein Kreis</small></span></a>
+            <a href="#gruppen"><img src="assets/img/kreis-gruppen-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.gruppen.t">Gruppenangebote</b><small data-t="dd.gruppen.s">Regelmäßige Kreise, online und vor Ort</small></span></a>
+            <a href="#kostenlos" class="dd-frei"><img src="assets/img/kreis-frei-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.frei.t">Kostenlos</b><small data-t="dd.frei.s">Podcast, Handbuch, Newsletter</small></span></a>
+          </div>
+        </li>
       </ul>
       </nav>
     </div>
@@ -86,20 +96,10 @@
     <div class="mh-side mh-side-r">
       <nav aria-label="Menü rechts">
       <ul class="mh-right">
-        <li class="mh-dd" id="mh-dd">
-          <button class="navlink" type="button" aria-expanded="false" aria-controls="dd-arbeiten" data-t="nav.work">So kannst du mit mir arbeiten</button>
-          <!-- Das Raster, das Franz wollte: 1:1 Sessions, Retreats & Events, Gruppenangebote, Free — plus die Begleitung -->
-          <div class="dd" id="dd-arbeiten">
-            <a href="begleitung.html"><img src="assets/img/kreis-begleitung-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.begleitung.t">Einzelbegleitung</b><small data-t="dd.begleitung.s">Mehrere Monate an deiner Seite</small></span></a>
-            <a href="sessions.html"><img src="assets/img/kreis-sessions-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.sessions.t">1:1 Sessions</b><small data-t="dd.sessions.s">Neo Emotional Release, online oder vor Ort</small></span></a>
-            <a href="#events"><img src="assets/img/kreis-events-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.events.t">Events &amp; Retreats</b><small data-t="dd.events.s">Ein Abend, ein Wochenende, ein Kreis</small></span></a>
-            <a href="#gruppen"><img src="assets/img/kreis-gruppen-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.gruppen.t">Gruppenangebote</b><small data-t="dd.gruppen.s">Regelmäßige Kreise, online und vor Ort</small></span></a>
-            <a href="#kostenlos" class="dd-frei"><img src="assets/img/kreis-frei-480.jpg" width="54" height="54" alt=""><span><b data-t="dd.frei.t">Kostenlos</b><small data-t="dd.frei.s">Podcast, Handbuch, Newsletter</small></span></a>
-          </div>
-        </li>
+        <li><a class="navlink" href="#kostenlos" data-t="nav.free">For free</a></li>
       </ul>
       </nav>
-      <a class="btn btn-navy btn-arrow mh-cta" href="#kontakt" data-t="nav.cta">Kennenlern-Call</a>
+      <a class="btn btn-navy btn-arrow mh-cta" href="#kontakt" data-t="nav.cta">Kennenlernen</a>
       <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -109,14 +109,14 @@
 
 <div class="mobile-menu" id="mobile-menu">
   <a href="about.html" data-t="nav.about">Über mich</a>
-  <a href="#kostenlos" data-t="nav.free">For Free</a>
-  <span class="mm-group" data-t="nav.work">So kannst du mit mir arbeiten</span>
+  <span class="mm-group" data-t="nav.work">Meine Arbeit</span>
   <a class="mm-sub" href="begleitung.html" data-t="dd.begleitung.t">Einzelbegleitung</a>
   <a class="mm-sub" href="sessions.html" data-t="dd.sessions.t">1:1 Sessions</a>
   <a class="mm-sub" href="#events" data-t="dd.events.t">Events &amp; Retreats</a>
   <a class="mm-sub" href="#gruppen" data-t="dd.gruppen.t">Gruppenangebote</a>
   <a class="mm-sub" href="#kostenlos" data-t="dd.frei.t">Kostenlos</a>
-  <a class="btn btn-orange btn-arrow" href="#kontakt" data-t="nav.cta">Kennenlern-Call</a>
+  <a href="#kostenlos" data-t="nav.free">For free</a>
+  <a class="btn btn-orange btn-arrow" href="#kontakt" data-t="nav.cta">Kennenlernen</a>
   <div class="mm-social">
     <a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a>
     <a href="#kontakt" class="mail-link" data-u="info" data-d="franzheinrich.com" aria-label="E-Mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a1 1 0 011 1v14a1 1 0 01-1 1H2a1 1 0 01-1-1V5a1 1 0 011-1zm1 2.5V18h18V6.5l-9 6-9-6zM3.6 6l8.4 5.6L20.4 6H3.6z"/></svg></a>
