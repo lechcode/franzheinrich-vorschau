@@ -836,16 +836,15 @@ body.links-navy h1,body.links-navy h2,body.links-navy h3{color:var(--cream)}
   .kopf-zitat h1{font-size:clamp(22px,1.35vw+12px,34px);line-height:1.18}
 }
 
-/* ---- 46 · Masthead weit gespreizt (Michael 01.10.2026) --------------------
-   Viel Luft zwischen den Menüpunkten: breitere Spur, Punkte nach außen
-   geschoben (EN ganz links, Kennenlernen ganz rechts), Marke bleibt mittig —
-   das Raster 1fr auto 1fr hält sie unabhängig vom Inhalt der Seiten. */
+/* ---- 46 · Masthead mit gleichen Abständen (Michael 01.10.2026) -----------
+   Ein einziger Abstandswert zwischen allen Punkten: EN · Über mich · Meine
+   Arbeit · [FH] · For free · Kennenlernen. Dafür müssen alle drei Lücken-
+   Quellen denselben Wert haben — Raster-Spalten, Seiten-Spalte und Liste.
+   Die Marke bleibt durch 1fr auto 1fr exakt mittig. */
 @media (min-width:1181px){
   .nav .wrap{width:min(1800px, 100% - clamp(24px,3vw,56px))}
-  .masthead{gap:clamp(24px,3.2vw,64px)}
-  .mh-side{gap:clamp(20px,2.6vw,48px)}
-  .mh-side-l,.mh-side-r{justify-content:space-between}
+  .masthead,.mh-side,.mh-left,.mh-right{gap:clamp(26px,4.2vw,88px)}
+  .mh-side-l{justify-content:flex-end}
+  .mh-side-r{justify-content:flex-start}
   .mh-side-l .lang{margin-right:0}
-  .mh-side > nav{flex:1}
-  .mh-left,.mh-right{width:100%;justify-content:space-between;gap:clamp(20px,2.6vw,48px)}
 }
