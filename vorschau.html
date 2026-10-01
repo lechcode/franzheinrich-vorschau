@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <!--
   FRANZ HEINRICH — Vorschauseite (das, was Franz zuerst sieht)
-  Runde 7 · Lechcode · 11.09.2026
-  Antwort auf Franz' Feedback-Sprachnachricht vom 09.09.2026: Punkt für Punkt,
-  was daraus geworden ist, und was wir noch von ihm brauchen.
-  Messwerte: eigene Messung am 11.09.2026 (Dateigrößen + Anfragen, s. unten).
+  Runde 9 · Lechcode · 01.10.2026
+  Nach dem Struktur-Call Franz × Michi vom 01.10.: die neue Grundstruktur steht.
+  Diese Seite zeigt ihm, was aus dem Call geworden ist — und was jetzt von ihm kommt.
 -->
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Franz, dein Feedback ist drin</title>
-<meta property="og:title" content="Franz, dein Feedback ist drin">
-<meta property="og:description" content="Neues Menü mit Aufklapp-Raster, fünf Kreise, eigene Über-mich-Seite, Timeline, Englisch-Schalter — Punkt für Punkt aus deiner Sprachnachricht.">
+<title>Franz, die Struktur steht</title>
+<meta property="og:title" content="Franz, die Struktur steht">
+<meta property="og:description" content="Vier Seiten, ein Ziel: die 1:1 Session. Blau und Orange, wenig Text, Stimmen und Kostenloses dazwischen — so wie im Call besprochen.">
 <meta property="og:image" content="assets/vorschau/neu-desktop.jpg">
 <meta name="theme-color" content="#023047">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23023047'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23f7f1e6'%3EFH%3C/text%3E%3Crect x='17' y='48' width='30' height='4' rx='2' fill='%23e96a2c'/%3E%3C/svg%3E">
@@ -21,8 +20,8 @@
 <link rel="stylesheet" href="assets/site.css">
 <style>
   /* Vorher/Nachher-Schieber */
-  .ba{position:relative;overflow:hidden;border:2px solid var(--rule);border-radius:var(--radius);
-      background:var(--sand);aspect-ratio:760/897;max-width:760px;margin-inline:auto}
+  .ba{position:relative;overflow:hidden;border:2px solid var(--line);border-radius:var(--radius);
+      background:var(--navy-2);aspect-ratio:760/897;max-width:760px;margin-inline:auto}
   .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .ba .neu{clip-path:inset(0 0 0 var(--pos,50%))}
   .ba .marke{position:absolute;top:12px;font-size:var(--t--2);font-weight:700;letter-spacing:.14em;
@@ -37,47 +36,23 @@
   .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
 
   .handys{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--sp-2);max-width:660px;margin-inline:auto}
-  .handys figure{margin:0}
-  .handys img{width:100%;border:2px solid var(--rule);border-radius:var(--radius)}
-  .handys figcaption{margin-top:.7em;font-size:var(--t--1);color:var(--ink-soft)}
-  .deep .handys figcaption{color:var(--paper-soft)}
-  .deep .handys img{border-color:var(--rule-deep)}
+  .handys img{width:100%;border:2px solid var(--line);border-radius:var(--radius)}
+  .handys figcaption{margin-top:.7em;font-size:var(--t--1);color:var(--fg-soft)}
 
-  .zahlen{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;background:var(--rule)}
-  .zahlen > div{background:var(--cream);padding:var(--sp-2)}
-  .zahlen b{display:block;font-family:var(--display);font-weight:400;font-size:var(--t-3);color:var(--orange-deep);line-height:1}
-  .zahlen p{margin-top:.6em;font-size:var(--t--1);color:var(--ink-soft)}
-
-  /* Feedback → Umsetzung */
+  /* Call → Umsetzung */
   table.fb{width:100%;border-collapse:collapse;font-size:var(--t--1);text-align:left}
-  table.fb th,table.fb td{padding:var(--sp-1) .8em;border-bottom:1px solid var(--rule-deep);vertical-align:top;text-align:left}
-  table.fb th{font-family:var(--body);font-weight:700;font-size:var(--t--2);letter-spacing:.14em;text-transform:uppercase;color:var(--paper-faint)}
-  table.fb td:first-child{color:var(--cream);font-weight:700;width:34%}
-  table.fb td:last-child{color:var(--paper-soft)}
-  table.fb td em{color:var(--sky);font-style:normal}
-  table.fb .ok::before{content:"✓ ";color:var(--orange)}
-  table.fb .offen::before{content:"○ ";color:var(--sky)}
+  table.fb th,table.fb td{padding:var(--sp-1) .8em;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+  table.fb th{font-weight:700;font-size:var(--t--2);letter-spacing:.14em;text-transform:uppercase;color:var(--fg-faint)}
+  table.fb td:first-child{font-weight:700;width:34%}
+  table.fb td:last-child{color:var(--fg-soft)}
+  table.fb td em{color:var(--fg-faint);font-style:normal}
   .scrollx{overflow-x:auto}
 
-  .liste{list-style:none;display:grid;gap:var(--sp-1);margin-top:var(--sp-2);max-width:46rem;margin-inline:auto;text-align:left}
-  .liste li{position:relative;padding-left:1.7em;font-size:var(--t--1);line-height:1.7;color:var(--ink-soft);text-align:left}
-  .liste li::before{content:"→";position:absolute;left:0;top:0;color:var(--orange-deep);font-weight:700}
-  .liste strong{color:var(--ink)}
-  .deep .liste li{color:var(--paper-soft)}
-  .deep .liste li::before{color:var(--orange)}
-  .deep .liste strong{color:var(--cream)}
+  .liste{list-style:none;display:grid;gap:var(--sp-1);max-width:46rem;margin-inline:auto;text-align:left}
+  .liste li{position:relative;padding-left:1.7em;font-size:var(--t-0);line-height:1.6;color:var(--fg-soft);text-align:left}
+  .liste li::before{content:"→";position:absolute;left:0;top:0;color:var(--fg);font-weight:700}
+  .liste strong{color:var(--fg)}
 
-  .seiten{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--sp-2);max-width:64rem;margin-inline:auto;text-align:left}
-  .seiten a{display:block;text-decoration:none;color:inherit;border:2px solid var(--rule);border-radius:var(--radius);padding:var(--sp-2) var(--sp-1);transition:transform .2s var(--ease),border-color .2s}
-  .seiten a:hover{transform:translateY(-3px);border-color:var(--orange)}
-  .seiten b{display:block;font-family:var(--display);font-weight:400;font-size:var(--t-1);margin-bottom:.35em}
-  .seiten p{font-size:var(--t--1);color:var(--ink-soft);text-align:left}
-  .seiten .neu{display:inline-block;font-size:var(--t--2);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-deep);margin-bottom:.6em}
-
-  .lcbook{background:var(--navy);color:var(--paper);border-top:2px solid var(--rule-deep);
-          padding-block:var(--sp-4);text-align:center}
-  .lcbook h2{color:var(--cream);max-width:18ch;margin-inline:auto}
-  .lcbook .lead{color:var(--paper-soft)}
   .lcbook-eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--sky);
       font-size:var(--t--2);font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:var(--sp-2)}
 </style>
@@ -85,10 +60,10 @@
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 
-<header class="nav solid">
+<header class="nav">
   <div class="wrap nav-simple">
     <span class="brand"><span class="name">Lechcode</span> <span class="small muted">für Franz</span></span>
-    <a class="btn btn-navy btn-arrow" href="index.html">Zur neuen Seite</a>
+    <a class="btn btn-orange btn-arrow mh-cta" style="display:inline-flex" href="index.html">Zur Seite</a>
   </div>
 </header>
 
@@ -97,81 +72,66 @@
 <!-- ═══ KOPF ═══ -->
 <section class="pagehead">
   <div class="wrap">
-    <span class="eyebrow">Runde 2 · Dein Feedback vom 9. September · Stand 16. September</span>
-    <h1>Franz, dein Feedback ist <em>drin</em>.</h1>
-    <p class="lead">Wir sind deine Nachricht Punkt für Punkt durchgegangen: neues Menü mit Aufklapp-Raster,
-      die fünf Wege als Kreise direkt unter deinem Bild, eine eigene Über-mich-Seite in deiner Gliederung,
-      die Sessions als Timeline, „Das ist drin" bei der Begleitung, Google ganz unten — und die Seite
-      spricht jetzt auch Englisch.</p>
-      <p class="lead mt-2"><strong>Neu seit dem 16. September:</strong> Das Video ganz oben ist vorerst raus. Stattdessen begrüßt
-        dein Foto vor der Sandwand, dein Zitat liegt in weißer Schrift auf dem Bild (neben dir, nie über deinem Gesicht),
-        darunter stehen dein Name und dein Titel — und der Link zu den fünf Wegen.
-        Das Menü ist seit dem 1. Oktober: EN · Über mich · Meine Arbeit ▾ · Logo · For free · Kennenlernen.</p>
-    <p class="mt-2"><a class="btn btn-orange btn-arrow" href="index.html">Deine Seite ansehen</a></p>
+    <span class="eyebrow">Nach unserem Call vom 1. Oktober</span>
+    <h1>Franz, die Struktur <em>steht</em>.</h1>
+    <p class="lead">Vier Seiten, ein Ziel: die 1:1 Session. Blau und Orange tragen wieder, die Texte sind kurz,
+      Stimmen und Kostenloses tauchen immer wieder dazwischen auf. Jetzt bist du dran mit Bildern,
+      Stimmen und deinen Worten.</p>
+    <a class="btn btn-orange btn-arrow" href="index.html">Deine Seite ansehen</a>
   </div>
 </section>
 
-<!-- ═══ FEEDBACK → UMSETZUNG ═══ -->
-<section class="section deep">
+<!-- ═══ DIE VIER SEITEN ═══ -->
+<section class="section sky">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">Punkt für Punkt</span>
-      <h2>Was du gesagt hast — und was daraus wurde.</h2>
+      <span class="eyebrow">Zum Durchklicken</span>
+      <h2>Vier Seiten. Mehr braucht es nicht.</h2>
+    </div>
+    <div class="gaben" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+      <a class="gabe" href="index.html"><span class="tag">Start</span><h3>Startseite</h3><p>Bild und Zitat, Kennst du das?, Dein Weg, Stimmen, Über mich, For free, Kennenlernen.</p><span class="go">Ansehen →</span></a>
+      <a class="gabe" href="sessions.html"><span class="tag">Die wichtigste</span><h3>1:1 Session</h3><p>Fakten mit Preis, Ablauf, für dich / nicht für dich, Stimmen, Fragen.</p><span class="go">Ansehen →</span></a>
+      <a class="gabe" href="about.html"><span class="tag">Darf lang sein</span><h3>Über mich</h3><p>Hard Facts, deine Geschichte in drei Kapiteln, Zone of Genius, Random Facts.</p><span class="go">Ansehen →</span></a>
+      <a class="gabe" href="for-free.html"><span class="tag">Neu</span><h3>For free</h3><p>Oben alles Kostenlose, darunter getrennt die kleinen Angebote.</p><span class="go">Ansehen →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CALL → UMSETZUNG ═══ -->
+<section class="section">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Aus dem Call</span>
+      <h2>Was wir besprochen haben — und was daraus wurde.</h2>
     </div>
     <div class="scrollx">
       <table class="fb">
-        <thead><tr><th scope="col">Du</th><th scope="col">Jetzt auf der Seite</th></tr></thead>
+        <thead><tr><th scope="col">Besprochen</th><th scope="col">Jetzt auf der Seite</th></tr></thead>
         <tbody>
-          <tr><td>„Die Farben, das ist geil."</td><td class="ok">Bleiben genau so. Navy, Orange, Cream — dein Kit.</td></tr>
-          <tr><td>Auf Englisch umschalten</td><td class="ok">Schalter <em>EN</em> oben links — am Handy genauso. Genau wie du es dir vorgestellt hast: Du schreibst Deutsch, wir übersetzen, du korrigierst — die Startseite ist schon komplett übersetzt, die Unterseiten folgen, sobald deine deutschen Texte stehen.</td></tr>
-          <tr><td>Google-Rezensionen, „wahrscheinlich ganz unten"</td><td class="offen">Block <em>„Das sagen Menschen auf Google"</em> sitzt direkt vor dem Kontakt. Schick uns den Link, dann füllen wir ihn.</td></tr>
-          <tr><td>Logo: „nichts Besonderes, aber passt"</td><td class="ok">Bleibt. Wenn du irgendwann ein richtiges willst, sag Bescheid.</td></tr>
-          <tr><td>Übersicht „So kannst du mit mir arbeiten": Begleitung, 1:1, Events &amp; Retreats, Gruppen, Free — als Rad oder Kreise mit Bild und Text</td><td class="ok"><em>Fünf Kreise</em> direkt unter dem Video: Bild, Titel, ein Satz, Link. „Kostenlos" ist gestrichelt umrandet, damit es sich abhebt. Das drehbare Rad haben wir bewusst nicht gebaut — am Handy sind Kreise klarer und schneller.</td></tr>
-          <tr><td>Leiste oben: Über mich · Shop · Logo · So kannst du mit mir arbeiten (als Raster) · Kontakt — plus Icons für Instagram, Mail, Spotify</td><td class="ok">Jetzt in dieser Reihenfolge: <em>EN · Über mich · Meine Arbeit ▾ · Logo · For free · Kennenlernen</em> (Stand 1. Oktober). Das Raster klappt unter „Meine Arbeit" auf (Begleitung, 1:1 Sessions, Events &amp; Retreats, Gruppenangebote, Kostenlos, jeweils mit Bild). „Kontakt" ist als Menüpunkt raus — der Call-Knopf führt dorthin. Die drei Icons stehen im Handy-Menü und beim Kontakt.</td></tr>
-          <tr><td>Kennenlern-Call oben rechts — aber nicht „so direkt in die Fresse"</td><td class="ok">Der Knopf sitzt oben rechts. Ganz oben steht jetzt dein Foto mit deinem Zitat in weißer Schrift darauf, darunter Name und Titel und nur der kleine Link „So kannst du mit mir arbeiten". Der orange Call-Knopf kommt erst bei „Dein Weg", nach der Erklärung.</td></tr>
-          <tr><td>„Dein Weg" — bist du unschlüssig</td><td class="offen">Bleibt drin, weiter unten. Schau es dir mit dem neuen Aufbau an — wenn es weg soll, ist es ein Handgriff.</td></tr>
-          <tr><td>Alle-Links-Seite nur in Orange und Blau</td><td class="ok">Umgefärbt: Navy-Grund, orange Rahmen, die wichtigste Kachel orange.</td></tr>
-          <tr><td>Sessions: deine Timeline statt der drei Schritte; Vor Ort / Online / Zeit / Preis; „Eine Session von innen" und das FAQ behalten; „für wen" raus</td><td class="offen">Timeline-Layout steht mit fünf Stationen als Platzhalter, darüber die Fakten-Leiste <em>Vor Ort · Online · Zeit · Preis</em>. FAQ bleibt, „für wen" ist raus. <strong>Achtung:</strong> Das PDF, das bei uns ankam, sind deine AGB — nicht die Timeline. Schick sie bitte noch einmal.</td></tr>
-          <tr><td>Das Laufband ist cool, der Text passt nicht</td><td class="offen">Element bleibt. Schick uns deine Sätze, wir tauschen sie.</td></tr>
-          <tr><td>Erklärung am Anfang schreibst du um</td><td class="offen">Alles Vorschlag, alles austauschbar — Sprachnachricht reicht.</td></tr>
-          <tr><td>Text-Testimonials zwischendrin, dazu ein Video-Testimonial</td><td class="ok">Die Text-Stimme bleibt, das Video-Testimonial hat seine Bühne nach „Events &amp; Retreats". Wir brauchen nur die Datei und das Okay der Person.</td></tr>
-          <tr><td>Eigene About-Seite: Hard Facts, Story, Zone of Genius, Training &amp; Zertifizierungen, Erfahrung &amp; Praxis, Teaching &amp; Facilitation, Random Facts, Zitat mit Bild</td><td class="ok"><em>about.html</em> — genau in dieser Reihenfolge, mit deinem Zitat „Deine Emotionen sind nicht das Problem, sondern deine Beziehung zu ihnen" und deinem Bild am Schluss. Alle Texte sind Platzhalter, bis deine kommen.</td></tr>
-          <tr><td>Reinschnuppern anders nennen; Podcast und Instagram einbetten oder nur verlinken?</td><td class="offen">Heißt jetzt „Kostenlos &amp; Kleines" (Vorschlag). Vorerst verlinkt. Einbetten geht (Spotify-Player, Instagram-Posts), kostet aber Ladezeit und braucht einen Datenschutz-Hinweis — deine Entscheidung.</td></tr>
-          <tr><td>„Für wen das hier ist und für wen nicht" auf die Begleitungsseite, nicht auf die Startseite</td><td class="ok">Verschoben. Auf der Begleitungsseite jetzt: „Für Menschen, die drei Dinge wollen" — dann „Das ist was für dich, wenn …" und „nichts für dich, wenn …".</td></tr>
-          <tr><td>Begleitung: was ist dabei? Fest oder individuell?</td><td class="offen">Modul <em>„Das ist drin"</em> mit deinen Bausteinen: Emotional-Release-Sessions, Integrations-Sessions als Walk &amp; Talk, psychosomatische Toolbox, WhatsApp-Support, Videokurs. Die Zahlen sind Platzhalter. Darunter steht der Satz „Oder ganz individuell" — du entscheidest, welche Variante bleibt.</td></tr>
-          <tr><td>Deine AGB (das PDF)</td><td class="ok">Eingebaut auf <em>agb.html</em>, nur gegliedert, nicht verändert. Dazu sechs Hinweise, die jemand mit Rechtskenntnis vor dem Live-Gang prüfen sollte.</td></tr>
+          <tr><td>Blau und Orange statt Beige</td><td>Navy ist jetzt der Grund der ganzen Seite, Orange trägt Knöpfe, Zahlen und ein Stimmen-Band. Das hellere Blau kommt bei „For free“ vor. Beige gibt es nur noch als eine helle Fläche bei „Über mich“ und für lange Lesetexte.</td></tr>
+          <tr><td>Oben: Bild mit Zitat, später Video</td><td>Dein Foto mit dem Zitat in weißer Schrift, darunter Name und Titel. Sobald dein Video da ist, tritt es an die Stelle des Fotos — der Platz ist vorbereitet. <em>Du suchst das Kopfbild noch aus.</em></td></tr>
+          <tr><td>Danach direkt „Kennst du das?“</td><td>Sitzt jetzt als zweiter Bildschirm: erst der Schmerz, dann die Lösung.</td></tr>
+          <tr><td>„Dein Weg“ statt „Meine Arbeit“ — die 1:1 Session als Einstieg</td><td>Die Session steht groß mit Bild und Knopf. Darunter, bewusst kleiner: „Und danach, wenn es passt“ — Einzelbegleitung und Retreat. Beide ohne eigene Unterseite und ohne Details, wie besprochen.</td></tr>
+          <tr><td>Nur ein Call to Action</td><td>Überall derselbe Knopf: <em>Kennenlernen</em>. Er führt zum Kennenlern-Call. WhatsApp und E-Mail-Adresse sind raus, das Formular bleibt als „Lieber schreiben?“.</td></tr>
+          <tr><td>Stimmen immer wieder dazwischen, ausgewählt statt Google-Block</td><td>Drei auf der Startseite, drei auf der Session-Seite, dazu Über mich und For free. Es sind einzelne Sätze von Luca, Nicole, Denise und Lukas von deiner bisherigen Seite, ohne Sterne, weil keine Bewertungsplattform dahintersteht. <em>Bitte prüfen, ob das für die vier so passt.</em> Der Google-Block ist raus.</td></tr>
+          <tr><td>Video-Testimonial auf die Session-Seite</td><td>Der Platz ist dort, nicht mehr auf der Startseite.</td></tr>
+          <tr><td>Kostenloses immer wieder einbauen</td><td>Auf der Startseite zweimal: eine Zeile „Lieber erst mal zuhören?“ und der Bereich „For free“ mit drei Kostproben. Dazu auf jeder Unterseite ein Hinweis. Instagram und Spotify laufen darüber, nicht als Feed.</td></tr>
+          <tr><td>Eigene Seite für Freebies und kleine Angebote, getrennt</td><td><em>for-free.html</em>: oben alles Kostenlose, darunter in einer eigenen Fläche Morgen-Ritual, psychosomatische Toolbox und Vortrag. Was es noch nicht gibt, ist gestrichelt und heißt „bald“.</td></tr>
+          <tr><td>Über mich wie bei Lydia</td><td>Überschrift mit deinem Satz „Ich bin mein bestes Testimonial“, Hard Facts, deine Geschichte in drei Kapiteln mit Bildern, „In den letzten Jahren“, Zone of Genius, Stimmen, Random Facts, dein Zitat.</td></tr>
+          <tr><td>Verspieltes raus, weniger Text</td><td>Laufband, die fünf Kreise, Newsletter, Gruppenangebote und die Begleitungs-Seite sind raus. Die Startseite ist deutlich kürzer.</td></tr>
+          <tr><td>Preis der Session</td><td>Auf der Session-Seite steht <em>300 €</em>, so wie im Call genannt. <em>Bitte bestätigen oder korrigieren — und sag uns, ob das der Endpreis inklusive Umsatzsteuer ist.</em></td></tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
-<!-- ═══ DIE SEITEN ═══ -->
-<section class="section">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Zum Durchklicken</span>
-      <h2>Sechs Seiten, alle in deinem Look.</h2>
-    </div>
-    <div class="seiten">
-      <a href="index.html"><b>Startseite</b><p>Dein Bild mit Zitat, fünf Kreise, Kennst du das?, vier Angebote mit Stimmen dazwischen, Über mich, Dein Weg, Kostenlos &amp; Shop, Newsletter, Google, Kontakt.</p></a>
-      <a href="about.html"><span class="neu">Neu</span><b>Über mich</b><p>Steckbrief, Story, Zone of Genius, Ausbildung, Erfahrung, Lehre, Random Facts, dein Zitat.</p></a>
-      <a href="sessions.html"><span class="neu">Neu gebaut</span><b>1:1 Sessions</b><p>Fakten-Leiste, Timeline, Formate, FAQ.</p></a>
-      <a href="begleitung.html"><span class="neu">Neu gebaut</span><b>Einzelbegleitung</b><p>Für wen, drei Phasen, „Das ist drin", Rahmen.</p></a>
-      <a href="links.html"><span class="neu">Umgefärbt</span><b>Alle Links</b><p>Dein Linktree-Ersatz in Navy und Orange.</p></a>
-      <a href="agb.html"><span class="neu">Dein Text</span><b>AGB</b><p>Deine Bedingungen, gegliedert, mit Prüfhinweisen.</p></a>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ VORHER / NACHHER ═══ -->
-<section class="section deep">
+<section class="section tief">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Vorher · Nachher</span>
       <h2>Zieh den Griff nach links und rechts.</h2>
-      <p class="lead">Links deine bisherige Seite, rechts der aktuelle Entwurf. Beide Bilder zeigen
-        denselben Ausschnitt am großen Bildschirm.</p>
     </div>
     <div class="ba" id="ba" style="--pos:50%">
       <img src="assets/vorschau/alt-desktop.jpg" width="760" height="897" alt="Die bisherige Website von Franz Heinrich am Desktop">
@@ -181,114 +141,58 @@
       <span class="griff" aria-hidden="true"></span>
       <input type="range" id="ba-range" min="0" max="100" value="50" aria-label="Vergleich zwischen alter und neuer Seite">
     </div>
-  </div>
-</section>
-
-<!-- ═══ HANDY ═══ -->
-<section class="section">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Und am Handy?</span>
-      <h2>Dort entscheidet sich der erste Eindruck.</h2>
-      <p class="lead">Die Seite ist zuerst fürs Handy gebaut: dein Foto mit dem Zitat darauf, dein Name, dein Titel —
-        und ein Fingertipp weiter die fünf Wege als Kreise.</p>
-    </div>
-    <div class="handys">
+    <div class="handys mt-3">
       <figure>
         <img src="assets/vorschau/alt-handy.jpg" width="390" height="844" loading="lazy" alt="Die bisherige Seite am Smartphone: die Überschrift ist abgeschnitten">
-        <figcaption><strong>Bisher</strong> — „…iere deine …am": die Headline läuft aus dem Bild.</figcaption>
+        <figcaption><strong>Bisher</strong> am Handy</figcaption>
       </figure>
       <figure>
-        <img src="assets/vorschau/neu-handy.jpg" width="390" height="844" loading="lazy" alt="Die neue Seite am Smartphone: Video-Bühne, Überschrift und Namenszeile vollständig sichtbar">
-        <figcaption><strong>Neu</strong> — dein Foto randlos, das Zitat in weißer Schrift am unteren Bildrand, dein Gesicht bleibt frei.</figcaption>
+        <img src="assets/vorschau/neu-handy.jpg" width="390" height="844" loading="lazy" alt="Die neue Seite am Smartphone: Foto mit Zitat, Name und Titel">
+        <figcaption><strong>Neu</strong> am Handy</figcaption>
       </figure>
     </div>
-  </div>
-</section>
-
-<!-- ═══ ZAHLEN ═══ -->
-<section class="section deep">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Die Zahlen</span>
-      <h2>Und sie bleibt leicht — mit allen Fotos.</h2>
-    </div>
-    <div class="zahlen">
-      <div><b>0,32 MB</b><p>lädt beim ersten Bildschirm — dein Foto, die Schriften, der Text. Der Rest kommt erst beim Scrollen.</p></div>
-      <div><b>1,15 MB</b><p>die komplette Startseite mit allen 22 Fotos. Bisher waren es 2,2 MB mit deutlich weniger Bildern.</p></div>
-      <div><b>22</b><p>Anfragen pro Aufruf, alle an deinen eigenen Server. Bisher: 31 an fünf Server, davon vier fremde.</p></div>
-      <div><b>0</b><p>Cookies, kein Tracking, keine Verbindung zu Google — deshalb auch kein Cookie-Banner.</p></div>
-    </div>
-    <p class="small mt-2" style="color:var(--paper-soft)">Eigene Messung am 16.09.2026 (Dateigrößen und Anfragen der Startseite am großen Bildschirm).</p>
   </div>
 </section>
 
 <!-- ═══ WAS WIR BRAUCHEN ═══ -->
-<section class="section">
+<section class="section hell">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Von dir</span>
-      <h2>Damit daraus deine Seite wird.</h2>
-      <p class="lead">Alles, was jetzt drinsteht, ist ein Vorschlag. Du wolltest die Texte selbst
-        schreiben — überschreib uns gnadenlos. Sprachnachricht reicht.</p>
+      <h2>Das Gerüst braucht jetzt Futter.</h2>
+      <p class="lead">In dieser Reihenfolge, so wie im Call besprochen. Zwei bis drei Stunden pro Woche reichen.</p>
     </div>
     <ul class="liste">
-      <li><strong>Deine Timeline für die Sessions</strong> — das PDF, das ankam, waren die AGB.</li>
-      <li><strong>Der Google-Link</strong> zu deinen Rezensionen. Weil beim Live-Laden Daten zu Google fließen,
-        schlagen wir vor, die Rezensionen regelmäßig abzuholen und selbst anzuzeigen — cookiefrei.</li>
-      <li><strong>Deine Texte</strong>: Erklärung am Anfang, Laufband-Sätze, die About-Seite (Steckbrief, Story,
-        Zone of Genius, Ausbildung, Erfahrung, Lehre, Random Facts). Danach übersetzen wir, du korrigierst.</li>
-      <li><strong>Begleitung: fest oder individuell?</strong> Und wenn fest — wie viele Sessions, wie viele
-        Walk &amp; Talks, was genau ist die Toolbox?</li>
-      <li><strong>Der Preis der Session</strong> — du wolltest ihn auf der Sessions-Seite stehen haben; das Feld wartet.</li>
-      <li><strong>Das Video-Testimonial</strong> als Datei, plus das Okay der Person. Dazu <strong>echte Text-Stimmen</strong>.</li>
-      <li><strong>Dein Video bei „Über mich"</strong> (die fünf Minuten) als MP4. Das Intro-Video ganz oben ist vorerst raus — dein Foto trägt den Anfang; der Platz lässt sich jederzeit wieder aufmachen.</li>
-      <li><strong>Podcast und Instagram</strong>: einbetten oder verlinken?</li>
-      <li><strong>Deine Orte.</strong> München und Regensburg stehen noch drin — stimmt das, jetzt mit Koh Phangan im Winter?</li>
-      <li><strong>Termine, Shop-Links und Preise</strong> für Events, Retreats, Morgen-Ritual, Self-Study.</li>
-      <li><strong>Kalender-Link und WhatsApp-Nummer</strong> — bis dahin führen beide Knöpfe aufs Formular.</li>
-      <li><strong>Newsletter-Anbieter</strong> und das kleine Scham-Handbuch als PDF.</li>
-      <li><strong>Wer hat die Fotos gemacht?</strong> Nutzungsrechte klären wir, bevor die Seite offiziell live geht.</li>
-      <li><strong>Impressums-Angaben</strong> — Anschrift, E-Mail, Telefon, USt-Status.</li>
-      <li><strong>AGB prüfen lassen</strong> — unsere Hinweise stehen unten auf der AGB-Seite.</li>
+      <li><strong>Bilder.</strong> Im Drive-Ordner auswählen und benennen: Kopfbild, Session, Über mich (drei Kapitel), Retreat.</li>
+      <li><strong>Stimmen.</strong> Die besten aus Google und von deiner Liste, gern mit Foto. Und ein Video-Testimonial für die Session-Seite.</li>
+      <li><strong>Kostenloses.</strong> Link zur Tanz-Playlist, deine erste geführte Meditation oder Breathwork, weitere Podcast-Gespräche.</li>
+      <li><strong>Texte.</strong> Ganz am Schluss und in deiner Sprache: Start, Session-Seite, Über mich. Danach übersetzen wir, du korrigierst.</li>
+      <li><strong>Drei Angaben.</strong> Preis der Session bestätigen, Kalender-Link für den Kennenlern-Call, deine Orte.</li>
+      <li><strong>Später.</strong> Preise und Links für die kleinen Angebote, dein Kopf-Video, Impressum-Angaben, AGB prüfen lassen.</li>
     </ul>
+    <p class="lead mt-3">Ziel: live, bevor du nach Koh Phangan fliegst.</p>
   </div>
 </section>
-
-<!-- ═══ CTA ═══ -->
-<section class="cta-band">
-  <div class="wrap">
-    <span class="eyebrow">Und jetzt</span>
-    <h2>Schau sie dir in Ruhe an.</h2>
-    <p class="lead">Danach telefonieren wir und gehen zusammen durch, was bleibt, was fliegt und
-      was noch fehlt. Wie besprochen: Die Rechnung kommt erst, wenn der Entwurf steht und du
-      damit zufrieden bist.</p>
-    <a class="btn btn-orange btn-arrow" href="index.html">Deine Seite ansehen</a>
-    <p class="small mt-2" style="color:var(--paper-soft)">Lenny &amp; Michael · Lechcode, Landsberg am Lech</p>
-  </div>
-</section>
-</main>
 
 <!-- ═══ TERMIN-BUCHUNG — Kalender-Link aus Lennys Commit 5a03613, cookiefrei (neuer Tab) ═══ -->
-<section class="lcbook deep" aria-labelledby="lcbook-h">
+<section class="cta-band" aria-labelledby="lcbook-h">
   <div class="wrap-narrow center">
     <span class="lcbook-eyebrow">
       <svg viewBox="0 0 64 64" fill="none" aria-hidden="true" width="26" height="26"><circle cx="32" cy="32" r="22.5" stroke="currentColor" stroke-width="3.4"/><path d="M15 36 C22 28 29 28 33 34 C37 40 44 40 50 31" stroke="currentColor" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="44" cy="18.5" r="3.4" fill="currentColor"/></svg>
       Lechcode · Landsberg am Lech
     </span>
-    <h2 id="lcbook-h">Lust auf ein kurzes Gespräch, Franz?</h2>
-    <p class="lead mt-2" style="margin-inline:auto;text-align:center">Such dir einfach einen Termin aus — rund 30 Minuten,
-      ganz unverbindlich. Wir gehen zusammen durch die Seite, und du fragst, was du willst.</p>
-    <p class="mt-2"><a class="btn btn-orange btn-arrow" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1vusFYCV6O45i109a0J5ruEFtWCT7iFsq5t4Mb2KvQmNhdkMtlddml9dx5V2jButjV2SUGapFg?gv=true" target="_blank" rel="noopener noreferrer">Termin aussuchen</a></p>
-    <p class="small mt-2" style="max-width:46ch;margin-inline:auto;color:var(--paper-soft)">Öffnet unseren Kalender in einem neuen Tab.
-      Diese Seite bleibt komplett cookiefrei.</p>
+    <h2 id="lcbook-h">Feedback-Runde Ende Oktober?</h2>
+    <p class="lead">Such dir einen Termin aus — rund 30 Minuten, dann gehen wir zusammen durch.</p>
+    <a class="btn btn-orange btn-arrow" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1vusFYCV6O45i109a0J5ruEFtWCT7iFsq5t4Mb2KvQmNhdkMtlddml9dx5V2jButjV2SUGapFg?gv=true" target="_blank" rel="noopener noreferrer">Termin aussuchen</a>
+    <p class="small mt-2 muted">Öffnet unseren Kalender in einem neuen Tab. Diese Seite bleibt komplett cookiefrei.</p>
   </div>
 </section>
+</main>
 
 <footer class="footer">
   <div class="wrap">
     <div class="footer-bottom" style="margin-top:0;border-top:0">
-      <span>Unverbindliche Design-Vorschau für Franz Heinrich · Stand 16.09.2026</span>
+      <span>Unverbindliche Design-Vorschau für Franz Heinrich · Stand 01.10.2026</span>
       <span>Konzept &amp; Code: Lechcode, Landsberg am Lech</span>
     </div>
   </div>

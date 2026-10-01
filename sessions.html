@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <!--
-  FRANZ HEINRICH — 1:1 Sessions (Tiefen-Seite)
-  Design-Vorschau · Lechcode · Runde 7 · 11.09.2026
-  Franz' Feedback vom 09.09.:
-    · seine eigene Timeline statt drei Bild/Text-Schritten (PDF angekündigt,
-      noch nicht da → die Struktur steht, er ersetzt die Stationen)
-    · Fakten „Vor Ort · Online · Zeit · Preis" — mit Preis, ausdrücklich sein Wunsch
-    · „Eine Session von innen" bleibt, das FAQ („das wollen fast alle wissen") bleibt
-    · „für wen das was ist" fliegt hier raus — das gehört zur Begleitung
-  Alle Texte sind Vorschläge — Stellen mit „HIER:" markiert.
+  FRANZ HEINRICH — 1:1 Session (die wichtigste Unterseite)
+  Design-Vorschau · Lechcode · Runde 9 · 01.10.2026
+  Call vom 01.10.: Die Session ist der Einstieg in alles. Diese Seite soll so klar sein,
+  dass der Kopf sagt „verstanden — ich buche den Kennenlern-Call“. Aufbau nach dem
+  Vorbild thewellpaidpriestess.com/sessions: Fakten → Ablauf → Stimme → für dich / nicht
+  für dich → Video-Stimme → was danach kommt → Stimmen → Fragen → Kennenlernen.
+  · Preis 300 € wurde im Call genannt — HIER: bitte bestätigen.
+  · Franz' eigene Timeline (PDF) fehlt weiter — die fünf Stationen sind Platzhalter.
+  · Video-Testimonial gehört laut Franz auf DIESE Seite, nicht auf die Startseite.
+  Alle Texte sind Vorschläge — Stellen mit „HIER:“ markiert.
 -->
 <html lang="de">
 <head>
@@ -16,10 +17,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js');if(location.search.indexOf('foto')>-1)document.documentElement.classList.add('foto');</script>
 <meta name="robots" content="noindex, nofollow">
-<title>1:1 Sessions — Neo Emotional Release | Franz Heinrich</title>
-<meta name="description" content="Was in einer Session mit Neo Emotional Release passiert: Ablauf als Timeline, online und vor Ort, Dauer und Preis. Ehrlich erklärt von Franz Heinrich.">
-<meta property="og:title" content="1:1 Sessions — Neo Emotional Release | Franz Heinrich">
-<meta property="og:description" content="Eine Session von innen: Ablauf, Formate, Fakten — ehrlich erklärt.">
+<title>1:1 Session — Neo Emotional Release | Franz Heinrich</title>
+<meta name="description" content="Was in einer 1:1 Session mit Franz Heinrich passiert: Ablauf, online und vor Ort, Dauer und Preis. Der Einstieg in die Arbeit mit Scham und Emotionen.">
+<meta property="og:title" content="1:1 Session — Neo Emotional Release | Franz Heinrich">
+<meta property="og:description" content="Eine Session von innen: Ablauf, Fakten, Stimmen — und der Weg zum Kennenlern-Call.">
 <meta property="og:image" content="assets/img/og-1200.jpg">
 <meta name="theme-color" content="#023047">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23023047'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23f7f1e6'%3EFH%3C/text%3E%3Crect x='17' y='48' width='30' height='4' rx='2' fill='%23e96a2c'/%3E%3C/svg%3E">
@@ -31,22 +32,20 @@
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 
-<header class="nav solid" id="nav">
+<header class="nav" id="nav">
   <div class="wrap masthead">
     <div class="mh-side mh-side-l">
       <!-- Unterseiten sind noch nur deutsch: EN führt auf die englische Startseite -->
-      <button class="lang" id="lang-desktop" type="button" aria-label="Switch to English">EN</button>
+      <button class="lang" type="button" aria-label="Switch to English">EN</button>
       <nav aria-label="Menü links">
       <ul class="mh-left">
         <li><a class="navlink" href="about.html">Über mich</a></li>
         <li class="mh-dd" id="mh-dd">
-          <button class="navlink" type="button" aria-expanded="false" aria-controls="dd-arbeiten">Meine Arbeit</button>
-          <div class="dd" id="dd-arbeiten">
-            <a href="begleitung.html"><img src="assets/img/kreis-begleitung-480.jpg" width="54" height="54" alt=""><span><b>Einzelbegleitung</b><small>Mehrere Monate an deiner Seite</small></span></a>
-            <a href="sessions.html" aria-current="page"><img src="assets/img/kreis-sessions-480.jpg" width="54" height="54" alt=""><span><b>1:1 Sessions</b><small>Neo Emotional Release, online oder vor Ort</small></span></a>
-            <a href="index.html#events"><img src="assets/img/kreis-events-480.jpg" width="54" height="54" alt=""><span><b>Events &amp; Retreats</b><small>Ein Abend, ein Wochenende, ein Kreis</small></span></a>
-            <a href="index.html#gruppen"><img src="assets/img/kreis-gruppen-480.jpg" width="54" height="54" alt=""><span><b>Gruppenangebote</b><small>Regelmäßige Kreise, online und vor Ort</small></span></a>
-            <a href="index.html#kostenlos" class="dd-frei"><img src="assets/img/kreis-frei-480.jpg" width="54" height="54" alt=""><span><b>Kostenlos</b><small>Podcast, Handbuch, Newsletter</small></span></a>
+          <button class="navlink" type="button" aria-expanded="false" aria-controls="dd-weg">Dein Weg</button>
+          <div class="dd" id="dd-weg">
+            <a class="dd-start" href="sessions.html" aria-current="page"><span class="nr">01</span><img src="assets/img/kreis-sessions-480.jpg" width="54" height="54" loading="lazy" alt=""><span><b>1:1 Session</b><small>Der Einstieg — online oder vor Ort</small></span></a>
+            <a href="index.html#danach"><span class="nr">02</span><img src="assets/img/kreis-begleitung-480.jpg" width="54" height="54" loading="lazy" alt=""><span><b>Einzelbegleitung</b><small>Mehrere Monate an deiner Seite</small></span></a>
+            <a href="index.html#danach"><span class="nr">03</span><img src="assets/img/kreis-events-480.jpg" width="54" height="54" loading="lazy" alt=""><span><b>Retreat</b><small>Ein paar Tage in der Gruppe</small></span></a>
           </div>
         </li>
       </ul>
@@ -60,10 +59,10 @@
     <div class="mh-side mh-side-r">
       <nav aria-label="Menü rechts">
       <ul class="mh-right">
-        <li><a class="navlink" href="index.html#kostenlos">For free</a></li>
+        <li><a class="navlink" href="for-free.html">For free</a></li>
       </ul>
       </nav>
-      <a class="btn btn-navy btn-arrow mh-cta" href="index.html#kontakt">Kennenlernen</a>
+      <a class="btn btn-orange btn-arrow mh-cta" href="index.html#kontakt">Kennenlernen</a>
       <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -73,45 +72,44 @@
 
 <div class="mobile-menu" id="mobile-menu">
   <a href="about.html">Über mich</a>
-  <span class="mm-group">Meine Arbeit</span>
-  <a class="mm-sub" href="begleitung.html">Einzelbegleitung</a>
-  <a class="mm-sub" href="sessions.html">1:1 Sessions</a>
-  <a class="mm-sub" href="index.html#events">Events &amp; Retreats</a>
-  <a class="mm-sub" href="index.html#gruppen">Gruppenangebote</a>
-  <a class="mm-sub" href="index.html#kostenlos">Kostenlos</a>
-  <a href="index.html#kostenlos">For free</a>
+  <span class="mm-group">Dein Weg</span>
+  <a class="mm-sub" href="sessions.html">1:1 Session</a>
+  <a class="mm-sub" href="index.html#danach">Einzelbegleitung</a>
+  <a class="mm-sub" href="index.html#danach">Retreat</a>
+  <a href="for-free.html">For free</a>
   <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Kennenlernen</a>
 </div>
 
 <main id="main">
 
-<!-- ═══ SEITENKOPF ═══ -->
+<!-- ═══ KOPF ═══ -->
 <section class="pagehead">
   <div class="wrap">
-    <span class="crumb"><a href="index.html">Start</a> · 1:1 Sessions</span>
-    <!-- HIER: Überschrift + Einleitung -->
+    <span class="crumb"><a href="index.html">Start</a> · Dein Weg · 1:1 Session</span>
+    <!-- HIER: Überschrift + ein Satz -->
     <h1 class="rise">Eine Session von <em>innen</em>.</h1>
-    <p class="lead rise d1">Du legst dich hin, du atmest, ich begleite dich — dein Körper macht den Rest.
-      Hier steht, was wirklich passiert, damit du nicht ins Ungewisse gehst.</p>
+    <p class="lead rise d1">Du legst dich hin, du atmest, ich begleite dich — dein Körper macht den Rest.</p>
+    <a class="btn btn-orange btn-arrow rise d2" href="index.html#kontakt">Kennenlernen</a>
   </div>
 </section>
 
-<!-- ═══ FAKTEN — Franz: „Vor Ort, Online, die Zeit und dann würde ich auch nur den Preis hinschreiben" ═══ -->
-<section class="section-tight" style="padding-top:0">
+<!-- ═══ FAKTEN — Franz: „Vor Ort, Online, die Zeit und dann würde ich auch nur den Preis hinschreiben“ ═══ -->
+<section class="section-tight tief">
   <div class="wrap">
     <div class="fakten rise">
-      <!-- HIER: Orte bestätigen (offener Punkt D3) -->
+      <!-- HIER: Orte bestätigen -->
       <div><span class="k">Vor Ort</span><span class="v">München</span><span class="s">&amp; Regensburg</span></div>
       <div><span class="k">Online</span><span class="v">Überall</span><span class="s">per Video</span></div>
-      <div><span class="k">Zeit</span><span class="v">90 Min.</span><span class="s">plus Ankommen</span></div>
-      <!-- HIER: dein Preis — du wolltest ihn hier ausdrücklich stehen haben -->
-      <div><span class="k">Preis</span><span class="v">… €</span><span class="s">trägst du ein</span></div>
+      <div><span class="k">Zeit</span><span class="v">90 Min.</span><span class="s">mit Ankommen und Landen</span></div>
+      <!-- HIER: Preis — im Call vom 01.10. wurden 300 € genannt, bitte bestätigen. Du bist umsatzsteuerpflichtig:
+           gegenüber Privatleuten muss das der Endpreis inkl. USt. sein — dann „inkl. USt.“ ergänzen. -->
+      <div class="hot"><span class="k">Preis</span><span class="v">300 €</span><span class="s">pro Session</span></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ TIMELINE — Franz' eigene Timeline (PDF angekündigt). Die Struktur steht, er ersetzt die Stationen. ═══ -->
-<section class="section">
+<!-- ═══ ABLAUF — Timeline. HIER: Franz' eigene Timeline; Stationen und Sätze sind Platzhalter. ═══ -->
+<section class="section hell">
   <div class="wrap">
     <div class="split">
       <figure class="fig rise-img">
@@ -123,37 +121,31 @@
       <div class="txt rise d1">
         <span class="eyebrow">So läuft es ab</span>
         <h2 style="font-size:var(--t-3)">Von der Tür bis zur Woche danach.</h2>
-        <!-- HIER: Franz' Timeline — Stationen, Zeiten und Sätze sind Platzhalter in seiner Struktur -->
         <ol class="tl mt-3">
           <li>
             <span class="zeit">Vorher</span>
-            <b>Kurze Absprache</b>
-            <p>Ein paar Zeilen per Nachricht: Was ist gerade da? Du musst nichts vorbereiten.
-              Bequeme Kleidung, ein ruhiger Ort — mehr braucht es nicht.</p>
+            <b>Kennenlern-Call</b>
+            <p>30 Minuten, kostenlos. Wir schauen, was los ist und ob wir zusammenpassen.</p>
           </li>
           <li>
             <span class="zeit">Die ersten 15 Minuten</span>
-            <b>Ankommen, ohne Vortrag</b>
-            <p>Wir reden kurz. Dann klären wir, wo Berührung für dich okay ist und wie du jederzeit
-              stoppen kannst. Das ist kein Formalkram — das ist die halbe Arbeit.</p>
+            <b>Ankommen</b>
+            <p>Wir klären, wo Berührung für dich okay ist und wie du jederzeit stoppen kannst.</p>
           </li>
           <li>
             <span class="zeit">Rund 60 Minuten</span>
             <b>Atem, Druckpunkte, meine Stimme</b>
-            <p>Du liegst, dein Atem wird tiefer. Ich arbeite an den Punkten, an denen dein Körper
-              Spannung parkt, und begleite dich durch das, was hochkommt. Nichts davon musst du erklären.</p>
+            <p>Du liegst. Ich arbeite an den Punkten, an denen dein Körper Spannung parkt.</p>
           </li>
           <li>
             <span class="zeit">Die letzten 15 Minuten</span>
             <b>Landen</b>
-            <p>Wir sitzen wieder. Was hat sich verändert — im Körper, nicht im Kopf? Und was brauchst du
-              in den nächsten Tagen, damit es nicht sofort wieder zugedeckt wird?</p>
+            <p>Was hat sich verändert — im Körper, nicht im Kopf?</p>
           </li>
           <li>
-            <span class="zeit">Die Woche danach</span>
-            <b>Die eigentliche Bewegung</b>
-            <p>Vieles passiert erst nach der Session. Deshalb gehörst du danach nicht direkt zurück ins
-              nächste Meeting — und wir bleiben in Kontakt.</p>
+            <span class="zeit">Die Tage danach</span>
+            <b>Nachklingen</b>
+            <p>Vieles bewegt sich erst nach der Session. Wenn es passt, sprechen wir darüber, wie es weitergeht.</p>
           </li>
         </ol>
       </div>
@@ -161,69 +153,129 @@
   </div>
 </section>
 
-<!-- ═══ FORMATE ═══ -->
-<section class="section deep">
+<!-- ═══ STIMME — von Franz' bisheriger Seite, gekürzt ═══ -->
+<section class="stimme glut">
+  <blockquote class="rise">
+    <p class="zitat">„Vor der Session mit Franz konnte ich mir kaum vorstellen, wie so etwas (online) abläuft […]. Die Antwort: Ja, das geht!“</p>
+    <footer>Luca, Bamberg</footer>
+  </blockquote>
+</section>
+
+<!-- ═══ FÜR DICH / NICHT FÜR DICH ═══ -->
+<section class="section">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow">Formate</span>
-      <h2>Online oder vor Ort — beides geht wirklich.</h2>
+      <span class="eyebrow rise">Ehrlich gesagt</span>
+      <h2 class="rise d1">Passt das zu dir?</h2>
     </div>
-    <div class="duo">
+    <div class="passt">
       <div class="rise">
-        <h3>Vor Ort</h3>
-        <p>Ich arbeite mit den Händen. Berührung, Druck, Halt — das ist der direkteste Weg
-          zu dem, was dein System hält.</p>
+        <h3>Das ist was für dich, wenn</h3>
         <ul>
-          <li>Matte, Decke, Ruhe — mehr brauchst du nicht</li>
-          <li>Bequeme Kleidung, ich arbeite über dem Stoff</li>
+          <!-- HIER: deine Kriterien -->
+          <li>du dich schon lange verstehst und trotzdem nichts anders wird</li>
+          <li>du endlich fühlen willst, statt noch mehr zu wissen</li>
+          <li>du bereit bist, dich 90 Minuten führen zu lassen</li>
         </ul>
       </div>
-      <div class="rise d1">
-        <h3>Online</h3>
-        <p>Ich leite dich durch Atem, Visualisierung und Selbstberührung an denselben Punkten.
-          Anders — aber nicht weniger tief. Viele arbeiten sogar lieber im eigenen Zuhause.</p>
+      <div class="nein rise d1">
+        <h3>Das ist nichts für dich, wenn</h3>
         <ul>
-          <li>Ein Raum, in dem du laut sein darfst</li>
-          <li>Matte oder Bett, stabile Verbindung</li>
+          <li>du eine Diagnose oder Behandlung suchst</li>
+          <li>du gerade in einer akuten Krise steckst — dann zuerst ärztliche oder therapeutische Hilfe</li>
+          <li>du eine schnelle Lösung ohne dein Zutun erwartest</li>
         </ul>
       </div>
     </div>
-    <p class="mt-3"><a class="tlink" href="index.html#kontakt"><b>Erste Session anfragen <span>→</span></b></a></p>
   </div>
 </section>
 
-<!-- ═══ FAQ — „das wollen fast alle wissen" bleibt ═══ -->
+<!-- ═══ VIDEO-STIMME — HIER: Datei assets/video/stimme-1.mp4 + Freigabe der Person ═══ -->
+<section class="section tief">
+  <div class="wrap">
+    <span class="eyebrow rise">Eine Stimme</span>
+    <div class="vt-wrap rise d1">
+      <div class="videostage">
+        <img src="assets/img/gruppe-wiese-1100.jpg" srcset="assets/img/gruppe-wiese-700.jpg 700w, assets/img/gruppe-wiese-1100.jpg 1100w"
+             sizes="(max-width: 760px) 92vw, 46rem" width="1100" height="733" loading="lazy" alt="Franz mit einer Gruppe auf der Wiese, Hände auf dem Herzen">
+        <button class="video-play video-open" type="button">
+          <span class="disc" aria-hidden="true"><svg width="18" height="22" viewBox="0 0 20 24" fill="currentColor"><path d="M0 0l20 12L0 24z"/></svg></span>
+          <span class="cap">Video-Testimonial — Platzhalter</span>
+        </button>
+      </div>
+      <footer>Platzhalter · Vorname, Ort</footer>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ UND DANACH? — die zwei Türen, ohne Details ═══ -->
 <section class="section">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rise">Und danach?</span>
+      <h2 class="rise d1">Wenn es passt, geht es weiter.</h2>
+      <p class="lead rise d2">Nach deiner Session sprechen wir darüber, ob und wie.</p>
+    </div>
+    <div class="weg-danach" id="danach" style="margin-top:0">
+      <div class="tueren">
+        <div class="tuer rise">
+          <img src="assets/img/kreis-begleitung-480.jpg" width="96" height="96" loading="lazy" alt="Franz geht am Strand auf die Sonne zu">
+          <div>
+            <span class="nr">02</span>
+            <h3>Einzelbegleitung</h3>
+            <!-- HIER: ein Satz -->
+            <p>Mehrere Monate an deiner Seite. Sessions, Integration und alles dazwischen.</p>
+          </div>
+        </div>
+        <div class="tuer rise d1">
+          <img src="assets/img/kreis-events-480.jpg" width="96" height="96" loading="lazy" alt="Franz steht in einem Kreis und hält Hände">
+          <div>
+            <span class="nr">03</span>
+            <h3>Retreat</h3>
+            <!-- HIER: ein Satz + Termin -->
+            <p>Ein paar Tage in der Gruppe. Offen für alle, die schon eine Session mit mir hatten.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STIMMEN ═══ -->
+<section class="section tief">
+  <div class="wrap">
+    <div class="stimmen">
+      <blockquote class="rise">
+        <p>„Dadurch, dass ich mich vom ersten Call an komplett verstanden und zu 111% gesehen gefühlt habe, konnte ich beim 1:1 mit dir endlich loslassen.“</p>
+        <footer>Denise, Graz</footer>
+      </blockquote>
+      <blockquote class="rise d1">
+        <p>„Mein erstes Wort nach unserer 1:1-Session war ‚Verrückt!‘“</p>
+        <footer>Nicole, München</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FRAGEN ═══ -->
+<section class="section hell">
   <div class="wrap-narrow">
     <div class="head">
-      <span class="eyebrow">Bevor du fragst</span>
-      <h2>Das wollen fast alle wissen.</h2>
+      <span class="eyebrow rise">Bevor du fragst</span>
+      <h2 class="rise d1">Das wollen fast alle wissen.</h2>
     </div>
     <!-- HIER: Fragen und Antworten -->
     <div class="faq rise">
       <details>
+        <!-- HIER: bitte bestätigen, dass du über der Kleidung arbeitest -->
         <summary>Muss ich mich ausziehen?</summary>
         <div class="answer"><p>Nein. Bequeme Kleidung reicht. Ich arbeite über der Kleidung, und wir
-          klären vorher, welche Körperbereiche für dich okay sind und welche nicht.</p></div>
+          klären vorher, welche Körperbereiche für dich okay sind.</p></div>
       </details>
       <details>
         <summary>Was, wenn nichts kommt?</summary>
         <div class="answer"><p>Dann kommt nichts, und auch das ist eine Information. Dein System
-          entscheidet über das Tempo, nicht dein Ehrgeiz. Ich habe noch keine Session erlebt,
-          aus der jemand mit leeren Händen rausgegangen ist — aber manchmal sieht das Ergebnis
-          anders aus als erwartet.</p></div>
-      </details>
-      <details>
-        <summary>Ich schäme mich, über meine Scham zu reden.</summary>
-        <div class="answer"><p>Willkommen. Genau dafür ist der Raum da. Scham lebt davon, versteckt zu
-          bleiben — sie verliert ihre Macht dort, wo sie gesehen wird, ohne bewertet zu werden.
-          Du musst hier nichts beschönigen und nichts sortieren.</p></div>
-      </details>
-      <details>
-        <summary>Wie viele Sessions brauche ich?</summary>
-        <div class="answer"><p>Ehrliche Antwort: kommt drauf an. Manche kommen mit einem konkreten Thema
-          und sind nach wenigen Sessions fertig, andere gehen einen längeren Weg. Nach der ersten
-          Session sage ich dir meine Einschätzung — keine Verkaufsformel.</p></div>
+          entscheidet über das Tempo, nicht dein Ehrgeiz.</p></div>
       </details>
       <details>
         <summary>Wie sage ich ab oder verschiebe?</summary>
@@ -232,10 +284,9 @@
       </details>
       <details>
         <summary>Ersetzt das eine Psychotherapie?</summary>
-        <div class="answer"><p>Nein, und das sage ich bewusst deutlich. Coaching und Neo Emotional Release
-          sind Prozess- und Persönlichkeitsarbeit, kein Heilverfahren. Bei psychischen Erkrankungen und
-          in akuten Krisen gehört ärztliche oder psychotherapeutische Hilfe an die erste Stelle.
-          Parallel geht oft gut — ersetzen geht nicht.</p>
+        <div class="answer"><p>Nein. Neo Emotional Release ist Prozess- und Persönlichkeitsarbeit, kein
+          Heilverfahren. Bei psychischen Erkrankungen und in akuten Krisen gehört ärztliche oder
+          psychotherapeutische Hilfe an die erste Stelle.</p>
           <p>Sofort erreichbar: Notruf 112 · Telefonseelsorge 0800&nbsp;111&nbsp;0&nbsp;111 ·
             Krisendienst Bayern 0800&nbsp;655&nbsp;3000</p></div>
       </details>
@@ -243,14 +294,21 @@
   </div>
 </section>
 
+<!-- ═══ Kostenloses zwischendurch ═══ -->
+<div class="hoer sky">
+  <div class="wrap">
+    <p>Noch nicht so weit?</p>
+    <a class="tlink" href="for-free.html"><b>Hör und probier erst mal kostenlos <span>→</span></b></a>
+  </div>
+</div>
+
 <!-- ═══ CTA ═══ -->
 <section class="cta-band">
   <div class="wrap">
     <span class="eyebrow">Nächster Schritt</span>
     <h2>Erst reden, dann entscheiden.</h2>
-    <p class="lead">Wir telefonieren 30 Minuten, kostenlos und unverbindlich. Danach weißt du,
-      ob eine erste Session für dich Sinn ergibt.</p>
-    <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Kennenlern-Call anfragen</a>
+    <p class="lead">30 Minuten, kostenlos und unverbindlich.</p>
+    <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Kennenlernen</a>
   </div>
 </section>
 </main>
@@ -262,13 +320,15 @@
       <span class="name">Franz&nbsp;Heinrich</span>
       <span class="rolle">Scham &amp; Emotionen</span>
     </span>
+    <p class="small">Körperorientierte Arbeit mit Scham und Emotionen. 1:1 Sessions online und vor Ort, Einzelbegleitung, Retreats.</p>
     <nav aria-label="Footer">
       <ul class="footer-nav">
         <li><a href="index.html">Start</a></li>
-        <li><a href="begleitung.html">Begleitung</a></li>
         <li><a href="about.html">Über mich</a></li>
+        <li><a href="for-free.html">For free</a></li>
         <li><a href="links.html">Alle Links</a></li>
-        <li><a href="index.html#kontakt">Kontakt</a></li>
+        <li><a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer">Spotify</a></li>
       </ul>
     </nav>
     <div class="footer-bottom">
@@ -278,26 +338,20 @@
   </div>
 </footer>
 
-<script>
-(function(){
-  document.querySelectorAll('.lang').forEach(function(b){b.addEventListener('click',function(){try{localStorage.setItem('fh-lang','en');}catch(e){}location.href='index.html';});});
-})();
-(function(){
-  var dd=document.getElementById('mh-dd');if(!dd)return;var btn=dd.querySelector('button');
-  btn.addEventListener('click',function(){var o=dd.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
-  document.addEventListener('click',function(e){if(!dd.contains(e.target)){dd.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
-})();
-(function(){
-  var b=document.getElementById('burger'),m=document.getElementById('mobile-menu');if(!b||!m)return;
-  b.addEventListener('click',function(){var open=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',open?'true':'false');b.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');});
-  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');});});
-})();
-(function(){
-  var els=document.querySelectorAll('.rise, .rise-img');function show(el){el.classList.add('in');}
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(show);return;}
-  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});},{threshold:.14,rootMargin:'0px 0px -6% 0px'});
-  els.forEach(function(el){if(el.getBoundingClientRect().top<window.innerHeight*0.9){show(el);}else{io.observe(el);}});
-})();
-</script>
+<!-- ═══ VIDEO-LIGHTBOX ═══ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video">
+  <div class="lightbox-inner">
+    <button class="lightbox-x" id="lightbox-x" aria-label="Schließen">&times;</button>
+    <!-- HIER: sobald assets/video/stimme-1.mp4 existiert, den Hinweis löschen und einkommentieren:
+    <video controls playsinline><source src="assets/video/stimme-1.mp4" type="video/mp4"></video>
+    -->
+    <div class="lightbox-note">
+      <p><strong>Design-Vorschau</strong></p>
+      <p class="small mt-1">Hier läuft später dein Video-Testimonial — der Platz dafür steht schon.</p>
+    </div>
+  </div>
+</div>
+
+<script src="assets/site.js" defer></script>
 </body>
 </html>

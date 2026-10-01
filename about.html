@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <!--
-  FRANZ HEINRICH — Über mich (eigene Unterseite, von Franz gewünscht)
-  Design-Vorschau · Lechcode · 11.09.2026
-  Franz' Gliederung aus der Sprachnachricht vom 09.09.:
-    Hard Facts / Steckbrief · meine Story · Zone of Genius ·
-    Training & Zertifizierungen · Erfahrung & Praxis · Teaching & Facilitation ·
-    Random Facts About Me · zum Schluss ein Zitat mit Bild.
-  Er hat dazu „schon ein bisschen zusammengeschrieben" — alle Texte hier sind
-  Platzhalter in seiner Struktur, mit „HIER:" markiert.
+  FRANZ HEINRICH — Über mich
+  Design-Vorschau · Lechcode · Runde 9 · 01.10.2026
+  Call vom 01.10.: Aufbau nach dem Vorbild seiner Mentorin (thewellpaidpriestess.com/about) —
+  wer ich bin → Heldenreise mit Bildern → „heute“ → „in den letzten Jahren“ (Hard Facts,
+  Zertifizierungen) → Zone of Genius → Stimmen → Random Facts → Kostenloses → Zitat.
+  Leitgedanke von Franz: „Ich bin mein bestes Testimonial.“ Diese Seite darf länger sein
+  als die Startseite. Er hat Stichpunkte und Story schon gesammelt —
+  alle Texte hier sind Platzhalter in seiner Struktur, mit „HIER:“ markiert.
 -->
 <html lang="de">
 <head>
@@ -16,7 +16,7 @@
 <script>document.documentElement.classList.add('js');if(location.search.indexOf('foto')>-1)document.documentElement.classList.add('foto');</script>
 <meta name="robots" content="noindex, nofollow">
 <title>Über mich | Franz Heinrich</title>
-<meta name="description" content="Wer Franz Heinrich ist: Steckbrief, Geschichte, Ausbildung und Praxis als Coach für Scham und Emotionen mit Neo Emotional Release.">
+<meta name="description" content="Wer Franz Heinrich ist: seine Geschichte mit Scham, Ausbildung und Praxis als Emotional-Release-Experte — und warum er sein eigenes bestes Testimonial ist.">
 <meta property="og:title" content="Über mich | Franz Heinrich">
 <meta property="og:image" content="assets/img/og-1200.jpg">
 <meta name="theme-color" content="#023047">
@@ -29,22 +29,20 @@
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 
-<header class="nav solid" id="nav">
+<header class="nav" id="nav">
   <div class="wrap masthead">
     <div class="mh-side mh-side-l">
       <!-- Unterseiten sind noch nur deutsch: EN führt auf die englische Startseite -->
-      <button class="lang" id="lang-desktop" type="button" aria-label="Switch to English">EN</button>
+      <button class="lang" type="button" aria-label="Switch to English">EN</button>
       <nav aria-label="Menü links">
       <ul class="mh-left">
         <li><a class="navlink" href="about.html" aria-current="page">Über mich</a></li>
         <li class="mh-dd" id="mh-dd">
-          <button class="navlink" type="button" aria-expanded="false" aria-controls="dd-arbeiten">Meine Arbeit</button>
-          <div class="dd" id="dd-arbeiten">
-            <a href="begleitung.html"><img src="assets/img/kreis-begleitung-480.jpg" width="54" height="54" alt=""><span><b>Einzelbegleitung</b><small>Mehrere Monate an deiner Seite</small></span></a>
-            <a href="sessions.html"><img src="assets/img/kreis-sessions-480.jpg" width="54" height="54" alt=""><span><b>1:1 Sessions</b><small>Neo Emotional Release, online oder vor Ort</small></span></a>
-            <a href="index.html#events"><img src="assets/img/kreis-events-480.jpg" width="54" height="54" alt=""><span><b>Events &amp; Retreats</b><small>Ein Abend, ein Wochenende, ein Kreis</small></span></a>
-            <a href="index.html#gruppen"><img src="assets/img/kreis-gruppen-480.jpg" width="54" height="54" alt=""><span><b>Gruppenangebote</b><small>Regelmäßige Kreise, online und vor Ort</small></span></a>
-            <a href="index.html#kostenlos" class="dd-frei"><img src="assets/img/kreis-frei-480.jpg" width="54" height="54" alt=""><span><b>Kostenlos</b><small>Podcast, Handbuch, Newsletter</small></span></a>
+          <button class="navlink" type="button" aria-expanded="false" aria-controls="dd-weg">Dein Weg</button>
+          <div class="dd" id="dd-weg">
+            <a class="dd-start" href="sessions.html"><span class="nr">01</span><img src="assets/img/kreis-sessions-480.jpg" width="54" height="54" loading="lazy" alt=""><span><b>1:1 Session</b><small>Der Einstieg — online oder vor Ort</small></span></a>
+            <a href="index.html#danach"><span class="nr">02</span><img src="assets/img/kreis-begleitung-480.jpg" width="54" height="54" loading="lazy" alt=""><span><b>Einzelbegleitung</b><small>Mehrere Monate an deiner Seite</small></span></a>
+            <a href="index.html#danach"><span class="nr">03</span><img src="assets/img/kreis-events-480.jpg" width="54" height="54" loading="lazy" alt=""><span><b>Retreat</b><small>Ein paar Tage in der Gruppe</small></span></a>
           </div>
         </li>
       </ul>
@@ -58,10 +56,10 @@
     <div class="mh-side mh-side-r">
       <nav aria-label="Menü rechts">
       <ul class="mh-right">
-        <li><a class="navlink" href="index.html#kostenlos">For free</a></li>
+        <li><a class="navlink" href="for-free.html">For free</a></li>
       </ul>
       </nav>
-      <a class="btn btn-navy btn-arrow mh-cta" href="index.html#kontakt">Kennenlernen</a>
+      <a class="btn btn-orange btn-arrow mh-cta" href="index.html#kontakt">Kennenlernen</a>
       <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -71,13 +69,11 @@
 
 <div class="mobile-menu" id="mobile-menu">
   <a href="about.html">Über mich</a>
-  <span class="mm-group">Meine Arbeit</span>
-  <a class="mm-sub" href="begleitung.html">Einzelbegleitung</a>
-  <a class="mm-sub" href="sessions.html">1:1 Sessions</a>
-  <a class="mm-sub" href="index.html#events">Events &amp; Retreats</a>
-  <a class="mm-sub" href="index.html#gruppen">Gruppenangebote</a>
-  <a class="mm-sub" href="index.html#kostenlos">Kostenlos</a>
-  <a href="index.html#kostenlos">For free</a>
+  <span class="mm-group">Dein Weg</span>
+  <a class="mm-sub" href="sessions.html">1:1 Session</a>
+  <a class="mm-sub" href="index.html#danach">Einzelbegleitung</a>
+  <a class="mm-sub" href="index.html#danach">Retreat</a>
+  <a href="for-free.html">For free</a>
   <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Kennenlernen</a>
 </div>
 
@@ -87,15 +83,14 @@
 <section class="pagehead">
   <div class="wrap">
     <span class="crumb"><a href="index.html">Start</a> · Über mich</span>
-    <!-- HIER: Überschrift + ein Satz -->
-    <h1 class="rise">Wer da eigentlich <em>Raum</em> hält.</h1>
-    <p class="lead rise d1">Kein Guru, kein Therapeut, kein Mann mit Antworten auf alles. Einer, der Scham von
-      innen kennt — und gelernt hat, wie man ihr begegnet.</p>
+    <!-- HIER: Überschrift + ein Satz. „Ich bin mein bestes Testimonial“ ist Franz' eigener Satz aus dem Call. -->
+    <h1 class="rise">Ich bin mein <em>bestes</em> Testimonial.</h1>
+    <p class="lead rise d1">Kein Guru, kein Therapeut. Einer, der Scham von innen kennt — und gelernt hat, wie man ihr begegnet.</p>
   </div>
 </section>
 
-<!-- ═══ 1 · HARD FACTS / STECKBRIEF ═══ -->
-<section class="section-tight">
+<!-- ═══ HARD FACTS ═══ -->
+<section class="section-tight tief">
   <div class="wrap">
     <span class="eyebrow rise">Hard Facts</span>
     <!-- HIER: Franz' Steckbrief -->
@@ -110,50 +105,53 @@
   </div>
 </section>
 
-<!-- ═══ 2 · MEINE STORY ═══ -->
-<section class="section">
+<!-- ═══ MEINE GESCHICHTE — Heldenreise in drei Kapiteln, je ein Bild. HIER: Franz' Story in seinen Worten. ═══ -->
+<section class="section hell">
   <div class="wrap">
-    <div class="zitat-split">
-      <figure class="rise-img">
+    <div class="head">
+      <span class="eyebrow rise">Meine Geschichte</span>
+      <h2 class="rise d1">Ich kenne Scham nicht aus Büchern.</h2>
+    </div>
+    <div class="kapitel">
+      <article class="rise">
+        <img src="assets/img/franz-treppe-900.jpg" srcset="assets/img/franz-treppe-560.jpg 560w, assets/img/franz-treppe-900.jpg 900w"
+             sizes="(max-width: 760px) 92vw, 22rem" width="900" height="1125" loading="lazy"
+             alt="Franz kommt barfuß eine Holztreppe herunter">
+        <div>
+          <span class="jahr">Früher</span>
+          <h3>Kleinmachen war mein Normalzustand.</h3>
+          <p>Platzhalter: Verstecken, funktionieren, gegen das eigene Gefühl anarbeiten — hier erzählst du, wie es war.</p>
+        </div>
+      </article>
+      <article class="rise">
+        <img src="assets/img/hand-herz-900.jpg" srcset="assets/img/hand-herz-560.jpg 560w, assets/img/hand-herz-900.jpg 900w"
+             sizes="(max-width: 760px) 92vw, 22rem" width="900" height="1125" loading="lazy"
+             alt="Franz steht am Strand, die Hand auf dem eigenen Herzen">
+        <div>
+          <span class="jahr">Der Wendepunkt</span>
+          <h3>Dann hat mein Körper übernommen.</h3>
+          <p>Platzhalter: der Moment, in dem es gekippt ist — deine erste Session, dein erster Release.</p>
+        </div>
+      </article>
+      <article class="rise">
         <img src="assets/img/franz-lachen-900.jpg" srcset="assets/img/franz-lachen-560.jpg 560w, assets/img/franz-lachen-900.jpg 900w"
-             sizes="(max-width: 860px) 92vw, 34rem" width="900" height="1125" loading="lazy"
+             sizes="(max-width: 760px) 92vw, 22rem" width="900" height="1125" loading="lazy"
              alt="Franz lacht, hinter ihm Berge im Abendlicht">
-      </figure>
-      <div class="story">
-        <span class="eyebrow rise">Meine Story</span>
-        <!-- HIER: Franz' Geschichte — in seinen Worten -->
-        <h2 class="rise d1">Ich kenne Scham nicht aus Büchern.</h2>
-        <p class="mt-2 muted rise d1">Kleinmachen, verstecken, den ganzen Tag gegen das eigene Gefühl
-          anarbeiten — das war jahrelang mein Normalzustand. Platzhalter: Hier kommt deine Geschichte hin,
-          so lang oder kurz, wie du sie erzählen willst.</p>
-        <p class="mt-2 muted rise d2">Heute begleite ich Menschen genau dorthin, wo es weich wird.
-          Nicht, weil ich fertig wäre — sondern weil ich weiß, wie sich der Weg anfühlt.</p>
-      </div>
+        <div>
+          <span class="jahr">Heute</span>
+          <h3>Ich begleite Menschen dorthin, wo es weich wird.</h3>
+          <p>Platzhalter: wie du heute lebst und arbeitest — und warum du nicht fertig bist, sondern den Weg kennst.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ═══ 3 · ZONE OF GENIUS ═══ -->
-<section class="section deep">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow rise">Zone of Genius</span>
-      <h2 class="rise d1">Was ich wirklich gut kann.</h2>
-    </div>
-    <!-- HIER: drei bis fünf Sätze -->
-    <ul class="liste-plain rise d2">
-      <li>Räume halten, in denen Menschen sich zeigen dürfen — ohne dass es peinlich wird.</li>
-      <li>Merken, was ein Körper sagt, bevor der Kopf es formuliert.</li>
-      <li>Schwere Themen leicht ansprechen. Humor ist bei mir kein Ausweichen, sondern ein Werkzeug.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ═══ 4 · TRAINING & ZERTIFIZIERUNGEN · ERFAHRUNG & PRAXIS · TEACHING & FACILITATION ═══ -->
+<!-- ═══ IN DEN LETZTEN JAHREN — Zertifizierungen, Erfahrung, Lehre ═══ -->
 <section class="section">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow rise">Hintergrund</span>
+      <span class="eyebrow rise">In den letzten Jahren</span>
       <h2 class="rise d1">Woher das kommt.</h2>
     </div>
     <div class="duo">
@@ -161,32 +159,75 @@
         <h3>Ausbildung &amp; Zertifizierungen</h3>
         <!-- HIER: Franz' Ausbildungen -->
         <ul>
-          <li>Neo Emotional Release Practitioner (zertifiziert, nach David Manning)</li>
+          <li>Neo Emotional Release Practitioner (zertifiziert)</li>
           <li>Possibility Management — Platzhalter</li>
-          <li>Platzhalter: weitere Ausbildungen, Jahre, Lehrer:innen</li>
+          <li>Platzhalter: weitere Ausbildungen, Jahre</li>
         </ul>
       </div>
       <div class="rise d1">
         <h3>Erfahrung &amp; Praxis</h3>
         <ul>
-          <li>Platzhalter: seit wann, wie viele Sessions, wo</li>
-          <li>1:1 online und vor Ort, Workshops, Retreats</li>
-          <li>Platzhalter: Schwerpunkte, mit wem du am liebsten arbeitest</li>
+          <li>Platzhalter: seit wann, wie viele Sessions</li>
+          <li>1:1 online und vor Ort, Retreats</li>
         </ul>
       </div>
       <div class="rise d2">
         <h3>Lehre &amp; Facilitation</h3>
         <ul>
-          <li>Platzhalter: Festivals, Retreats, Online-Akademien, in denen du unterrichtest</li>
-          <li>Platzhalter: Formate, die du entwickelt hast</li>
+          <li>Platzhalter: Festivals, Retreats, Akademien</li>
+          <li>Platzhalter: eigene Formate</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ 5 · RANDOM FACTS ═══ -->
-<section class="section deep">
+<!-- ═══ ZONE OF GENIUS + Video ═══ -->
+<section class="section tief">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rise">Zone of Genius</span>
+      <h2 class="rise d1">Was ich wirklich gut kann.</h2>
+    </div>
+    <!-- HIER: drei Sätze -->
+    <ul class="liste-plain rise d2">
+      <li>Räume halten, in denen Menschen sich zeigen dürfen — ohne dass es peinlich wird.</li>
+      <li>Merken, was ein Körper sagt, bevor der Kopf es formuliert.</li>
+      <li>Schwere Themen leicht ansprechen. Humor ist bei mir ein Werkzeug.</li>
+    </ul>
+    <!-- HIER: „fünf Minuten über mich“ als MP4 → assets/video/franz-intro.mp4 -->
+    <div class="vt-wrap mt-3 rise" style="max-width:36rem">
+      <div class="videostage">
+        <img src="assets/img/ueber-video-860.jpg" srcset="assets/img/ueber-video-560.jpg 560w, assets/img/ueber-video-860.jpg 860w"
+             sizes="(max-width: 600px) 92vw, 36rem" width="860" height="645" loading="lazy"
+             alt="Franz steht am Strand, die Hand auf dem eigenen Herzen">
+        <button class="video-play video-open" type="button">
+          <span class="disc" aria-hidden="true"><svg width="18" height="22" viewBox="0 0 20 24" fill="currentColor"><path d="M0 0l20 12L0 24z"/></svg></span>
+          <span class="cap">Fünf Minuten über mich</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STIMMEN — von Franz' bisheriger Seite, gekürzt ═══ -->
+<section class="section">
+  <div class="wrap">
+    <div class="stimmen">
+      <blockquote class="rise">
+        <p>„Franz öffnet für mich einen sicheren Raum, in dem all das möglich wird.“</p>
+        <footer>Nicole, München</footer>
+      </blockquote>
+      <blockquote class="rise d1">
+        <p>„Durch unsere Zusammenarbeit habe ich viel mehr Akzeptanz für mich selbst entwickelt.“</p>
+        <footer>Lukas, Cottbus</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RANDOM FACTS ═══ -->
+<section class="section hell">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow rise">Random Facts</span>
@@ -197,27 +238,29 @@
       <li>Platzhalter: etwas, das niemand von dir erwartet.</li>
       <li>Platzhalter: eine Gewohnheit, die dich verrät.</li>
       <li>Platzhalter: der Ort, an dem du am ehesten du bist.</li>
-      <li>Platzhalter: eine Sache, die dich zuverlässig zum Lachen bringt.</li>
     </ul>
-    <figure class="rise-img mt-3" style="max-width:26rem;margin-inline:auto">
-      <img src="assets/img/franz-treppe-900.jpg" srcset="assets/img/franz-treppe-560.jpg 560w, assets/img/franz-treppe-900.jpg 900w"
-           sizes="(max-width: 560px) 92vw, 26rem" width="900" height="1125" loading="lazy" style="border-radius:var(--radius)"
-           alt="Franz kommt barfuß eine Holztreppe herunter, neben ihm eine geschnitzte Wand">
-    </figure>
   </div>
 </section>
 
-<!-- ═══ 6 · ZITAT MIT BILD — Franz' Wunsch für den Schluss ═══ -->
+<!-- ═══ Kostenloses zwischendurch ═══ -->
+<div class="hoer sky">
+  <div class="wrap">
+    <p>Hör, wie ich klinge.</p>
+    <a class="tlink" href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer"><b>Gespräche mit Franz auf Spotify <span>↗</span></b></a>
+  </div>
+</div>
+
+<!-- ═══ ZITAT MIT BILD — Franz' Wunsch für den Schluss ═══ -->
 <section class="section">
   <div class="wrap">
     <div class="zitat-split">
       <figure class="rise-img">
-        <img src="assets/img/franz-herz-900.jpg" srcset="assets/img/franz-herz-560.jpg 560w, assets/img/franz-herz-900.jpg 900w"
+        <img src="assets/img/franz-reden-900.jpg" srcset="assets/img/franz-reden-560.jpg 560w, assets/img/franz-reden-900.jpg 900w"
              sizes="(max-width: 860px) 92vw, 30rem" width="900" height="1125" loading="lazy"
-             alt="Franz Heinrich, die Hand auf dem Herzen">
+             alt="Franz erklärt etwas mit den Händen, im Hintergrund Olivenbäume">
       </figure>
       <blockquote class="rise d1">
-        <p>„Deine Emotionen sind nicht das Problem — sondern deine Beziehung zu ihnen."</p>
+        <p>„Deine Emotionen sind nicht das Problem — sondern deine Beziehung zu ihnen.“</p>
         <footer>Franz Heinrich</footer>
       </blockquote>
     </div>
@@ -225,12 +268,15 @@
 </section>
 
 <!-- ═══ CTA ═══ -->
-<section class="cta-band">
+<section class="cta-band tief">
   <div class="wrap">
     <span class="eyebrow">Nächster Schritt</span>
-    <h2>Erst reden, dann entscheiden.</h2>
-    <p class="lead">30 Minuten, kostenlos und unverbindlich.</p>
-    <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Kennenlern-Call anfragen</a>
+    <h2>Es beginnt mit einer Session.</h2>
+    <p class="lead">Und die beginnt mit einem Gespräch: 30 Minuten, kostenlos.</p>
+    <div class="btn-row">
+      <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Kennenlernen</a>
+      <a class="tlink" href="sessions.html"><b>So läuft eine Session ab <span>→</span></b></a>
+    </div>
   </div>
 </section>
 </main>
@@ -242,13 +288,15 @@
       <span class="name">Franz&nbsp;Heinrich</span>
       <span class="rolle">Scham &amp; Emotionen</span>
     </span>
+    <p class="small">Körperorientierte Arbeit mit Scham und Emotionen. 1:1 Sessions online und vor Ort, Einzelbegleitung, Retreats.</p>
     <nav aria-label="Footer">
       <ul class="footer-nav">
         <li><a href="index.html">Start</a></li>
-        <li><a href="sessions.html">Sessions</a></li>
-        <li><a href="begleitung.html">Begleitung</a></li>
+        <li><a href="sessions.html">1:1 Session</a></li>
+        <li><a href="for-free.html">For free</a></li>
         <li><a href="links.html">Alle Links</a></li>
-        <li><a href="index.html#kontakt">Kontakt</a></li>
+        <li><a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer">Spotify</a></li>
       </ul>
     </nav>
     <div class="footer-bottom">
@@ -258,26 +306,20 @@
   </div>
 </footer>
 
-<script>
-(function(){
-  document.querySelectorAll('.lang').forEach(function(b){b.addEventListener('click',function(){try{localStorage.setItem('fh-lang','en');}catch(e){}location.href='index.html';});});
-})();
-(function(){
-  var dd=document.getElementById('mh-dd');if(!dd)return;var btn=dd.querySelector('button');
-  btn.addEventListener('click',function(){var o=dd.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
-  document.addEventListener('click',function(e){if(!dd.contains(e.target)){dd.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
-})();
-(function(){
-  var b=document.getElementById('burger'),m=document.getElementById('mobile-menu');if(!b||!m)return;
-  b.addEventListener('click',function(){var open=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',open?'true':'false');});
-  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');});});
-})();
-(function(){
-  var els=document.querySelectorAll('.rise, .rise-img');function show(el){el.classList.add('in');}
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){els.forEach(show);return;}
-  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});},{threshold:.14,rootMargin:'0px 0px -6% 0px'});
-  els.forEach(function(el){if(el.getBoundingClientRect().top<window.innerHeight*0.9){show(el);}else{io.observe(el);}});
-})();
-</script>
+<!-- ═══ VIDEO-LIGHTBOX ═══ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video">
+  <div class="lightbox-inner">
+    <button class="lightbox-x" id="lightbox-x" aria-label="Schließen">&times;</button>
+    <!-- HIER: sobald assets/video/franz-intro.mp4 existiert, den Hinweis löschen und einkommentieren:
+    <video controls playsinline><source src="assets/video/franz-intro.mp4" type="video/mp4"></video>
+    -->
+    <div class="lightbox-note">
+      <p><strong>Design-Vorschau</strong></p>
+      <p class="small mt-1">Hier läuft später dein Video — der Platz dafür steht schon.</p>
+    </div>
+  </div>
+</div>
+
+<script src="assets/site.js" defer></script>
 </body>
 </html>
