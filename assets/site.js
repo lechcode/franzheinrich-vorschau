@@ -85,6 +85,12 @@
       if(!el.dataset.de)el.dataset.de=el.innerHTML;
       el.innerHTML=(lang==='en'&&en[k]!==undefined)?en[k]:el.dataset.de;
     });
+    /* Alt-Texte von Bildern (data-t-alt) */
+    d.querySelectorAll('[data-t-alt]').forEach(function(el){
+      var k=el.getAttribute('data-t-alt');
+      if(el.dataset.deAlt===undefined)el.dataset.deAlt=el.alt;
+      el.alt=(lang==='en'&&en[k]!==undefined)?en[k]:el.dataset.deAlt;
+    });
     /* Platzhalter in Eingabefeldern (data-t-ph) */
     d.querySelectorAll('[data-t-ph]').forEach(function(el){
       var k=el.getAttribute('data-t-ph');

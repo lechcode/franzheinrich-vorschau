@@ -9,6 +9,13 @@
    Kundenstimmen: geglättet, nicht umgedichtet.
    ========================================================================== */
 window.FH_EN = {
+  "skip": "Skip to content",
+  "alt.hero": "Franz Heinrich smiling, sitting against a sunlit wall",
+  "alt.offer": "Franz resting his hand on the belly of a client lying with eyes closed",
+  "alt.begleitung": "Franz sitting opposite a woman, listening with a smile",
+  "alt.retreat": "Franz standing in a circle with eyes closed, holding a participant’s hand",
+  "alt.about": "Franz Heinrich laughing in front of a big green tree",
+
   "meta.title": "Franz Heinrich — Shame & Emotional Release",
   "brand.rolle": "Shame &amp; Emotion",
   "nav.about": "About",
@@ -79,8 +86,8 @@ window.FH_EN = {
   "about.link": "Read my full story <span>→</span>",
 
   "s3.zitat": "“I feel stronger than ever and incredibly proud of myself.”",
-  "s3.p": "From the very first call I felt completely understood and 111% seen. That’s why I could finally let go in the session. There’s nothing to transform — only to integrate and embrace.",
-  "s3.ort": "Graz, Austria",
+  "s3.p": "From the very first call I felt completely understood and 111% seen. That’s why I could finally let go in the session. Instead of “shadows” or “limitations”, I got to see the frightened little girl behind them. There’s nothing to transform — only to INTEGRATE and embrace.",
+  "s3.ort": "Graz (AT)",
   "s4.zitat": "“In every session a small knot came loose. This time a BIG one.”",
   "s4.p": "I now know how to feel my anger — and above all, how to express it. My energy and motivation are coming back. I don’t want to be the victim anymore. I’m taking things into my own hands again.",
   "s4.ort": "Rostock",
