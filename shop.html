@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--
+  FRANZ HEINRICH — Shop (On Demand / Online-Kurse) — NEU in Runde 10
+  Design-Vorschau · Lechcode · 23.10.2026
+  Aufbau aus Franz' Struktur-Dokument + Sprachnachricht (Vorbild: Shop von thewellpaidpriestess.com):
+  Shop on Demand + kurzer Text → Feedback speziell zu den Angeboten (Morgenritual, Schütteln, Breathwork) →
+  Produkte (Morgenritual 2×15 Min. + Bonus 60 Min., Vortrag „Bewusst Gefühle fühlen“, Morgenritual auf
+  Englisch, Bundle, Gutschein) → FAQ → Freebie → Nachricht von mir + Bild.
+  · Bezahlt wird über Whop (Franz' Zahlungsanbieter). HIER: je Produkt den Whop-Link eintragen; Whop kann
+    den Checkout auch einbetten. Nach dem Kauf leitet Whop auf eine Danke-Seite weiter (stellt Franz dort ein).
+  · Die Chatverläufe („Client Love Notes“) liegen nicht im geteilten Drive — bis dahin Text-Stimmen.
+-->
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js');if(location.search.indexOf('foto')>-1)document.documentElement.classList.add('foto');</script>
+<meta name="robots" content="noindex, nofollow">
+<title>Shop — Rituale, Vorträge &amp; Kurse | Franz Heinrich</title>
+<meta name="description" content="Rituale, Vorträge und Online-Kurse von Franz Heinrich zum Selbermachen: das Morgenritual, der Vortrag „Bewusst Gefühle fühlen“, Bundles und Gutscheine.">
+<meta property="og:title" content="Shop | Franz Heinrich">
+<meta property="og:image" content="assets/img/og-1200.jpg">
+<meta name="theme-color" content="#f7f1e6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23023047'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23f7f1e6'%3EFH%3C/text%3E%3Crect x='17' y='48' width='30' height='4' rx='2' fill='%23e96a2c'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/dmserifdisplay-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/manrope-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<header class="nav" id="nav">
+  <div class="wrap masthead">
+    <div class="mh-side mh-side-l">
+      <!-- Unterseiten sind noch nur deutsch: EN führt auf die englische Startseite -->
+      <button class="lang" type="button" aria-label="Switch to English">EN</button>
+      <nav aria-label="Menü links">
+      <ul class="mh-left">
+        <li><a class="navlink" href="about.html">Über mich</a></li>
+        <li><a class="navlink" href="index.html#weg">Dein Weg</a></li>
+      </ul>
+      </nav>
+    </div>
+    <a class="brand" href="index.html" aria-label="Franz Heinrich — zur Startseite">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#e96a2c"/><text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#023047">FH</text></svg>
+      <span class="name">Franz&nbsp;Heinrich</span>
+      <span class="rolle">Scham &amp; Emotionen</span>
+    </a>
+    <div class="mh-side mh-side-r">
+      <nav aria-label="Menü rechts">
+      <ul class="mh-right">
+        <li><a class="navlink" href="shop.html" aria-current="page">Shop</a></li>
+        <li><a class="navlink" href="for-free.html">For free</a></li>
+      </ul>
+      </nav>
+      <a class="btn btn-orange btn-arrow mh-cta" href="index.html#kontakt">Lass uns sprechen</a>
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html">Über mich</a>
+  <a href="index.html#weg">Dein Weg</a>
+  <a href="shop.html">Shop</a>
+  <a href="for-free.html">For free</a>
+  <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Lass uns sprechen</a>
+</div>
+
+<main id="main">
+
+<!-- ═══ KOPF — Shop on Demand + kurzer Text. HIER: Text in deinen Worten ═══ -->
+<section class="pagehead">
+  <div class="wrap">
+    <span class="crumb"><a href="index.html">Start</a> · Shop</span>
+    <span class="eyebrow rise">Shop on Demand</span>
+    <h1 class="rise d1">Rituale, Vorträge und Kurse — <em>in deinem Tempo.</em></h1>
+    <p class="lead rise d2">Alles hier kannst du zu Hause machen, wann es für dich passt, und so oft du willst.
+      Für die Tage, an denen du dich wieder spüren willst.</p>
+    <a class="tlink rise d3" href="#produkte" style="margin-top:var(--sp-2)"><b>Zu den Angeboten <span>↓</span></b></a>
+  </div>
+  <figure class="rise-img" style="width:min(1180px, 100% - clamp(28px,6vw,108px));margin:var(--sp-3) auto 0">
+    <img src="assets/img/shop-head-1600.jpg" srcset="assets/img/shop-head-1000.jpg 1000w, assets/img/shop-head-1600.jpg 1600w"
+         sizes="(max-width: 1180px) 94vw, 1180px" width="1600" height="1067" fetchpriority="high"
+         style="width:100%;border-radius:var(--radius);aspect-ratio:21/9;object-fit:cover;object-position:60% 40%"
+         alt="Franz breitet unter einem Schilfdach die Arme aus und leitet eine Übung an">
+  </figure>
+</section>
+
+<!-- ═══ FEEDBACK SPEZIELL ZU DEN ANGEBOTEN — HIER: Chatverläufe / Client Love Notes als Screenshots
+     (geschwärzt), sobald sie im Drive liegen. Bis dahin drei Text-Stimmen aus dem Testimonial-Dokument. ═══ -->
+<section class="section sand">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rise">Client Love Notes</span>
+      <h2 class="rise d1">Was andere damit erleben.</h2>
+    </div>
+    <div class="stimmen drei">
+      <blockquote class="rise">
+        <p>„Eine großartige Art, regulierter in den Tag zu starten.“</p>
+        <p class="small muted mt-1" style="font-family:var(--body)">Das Reiben, Abklopfen, laute Atmen und Schütteln sind großartige Wege, jeden Tag reguliert
+          und mit mehr innerem Raum zu beginnen. Ich will diese Praxis auf jeden Fall weitermachen!</p>
+        <footer>Aristidis · Morgenritual</footer>
+      </blockquote>
+      <blockquote class="rise d1">
+        <p>„Zum ersten Mal habe ich mich mitten im Park ausgeschüttelt.“</p>
+        <p class="small muted mt-1" style="font-family:var(--body)">Ich stand in der Sonne, hörte Musik und habe angefangen, mich zu bewegen und auszuschütteln.
+          Es reguliert mich richtig stark. In der Öffentlichkeit ist es noch eine Hürde, aber es ist richtig schön, solche Hürden zu überwinden.</p>
+        <footer>Joshua · Schütteln</footer>
+      </blockquote>
+      <blockquote class="rise d2">
+        <p>„Seitdem starte ich meinen Morgen ruhig.“</p>
+        <p class="small muted mt-1" style="font-family:var(--body)">Ohne Bildschirm und mit einer kleinen Morning Session.
+          Und ich habe gemerkt, wie unglaublich viel mir echte Verbindung gibt.</p>
+        <footer>Verena · Morgenritual</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRODUKTE — HIER: Preise, Whop-Links (oder eingebetteter Whop-Checkout), Bundle-Inhalt ═══ -->
+<section class="section" id="produkte">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rise">Angebote</span>
+      <h2 class="rise d1">Für dich zum Mitnehmen.</h2>
+    </div>
+    <div class="produkte">
+      <article class="produkt highlight rise">
+        <img src="assets/img/shop-morgen-800.jpg" width="800" height="533" loading="lazy" alt="Franz sitzt im Schneidersitz unter einem Schilfdach, im Hintergrund eine Teilnehmerin">
+        <div class="in">
+          <span class="tag">Audio · Video</span>
+          <h3>Das Morgenritual</h3>
+          <p>Zwei Mal 15 Minuten, damit du im Körper startest und nicht im Kopf: reiben, abklopfen, atmen, schütteln.</p>
+          <p class="bonus">+ Bonus: das lange Morgenritual (60 Min.)</p>
+          <div class="fuss"><span class="preis">… €</span><a class="btn btn-line" href="#produkte">Link folgt</a></div>
+        </div>
+      </article>
+      <article class="produkt rise d1">
+        <img src="assets/img/shop-vortrag-800.jpg" width="800" height="533" loading="lazy" alt="Franz spricht unter einem Schilfdach zu einer kleinen Gruppe">
+        <div class="in">
+          <span class="tag">Vortrag</span>
+          <h3>Bewusst Gefühle fühlen</h3>
+          <p>Mein Vortrag als Aufzeichnung: warum wir Gefühle wegdrücken — und wie du anfängst, sie wieder zu fühlen.</p>
+          <div class="fuss"><span class="preis">… €</span><a class="btn btn-line" href="#produkte">Link folgt</a></div>
+        </div>
+      </article>
+      <article class="produkt rise d2">
+        <img src="assets/img/shop-morning-800.jpg" width="800" height="533" loading="lazy" alt="Franz leitet mit ausgebreiteten Armen eine Atemübung an">
+        <div class="in">
+          <span class="tag">English</span>
+          <h3>The Morning Ritual</h3>
+          <p>Das Morgenritual auf Englisch — für alle, die lieber in English mitmachen.</p>
+          <div class="fuss"><span class="preis">… €</span><a class="btn btn-line" href="#produkte">Link folgt</a></div>
+        </div>
+      </article>
+      <article class="produkt rise">
+        <img src="assets/img/shop-bundle-570.jpg" width="570" height="426" loading="lazy" alt="Eine Gruppe steht Arm in Arm auf einer Wiese und schaut über das Tal">
+        <div class="in">
+          <span class="tag">Bundle</span>
+          <h3>Ritual + Vortrag</h3>
+          <!-- HIER: was ins Bundle gehört -->
+          <p>Das Morgenritual und „Bewusst Gefühle fühlen“ zusammen — zum Bundle-Preis.</p>
+          <div class="fuss"><span class="preis">… €</span><a class="btn btn-line" href="#produkte">Link folgt</a></div>
+        </div>
+      </article>
+      <article class="produkt rise d1">
+        <img src="assets/img/shop-gutschein-800.jpg" width="800" height="533" loading="lazy" alt="Franz lacht neben einer Teilnehmerin im Eisbad-Fass">
+        <div class="in">
+          <span class="tag">Gutschein</span>
+          <h3>Verschenk UnVerschämtheit</h3>
+          <p>Ein Gutschein für eine Zusammenarbeit mit mir oder für den Shop — für die Menschen, die dir am Herzen liegen.</p>
+          <div class="fuss"><span class="preis">ab … €</span><a class="btn btn-line" href="#produkte">Link folgt</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ — 4–5 Fragen zu Breathwork, Schütteln & Co. HIER: deine Antworten ═══ -->
+<section class="section sand">
+  <div class="wrap-narrow">
+    <div class="head">
+      <span class="eyebrow rise">Häufig gestellte Fragen</span>
+      <h2 class="rise d1">Gut zu wissen.</h2>
+    </div>
+    <div class="faq rise">
+      <details>
+        <summary>Brauche ich Vorerfahrung mit Breathwork?</summary>
+        <div class="answer"><p>Nein. Ich führe dich Schritt für Schritt. Du machst nur so viel, wie sich für dich gut anfühlt.</p></div>
+      </details>
+      <details>
+        <summary>Warum Schütteln?</summary>
+        <div class="answer"><p>Schütteln ist eine der einfachsten Arten, Anspannung aus dem Körper zu lassen. Viele erleben danach mehr Ruhe und mehr Raum in sich.</p></div>
+      </details>
+      <details>
+        <summary>Wie komme ich nach dem Kauf an meine Inhalte?</summary>
+        <!-- HIER: wie es bei Whop läuft (Zugang per Mail? zum Behalten?) -->
+        <div class="answer"><p>Direkt nach dem Kauf bekommst du deinen Zugang per Mail. Du kannst die Inhalte anschauen und anhören, so oft du willst.</p></div>
+      </details>
+      <details>
+        <summary>Kann ich das machen, wenn es mir gerade nicht gut geht?</summary>
+        <div class="answer"><p>Die Übungen sind keine Therapie und ersetzen keine ärztliche oder psychotherapeutische Behandlung.
+          Wenn du gerade in einer akuten Krise bist, hol dir bitte zuerst Unterstützung: Notruf 112 · Telefonseelsorge 0800&nbsp;111&nbsp;0&nbsp;111.</p></div>
+      </details>
+      <details>
+        <summary>Wie funktioniert der Gutschein?</summary>
+        <div class="answer"><p>Du wählst einen Betrag oder ein Angebot, bekommst den Gutschein per Mail und kannst ihn weiterschenken.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FREEBIE-HINWEIS ═══ -->
+<div class="hoer tief">
+  <div class="wrap">
+    <p>Erst mal reinschnuppern?</p>
+    <a class="tlink" href="for-free.html"><b>Meine Meditation als Geschenk <span>→</span></b></a>
+  </div>
+</div>
+
+<!-- ═══ NACHRICHT VON MIR + BILD — wie bei Lydia („Consider this your portal of self-discovery“),
+     nur in Franz' UnVerschämt-Sprache. HIER: deine Worte ═══ -->
+<section class="section nacht">
+  <div class="wrap">
+    <div class="brief">
+      <div class="rise">
+        <h2>Betrachte das hier als deine Einladung, <em>unverschämt du</em> zu sein.</h2>
+        <p>Hier findest du Rituale, Vorträge und Übungen, mit denen du <b>wieder in deinen Körper kommst</b>, Gefühle fühlst, statt sie wegzudrücken,
+          und dir selbst ein Stück näherkommst.</p>
+        <p>Jedes Angebot ist so gemacht, als würden wir zusammen im Raum sitzen.</p>
+        <p><b>Komm genau so, wie du bist.</b> Alles ist on demand, in deinem Tempo und gehört dir.</p>
+        <p class="gruss">Alles Liebe, Franz</p>
+      </div>
+      <figure class="rise-img">
+        <img src="assets/img/shop-nachricht-960.jpg" srcset="assets/img/shop-nachricht-600.jpg 600w, assets/img/shop-nachricht-960.jpg 960w"
+             sizes="(max-width: 860px) 92vw, 24rem" width="960" height="1200" loading="lazy"
+             alt="Franz sitzt im Schneidersitz im Abendlicht und breitet die Arme aus">
+      </figure>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="brand">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#e96a2c"/><text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#023047">FH</text></svg>
+      <span class="name">Franz&nbsp;Heinrich</span>
+      <span class="rolle">Scham &amp; Emotionen</span>
+    </span>
+    <p class="small">Körperorientierte Arbeit mit Scham und Emotionen. Der UnVerschämt-Monat online und vor Ort, Einzelbegleitung, Retreats.</p>
+    <nav aria-label="Footer">
+      <ul class="footer-nav">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="sessions.html">UnVerschämt-Monat</a></li>
+        <li><a href="about.html">Über mich</a></li>
+        <li><a href="for-free.html">For free</a></li>
+        <li><a href="links.html">Alle Links</a></li>
+        <li><a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://open.spotify.com/playlist/0qxD5oTBT6r1wUF7NiAAmk" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+      </ul>
+    </nav>
+    <div class="footer-bottom">
+      <span>© 2026 Franz Heinrich · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a></span>
+      <span>Unverbindliche Design-Vorschau · Konzept &amp; Code: Lechcode, Landsberg am Lech</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>

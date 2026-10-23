@@ -1,19 +1,18 @@
 /* ============================================================================
    FRANZ HEINRICH — Design-System
-   Runde 9 · 01.10.2026 · Lechcode — nach dem Struktur-Call mit Franz
+   Runde 10 · 23.10.2026 · Lechcode — nach Franz' Feedback + Struktur-Dokument
 
    FARBEN + SCHRIFT: Franz' Brand Kit
      Navy #023047 · Warm Orange #E96A2C · Cream #F7F1E6
      Warm Sand #D9C7B5 · Soft Blue #8ECAE6
      Headline DM Serif Display · Body Manrope
 
-   HALTUNG DIESER FASSUNG (Call 01.10.): Blau und Orange tragen die Seite.
-     Franz: „das Navy-Blau als Hintergrund ist geil, das andere Blau kommt ab
-     und zu" — Beige nur noch als einzelne helle Fläche.
-     · NAVY IST DER STANDARD. Jede Fläche setzt ein paar Token (--bg, --fg …),
-       alle Bausteine lesen nur diese Token. Es gibt keine „.deep X"-Sonder-
-       regeln mehr: eine Sektion umfärben = eine Klasse tauschen.
-         (ohne)  Navy          .tief  dunkleres Zweit-Navy
+   HALTUNG DIESER FASSUNG (Franz 23.10.: „die Version, wo nicht alles so viel
+     blau ist, doch geiler"; Michael: Creme als Basis, Navy dazwischen).
+     · CREME IST DER STANDARD. Jede Fläche setzt ein paar Token (--bg, --fg …),
+       alle Bausteine lesen nur diese Token: eine Sektion umfärben = eine
+       Klasse tauschen.
+         (ohne)  Cream         .nacht Navy        .tief  Zweit-Navy
          .hell   Cream         .glut  Orange
      · SOFT BLUE IST NIE FLÄCHE (Michael, 01.10.): nur Akzent — Eyebrows,
        Namenszeilen, Etiketten, der „Hör rein"-Satz. Grundfarben sind Navy,
@@ -44,15 +43,15 @@
   --orange-deep:#b84a12;
   --orange-hell:#f2884f;
 
-  /* Flächen-Token — Standard ist Navy */
-  --bg:var(--navy);
-  --fg:var(--cream);
-  --fg-soft:var(--sand);
-  --fg-faint:var(--sky);
-  --line:rgba(247,241,230,.22);
-  --akzent:var(--orange);
-  --karte:var(--navy-2);
-  --fokus:var(--orange);
+  /* Flächen-Token — Standard ist Creme */
+  --bg:var(--cream);
+  --fg:var(--navy);
+  --fg-soft:#3d5a6c;
+  --fg-faint:#55707f;
+  --line:rgba(2,48,71,.16);
+  --akzent:var(--orange-deep);
+  --karte:var(--cream-2);
+  --fokus:var(--navy);
 
   --display:"DM Serif Display","DM Serif Fallback",Georgia,serif;
   --body:"Manrope","Manrope Fallback",-apple-system,"Segoe UI",Arial,sans-serif;
@@ -79,9 +78,13 @@
 }
 
 /* Die Flächen. Jede setzt nur Token — und malt sich selbst. */
-.tief{--bg:var(--navy-2);--karte:var(--navy)}
-.nacht{--bg:var(--navy);--fg:var(--cream);--fg-soft:var(--sand);--fg-faint:var(--sky);
+.nacht,.tief{--bg:var(--navy);--fg:var(--cream);--fg-soft:var(--sand);--fg-faint:var(--sky);
   --line:rgba(247,241,230,.22);--akzent:var(--orange);--karte:var(--navy-2);--fokus:var(--orange)}
+.tief{--bg:var(--navy-2);--karte:var(--navy)}
+/* Warm Sand aus dem Brand Kit — helle Alternative zu Navy für Stimmen-Bänder */
+.sand{--bg:var(--sand);--fg:var(--navy);--fg-soft:#20425a;--fg-faint:#34505f;
+  --line:rgba(2,48,71,.2);--akzent:var(--orange-deep);--karte:var(--cream);--fokus:var(--navy)}
+.sand{background:var(--bg);color:var(--fg)}
 .hell,.legal{--bg:var(--cream);--fg:var(--navy);--fg-soft:#3d5a6c;--fg-faint:#55707f;
   --line:rgba(2,48,71,.16);--akzent:var(--orange-deep);--karte:var(--cream-2);--fokus:var(--navy)}
 .glut{--bg:var(--orange);--fg:var(--navy);--fg-soft:var(--navy);--fg-faint:var(--navy);
@@ -95,7 +98,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px);-webkit
 
 body{
   font-family:var(--body);font-size:var(--t-0);font-weight:400;line-height:1.65;
-  color:var(--fg);background:var(--navy);
+  color:var(--fg);background:var(--cream);
   -webkit-font-smoothing:antialiased;overflow-x:clip;
 }
 img,svg,video{display:block;max-width:100%}
@@ -202,10 +205,10 @@ a{color:inherit;text-decoration-color:var(--akzent);text-underline-offset:.2em;t
 .js.foto .rv,.js.foto .rv-img,.js.foto .rise,.js.foto .rise-img{opacity:1;transform:none;transition:none}
 .js.foto .in-up{opacity:1;transform:none;animation:none}
 
-/* ---- 7 · Masthead: Menü | NAME | Menü — Navy, Call-Knopf Orange -------- */
+/* ---- 7 · Masthead: Menü | NAME | Menü — Creme, Call-Knopf Orange ------- */
 .nav{
   position:sticky;top:0;z-index:100;
-  background:rgba(2,48,71,.97);backdrop-filter:blur(12px);
+  background:rgba(247,241,230,.96);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
   padding-block:12px;
 }
@@ -233,7 +236,7 @@ a.navlink[aria-current="page"]{border-bottom:2px solid var(--orange);padding-bot
 .lang:hover{opacity:1}
 
 .burger{display:none;background:none;border:0;padding:10px;cursor:pointer;margin-left:auto}
-.burger span{display:block;width:24px;height:2.5px;border-radius:2px;background:var(--cream);margin:5px 0;transition:transform .3s var(--ease),opacity .2s}
+.burger span{display:block;width:24px;height:2.5px;border-radius:2px;background:var(--navy);margin:5px 0;transition:transform .3s var(--ease),opacity .2s}
 body.menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
 body.menu-open .burger span:nth-child(2){opacity:0}
 body.menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
@@ -299,6 +302,7 @@ body.menu-open{overflow:hidden}
 
 /* ---- 9 · Kennst du das? (eine Idee, ein Bildschirm) -------------------- */
 .statement h2{max-width:16ch;margin-inline:auto}
+.statement .lead{margin-top:var(--sp-2)}
 .saetze{list-style:none;display:grid;gap:var(--sp-1);margin:var(--sp-3) auto 0;max-width:34rem}
 .saetze li{font-family:var(--display);font-size:var(--t-1);line-height:1.35;color:var(--fg-soft)}
 .saetze li::before{content:"";display:block;width:26px;height:2px;background:var(--akzent);margin:0 auto .9em;opacity:.85}
@@ -429,7 +433,7 @@ a.gabe:hover{transform:translateY(-4px);border-color:var(--akzent)}
 .field.full{grid-column:1 / -1}
 .field label{font-size:var(--t--2);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-faint);text-align:left}
 .field input,.field textarea{font-family:var(--body);font-size:var(--t-0);color:var(--navy);
-  background:var(--cream);border:2px solid transparent;border-radius:var(--radius);padding:.8em 1em;width:100%}
+  background:#fff;border:2px solid var(--line);border-radius:var(--radius);padding:.8em 1em;width:100%}
 .field textarea{min-height:140px;resize:vertical}
 .field input:focus,.field textarea:focus{border-color:var(--orange);outline:none}
 .form-note{font-size:var(--t--1);color:var(--fg-soft);text-align:center}
@@ -593,3 +597,227 @@ details.formbox .inner{margin-top:var(--sp-3)}
 .mt-3{margin-top:var(--sp-3)}
 .center{text-align:center}
 .vh{position:absolute;left:-9999px}
+
+/* ==========================================================================
+   RUNDE 10 · 23.10.2026 — Bausteine aus Franz' Struktur-Dokument
+   ========================================================================== */
+
+/* ---- 26 · Angebote 01–03: der Monat groß, 02/03 gleichwertig mit Bild ---- */
+.weg-mehr{display:grid;gap:var(--sp-2);max-width:52rem;margin:var(--sp-4) auto 0}
+@media (min-width:720px){.weg-mehr{grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px)}}
+.angebot{text-align:left}
+.angebot .fig{overflow:hidden;border-radius:var(--radius);aspect-ratio:4/5;background:var(--karte)}
+.angebot .fig img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-out)}
+.angebot:hover .fig img{transform:scale(1.03)}
+.angebot .nr{display:block;margin-top:var(--sp-1);font-family:var(--display);font-size:clamp(34px,3.6vw,52px);line-height:1;color:var(--akzent)}
+.angebot h3{font-size:var(--t-2);margin-top:.2em}
+.angebot p{margin-top:.5em;color:var(--fg-soft);text-align:left;font-size:var(--t--1);line-height:1.6;max-width:30rem}
+
+/* ---- 27 · Stimme als Karte (Vorbild aus Franz' Dokument): Zitat groß,
+   Text mit Fettungen, Name + Ort, rundes Foto. Auf Orange gilt die
+   Kontrast-Regel: Fließtext Navy, 19 px, fett. ---------------------------- */
+.sk-band{padding-block:var(--sp-4)}
+.sk{display:grid;gap:var(--sp-2);align-items:center;max-width:62rem;margin-inline:auto;text-align:left}
+.sk-foto{justify-self:center}
+.sk-foto img{width:clamp(150px,22vw,250px);aspect-ratio:1;border-radius:50%;object-fit:cover;border:4px solid var(--bg);
+  box-shadow:0 0 0 2px var(--akzent)}
+.sk blockquote > .zitat{font-family:var(--display);font-style:italic;font-size:var(--t-3);line-height:1.15;text-align:left}
+.sk blockquote .text{margin-top:var(--sp-2);display:grid;gap:.8em}
+.sk blockquote .text p{text-align:left;font-size:var(--t-0);line-height:1.65;color:var(--fg-soft);max-width:40rem}
+.sk blockquote .text b{color:var(--fg);font-weight:800}
+.sk footer{margin-top:var(--sp-2);display:flex;flex-direction:column;gap:.15em}
+.sk footer .wer{font-family:var(--display);font-size:var(--t-1);line-height:1.1}
+.sk footer .ort{font-size:var(--t--2);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-faint)}
+@media (min-width:860px){
+  .sk{grid-template-columns:minmax(0,1fr) auto;gap:clamp(32px,6vw,96px)}
+  .sk.links{grid-template-columns:auto minmax(0,1fr)}
+  .sk.links .sk-foto{order:-1}
+}
+@media (max-width:859px){.sk-foto{order:-1}}
+.glut .sk blockquote .text p{color:var(--navy);font-size:19px;font-weight:700;line-height:1.55}
+.glut .sk blockquote .text b{font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.18em}
+.glut .sk footer .ort{font-size:19px;letter-spacing:.02em;text-transform:none;font-weight:800;color:var(--navy)}
+.glut .sk-foto img{border-color:var(--orange);box-shadow:0 0 0 2px var(--navy)}
+/* Vorlage für Franz' Selbst-Testimonial: gestrichelt = noch zu schreiben */
+.sk.vorlage{border:2px dashed var(--line);border-radius:var(--radius);padding:var(--sp-2)}
+
+/* ---- 28 · Zwei kurze Stimmen in Boxen auf Franz' Hintergrundbild -------- */
+.boxen-bild{position:relative;isolation:isolate;overflow:hidden;padding-block:var(--sp-4)}
+.boxen-bild > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.boxen-bild::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(2,48,71,.38)}
+.boxen{display:grid;gap:var(--sp-2);max-width:62rem;margin-inline:auto}
+@media (min-width:820px){.boxen{grid-template-columns:1fr 1fr}}
+.box{background:rgba(247,241,230,.96);color:var(--navy);border-radius:var(--radius);padding:var(--sp-2);text-align:left;
+  box-shadow:0 24px 60px -30px rgba(2,20,30,.7);display:flex;flex-direction:column}
+.box .zitat{font-family:var(--display);font-style:italic;font-size:var(--t-1);line-height:1.25;text-align:left}
+.box p{margin-top:.8em;font-size:var(--t--1);line-height:1.65;color:#3d5a6c;text-align:left}
+.box footer{margin-top:auto;padding-top:var(--sp-1);display:flex;align-items:center;gap:.8em}
+.box footer img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--orange)}
+.box footer .wer{font-family:var(--display);font-size:var(--t-0);line-height:1.1}
+.box footer .ort{display:block;font-size:var(--t--2);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#55707f}
+
+/* ---- 29 · Freebie: Geräte-Ansicht (Laptop, Tablet, Handy) + Anmeldung --- */
+.freebie{display:grid;gap:var(--sp-3);align-items:center;max-width:68rem;margin-inline:auto}
+@media (min-width:960px){.freebie{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}}
+.freebie .txt{text-align:left}
+.freebie .txt h2{font-size:var(--t-3);text-align:left;max-width:16ch}
+.freebie .txt .eyebrow{margin-inline:0;text-align:left}
+.freebie .txt .eyebrow::before{margin-inline:0}
+.freebie .txt > p{text-align:left;color:var(--fg-soft);margin-top:var(--sp-1);max-width:30rem}
+.paket{list-style:none;display:grid;gap:.55em;margin-top:var(--sp-1)}
+.paket li{position:relative;padding-left:1.6em;text-align:left;font-size:var(--t--1);line-height:1.5}
+.paket li::before{content:"";position:absolute;left:0;top:.45em;width:10px;height:10px;border-radius:50%;background:var(--sky);box-shadow:0 0 0 2px var(--navy)}
+.nacht .paket li::before,.tief .paket li::before{box-shadow:none}
+.anmelden{display:grid;gap:10px;margin-top:var(--sp-2);max-width:30rem}
+@media (min-width:520px){.anmelden{grid-template-columns:1fr 1fr}.anmelden .btn,.anmelden .form-note,.anmelden .form-hint{grid-column:1 / -1}}
+.anmelden input{font-family:var(--body);font-size:var(--t-0);color:var(--navy);background:#fff;border:2px solid var(--line);border-radius:var(--radius);padding:.8em 1em;width:100%}
+.anmelden input:focus{border-color:var(--orange);outline:none}
+.anmelden .btn{justify-self:start}
+.anmelden .form-note{text-align:left;font-size:var(--t--2);line-height:1.5}
+.anmelden .form-hint{margin:0;text-align:left}
+
+.geraete{position:relative;padding:2.2em 0 3.2em;max-width:640px;margin-inline:auto;width:100%}
+.geraete .buehne{position:relative;padding:0 5% 8%}
+.geraet{background:#10202a;border-radius:14px;padding:2.2%;box-shadow:0 30px 60px -28px rgba(2,20,30,.6)}
+.geraet img{width:100%;height:100%;object-fit:cover;border-radius:6px;display:block}
+.laptop .screen{position:relative;aspect-ratio:16/10;border-radius:12px 12px 0 0;padding:2%;background:#10202a}
+.laptop .screen img{border-radius:3px}
+.laptop .base{height:12px;margin:0 -6%;background:linear-gradient(#cfd6db,#9aa6ae);border-radius:0 0 14px 14px}
+.tablet{position:absolute;left:0;bottom:0;width:38%;aspect-ratio:4/3}
+.phone{position:absolute;right:0;bottom:0;width:19%;aspect-ratio:9/19;border-radius:18px;padding:4%}
+.phone img{border-radius:12px}
+.geraete .spiel{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+.geraete .spiel span{width:clamp(38px,6vw,56px);aspect-ratio:1;border-radius:50%;background:var(--orange);color:var(--navy);display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(2,20,30,.6)}
+.geraete .spiel svg{margin-left:3px}
+.geraete .label{position:absolute;font-family:var(--display);font-style:italic;font-size:var(--t--1);line-height:1.2;color:var(--fg);white-space:nowrap}
+.geraete .l-video{top:0;left:50%;transform:translateX(-50%)}
+.geraete .l-audio{left:0;bottom:0}
+.geraete .l-int{right:0;bottom:0}
+
+/* ---- 30 · Kontakt: zwei Wege (Kalender oder WhatsApp) ------------------- */
+.wege{display:flex;flex-wrap:wrap;gap:14px 22px;justify-content:center;align-items:center}
+.btn-wa{border-color:currentColor;color:var(--fg);font-size:var(--t--1);letter-spacing:.02em;background:transparent}
+.btn-wa:hover{background:rgba(247,241,230,.08)}
+.btn-wa svg{width:20px;height:20px;flex:none}
+@media (max-width:560px){.wege .btn{width:100%;max-width:22rem}}
+
+/* ---- 31 · Monat: Ablauf nach Wochen, Investment-Band, Methode ---------- */
+.wochen{display:grid;gap:var(--sp-2);max-width:62rem;margin-inline:auto;text-align:left}
+@media (min-width:860px){.wochen{grid-template-columns:repeat(2,1fr)}}
+.woche{background:var(--karte);border:1px solid var(--line);border-radius:var(--radius);padding:var(--sp-2)}
+.woche .wann{font-size:var(--t--2);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-faint)}
+.woche h3{font-size:var(--t-2);margin:.25em 0 .6em;text-align:left}
+.woche h3 .nr{color:var(--akzent);margin-right:.35em}
+.woche dl{display:grid;gap:.9em}
+.woche dt{font-weight:700;font-size:var(--t--1)}
+.woche dd{color:var(--fg-soft);font-size:var(--t--1);line-height:1.6}
+.woche dd small{display:block;margin-top:.2em;font-size:var(--t--2);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-faint)}
+.woche.ganz{grid-column:1 / -1;text-align:center}
+.woche.ganz h3,.woche.ganz p{text-align:center}
+
+.invest{display:grid;gap:var(--sp-1);max-width:56rem;margin-inline:auto}
+.invest .zeile{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:.2em .6em;text-align:center}
+.invest .k{font-size:var(--t--1);font-weight:800;color:var(--sky)}
+.invest .v{font-family:var(--display);font-size:var(--t-4);line-height:1.05;color:var(--cream)}
+.invest .s{font-size:var(--t-0);color:var(--sand)}
+.invest .preis .v{color:var(--orange)}
+.invest .fuer{margin-top:var(--sp-1);font-family:var(--display);font-style:italic;font-size:var(--t-1);color:var(--sand);text-align:center}
+
+.disclaimer{max-width:46rem;margin-inline:auto;border:2px solid var(--akzent);border-radius:var(--radius);padding:var(--sp-2);text-align:left}
+.disclaimer h3{font-size:var(--t-1);text-align:left;margin-bottom:.5em}
+.disclaimer p{text-align:left;font-size:var(--t--1);line-height:1.7;color:var(--fg-soft)}
+.disclaimer p + p{margin-top:.7em}
+.disclaimer p b{color:var(--fg)}
+.disclaimer.klein{padding:var(--sp-1);margin-top:var(--sp-1)}
+.disclaimer.klein p{font-size:var(--t--2);line-height:1.6}
+
+.vt-split{display:grid;gap:var(--sp-2);align-items:center;max-width:62rem;margin-inline:auto;text-align:left}
+@media (min-width:860px){.vt-split{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,5vw,72px)}}
+.videostage.hoch{aspect-ratio:4/5}
+
+.methode{display:grid;gap:var(--sp-3);align-items:center;max-width:62rem;margin-inline:auto;text-align:left}
+@media (min-width:860px){.methode{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
+.methode img{width:100%;border-radius:var(--radius)}
+.methode h2{font-size:var(--t-3);text-align:left}
+.methode .eyebrow{margin-inline:0;text-align:left}
+.methode .eyebrow::before{margin-inline:0}
+.methode p{text-align:left;color:var(--fg-soft);margin-top:var(--sp-1)}
+.saeulen{list-style:none;display:grid;gap:var(--sp-1);margin-top:var(--sp-2)}
+.saeulen li{text-align:left;border-left:3px solid var(--akzent);padding-left:1em}
+.saeulen b{display:block;font-family:var(--display);font-weight:400;font-size:var(--t-1)}
+.saeulen span{display:block;color:var(--fg-soft);font-size:var(--t--1);line-height:1.55}
+
+/* ---- 32 · Über mich: Vorstellung mit Bild, Reise, Zertifikate, Steckbrief */
+.intro-split{display:grid;gap:var(--sp-3);align-items:center;max-width:64rem;margin-inline:auto;text-align:left}
+@media (min-width:860px){.intro-split{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
+.intro-split img{width:100%;border-radius:var(--radius);aspect-ratio:4/5;object-fit:cover}
+.intro-split h1{font-size:var(--t-4);text-align:left;margin-inline:0}
+.intro-split .lead,.intro-split p{text-align:left;margin-inline:0}
+.intro-split .crumb{text-align:left}
+.intro-split .vorstellung{margin-top:var(--sp-2);font-size:var(--t-0);line-height:1.7;color:var(--fg-soft)}
+.intro-split .vorstellung + .vorstellung{margin-top:.8em}
+.intro-split .vorstellung b{color:var(--fg)}
+.intro-split .btn-row{justify-content:flex-start}
+
+.reise{list-style:none;display:grid;gap:var(--sp-1);max-width:46rem;margin-inline:auto;counter-reset:r}
+.reise li{counter-increment:r;display:grid;grid-template-columns:auto 1fr;gap:1em;align-items:baseline;text-align:left;
+  font-size:var(--t-1);font-family:var(--display);line-height:1.3}
+.reise li::before{content:counter(r,decimal-leading-zero);font-family:var(--display);font-size:var(--t-2);color:var(--akzent)}
+
+.zerts{display:grid;gap:var(--sp-1);max-width:56rem;margin:var(--sp-3) auto 0}
+@media (min-width:640px){.zerts{grid-template-columns:1fr 1fr}}
+.zerts img{width:100%;border-radius:6px;box-shadow:0 18px 40px -24px rgba(2,20,30,.6)}
+.zerts figcaption{margin-top:.6em;font-size:var(--t--2);font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-faint);text-align:center}
+.facts{display:grid;gap:clamp(24px,4vw,48px);max-width:62rem;margin-inline:auto;text-align:left}
+@media (min-width:860px){.facts{grid-template-columns:repeat(3,1fr)}}
+.facts > div{border-top:3px solid var(--orange);padding-top:var(--sp-1)}
+.facts h3{font-size:var(--t-1);text-align:left;margin-bottom:.7em}
+.facts ul{list-style:none;display:grid;gap:.75em}
+.facts li{text-align:left;font-size:var(--t--1);line-height:1.55;color:var(--fg-soft)}
+.facts li b{display:block;color:var(--fg);font-weight:700}
+.steck{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:56rem;margin-inline:auto}
+.steck span{font-family:var(--display);font-size:var(--t-1);line-height:1.2;padding:.45em .9em;border:2px solid var(--line);border-radius:999px}
+.steck span:nth-child(3n+1){border-color:var(--orange)}
+
+/* ---- 33 · Shop: Produktkarten + Nachricht von Franz -------------------- */
+.produkte{display:grid;gap:var(--sp-2);max-width:68rem;margin-inline:auto}
+@media (min-width:700px){.produkte{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1040px){.produkte{grid-template-columns:repeat(3,1fr)}}
+.produkt{display:flex;flex-direction:column;text-align:left;background:var(--karte);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.produkt > img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.produkt .in{display:flex;flex-direction:column;gap:.5em;padding:var(--sp-1) var(--sp-1) var(--sp-2);flex:1}
+.produkt .tag{align-self:flex-start;font-size:var(--t--2);font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--sky);color:var(--navy);padding:.4em .75em;border-radius:4px;line-height:1.2}
+.produkt h3{font-size:var(--t-1);text-align:left}
+.produkt p{font-size:var(--t--1);line-height:1.6;color:var(--fg-soft);text-align:left}
+.produkt .bonus{font-size:var(--t--1);font-weight:700;color:var(--fg)}
+.produkt .fuss{margin-top:auto;padding-top:var(--sp-1);display:flex;align-items:center;justify-content:space-between;gap:1em;flex-wrap:wrap}
+.produkt .preis{font-family:var(--display);font-size:max(26px,var(--t-2));line-height:1;color:var(--akzent)}
+.produkt .btn{font-size:var(--t--1);padding:.7em 1.2em}
+.produkt.highlight{border:2px solid var(--orange)}
+
+.brief{display:grid;gap:var(--sp-3);align-items:center;max-width:64rem;margin-inline:auto;text-align:left}
+@media (min-width:860px){.brief{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}}
+.brief h2{font-size:var(--t-4);text-align:left;max-width:14ch}
+.brief p{text-align:left;color:var(--fg-soft);max-width:36rem;margin-top:1em}
+.brief p b{color:var(--fg)}
+.brief .gruss{font-family:var(--display);font-style:italic;font-size:var(--t-3);color:var(--fg);margin-top:var(--sp-2)}
+.brief img{width:100%;border-radius:var(--radius);aspect-ratio:4/5;object-fit:cover}
+
+/* ---- 34 · Willkommen (versteckte Freebie-Seite) ------------------------ */
+.inhalte{display:grid;gap:var(--sp-4);max-width:58rem;margin-inline:auto}
+.inhalt{display:grid;gap:var(--sp-2);align-items:center;text-align:left}
+@media (min-width:820px){.inhalt{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.inhalt:nth-child(even) .medien{order:2}}
+.inhalt .nr{font-family:var(--display);font-size:var(--t-3);line-height:1;color:var(--akzent)}
+.inhalt h2{font-size:var(--t-2);text-align:left;margin:.2em 0 .4em}
+.inhalt p{text-align:left;color:var(--fg-soft)}
+.audio-platz{background:var(--karte);border:2px dashed var(--line);border-radius:var(--radius);padding:var(--sp-2);text-align:center;display:grid;gap:.6em;place-items:center}
+.audio-platz p{text-align:center;font-size:var(--t--1)}
+.audio-platz .disc{width:64px;height:64px;border-radius:50%;background:var(--orange);color:var(--navy);display:grid;place-items:center}
+
+/* drei Stimmen nebeneinander (Shop) */
+@media (min-width:1040px){.stimmen.drei{grid-template-columns:repeat(3,1fr);max-width:72rem}}
+.hoer .wrap > .tlink + .tlink{margin-top:.6em}
+@media (max-width:719px){.angebot .fig{aspect-ratio:4/3}.angebot .fig img{object-position:50% 22%}}
+.nw{white-space:nowrap}
+@media (max-width:859px){.intro-split img{aspect-ratio:4/3;object-position:50% 28%}}
+@media (max-width:420px){.btn-orange{padding:.8em 1.05em}}

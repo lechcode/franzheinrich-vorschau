@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <!--
-  FRANZ HEINRICH — 1:1 Session (die wichtigste Unterseite)
-  Design-Vorschau · Lechcode · Runde 9 · 01.10.2026
-  Call vom 01.10.: Die Session ist der Einstieg in alles. Diese Seite soll so klar sein,
-  dass der Kopf sagt „verstanden — ich buche den Kennenlern-Call“. Aufbau nach dem
-  Vorbild thewellpaidpriestess.com/sessions: Fakten → Ablauf → Stimme → für dich / nicht
-  für dich → Video-Stimme → was danach kommt → Stimmen → Fragen → Kennenlernen.
-  · Preis 300 € wurde im Call genannt — HIER: bitte bestätigen.
-  · Franz' eigene Timeline (PDF) fehlt weiter — die fünf Stationen sind Platzhalter.
-  · Video-Testimonial gehört laut Franz auf DIESE Seite, nicht auf die Startseite.
+  FRANZ HEINRICH — Dein UnVerschämt-Monat (1:1-Monatsbegleitung, die wichtigste Unterseite)
+  Design-Vorschau · Lechcode · Runde 10 · 23.10.2026
+  Aufbau aus Franz' Struktur-Dokument + Sprachnachricht: Ablauf (Timeline aus seinem PDF
+  „Dein UnVerschämt-Monat“) → Video-Stimme Kathi + Disclaimer → Text-Stimmen → für dich / nicht
+  für dich → Investment → Disclaimer → Meine Arbeit (Methode) → längere Stimme → „wenn es passt,
+  geht es weiter“ → Fragen → kostenlos probieren → Erst reden, dann entscheiden.
+  · Preis/Zeit: Michaels Entscheidung 23.10. — 420 € vor Ort / 390 € online, ca. 180 Min.
+  · Dateiname bleibt sessions.html, damit bestehende Links funktionieren.
   Alle Texte sind Vorschläge — Stellen mit „HIER:“ markiert.
 -->
 <html lang="de">
@@ -17,12 +16,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js');if(location.search.indexOf('foto')>-1)document.documentElement.classList.add('foto');</script>
 <meta name="robots" content="noindex, nofollow">
-<title>1:1 Session — Neo Emotional Release | Franz Heinrich</title>
-<meta name="description" content="Was in einer 1:1 Session mit Franz Heinrich passiert: Ablauf, online und vor Ort, Dauer und Preis. Der Einstieg in die Arbeit mit Scham und Emotionen.">
-<meta property="og:title" content="1:1 Session — Neo Emotional Release | Franz Heinrich">
-<meta property="og:description" content="Eine Session von innen: Ablauf, Fakten, Stimmen — und der Weg zum Kennenlern-Call.">
+<title>Dein UnVerschämt-Monat — 1:1-Begleitung | Franz Heinrich</title>
+<meta name="description" content="Dein UnVerschämt-Monat mit Franz Heinrich: vier Wochen 1:1-Begleitung mit einer Emotional-Release-Session, Integration und Check-ins — online oder vor Ort in München, Nürnberg, Regensburg und Ingolstadt.">
+<meta property="og:title" content="Dein UnVerschämt-Monat | Franz Heinrich">
+<meta property="og:description" content="Vier Wochen 1:1: Kennenlernen, Emotional-Release-Session, Integration, Check-ins. Online oder vor Ort.">
 <meta property="og:image" content="assets/img/og-1200.jpg">
-<meta name="theme-color" content="#023047">
+<meta name="theme-color" content="#f7f1e6">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23023047'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23f7f1e6'%3EFH%3C/text%3E%3Crect x='17' y='48' width='30' height='4' rx='2' fill='%23e96a2c'/%3E%3C/svg%3E">
 <link rel="preload" href="assets/fonts/dmserifdisplay-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/manrope-var.woff2" as="font" type="font/woff2" crossorigin>
@@ -40,7 +39,7 @@
       <nav aria-label="Menü links">
       <ul class="mh-left">
         <li><a class="navlink" href="about.html">Über mich</a></li>
-        <li><a class="navlink" href="index.html#weg">Dein Weg</a></li>
+        <li><a class="navlink" href="index.html#weg" aria-current="page">Dein Weg</a></li>
       </ul>
       </nav>
     </div>
@@ -52,10 +51,11 @@
     <div class="mh-side mh-side-r">
       <nav aria-label="Menü rechts">
       <ul class="mh-right">
+        <li><a class="navlink" href="shop.html">Shop</a></li>
         <li><a class="navlink" href="for-free.html">For free</a></li>
       </ul>
       </nav>
-      <a class="btn btn-orange btn-arrow mh-cta" href="index.html#kontakt">Kennenlernen</a>
+      <a class="btn btn-orange btn-arrow mh-cta" href="index.html#kontakt">Lass uns sprechen</a>
       <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
@@ -66,89 +66,151 @@
 <div class="mobile-menu" id="mobile-menu">
   <a href="about.html">Über mich</a>
   <a href="index.html#weg">Dein Weg</a>
+  <a href="shop.html">Shop</a>
   <a href="for-free.html">For free</a>
-  <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Kennenlernen</a>
+  <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Lass uns sprechen</a>
 </div>
 
 <main id="main">
 
-<!-- ═══ KOPF ═══ -->
+<!-- ═══ KOPF — Bild „Session - Header“ ═══ -->
 <section class="pagehead">
   <div class="wrap">
-    <span class="crumb"><a href="index.html">Start</a> · <a href="index.html#weg">Dein Weg</a> · 1:1 Session</span>
-    <!-- HIER: Überschrift + ein Satz -->
-    <h1 class="rise">Eine Session von <em>innen</em>.</h1>
-    <p class="lead rise d1">Du legst dich hin, du atmest, ich begleite dich — dein Körper macht den Rest.</p>
-    <a class="btn btn-orange btn-arrow rise d2" href="index.html#kontakt">Kennenlernen</a>
-  </div>
-</section>
-
-<!-- ═══ FAKTEN — Franz: „Vor Ort, Online, die Zeit und dann würde ich auch nur den Preis hinschreiben“ ═══ -->
-<section class="section-tight tief">
-  <div class="wrap">
-    <div class="fakten rise">
-      <!-- HIER: Orte bestätigen -->
-      <div><span class="k">Vor Ort</span><span class="v">München</span><span class="s">&amp; Regensburg</span></div>
-      <div><span class="k">Online</span><span class="v">Überall</span><span class="s">per Video</span></div>
-      <div><span class="k">Zeit</span><span class="v">90 Min.</span><span class="s">mit Ankommen und Landen</span></div>
-      <!-- HIER: Preis — im Call vom 01.10. wurden 300 € genannt, bitte bestätigen. Du bist umsatzsteuerpflichtig:
-           gegenüber Privatleuten muss das der Endpreis inkl. USt. sein — dann „inkl. USt.“ ergänzen. -->
-      <div class="hot"><span class="k">Preis</span><span class="v">300 €</span><span class="s">pro Session</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ ABLAUF — Timeline. HIER: Franz' eigene Timeline; Stationen und Sätze sind Platzhalter. ═══ -->
-<section class="section hell">
-  <div class="wrap">
-    <div class="split">
-      <figure class="fig rise-img">
-        <img src="assets/img/session-koerper-853.jpg"
-             srcset="assets/img/session-koerper-560.jpg 560w, assets/img/session-koerper-853.jpg 853w"
-             sizes="(max-width: 860px) 92vw, 46vw" width="853" height="1094" loading="lazy"
-             alt="Franz arbeitet mit beiden Händen am Kopf und Nacken eines liegenden Klienten">
+    <div class="intro-split">
+      <figure class="rise-img">
+        <img src="assets/img/monat-head-853.jpg" srcset="assets/img/monat-head-560.jpg 560w, assets/img/monat-head-853.jpg 853w"
+             sizes="(max-width: 860px) 92vw, 26rem" width="853" height="1066" fetchpriority="high"
+             alt="Franz hält den Kopf eines liegenden Klienten mit beiden Händen">
       </figure>
-      <div class="txt rise d1">
-        <span class="eyebrow">So läuft es ab</span>
-        <h2 style="font-size:var(--t-3)">Von der Tür bis zur Woche danach.</h2>
-        <ol class="tl mt-3">
-          <li>
-            <span class="zeit">Vorher</span>
-            <b>Kennenlern-Call</b>
-            <p>30 Minuten, kostenlos. Wir schauen, was los ist und ob wir zusammenpassen.</p>
-          </li>
-          <li>
-            <span class="zeit">Die ersten 15 Minuten</span>
-            <b>Ankommen</b>
-            <p>Wir klären, wo Berührung für dich okay ist und wie du jederzeit stoppen kannst.</p>
-          </li>
-          <li>
-            <span class="zeit">Rund 60 Minuten</span>
-            <b>Atem, Druckpunkte, meine Stimme</b>
-            <p>Du liegst. Ich arbeite an den Punkten, an denen dein Körper Spannung parkt.</p>
-          </li>
-          <li>
-            <span class="zeit">Die letzten 15 Minuten</span>
-            <b>Landen</b>
-            <p>Was hat sich verändert — im Körper, nicht im Kopf?</p>
-          </li>
-          <li>
-            <span class="zeit">Die Tage danach</span>
-            <b>Nachklingen</b>
-            <p>Vieles bewegt sich erst nach der Session. Wenn es passt, sprechen wir darüber, wie es weitergeht.</p>
-          </li>
-        </ol>
+      <div>
+        <span class="crumb"><a href="index.html">Start</a> · <a href="index.html#weg">Dein Weg</a> · 01</span>
+        <h1 class="rise">Dein <em>UnVerschämt</em>-Monat</h1>
+        <p class="kopf-rolle rise d1" style="margin-top:var(--sp-1)">1:1-Monatsbegleitung mit Franz</p>
+        <ul class="paket rise d2" style="margin-top:var(--sp-2)">
+          <li>Kennenlerngespräch vorab</li>
+          <li>Reflexionsfragebogen und Vorbereitungsguide</li>
+          <li>1:1 Emotional-Release-Session</li>
+          <li>Integrationsleitfaden mit Tools zur Unterstützung</li>
+          <li>Wöchentliche Check-ins mit Impulsen und Experimenten</li>
+          <li>Integrations-Session zum Abschluss</li>
+          <li>WhatsApp-Support während des ganzen Monats</li>
+        </ul>
+        <div class="btn-row rise d3">
+          <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Lass uns sprechen</a>
+          <a class="tlink" href="#investment"><b>Preis &amp; Orte <span>↓</span></b></a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ STIMME — von Franz' bisheriger Seite, gekürzt ═══ -->
-<section class="stimme glut">
-  <blockquote class="rise">
-    <p class="zitat">„Vor der Session mit Franz konnte ich mir kaum vorstellen, wie so etwas (online) abläuft […]. Die Antwort: Ja, das geht!“</p>
-    <footer>Luca, Bamberg</footer>
-  </blockquote>
+<!-- ═══ ABLAUF — Timeline aus Franz' PDF „Dein UnVerschämt-Monat“ ═══ -->
+<section class="section" id="ablauf" style="padding-top:var(--sp-3)">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rise">Dein Weg durch den Monat</span>
+      <h2 class="rise d1">Wie wir zusammenarbeiten.</h2>
+    </div>
+    <div class="wochen">
+      <div class="woche ganz rise">
+        <span class="wann">Vorab</span>
+        <h3>Kennenlerngespräch</h3>
+        <p class="muted small" style="max-width:34rem;margin-inline:auto">Ein sicherer Raum, in dem du dich gesehen fühlst und offen von dir und deinen Emotionen erzählen kannst. 45 Minuten, kostenlos.</p>
+      </div>
+      <div class="woche rise">
+        <span class="wann">Woche 1</span>
+        <h3><span class="nr">1</span>Ankommen und vorbereiten</h3>
+        <dl>
+          <dt>Fragebogen zur Reflexion</dt>
+          <dd>Hilft mir, deine tiefsten Muster zu erkennen und dich vor, während und nach der Session bestmöglich zu begleiten.<small>max. 1 Woche vor der Session</small></dd>
+          <dt>Vorbereitungsguide</dt>
+          <dd>Tipps für deine technische, körperliche und damit emotionale Vorbereitung.<small>2–3 Tage vor der Session</small></dd>
+        </dl>
+      </div>
+      <div class="woche rise d1">
+        <span class="wann">Woche 2</span>
+        <h3><span class="nr">2</span>Emotional Release</h3>
+        <dl>
+          <dt>Emotional-Release-Session</dt>
+          <dd>Eintauchen in deinen Körper durch Atemarbeit, Visualisierung, Arbeit mit inneren Anteilen und mehr.<small>ca. 180 Minuten mit Ankommen und Landen</small></dd>
+          <dt>Integrationsleitfaden</dt>
+          <dd>Tools für eine sanfte Integration deiner Erfahrung.<small>direkt nach der Session</small></dd>
+        </dl>
+      </div>
+      <div class="woche rise">
+        <span class="wann">Woche 3</span>
+        <h3><span class="nr">3</span>Integration</h3>
+        <dl>
+          <dt>Wöchentlicher Check-in per WhatsApp</dt>
+          <dd>Impulse von mir und Experimente für dich — in deinem Tempo.</dd>
+        </dl>
+      </div>
+      <div class="woche rise d1">
+        <span class="wann">Woche 4</span>
+        <h3><span class="nr">4</span>Integration und Abschluss</h3>
+        <dl>
+          <dt>Wöchentlicher Check-in per WhatsApp</dt>
+          <dd>Wir bleiben in Kontakt, während sich das Neue setzt.</dd>
+          <dt>Integrations-Session</dt>
+          <dd>Gemeinsame Reflexion und Raum für deinen Prozess: Erkenntnisse, Gefühle, Herausforderungen und offene Fragen.<small>ca. 2 Wochen nach der Session</small></dd>
+        </dl>
+      </div>
+      <div class="woche ganz rise">
+        <span class="wann">Durchgehend</span>
+        <h3>WhatsApp-Support vor und nach der Session</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STIMME 1 — Video von Kathi + Karte ohne medizinische Aussagen („Jan würde das hier nehmen“) + Disclaimer.
+     HIER: Video (162 MB .mov) gekürzt, die Stelle zu Cortison/Asthma raus oder rechtlich prüfen lassen,
+     dann nicht gelistet auf YouTube/Vimeo hochladen ODER als MP4 ≤ 30 MB nach assets/video/kathi.mp4. ═══ -->
+<section class="section sand">
+  <div class="wrap">
+    <div class="vt-split">
+      <div class="videostage hoch rise">
+        <img src="assets/img/kathi-thumb-900.jpg" srcset="assets/img/kathi-thumb-600.jpg 600w, assets/img/kathi-thumb-900.jpg 900w"
+             sizes="(max-width: 860px) 92vw, 24rem" width="900" height="1125" loading="lazy" alt="Kathi lächelt unter einem Baum">
+        <button class="video-play video-open" type="button">
+          <span class="disc" aria-hidden="true"><svg width="18" height="22" viewBox="0 0 20 24" fill="currentColor"><path d="M0 0l20 12L0 24z"/></svg></span>
+          <span class="cap">Kathi erzählt</span>
+        </button>
+      </div>
+      <div class="sk rise d1">
+        <blockquote>
+          <p class="zitat">„Ich durfte erfahren, was für eine STARKE Frau ich bin.“</p>
+          <div class="text">
+            <p>In der Session hat Franz mich so liebevoll gehalten, mich durch meine Trauer begleitet und mir gezeigt, Grenzen zu setzen.
+              Nicht gegen andere, sondern <b>für mich.</b> Glaubenssätze wie „Sonst bin ich nicht geliebt“ kann ich seitdem immer mehr loslassen.
+              Ich kann mich jetzt <b>viel besser selbst halten und lieben.</b></p>
+          </div>
+          <footer><span class="wer">Kathi</span></footer>
+          <div class="disclaimer klein">
+            <p><b>Wichtig:</b> Das ist Kathis persönliche Erfahrung. Meine Arbeit ersetzt keine ärztliche oder psychotherapeutische Behandlung,
+              und ich mache keine Heilversprechen. Bitte setze Medikamente niemals ohne Rücksprache mit deiner Ärztin oder deinem Arzt ab.</p>
+          </div>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Text-Stimmen: Eva (Testimonial-Dokument, Session 3) + Wiebke (Franz' Kommentar: „zu Session / Monatsbegleitung“).
+         HIER: Freigaben; Wiebkes Wortlaut mit ihr abstimmen. -->
+    <div class="stimmen mt-3">
+      <blockquote class="rise">
+        <p>„Ich war erstaunt, wie tief die Session tatsächlich ging.“</p>
+        <p class="small muted mt-1" style="font-family:var(--body)">Franz hat einen liebevollen Raum erschaffen und sich so viel Zeit genommen, dass ich mich sicher fühlen und öffnen konnte.
+          Seitdem tut sich immer wieder etwas — wie ein Stein, den man ins Wasser wirft und der all die Wellen auslöst.</p>
+        <footer>Eva, Österreich</footer>
+      </blockquote>
+      <blockquote class="rise d1">
+        <p>„Endlich ein Ansatz, der wirklich zu mir passt.“</p>
+        <p class="small muted mt-1" style="font-family:var(--body)">Ich habe vorher vieles ausprobiert. Jetzt wird mir klar, warum ich immer so blockiert war.
+          So tief reinzugehen und mit meinen Anteilen zu arbeiten, fühlt sich total schön und befreiend an.</p>
+        <footer>Wiebke</footer>
+      </blockquote>
+    </div>
+  </div>
 </section>
 
 <!-- ═══ FÜR DICH / NICHT FÜR DICH ═══ -->
@@ -165,7 +227,7 @@
           <!-- HIER: deine Kriterien -->
           <li>du dich schon lange verstehst und trotzdem nichts anders wird</li>
           <li>du endlich fühlen willst, statt noch mehr zu wissen</li>
-          <li>du bereit bist, dich 90 Minuten führen zu lassen</li>
+          <li>du dir einen Monat lang Zeit und Raum für dich nehmen willst</li>
         </ul>
       </div>
       <div class="nein rise d1">
@@ -180,82 +242,123 @@
   </div>
 </section>
 
-<!-- ═══ VIDEO-STIMME — HIER: Datei assets/video/stimme-1.mp4 + Freigabe der Person ═══ -->
-<section class="section tief">
+<!-- ═══ INVESTMENT — Zahlen, Daten, Fakten, gestaltet wie Franz' Entwurf im Struktur-Dokument.
+     HIER: Du bist umsatzsteuerpflichtig — gegenüber Privatleuten muss das der Endpreis inkl. USt. sein; dann „inkl. USt.“ ergänzen. ═══ -->
+<section class="section nacht" id="investment">
   <div class="wrap">
-    <span class="eyebrow rise">Eine Stimme</span>
-    <div class="vt-wrap rise d1">
-      <div class="videostage">
-        <img src="assets/img/gruppe-wiese-1100.jpg" srcset="assets/img/gruppe-wiese-700.jpg 700w, assets/img/gruppe-wiese-1100.jpg 1100w"
-             sizes="(max-width: 760px) 92vw, 46rem" width="1100" height="733" loading="lazy" alt="Franz mit einer Gruppe auf der Wiese, Hände auf dem Herzen">
-        <button class="video-play video-open" type="button">
-          <span class="disc" aria-hidden="true"><svg width="18" height="22" viewBox="0 0 20 24" fill="currentColor"><path d="M0 0l20 12L0 24z"/></svg></span>
-          <span class="cap">Video-Testimonial — Platzhalter</span>
-        </button>
-      </div>
-      <footer>Platzhalter · Vorname, Ort</footer>
+    <span class="eyebrow rise">Investment</span>
+    <div class="invest rise d1">
+      <p class="zeile"><span class="k">Vor Ort</span><span class="v">München, Nürnberg</span><span class="s">Regensburg, Ingolstadt</span></p>
+      <p class="zeile"><span class="k">Online</span><span class="v">Überall</span><span class="s">per Video</span></p>
+      <p class="zeile"><span class="k">Zeit</span><span class="v">ca. 180 Min.</span><span class="s">Session mit Ankommen und Landen</span></p>
+      <p class="zeile preis"><span class="k">Preis</span><span class="v"><span class="nw">420 € vor Ort</span> / <span class="nw">390 € online</span></span></p>
+      <p class="fuer">für 4 Wochen Begleitung</p>
+    </div>
+    <div class="btn-row rise d2">
+      <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Kostenloses Kennenlerngespräch buchen</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ UND DANACH? — die zwei Türen, ohne Details ═══ -->
+<!-- ═══ DISCLAIMER + MEINE ARBEIT — Franz' Grafik „Neo Emotional Release“ (image13) und die fünf Säulen aus seinem PDF.
+     HIER: ER, Possibility Management, Unshaming in deinen Worten — als Text oder später als Video. ═══ -->
+<section class="section">
+  <div class="wrap">
+    <div class="disclaimer rise">
+      <h3>Ehrlich und transparent</h3>
+      <p>Ich mache dir keine Heilversprechen und locke dich nicht mit Wundermethoden. Meine Arbeit ist Prozess- und Persönlichkeitsarbeit:
+        Sie ersetzt <b>keine ärztliche oder psychotherapeutische Behandlung</b>, sie kann sie höchstens begleiten.</p>
+      <p>Ich erkläre dir offen, wie wir arbeiten. Den Rahmen setzen wir gemeinsam im Kennenlerngespräch — denn was du brauchst,
+        hängt davon ab, wo du auf deiner Reise gerade stehst.</p>
+    </div>
+
+    <div class="methode mt-3" id="methode">
+      <figure class="rise-img">
+        <img src="assets/img/methode-1000.jpg" srcset="assets/img/methode-700.jpg 700w, assets/img/methode-1000.jpg 1000w"
+             sizes="(max-width: 860px) 92vw, 24rem" width="1000" height="1414" loading="lazy"
+             alt="Grafik: Neo Emotional Release mit den Säulen Human Presence, Verbal Guidance, Expressive Breathing, Psychosomatic Bodywork und Subconscious Visualisation">
+      </figure>
+      <div class="rise d1">
+        <span class="eyebrow">Meine Arbeit</span>
+        <h2>Emotional Release, <em>Schritt für Schritt.</em></h2>
+        <p>Platzhalter: Wie ich arbeite und was Emotional Release, Possibility Management und Unshaming miteinander zu tun haben — in deinen Worten.</p>
+        <ul class="saeulen">
+          <li><b>Präsenz</b><span>Ich bin ganz da. Ohne zu bewerten, ohne zu reparieren.</span></li>
+          <li><b>Begleitung durch meine Stimme</b><span>Ich führe dich durch den Prozess, du musst nichts richtig machen.</span></li>
+          <li><b>Ausdrucksvolles Atmen</b><span>Der Atem öffnet, was lange festgehalten wurde.</span></li>
+          <li><b>Psychosomatische Körperarbeit</b><span>Druckpunkte und Berührung dort, wo dein Körper Spannung hält.</span></li>
+          <li><b>Visualisierung</b><span>Innere Bilder und Anteile, mit denen wir arbeiten.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STIMME 2 (länger) — Franz: „evtl. Sarah??“ — Sarah aus der Sprachnachricht (schlägt den Teil selbst vor).
+     HIER: Freigabe; ggf. längere Fassung. ═══ -->
+<section class="sk-band glut">
+  <div class="wrap">
+    <div class="sk rise">
+      <blockquote>
+        <p class="zitat">„Ich dachte immer, meine Sensibilität ist falsch.“</p>
+        <div class="text">
+          <p>Ich hatte immer Angst, traurig zu werden, zu weinen und Verletzungen wirklich zu fühlen. Also habe ich alles zu Tode erklärt,
+            damit ich bloß nicht traurig sein muss. Heute <b>weine ich, wenn mir danach ist</b>, statt es wegzudrücken.
+            Und danach bin ich <b>richtig befreit</b>, statt zwei Wochen an einem Thema zu leiden.</p>
+        </div>
+        <footer><span class="wer">Sarah</span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WENN ES PASST, GEHT ES WEITER — Franz: „würde ich mal drin lassen“ (später eigene Unterseiten) ═══ -->
 <section class="section">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow rise">Und danach?</span>
+      <span class="eyebrow rise">Nach deinem Monat</span>
       <h2 class="rise d1">Wenn es passt, geht es weiter.</h2>
-      <p class="lead rise d2">Nach deiner Session sprechen wir darüber, ob und wie.</p>
+      <p class="lead rise d2">Wenn du spürst, dass du weiter mit mir arbeiten möchtest, zeige ich dir gern Möglichkeiten — und wir schauen gemeinsam, was zu dir passt.</p>
     </div>
-    <div class="weg-danach" id="danach" style="margin-top:0">
-      <div class="tueren">
-        <div class="tuer rise">
-          <img src="assets/img/kreis-begleitung-480.jpg" width="96" height="96" loading="lazy" alt="Franz geht am Strand auf die Sonne zu">
-          <div>
-            <span class="nr">02</span>
-            <h3>Einzelbegleitung</h3>
-            <!-- HIER: ein Satz -->
-            <p>Mehrere Monate an deiner Seite. Sessions, Integration und alles dazwischen.</p>
-          </div>
+    <div class="tueren" style="max-width:52rem;margin-inline:auto">
+      <div class="tuer rise">
+        <img src="assets/img/begleitung-560.jpg" width="96" height="96" loading="lazy" alt="Franz hört einer Frau lächelnd zu">
+        <div>
+          <span class="nr">02</span>
+          <h3>Einzelbegleitung</h3>
+          <!-- HIER: ein Satz -->
+          <p>Mehrere Monate an deiner Seite. Sessions, Integration und alles dazwischen.</p>
         </div>
-        <div class="tuer rise d1">
-          <img src="assets/img/kreis-events-480.jpg" width="96" height="96" loading="lazy" alt="Franz steht in einem Kreis und hält Hände">
-          <div>
-            <span class="nr">03</span>
-            <h3>Retreat</h3>
-            <!-- HIER: ein Satz + Termin -->
-            <p>Ein paar Tage in der Gruppe. Offen für alle, die schon eine Session mit mir hatten.</p>
-          </div>
+      </div>
+      <div class="tuer rise d1">
+        <img src="assets/img/retreat-520.jpg" width="96" height="96" loading="lazy" alt="Franz in einem Kreis, Hände haltend">
+        <div>
+          <span class="nr">03</span>
+          <h3>Retreat</h3>
+          <!-- HIER: ein Satz + Termin -->
+          <p>Ein paar Tage in der Gruppe — atmen, fühlen, tanzen.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ STIMMEN ═══ -->
-<section class="section tief">
-  <div class="wrap">
-    <div class="stimmen">
-      <blockquote class="rise">
-        <p>„Dadurch, dass ich mich vom ersten Call an komplett verstanden und zu 111% gesehen gefühlt habe, konnte ich beim 1:1 mit dir endlich loslassen.“</p>
-        <footer>Denise, Graz</footer>
-      </blockquote>
-      <blockquote class="rise d1">
-        <p>„Mein erstes Wort nach unserer 1:1-Session war ‚Verrückt!‘“</p>
-        <footer>Nicole, München</footer>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FRAGEN ═══ -->
-<section class="section hell">
+<!-- ═══ FRAGEN — Luca bei „Geht das auch online?“ (Franz' Kommentar: „bei FAQ einbinden!“) ═══ -->
+<section class="section sand">
   <div class="wrap-narrow">
     <div class="head">
-      <span class="eyebrow rise">Bevor du fragst</span>
+      <span class="eyebrow rise">Häufig gestellte Fragen</span>
       <h2 class="rise d1">Das wollen fast alle wissen.</h2>
     </div>
     <!-- HIER: Fragen und Antworten -->
     <div class="faq rise">
+      <details>
+        <summary>Geht das auch online?</summary>
+        <div class="answer"><p>Ja. Online arbeiten wir per Video, du liegst bei dir zu Hause, ich führe dich mit meiner Stimme.
+          Luca aus Bamberg war skeptisch:</p>
+          <p><i>„Vor der Session konnte ich mir kaum vorstellen, wie so etwas online abläuft und ob ich wirklich tief in meine Emotionen eintauchen kann.
+            Franz hat mich Schritt für Schritt durch die Session geführt und mir jederzeit ein sicheres Gefühl gegeben. Ob das online wirklich geht? JA, das geht!“</i></p></div>
+      </details>
       <details>
         <!-- HIER: bitte bestätigen, dass du über der Kleidung arbeitest -->
         <summary>Muss ich mich ausziehen?</summary>
@@ -268,13 +371,18 @@
           entscheidet über das Tempo, nicht dein Ehrgeiz.</p></div>
       </details>
       <details>
+        <summary>Was passiert nach dem Monat?</summary>
+        <div class="answer"><p>Zwei Wochen nach der Session schauen wir in der Integrations-Session gemeinsam zurück.
+          Wenn du danach weitergehen willst, zeige ich dir die Möglichkeiten — ohne Druck.</p></div>
+      </details>
+      <details>
         <summary>Wie sage ich ab oder verschiebe?</summary>
         <div class="answer"><p>Bis 48 Stunden (zwei Werktage) vorher kostenlos, bei Terminen vor Ort bitte
           eine Woche vorher. Alles Weitere steht in den <a href="agb.html">AGB</a>.</p></div>
       </details>
       <details>
         <summary>Ersetzt das eine Psychotherapie?</summary>
-        <div class="answer"><p>Nein. Neo Emotional Release ist Prozess- und Persönlichkeitsarbeit, kein
+        <div class="answer"><p>Nein. Emotional Release ist Prozess- und Persönlichkeitsarbeit, kein
           Heilverfahren. Bei psychischen Erkrankungen und in akuten Krisen gehört ärztliche oder
           psychotherapeutische Hilfe an die erste Stelle.</p>
           <p>Sofort erreichbar: Notruf 112 · Telefonseelsorge 0800&nbsp;111&nbsp;0&nbsp;111 ·
@@ -284,21 +392,21 @@
   </div>
 </section>
 
-<!-- ═══ Kostenloses zwischendurch ═══ -->
+<!-- ═══ Noch nicht so weit? → Freebie ═══ -->
 <div class="hoer tief">
   <div class="wrap">
     <p>Noch nicht so weit?</p>
-    <a class="tlink" href="for-free.html"><b>Hör und probier erst mal kostenlos <span>→</span></b></a>
+    <a class="tlink" href="for-free.html"><b>Probier es erst mal kostenlos <span>→</span></b></a>
   </div>
 </div>
 
 <!-- ═══ CTA ═══ -->
-<section class="cta-band">
+<section class="cta-band nacht">
   <div class="wrap">
     <span class="eyebrow">Nächster Schritt</span>
     <h2>Erst reden, dann entscheiden.</h2>
-    <p class="lead">30 Minuten, kostenlos und unverbindlich.</p>
-    <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Kennenlernen</a>
+    <p class="lead">45 Minuten, kostenlos und unverbindlich.</p>
+    <a class="btn btn-orange btn-arrow" href="index.html#kontakt">Lass uns sprechen</a>
   </div>
 </section>
 </main>
@@ -310,11 +418,12 @@
       <span class="name">Franz&nbsp;Heinrich</span>
       <span class="rolle">Scham &amp; Emotionen</span>
     </span>
-    <p class="small">Körperorientierte Arbeit mit Scham und Emotionen. 1:1 Sessions online und vor Ort, Einzelbegleitung, Retreats.</p>
+    <p class="small">Körperorientierte Arbeit mit Scham und Emotionen. Der UnVerschämt-Monat online und vor Ort, Einzelbegleitung, Retreats.</p>
     <nav aria-label="Footer">
       <ul class="footer-nav">
         <li><a href="index.html">Start</a></li>
         <li><a href="about.html">Über mich</a></li>
+        <li><a href="shop.html">Shop</a></li>
         <li><a href="for-free.html">For free</a></li>
         <li><a href="links.html">Alle Links</a></li>
         <li><a href="https://www.instagram.com/franz.unverschaemt/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
@@ -332,12 +441,11 @@
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video">
   <div class="lightbox-inner">
     <button class="lightbox-x" id="lightbox-x" aria-label="Schließen">&times;</button>
-    <!-- HIER: sobald assets/video/stimme-1.mp4 existiert, den Hinweis löschen und einkommentieren:
-    <video controls playsinline><source src="assets/video/stimme-1.mp4" type="video/mp4"></video>
-    -->
+    <!-- HIER: sobald Kathis Video gekürzt und freigegeben ist — entweder YouTube/Vimeo-Einbettung (nicht gelistet)
+         oder als Datei: <video controls playsinline><source src="assets/video/kathi.mp4" type="video/mp4"></video> -->
     <div class="lightbox-note">
       <p><strong>Design-Vorschau</strong></p>
-      <p class="small mt-1">Hier läuft später dein Video-Testimonial — der Platz dafür steht schon.</p>
+      <p class="small mt-1">Hier läuft später Kathis Video — der Platz dafür steht schon.</p>
     </div>
   </div>
 </div>

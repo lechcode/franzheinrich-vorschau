@@ -56,11 +56,18 @@
     if(location.hash==='#kontaktform')fb.open=true;
   }
 
-  /* Formulare: in der Vorschau nur bestätigen, nicht senden */
+  /* Formulare: in der Vorschau nur bestätigen, nicht senden.
+     data-weiter: zeigt in der Vorschau, wohin die echte Anmeldung später weiterleitet. */
   d.querySelectorAll('form[data-vorschau]').forEach(function(f){
     f.addEventListener('submit',function(e){
       e.preventDefault();var b=f.querySelector('button[type=submit]');
-      b.textContent='Danke — in der Vorschau wird noch nichts gesendet';b.disabled=true;
+      var en=d.documentElement.lang==='en';
+      b.textContent=en?'Thanks — nothing is sent in this preview yet':'Danke — in der Vorschau wird noch nichts gesendet';b.disabled=true;
+      if(f.dataset.weiter&&!f.querySelector('.weiter')){
+        var p=d.createElement('p');p.className='form-note weiter';
+        p.innerHTML='<a href="'+f.dataset.weiter+'">'+(en?'See the page you’ll land on →':'So sieht die Seite danach aus →')+'</a>';
+        f.appendChild(p);
+      }
     });
   });
 
@@ -77,6 +84,12 @@
       var k=el.getAttribute('data-t');
       if(!el.dataset.de)el.dataset.de=el.innerHTML;
       el.innerHTML=(lang==='en'&&en[k]!==undefined)?en[k]:el.dataset.de;
+    });
+    /* Platzhalter in Eingabefeldern (data-t-ph) */
+    d.querySelectorAll('[data-t-ph]').forEach(function(el){
+      var k=el.getAttribute('data-t-ph');
+      if(!el.dataset.dePh)el.dataset.dePh=el.placeholder;
+      el.placeholder=(lang==='en'&&en[k]!==undefined)?en[k]:el.dataset.dePh;
     });
     d.documentElement.lang=lang;
     langBtns.forEach(function(b){
