@@ -835,3 +835,14 @@ details.formbox .inner{margin-top:var(--sp-3)}
   box-shadow:0 18px 40px -22px rgba(2,20,30,.55);transform:rotate(-2deg)}
 /* Kapitälchen-Links: genug Klickhöhe am Handy */
 @media (max-width:860px){.tlink{padding-block:.7em}}
+/* Stimmen-Karten: Zitat in Serif, Text darunter klein in Manrope (Leonardo 23.10.: Hierarchie) */
+.stimmen p.st-text{font-family:var(--body);font-size:var(--t--1);line-height:1.6;color:var(--fg-soft);margin-top:var(--sp-1)}
+.footer .brand{justify-content:center}
+.tuer img{object-position:50% 12%}
+.shop-kopfbild{width:100%;border-radius:var(--radius);aspect-ratio:21/9;object-fit:cover;object-position:60% 40%}
+@media (max-width:719px){
+  .angebot,.angebot p{text-align:center}
+  .angebot p{margin-inline:auto}
+  .angebot .fig{margin-inline:auto}
+  .shop-kopfbild{aspect-ratio:4/3;object-position:65% 40%}
+}
