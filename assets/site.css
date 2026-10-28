@@ -866,8 +866,6 @@ details.formbox .inner{margin-top:var(--sp-3)}
 .invest-fuer{margin-top:var(--sp-2);font-family:var(--display);font-style:italic;font-size:var(--t-1);color:var(--sand);text-align:center}
 .invest-stimmen{margin-top:var(--sp-3)}
 
-/* Kathis Video (YouTube Short, Hochformat) — lädt erst nach Klick (28.10.2026) */
-.video-hinweis{margin-top:.7em;font-size:var(--t--2);line-height:1.5;color:var(--fg-faint);text-align:center}
-.video-hinweis a{color:inherit}
-.lightbox-inner.hoch{width:min(420px,100%,calc((100vh - 120px) * 9 / 16))}
-.lightbox-media iframe{display:block;width:100%;aspect-ratio:9/16;border:0;border-radius:var(--radius);background:#000}
+/* Kathis Video (YouTube Short) spielt direkt im Bildrahmen — nach Klick Hochformat 9:16 (28.10.2026) */
+.videostage.spielt{aspect-ratio:9/16;background:#000}
+.videostage.spielt iframe{display:block;width:100%;height:100%;border:0}

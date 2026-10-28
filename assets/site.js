@@ -39,24 +39,23 @@
     els.forEach(function(el){if(el.getBoundingClientRect().top<window.innerHeight*0.92){show(el);}else{io.observe(el);}});
   }
 
-  /* Video-Lightbox (alle Play-Knöpfe mit .video-open).
-     data-yt="<ID>": YouTube wird erst beim Klick geladen (youtube-nocookie) und beim Schließen wieder entfernt. */
-  var box=d.getElementById('lightbox'),boxX=d.getElementById('lightbox-x'),media=d.getElementById('lightbox-media');
+  /* YouTube direkt im Bildrahmen (.video-yt[data-yt]): Vorschaubild bleibt, bis jemand auf Play klickt —
+     erst dann wird der Player (youtube-nocookie) an derselben Stelle geladen. */
+  d.querySelectorAll('.video-yt[data-yt]').forEach(function(b){b.addEventListener('click',function(){
+    var stage=b.closest('.videostage'),f=d.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(b.getAttribute('data-yt'))+'?autoplay=1&rel=0&playsinline=1&modestbranding=1';
+    f.title=b.getAttribute('data-yt-title')||'Video';
+    f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.setAttribute('allowfullscreen','');
+    f.referrerPolicy='strict-origin-when-cross-origin';
+    stage.classList.add('spielt');stage.innerHTML='';stage.appendChild(f);f.focus();
+  });});
+
+  /* Video-Lightbox (alle Play-Knöpfe mit .video-open) */
+  var box=d.getElementById('lightbox'),boxX=d.getElementById('lightbox-x');
   if(box&&boxX){
-    var hide=function(){box.classList.remove('on');var v=box.querySelector('video');if(v)v.pause();if(media)media.innerHTML='';};
-    d.querySelectorAll('.video-open').forEach(function(b){b.addEventListener('click',function(){
-      var yt=b.getAttribute('data-yt');
-      if(yt&&media){
-        var f=d.createElement('iframe');
-        f.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(yt)+'?autoplay=1&rel=0&playsinline=1&modestbranding=1';
-        f.title=b.getAttribute('data-yt-title')||'Video';
-        f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
-        f.setAttribute('allowfullscreen','');
-        f.referrerPolicy='strict-origin-when-cross-origin';
-        media.innerHTML='';media.appendChild(f);
-      }
-      box.classList.add('on');boxX.focus();
-    });});
+    var hide=function(){box.classList.remove('on');var v=box.querySelector('video');if(v)v.pause();};
+    d.querySelectorAll('.video-open').forEach(function(b){b.addEventListener('click',function(){box.classList.add('on');boxX.focus();});});
     boxX.addEventListener('click',hide);
     box.addEventListener('click',function(e){if(e.target===box)hide();});
     d.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});
