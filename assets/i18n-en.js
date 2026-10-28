@@ -94,7 +94,7 @@ window.FH_EN = {
   "kontakt.eyebrow": "Let’s talk",
   "kontakt.h2": "Let’s talk.",
   "kontakt.p": "45 minutes, free, no strings attached. By the end, you’ll know whether your Unashamed Month is the right next step.",
-  "kontakt.btn": "Book your free intro call",
+  "kontakt.btn": "Message me on WhatsApp",
   "kontakt.wa": "Or message me on WhatsApp",
   "kontakt.form": "Rather write here? <span>↓</span>",
   "kontakt.hint": "Design preview: this form doesn’t send anything yet.",

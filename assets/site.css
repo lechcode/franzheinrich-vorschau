@@ -163,8 +163,9 @@ a{color:inherit;text-decoration-color:var(--akzent);text-underline-offset:.2em;t
 .btn-navy{font-size:var(--t--1);letter-spacing:.04em}
 .btn-line{border-color:var(--line);color:var(--fg);font-size:var(--t--1);letter-spacing:.04em}
 .btn-line:hover{border-color:var(--fg)}
-.btn-arrow::after{content:"→";font-size:1.05em;line-height:1;transition:transform .22s var(--ease)}
-.btn-arrow:hover::after{transform:translateX(4px)}
+/* Pfeil steht VOR dem Text (Franz 28.10.: „der sollte davor sein“) */
+.btn-arrow::before{content:"→";font-size:1.05em;line-height:1;transition:transform .22s var(--ease)}
+.btn-arrow:hover::before{transform:translateX(4px)}
 .btn-row{display:flex;flex-wrap:wrap;gap:14px 26px;justify-content:center;align-items:center;margin-top:var(--sp-2)}
 @media (max-width:560px){.btn-row .btn{width:100%;max-width:22rem}}
 
@@ -205,10 +206,11 @@ a{color:inherit;text-decoration-color:var(--akzent);text-underline-offset:.2em;t
 .js.foto .rv,.js.foto .rv-img,.js.foto .rise,.js.foto .rise-img{opacity:1;transform:none;transition:none}
 .js.foto .in-up{opacity:1;transform:none;animation:none}
 
-/* ---- 7 · Masthead: Menü | NAME | Menü — Creme, Call-Knopf Orange ------- */
+/* ---- 7 · Masthead: Menü | NAME | Menü — Navy von Anfang an (Franz 28.10.), Call-Knopf Orange ---- */
 .nav{
   position:sticky;top:0;z-index:100;
-  background:rgba(247,241,230,.96);backdrop-filter:blur(12px);
+  --fg:var(--cream);--fg-faint:var(--sky);--line:rgba(247,241,230,.18);--fokus:var(--orange);
+  background:rgba(2,48,71,.97);backdrop-filter:blur(12px);color:var(--fg);
   border-bottom:1px solid var(--line);
   padding-block:12px;
 }
@@ -236,7 +238,7 @@ a.navlink[aria-current="page"]{border-bottom:2px solid var(--orange);padding-bot
 .lang:hover{opacity:1}
 
 .burger{display:none;background:none;border:0;padding:10px;cursor:pointer;margin-left:auto}
-.burger span{display:block;width:24px;height:2.5px;border-radius:2px;background:var(--navy);margin:5px 0;transition:transform .3s var(--ease),opacity .2s}
+.burger span{display:block;width:24px;height:2.5px;border-radius:2px;background:var(--fg);margin:5px 0;transition:transform .3s var(--ease),opacity .2s}
 body.menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
 body.menu-open .burger span:nth-child(2){opacity:0}
 body.menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
@@ -403,7 +405,7 @@ body.menu-open{overflow:hidden}
 .gaben{display:grid;gap:var(--sp-1);max-width:64rem;margin-inline:auto}
 @media (min-width:680px){.gaben{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1000px){.gaben{grid-template-columns:repeat(3,1fr)}}
-.gabe{display:flex;flex-direction:column;gap:.5em;text-align:left;text-decoration:none;color:var(--fg);
+.gabe{position:relative;display:flex;flex-direction:column;gap:.5em;text-align:left;text-decoration:none;color:var(--fg);
   background:var(--karte);border:1px solid var(--line);border-radius:var(--radius);padding:var(--sp-2) var(--sp-1);
   transition:transform .25s var(--ease),border-color .25s var(--ease)}
 a.gabe:hover{transform:translateY(-4px);border-color:var(--akzent)}
@@ -716,13 +718,6 @@ details.formbox .inner{margin-top:var(--sp-3)}
 .woche.ganz{grid-column:1 / -1;text-align:center}
 .woche.ganz h3,.woche.ganz p{text-align:center}
 
-.invest{display:grid;gap:var(--sp-1);max-width:56rem;margin-inline:auto}
-.invest .zeile{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:.2em .6em;text-align:center}
-.invest .k{font-size:var(--t--1);font-weight:800;color:var(--sky)}
-.invest .v{font-family:var(--display);font-size:var(--t-4);line-height:1.05;color:var(--cream)}
-.invest .s{font-size:var(--t-0);color:var(--sand)}
-.invest .preis .v{color:var(--orange)}
-.invest .fuer{margin-top:var(--sp-1);font-family:var(--display);font-style:italic;font-size:var(--t-1);color:var(--sand);text-align:center}
 
 .disclaimer{max-width:46rem;margin-inline:auto;border:2px solid var(--akzent);border-radius:var(--radius);padding:var(--sp-2);text-align:left}
 .disclaimer h3{font-size:var(--t-1);text-align:left;margin-bottom:.5em}
@@ -849,3 +844,24 @@ details.formbox .inner{margin-top:var(--sp-3)}
 
 /* ausgeblendet bis fertig (Livegang 28.10.2026) — Attribut hidden schlägt jede display-Regel */
 [hidden]{display:none!important}
+
+/* ---- Runde 11 (28.10.2026) ------------------------------------------------ */
+/* Kleines Logo oben rechts in den Spotify-/Instagram-Kacheln — die ganze Kachel ist der Link */
+.gabe .logo{position:absolute;top:var(--sp-1);right:var(--sp-1);width:34px;height:34px}
+.gabe:has(.logo) .tag{margin-right:46px}
+.logo-spotify{color:#1db954}
+.logo-insta{color:#d6297a}
+
+/* Investment als zwei Boxen: links vor Ort, rechts online (Franz 28.10.) */
+.invest-boxen{display:grid;gap:var(--sp-1);max-width:52rem;margin:var(--sp-2) auto 0}
+@media (min-width:720px){.invest-boxen{grid-template-columns:1fr 1fr}}
+.invest-box{background:var(--karte);border:1px solid var(--line);border-radius:var(--radius);padding:var(--sp-2);
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:.35em}
+.invest-box .art{font-size:var(--t--2);font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--sky)}
+.invest-box .ort{font-family:var(--display);font-size:var(--t-3);line-height:1.1;color:var(--cream);margin-top:.2em;margin-bottom:var(--sp-1)}
+.invest-box .wie{font-size:var(--t--1);color:var(--sand);margin-bottom:var(--sp-1)}
+.invest-box .zeit{margin-top:auto;padding-top:var(--sp-1);border-top:1px solid var(--line);width:100%;
+  font-size:var(--t--1);font-weight:700;letter-spacing:.06em;color:var(--cream)}
+.invest-box .preis{font-family:var(--display);font-size:var(--t-4);line-height:1;color:var(--orange);margin-top:.15em}
+.invest-fuer{margin-top:var(--sp-2);font-family:var(--display);font-style:italic;font-size:var(--t-1);color:var(--sand);text-align:center}
+.invest-stimmen{margin-top:var(--sp-3)}
