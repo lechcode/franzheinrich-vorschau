@@ -846,9 +846,9 @@ details.formbox .inner{margin-top:var(--sp-3)}
 [hidden]{display:none!important}
 
 /* ---- Runde 11 (28.10.2026) ------------------------------------------------ */
-/* Kleines Logo oben rechts in den Spotify-/Instagram-Kacheln — die ganze Kachel ist der Link */
-.gabe .logo{position:absolute;top:var(--sp-1);right:var(--sp-1);width:34px;height:34px}
-.gabe:has(.logo) .tag{margin-right:46px}
+/* Spotify-/Instagram-Logo unten in der Link-Zeile, vor dem Text (Franz/Michael 28.10.) — die ganze Kachel ist der Link */
+.gabe .go:has(.logo){display:flex;align-items:center;gap:.7em}
+.gabe .logo{width:24px;height:24px;flex:none}
 .logo-spotify{color:#1db954}
 .logo-insta{color:#d6297a}
 
