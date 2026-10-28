@@ -7,7 +7,7 @@
   ║  RUNDE 10 — Franz' Sprachnachricht + Struktur-Dokument vom Oktober:       ║
   ║  · Kopf mit Bild (kein Video) → Pain → Angebot 01 Dein UnVerschämt-Monat  ║
   ║    · 02 Einzelbegleitung · 03 Retreat → Stimme 1 (Brand-Farbe) →          ║
-  ║    Freebie mit Mail-Anmeldung → Text für die Zielgruppe → Lern mich       ║
+  ║    Freebie (kostenlos über Whop) → Text für die Zielgruppe → Lern mich       ║
   ║    kennen (Podcast, Playlist) → Stimme 2 → Über mich → zwei kurze         ║
   ║    Stimmen auf Franz' Hintergrundbild → Lass uns reden.                   ║
   ║  · Farben: Creme ist die Basis, Navy kommt als Abschnitt dazwischen       ║
@@ -225,8 +225,7 @@
   </div>
 </section>
 
-<!-- ═══ 5 · FREEBIE mit Mail-Anmeldung — Geräte-Ansicht wie bei Lydia.
-     Anmeldung ist Vorschau (Michael 23.10.: Mail-Tool erst mal nicht umsetzen). ═══ -->
+<!-- ═══ 5 · FREEBIE — Geräte-Ansicht wie bei Lydia. Kein Formular: Knopf führt zum kostenlosen Whop-Produkt (Franz 28.10.2026) ═══ -->
 <section class="section" id="freebie">
   <div class="wrap">
     <div class="freebie">
@@ -248,21 +247,18 @@
         <span class="eyebrow rv" data-t="free.eyebrow">Dein Geschenk</span>
         <h2 class="rv" style="--d:.1s" data-t="free.h2">Dein erster Release. <em>Zu Hause.</em></h2>
         <!-- HIER: ein Satz zum Freebie -->
-        <p class="rv" style="--d:.2s" data-t="free.p">Trag dich ein, und du bekommst direkt Zugang zu meiner Emotional-Release-Meditation:</p>
+        <p class="rv" style="--d:.2s" data-t="free.p">Hol es dir kostenlos, und du bekommst direkt Zugang zu meiner Emotional-Release-Meditation:</p>
         <ul class="paket rv" style="--d:.25s">
           <li data-t="free.i1">ein Willkommensvideo von mir</li>
           <li data-t="free.i2">die geführte Meditation als Audio</li>
           <li data-t="free.i3">ein Video zur Integration</li>
           <li data-t="free.i4">eine Playlist zum Nachspüren</li>
         </ul>
-        <!-- HIER: Anmeldung an ein Mail-Tool mit Double-Opt-in anschließen (Anbieter offen) — danach leitet es auf
-             die versteckte Seite willkommen.html weiter und verschickt die Willkommensmail. -->
-        <form class="anmelden rv" style="--d:.3s" data-vorschau data-weiter="willkommen.html" novalidate>
-          <label class="vh" for="fb-name">Vorname</label><input id="fb-name" name="vorname" type="text" autocomplete="given-name" placeholder="Dein Vorname" data-t-ph="f.vorname">
-          <label class="vh" for="fb-mail">E-Mail</label><input id="fb-mail" name="email" type="email" autocomplete="email" placeholder="Deine E-Mail" data-t-ph="f.mailph" required>
-          <button class="btn btn-orange btn-arrow" type="submit" data-t="free.btn">Schick mir das Geschenk</button>
-          <p class="form-note muted" data-t="free.note">Kostenlos. Du bestätigst deine Anmeldung per Mail und kannst dich jederzeit wieder abmelden. <a href="datenschutz.html">Datenschutz</a>.</p>
-        </form>
+        <!-- HIER: Whop-Link zum kostenlosen Produkt (0 €) eintragen — wie im Shop. Nach dem Checkout kann Whop auf willkommen.html weiterleiten. -->
+        <div class="anmelden rv" style="--d:.3s">
+          <a class="btn btn-orange btn-arrow" href="#freebie" data-t="free.btn">Zum Geschenk</a>
+          <p class="form-note muted" data-t="free.note">Kostenlos, 0&nbsp;€. Du kommst auf meine Bestellseite bei Whop und hast danach direkt Zugang. <a href="datenschutz.html">Datenschutz</a>.</p>
+        </div>
       </div>
     </div>
   </div>
