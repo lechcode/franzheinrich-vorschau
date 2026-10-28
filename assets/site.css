@@ -846,3 +846,6 @@ details.formbox .inner{margin-top:var(--sp-3)}
   .angebot .fig{margin-inline:auto}
   .shop-kopfbild{aspect-ratio:4/3;object-position:65% 40%}
 }
+
+/* ausgeblendet bis fertig (Livegang 28.10.2026) — Attribut hidden schlägt jede display-Regel */
+[hidden]{display:none!important}

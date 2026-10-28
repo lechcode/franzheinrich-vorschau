@@ -71,7 +71,7 @@ window.FH_EN = {
   "frei.eyebrow": "Start your unashamed journey",
   "frei.h2": "Get a feel for me first.",
   "frei.1.tag": "Podcasts", "frei.1.t": "Conversations with Franz Heinrich", "frei.1.p": "On shame, the body, and all the things nobody else says out loud.", "frei.1.go": "Listen on Spotify ↗",
-  "frei.2.tag": "Music inspiration", "frei.2.t": "Dance &amp; feel, unashamed", "frei.2.p": "My Spotify playlists for shaking, stomping and letting it all go.", "frei.2.go": "Coming soon →",
+  "frei.2.tag": "Music inspiration", "frei.2.t": "Dance &amp; feel, unashamed", "frei.2.p": "My Spotify playlists for shaking, stomping and letting it all go.", "frei.2.go": "Listen on Spotify ↗",
 
   "s2.zitat": "“This judgement-free space with Franz is incredibly valuable and important to me.”",
   "s2.p1": "It feels <b>indescribably beautiful</b> to be seen and held in my emotions — it makes me feel safe and at ease. Working together, I’ve developed <b>so much more self-acceptance</b>.",
@@ -106,5 +106,5 @@ window.FH_EN = {
   "foot.p": "Somatic work with shame and emotions. The Unashamed Month online and in person, mentorship and retreats.",
   "foot.monat": "Unashamed Month", "foot.about": "About", "foot.shop": "Shop", "foot.free": "Freebies", "foot.links": "All links",
   "foot.legal": "© 2026 Franz Heinrich · <a href=\"impressum.html\">Legal notice</a> · <a href=\"datenschutz.html\">Privacy</a> · <a href=\"agb.html\">Terms</a>",
-  "foot.note": "Design preview, not final · Concept &amp; code: Lechcode, Landsberg am Lech"
+  "foot.note": "Website: <a href=\"https://lechcode.de\" target=\"_blank\" rel=\"noopener\">Lechcode</a>, Landsberg am Lech"
 };
