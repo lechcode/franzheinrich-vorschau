@@ -1,3 +1,5 @@
-# Design-Vorschau — nicht für Suchmaschinen bestimmt.
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /willkommen.html
+
+Sitemap: https://franzheinrich.com/sitemap.xml
