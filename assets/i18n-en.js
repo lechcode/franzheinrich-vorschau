@@ -62,7 +62,6 @@ window.FH_EN = {
   "free.i4": "a playlist to help you land",
   "f.vorname": "Your first name", "f.mailph": "Your email",
   "free.btn": "Get your gift",
-  "free.note": "Free, €0. You’ll land on my order page at Whop and get access right away. <a href=\"datenschutz.html\">Privacy</a>.",
 
   "ziel.eyebrow": "Imagine this",
   "ziel.h2": "You get to show up. <em>Fully.</em>",
