@@ -49,13 +49,6 @@
     d.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});
   }
 
-  /* Formular-Klappe: Anker #kontaktform öffnet sie */
-  var fb=d.getElementById('kontaktform');
-  if(fb){
-    d.querySelectorAll('a[href$="#kontaktform"]').forEach(function(a){a.addEventListener('click',function(){fb.open=true;});});
-    if(location.hash==='#kontaktform')fb.open=true;
-  }
-
   /* Formulare: in der Vorschau nur bestätigen, nicht senden.
      data-weiter: zeigt in der Vorschau, wohin die echte Anmeldung später weiterleitet. */
   d.querySelectorAll('form[data-vorschau]').forEach(function(f){
