@@ -104,6 +104,6 @@ window.FH_EN = {
 
   "foot.p": "Somatic work with shame and emotions. The Unashamed Month online and in person, mentorship and retreats.",
   "foot.monat": "Unashamed Month", "foot.about": "About", "foot.shop": "Shop", "foot.free": "Freebies", "foot.links": "All links",
-  "foot.legal": "© 2026 Franz Heinrich · <a href=\"impressum.html\">Legal notice</a> · <a href=\"datenschutz.html\">Privacy</a>",
+  "foot.legal": "© 2026 Franz Heinrich · <a href=\"legal-notice.html\">Legal Notice</a> · <a href=\"privacy-policy.html\">Privacy Policy</a>",
   "foot.note": "Website: <a href=\"https://lechcode.de\" target=\"_blank\" rel=\"noopener\">Lechcode</a>, Landsberg am Lech"
 };
