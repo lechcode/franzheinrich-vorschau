@@ -43,9 +43,9 @@ window.FH_EN = {
   "weg.1.cta": "Let’s talk",
   "weg.1.link": "How your month unfolds <span>→</span>",
   "weg.2.t": "1:1 Mentorship",
-  "weg.2.p": "Several months with me by your side — for anyone who wants to go deeper after their month.",
+  "weg.2.p": "For anyone who wants to go even deeper. Several months by your side, so you can learn a new way of relating to your emotions.",
   "weg.3.t": "Retreat",
-  "weg.3.p": "A few days together in a group: breathing, feeling, dancing — and realising you’re not alone.",
+  "weg.3.p": "Your initiation into a life full of aliveness, lightness and expression.<br>4 days together with me and a group of UnShamed people in Bavaria, Germany.",
 
   "s1.zitat": "“It was one of the best decisions I’ve ever made.”",
   "s1.p1": "My first word after our 1:1 session was “Crazy!” It’s honestly <b>crazy what’s possible</b>, and how much more of myself I keep discovering. It turns my whole view of things upside down and <b>is changing my life.</b>",
