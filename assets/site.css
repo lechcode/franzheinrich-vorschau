@@ -869,3 +869,24 @@ details.formbox .inner{margin-top:var(--sp-3)}
 /* Kathis Video (YouTube Short) spielt direkt im Bildrahmen — nach Klick Hochformat 9:16 (28.10.2026) */
 .videostage.spielt{aspect-ratio:9/16;background:#000}
 .videostage.spielt iframe{display:block;width:100%;height:100%;border:0}
+
+/* ---- Rechtstexte mit Tabellen (AGB, Datenschutz) — 24.11.2026 ------------- */
+.legal ol{margin:.9em 0 0 1.4em;display:grid;gap:.5em}
+.legal h4{font-size:var(--t-0);margin-top:var(--sp-1);margin-bottom:.4em}
+.legal .tabelle{margin:1.4em 0}
+.legal table{width:100%;border-collapse:collapse;font-size:var(--t--1);line-height:1.6}
+.legal th,.legal td{text-align:left;vertical-align:top;padding:.7em .8em;border-bottom:1px solid var(--line);color:var(--fg-soft)}
+.legal th{color:var(--fg);font-weight:700;background:var(--cream-2);border-bottom:2px solid var(--line)}
+/* Handy: jede Zeile wird eine Karte, Spaltenname steht klein über dem Wert — nichts läuft aus dem Bild */
+@media (max-width:700px){
+  .legal table,.legal tbody,.legal tr,.legal td{display:block;width:100%}
+  .legal thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .legal tr{background:var(--cream-2);border-radius:var(--radius);padding:.5em .9em;margin-bottom:.8em}
+  .legal td{border-bottom:1px solid var(--line);padding:.55em 0}
+  .legal td:last-child{border-bottom:0}
+  .legal td::before{content:attr(data-label);display:block;font-size:var(--t--2);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);margin-bottom:.15em}
+}
+.legal .pdf-link{margin:0 0 var(--sp-2)}
+.legal .pdf-link a{display:inline-flex;align-items:center;gap:.6em;font-weight:700;color:var(--fg);text-decoration:none;border:2px solid var(--line);border-radius:var(--radius);padding:.7em 1em}
+.legal .pdf-link a::before{content:"↓";font-size:1.1em;color:var(--orange-deep)}
+.legal .pdf-link a:hover{border-color:var(--fg)}
