@@ -62,6 +62,7 @@
     var w = d.querySelector('.legal .wrap-narrow');
     if (!w) throw new Error('Inhalt nicht gefunden');
     w.querySelectorAll('.pdf-link, p.mt-3').forEach(function (e) { e.remove(); });   // Download-Knopf + „Zurück“
+    w.querySelectorAll('p.small').forEach(function (p) { if (p.querySelector('a[lang]')) p.remove(); });   // Sprachwechsel
     w.querySelectorAll('a[href]').forEach(function (a) {                              // im PDF volle Adressen
       var h = a.getAttribute('href');
       if (!/^(https?:|mailto:|tel:|#)/.test(h)) a.setAttribute('href', 'https://franzheinrich.com/' + h.replace(/\.html$/, ''));

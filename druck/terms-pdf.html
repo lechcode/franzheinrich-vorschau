@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+  DRUCKVORLAGE für assets/docs/Terms-and-Withdrawal-Franz-Heinrich.pdf (englische Fassung von agb-pdf.html)
+  Holt beim Öffnen die aktuellen Texte aus ../terms.html und ../withdrawal.html — Texte NIE hier ändern,
+  sondern in den Seiten. Gebaut wird mit druck/pdf-bauen.sh (Chrome --print-to-pdf), nicht von Hand.
+  Look: Franz' Brand Kit (Navy #023047, Orange #E96A2C, Cream, DM Serif Display + Manrope, FH-Zeichen).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Terms and Withdrawal Information – Franz Heinrich</title>
+<link rel="stylesheet" href="../assets/fonts.css">
+<style>
+  @page { size: A4; margin: 20mm 19mm 22mm;
+    @bottom-left  { content: "Franz Heinrich · franzheinrich.com · As of November 2026"; font: 8pt Manrope, sans-serif; color: #486371; }
+    @bottom-right { content: "Page " counter(page) " of " counter(pages); font: 8pt Manrope, sans-serif; color: #486371; } }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font-family: Manrope, Arial, sans-serif; font-size: 9.6pt; line-height: 1.55; color: #233f4f; background: #fff; }
+  .kopf { background: #023047; color: #f7f1e6; padding: 16mm 14mm 12mm; margin: 0 0 9mm; border-radius: 3mm; }
+  .kopf .mark { width: 13mm; height: 13mm; display: block; margin-bottom: 7mm; }
+  .kopf .titel { font-family: "DM Serif Display", Georgia, serif; font-size: 28pt; line-height: 1.05; margin: 0; }
+  .kopf .titel em { color: #e96a2c; font-style: italic; }
+  .kopf .unter { margin: 4mm 0 0; font-size: 9.5pt; color: #d9c7b5; }
+  .kopf .inhalt { margin: 6mm 0 0; font-size: 9pt; color: #f7f1e6; }
+  h1, h2, h3, h4 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; color: #023047; break-after: avoid; page-break-after: avoid; }
+  h1 { font-size: 21pt; line-height: 1.1; margin: 0 0 4mm; }
+  h2 { font-size: 15pt; margin: 7mm 0 2.5mm; }
+  h3 { font-size: 12pt; margin: 5.5mm 0 1.8mm; }
+  h1::after { content: ""; display: block; width: 14mm; height: 1.2mm; background: #e96a2c; border-radius: 1mm; margin-top: 3mm; }
+  p { margin: 0 0 2.4mm; orphans: 3; widows: 3; }
+  ul, ol { margin: 0 0 3mm 5mm; padding: 0; } li { margin: 0 0 1.4mm; }
+  a { color: #023047; text-decoration: underline; text-decoration-color: #e96a2c; }
+  strong { color: #023047; }
+  .tabelle { margin: 3mm 0 4mm; break-inside: avoid; }
+  table { width: 100%; border-collapse: collapse; font-size: 8.8pt; line-height: 1.45; }
+  th, td { text-align: left; vertical-align: top; padding: 2mm 2.4mm; border-bottom: .3mm solid #cdd5da; }
+  th { background: #f7f1e6; color: #023047; border-bottom: .5mm solid #023047; }
+  .teil2, .neue-seite { break-before: page; page-break-before: always; }
+  .neue-seite { margin-top: 0; }
+  .formular { list-style: none; margin: 4mm 0; }
+  .formular li { margin: 0 0 6mm; }
+  .formular li:not(:first-child) { padding-bottom: 9mm; border-bottom: .3mm solid #233f4f; }
+  .formular li:first-child { font-weight: 700; color: #023047; }
+  .fehler { color: #b00; font: 700 14pt Arial, sans-serif; }
+</style>
+</head>
+<body>
+<header class="kopf">
+  <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#e96a2c"/><text x="32" y="42" text-anchor="middle" font-family="DM Serif Display, Georgia, serif" font-size="30" fill="#023047">FH</text></svg>
+  <p class="titel">Terms and <em>Withdrawal Information</em></p>
+  <p class="unter">Franz Heinrich · Flurweg 3 · 93333 Neustadt an der Donau · Germany · franzheinrich.com</p>
+  <p class="inhalt">Contents: General Terms and Conditions · Withdrawal Information · Model Withdrawal Form</p>
+</header>
+<section class="teil1" id="agb"></section>
+<section class="teil2" id="widerruf"></section>
+<script>
+(async function () {
+  function inhalt(html) {
+    var d = new DOMParser().parseFromString(html, 'text/html');
+    var w = d.querySelector('.legal .wrap-narrow');
+    if (!w) throw new Error('Inhalt nicht gefunden');
+    w.querySelectorAll('.pdf-link, p.mt-3').forEach(function (e) { e.remove(); });   // Download-Knopf + „Zurück“
+    w.querySelectorAll('p.small').forEach(function (p) { if (p.querySelector('a[lang]')) p.remove(); });   // Sprachwechsel
+    w.querySelectorAll('a[href]').forEach(function (a) {                              // im PDF volle Adressen
+      var h = a.getAttribute('href');
+      if (!/^(https?:|mailto:|tel:|#)/.test(h)) a.setAttribute('href', 'https://franzheinrich.com/' + h.replace(/\.html$/, ''));
+    });
+    return w;
+  }
+  try {
+    var agb = inhalt(await (await fetch('../terms.html', { cache: 'no-store' })).text());
+    var wid = inhalt(await (await fetch('../withdrawal.html', { cache: 'no-store' })).text());
+    // Muster-Widerrufsformular: eigene Seite + Schreiblinien
+    wid.querySelectorAll('h2').forEach(function (h) {
+      if (/Model Withdrawal Form/.test(h.textContent) && !/Information and/.test(h.textContent)) {
+        h.classList.add('neue-seite');
+        var n = h.nextElementSibling; while (n && n.tagName !== 'UL' && n.tagName !== 'H2') n = n.nextElementSibling;
+        if (n && n.tagName === 'UL') n.classList.add('formular');
+      }
+    });
+    document.getElementById('agb').innerHTML = agb.innerHTML;
+    document.getElementById('widerruf').innerHTML = wid.innerHTML;
+    await document.fonts.ready;
+    document.body.setAttribute('data-fertig', 'ja');
+  } catch (e) {
+    document.body.innerHTML = '<p class="fehler">PDF template: ' + e.message + '</p>';
+  }
+})();
+</script>
+</body>
+</html>
